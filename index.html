@@ -632,7 +632,7 @@
     <!-- CONTACT SECTION -->
     <section id="contact">
         <div class="container">
-            <p style="font-size: 0.85rem; color: var(--gray-dark); margin-bottom: 1rem; margin-top: 8rem; letter-spacing: 3px; text-transform: uppercase; font-weight: 300;">SUNOLICIOUS™ — A NOAH® PROJECT</p>
+            <p style="font-size: 0.85rem; color: var(--gray-light); margin-bottom: 1rem; margin-top: 8rem; letter-spacing: 3px; text-transform: uppercase; font-weight: 300;">SUNOLICIOUS™ — A NOAH® PROJECT</p>
             <h2>Connect</h2>
             <p class="contact-text">For inquiries, collaborations, or booking:</p>
             <a href="mailto:sunolicious@noahmusic.com" class="contact-email">sunolicious@noahmusic.com</a>
@@ -750,4 +750,12 @@
         });
 
         document.addEventListener('keydown', (e) => {
-            if (e.
+            if (e.key === 'Escape' && popupOverlay.classList.contains('active')) {
+                popupOverlay.classList.remove('active');
+            }
+        });
+
+        console.log('🎵 SUNOLICIOUS™ website loaded successfully');
+    </script>
+</body>
+</html>
