@@ -330,7 +330,7 @@
         .contact-email {
             display: inline-block;
             font-size: 1.2rem;
-            color: var(--white);
+            color: var(--accent);
             text-decoration: none;
             font-weight: 300;
             margin-bottom: 3rem;
@@ -339,7 +339,7 @@
         }
         
         .contact-email:hover {
-            color: var(--accent);
+            color: var(--white);
         }
         
         .social-links {
@@ -370,6 +370,182 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             font-weight: 300;
+        }
+        
+        /* EMAIL POPUP STYLES - ADDED */
+        .signup-trigger {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 14px 28px;
+            font-size: 0.75rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.4s ease;
+            font-family: inherit;
+        }
+        
+        .signup-trigger:hover {
+            background: var(--accent);
+            color: var(--black);
+        }
+        
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+        
+        .popup-overlay.active {
+            display: flex;
+        }
+        
+        .popup-content {
+            background: var(--black);
+            border: 1px solid rgba(197, 183, 160, 0.3);
+            max-width: 500px;
+            width: 90%;
+            padding: 40px 30px;
+            position: relative;
+            animation: slideUp 0.4s ease;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            color: var(--gray-light);
+            font-size: 28px;
+            cursor: pointer;
+            line-height: 1;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            font-family: inherit;
+        }
+        
+        .close-btn:hover {
+            color: var(--accent);
+            transform: rotate(90deg);
+        }
+        
+        .popup-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .popup-header h1 {
+            font-size: 36px;
+            font-weight: 200;
+            letter-spacing: 4px;
+            margin-bottom: 5px;
+        }
+        
+        .popup-header h2 {
+            font-size: 24px;
+            font-weight: 300;
+            color: var(--accent);
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        
+        .popup-header p {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gray-light);
+        }
+        
+        .popup-description {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--gray-light);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .popup-form {
+            margin-bottom: 15px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            color: var(--gray-light);
+        }
+        
+        input[type="email"] {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+        
+        input[type="email"]:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--accent);
+        }
+        
+        input[type="email"]::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            font-size: 0.75rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            cursor: pointer;
+            transition: all 0.4s ease;
+            font-family: inherit;
+        }
+        
+        .submit-btn:hover {
+            background: var(--accent);
+            color: var(--black);
+        }
+        
+        .hidden-field {
+            position: absolute;
+            left: -5000px;
         }
         
         @keyframes fadeIn {
@@ -406,6 +582,10 @@
             .pull-quote { font-size: 1rem; }
             .closing-statement { font-size: 1.2rem; letter-spacing: 4px; }
             .social-links { gap: 2rem; }
+            .popup-content { padding: 30px 20px; }
+            .popup-header h1 { font-size: 28px; }
+            .popup-header h2 { font-size: 20px; }
+            .signup-trigger { bottom: 20px; right: 20px; padding: 12px 20px; font-size: 0.7rem; }
         }
         
         @media (max-width: 480px) {
@@ -467,8 +647,53 @@
         </div>
     </section>
 
+    <!-- EMAIL POPUP BUTTON -->
+    <button class="signup-trigger" id="openPopup">Join the List</button>
+
+    <!-- EMAIL POPUP -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content">
+            <button class="close-btn" id="closePopup">&times;</button>
+            
+            <div class="popup-header">
+                <h1>NOAH<sup style="font-size: 0.3em">®</sup></h1>
+                <h2>SUNOLICIOUS<sup style="font-size: 0.3em">™</sup></h2>
+                <p>Human. Machine. Manifest.</p>
+            </div>
+
+            <p class="popup-description">
+                Join the journey. Get exclusive updates, new releases, and insights into the evolution of human-machine musical collaboration.
+            </p>
+
+            <form class="popup-form" action="https://noahmusic.us6.list-manage.com/subscribe/post?u=634485f7f15097e5aecc9af5f&id=c2b49f4fa3&f_id=004911e2f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+                
+                <div class="form-group">
+                    <label for="mce-EMAIL">Email Address *</label>
+                    <input type="email" name="EMAIL" id="mce-EMAIL" required placeholder="your@email.com">
+                </div>
+
+                <div class="hidden-field" aria-hidden="true">
+                    <input type="text" name="b_634485f7f15097e5aecc9af5f_c2b49f4fa3" tabindex="-1" value="">
+                </div>
+
+                <button type="submit" class="submit-btn">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+    <script type="text/javascript">
+        (function($) {
+            window.fnames = new Array(); 
+            window.ftypes = new Array();
+            fnames[0]='EMAIL';
+            ftypes[0]='email';
+        }(jQuery));
+        var $mcj = jQuery.noConflict(true);
+    </script>
+
     <script>
-        // Smooth scroll for navigation links
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -482,7 +707,7 @@
             });
         });
 
-        // Add fade-in animation on scroll for sections
+        // Fade-in animation on scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -100px 0px'
@@ -502,6 +727,31 @@
             section.style.transform = 'translateY(30px)';
             section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
             observer.observe(section);
+        });
+
+        // Email popup
+        const openPopupBtn = document.getElementById('openPopup');
+        const closePopupBtn = document.getElementById('closePopup');
+        const popupOverlay = document.getElementById('popupOverlay');
+
+        openPopupBtn.addEventListener('click', () => {
+            popupOverlay.classList.add('active');
+        });
+
+        closePopupBtn.addEventListener('click', () => {
+            popupOverlay.classList.remove('active');
+        });
+
+        popupOverlay.addEventListener('click', (e) => {
+            if (e.target === popupOverlay) {
+                popupOverlay.classList.remove('active');
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && popupOverlay.classList.contains('active')) {
+                popupOverlay.classList.remove('active');
+            }
         });
 
         console.log('🎵 SUNOLICIOUS™ website loaded successfully');
