@@ -654,7 +654,8 @@
                 <a href="https://youtube.com/@sunolicious" class="social-link" target="_blank">YouTube</a>
             </div>
 
-            <p class="copyright">© 2025 NOAH® / Sunolicious™ • All Rights Reserved</p>
+<a href="#" id="aiEthicsLink" style="display: block; color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem; transition: opacity 0.3s ease;">AI Ethics & Creative Statement</a>
+<p class="copyright">© 2025 NOAH® / Sunolicious™ • All Rights Reserved</p>
         </div>
     </section>
 
@@ -766,6 +767,168 @@
             }
         });
     </script>
+<!-- AI ETHICS MODAL -->
+<div class="ai-ethics-overlay" id="aiEthicsOverlay">
+    <div class="ai-ethics-content">
+        <button class="ai-close-btn" id="closeAiEthics">&times;</button>
+        
+        <div class="ai-ethics-header">
+            <h2>AI Ethics & Creative Statement</h2>
+        </div>
+
+        <div class="ai-ethics-body">
+            <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.9;">
+                <strong>Sunolicious™ is where human artistry meets technological possibility.</strong><br>
+                Every track begins with my melodies, my lyrics, my phrasing, my emotional direction.
+            </p>
+            
+            <p style="margin-bottom: 1.5rem;">
+                AI doesn't originate my music — it extends it. It's a tool, not a ghostwriter; an instrument, not a replacement for the artist.
+            </p>
+            
+            <p style="margin-bottom: 1.5rem;">
+                I design the concepts. I write the songs. I shape the sonic identity. I make the call on what lives and what gets left on the cutting-room floor.
+            </p>
+            
+            <p style="margin-bottom: 1.5rem;">
+                AI enters the process the way synthesizers, samplers, drum machines, autotune, and guitar-amp modeling always have: as technology that amplifies human intention, not technology that authors the work.
+            </p>
+            
+            <p style="margin-bottom: 1.5rem;">
+                Every Sunolicious™ song is created, curated, arranged, and produced under my authorship. Vocal models, textures, and generative tools appear only as elements inside a human-built composition.
+            </p>
+            
+            <p style="margin-bottom: 1.5rem;">
+                <strong>There is no "fully AI-generated music" here</strong> — only human creation with machine-assisted expression.
+            </p>
+            
+            <p style="margin-bottom: 0;">
+                Human first. Machine second. The art is mine. The expansion is shared.
+            </p>
+        </div>
+    </div>
+</div>
+
+<style>
+/* AI ETHICS MODAL STYLES */
+.ai-ethics-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    animation: fadeIn 0.3s ease;
+}
+
+.ai-ethics-overlay.active {
+    display: flex;
+}
+
+.ai-ethics-content {
+    background: linear-gradient(161deg, #090329 10%, #3d1a94 35%, #c742c2 65%, #3d1a94 85%, #090329 100%);
+    border: 1px solid rgba(197, 183, 160, 0.3);
+    max-width: 700px;
+    width: 90%;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 40px 35px;
+    position: relative;
+    animation: slideUp 0.4s ease;
+}
+
+.ai-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 32px;
+    cursor: pointer;
+    line-height: 1;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    font-family: inherit;
+}
+
+.ai-close-btn:hover {
+    color: #C5B7A0;
+    transform: rotate(90deg);
+}
+
+.ai-ethics-header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.ai-ethics-header h2 {
+    font-size: 1.5rem;
+    font-weight: 200;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #ffffff !important;
+}
+
+.ai-ethics-body {
+    color: #ffffff;
+}
+
+.ai-ethics-body p {
+    color: #ffffff !important;
+}
+
+@media (max-width: 768px) {
+    .ai-ethics-content {
+        padding: 30px 25px;
+        max-height: 90vh;
+    }
     
+    .ai-ethics-header h2 {
+        font-size: 1.2rem;
+    }
+}
+</style>
+
+<script>
+// AI ETHICS MODAL FUNCTIONALITY
+(function() {
+    const overlay = document.getElementById('aiEthicsOverlay');
+    const closeBtn = document.getElementById('closeAiEthics');
+    const aiEthicsLink = document.getElementById('aiEthicsLink');
+
+    // Open modal
+    aiEthicsLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        overlay.classList.add('active');
+    });
+
+    // Close modal
+    closeBtn.addEventListener('click', () => {
+        overlay.classList.remove('active');
+    });
+
+    // Close on overlay click
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            overlay.classList.remove('active');
+        }
+    });
+
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && overlay.classList.contains('active')) {
+            overlay.classList.remove('active');
+        }
+    });
+})();
+</script>
 </body>
 </html>
