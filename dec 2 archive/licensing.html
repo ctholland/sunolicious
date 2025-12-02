@@ -9,8 +9,8 @@
     <meta name="twitter:image" content="https://music.sunolicious.com/images/Sunolicious_Logo_NOAH.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cover Sunolicious™ Tracks | NOAH®</title>
-    <meta name="description" content="Free instrumentals and lyrics for covering Sunolicious™ tracks. Make it yours, share it, tag us!">
+    <title>NOAH® | SUNOLICIOUS™ Music Licensing</title>
+    <meta name="description" content="Sync-ready music catalog for film, TV, games, and brand campaigns. 100% master and publishing controlled. One-stop clearance available.">
     
     <style>
         * {
@@ -32,6 +32,12 @@
             font-weight: 300;
             letter-spacing: 0.3px;
             min-height: 100vh;
+        }
+        
+        :root {
+            --accent: #C5B7A0;
+            --white: #FFFFFF;
+            --off-white: #E8E8E8;
         }
         
         h1, h2, h3, h4 {
@@ -67,9 +73,17 @@
             font-size: 2rem;
             letter-spacing: 4px;
             margin-bottom: 1rem;
+            text-transform: uppercase;
         }
         
         .tagline {
+            font-size: 1rem;
+            color: #ffffff;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+        
+        .subheader {
             font-size: 1.1rem;
             color: #ffffff;
             max-width: 700px;
@@ -94,15 +108,13 @@
             text-transform: uppercase;
         }
         
-        .intro-text {
-            max-width: 700px;
-            margin: 0 auto 3rem;
-            font-size: 1.05rem;
-            line-height: 2;
-            text-align: center;
+        h3 {
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
         }
         
-        /* Track Cards */
+        /* Featured Tracks */
         .tracks-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -123,116 +135,120 @@
         }
         
         .track-title {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: #ffffff;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             font-weight: 300;
         }
         
-        .track-info {
+        .track-mood {
             font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-style: italic;
         }
         
-        .download-btn {
-            display: block;
-            padding: 0.8rem 1.5rem;
+        .track-use {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1rem;
+        }
+        
+        .track-player {
+            width: 100%;
+            margin-top: 1rem;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+        
+        /* Catalog Request */
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
             background: transparent;
             color: #ffffff;
-            border: 1px solid #ffffff;
+            border: 2px solid #ffffff;
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             font-weight: 300;
-            transition: all 0.3s ease;
-            margin-bottom: 0.8rem;
-            text-align: center;
+            transition: all 0.4s ease;
+            margin: 2rem auto;
         }
         
-        .download-btn:hover {
+        .cta-button:hover {
             background: #ffffff;
             color: #090329;
         }
         
-        /* Terms Section */
-        .terms-box {
-            max-width: 800px;
-            margin: 2rem auto;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 2.5rem;
-        }
-        
-        .terms-box h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
+        .center {
             text-align: center;
         }
         
-        .terms-columns {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin: 2rem 0;
+        /* About Section */
+        .about-text {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+            line-height: 2;
+            text-align: center;
         }
         
-        .terms-column h4 {
-            font-size: 1rem;
-            margin-bottom: 1rem;
-            color: #C5B7A0;
-        }
-        
-        .terms-column ul {
+        /* Rights List */
+        .rights-list {
+            max-width: 600px;
+            margin: 2rem auto;
             list-style: none;
             padding-left: 0;
+            display: inline-block;
+            text-align: left;
         }
         
-        .terms-column li {
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
+        .rights-list li {
+            padding: 1rem 0 1rem 2.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 1rem;
             position: relative;
+            text-align: left;
         }
         
-        .terms-column li:before {
+        .rights-list li:before {
+            content: "✓";
             position: absolute;
             left: 0;
+            color: var(--accent);
             font-weight: bold;
         }
         
-        .can-list li:before {
-            content: "✓";
-            color: #4CAF50;
+        .rights-list li:last-child {
+            border-bottom: none;
         }
         
-        .cannot-list li:before {
-            content: "✗";
-            color: #f44336;
-        }
-        
-        .terms-footer {
-            margin-top: 2rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        /* Contact */
+        .contact-info {
             text-align: center;
-            font-size: 0.9rem;
+            padding: 2rem 0;
         }
         
-        /* Credit Section */
-        .credit-box {
-            max-width: 700px;
-            margin: 2rem auto;
-            text-align: center;
+        .contact-email {
+            display: inline-block;
+            font-size: 1.3rem;
+            color: #ffffff;
+            text-decoration: none;
+            margin: 1rem 0;
+            padding: 1rem 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
         }
         
-        .credit-example {
+        .contact-email:hover {
+            border-color: #ffffff;
             background: rgba(255, 255, 255, 0.05);
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            border-left: 3px solid #C5B7A0;
-            font-family: monospace;
-            font-size: 0.95rem;
         }
         
         /* Footer */
@@ -302,14 +318,6 @@
             .tracks-grid {
                 grid-template-columns: 1fr;
             }
-            
-            .terms-columns {
-                grid-template-columns: 1fr;
-            }
-            
-            .terms-box {
-                padding: 1.5rem;
-            }
         }
     </style>
 </head>
@@ -319,120 +327,99 @@
     <header>
         <div class="container">
             <img src="images/Sunolicious_Logo_NOAH2.png" alt="NOAH SUNOLICIOUS Logo" class="logo">
-            <h1>Cover Sunolicious™ Tracks</h1>
-            <p class="tagline">Free instrumentals. Clear terms. Make it yours.</p>
+            <h1>Music Licensing</h1>
+            <p class="tagline">Human. Machine. Manifest.</p>
+            <p class="subheader">Licensing-ready catalog for film, TV, games, and brand campaigns.</p>
         </div>
     </header>
 
-    <!-- INTRO -->
-    <section>
+    <!-- FEATURED TRACKS -->
+    <section id="featured">
         <div class="container">
-            <p class="intro-text">
-                Want to put your own spin on a Sunolicious™ track? Download free instrumentals and lyrics below. Record your cover, post it anywhere, and tag us so we can hear what you created!
-            </p>
-        </div>
-    </section>
-
-    <!-- AVAILABLE TRACKS -->
-    <section id="tracks">
-        <div class="container">
-            <h2>🎵 Available Tracks</h2>
+            <h2>🎧 Featured Tracks (Sync-Ready)</h2>
             
             <div class="tracks-grid">
                 
-                <!-- Track 1 - PLACEHOLDER -->
+                <!-- Track 1 -->
                 <div class="track-card">
-                    <h3 class="track-title">[Song Title 1]</h3>
-                    <p class="track-info">From: Sunolicious Sessions Vol. 1</p>
-                    <a href="#" class="download-btn">Download Instrumental</a>
-                    <a href="#" class="download-btn">Download Lyrics</a>
-                    <a href="#" class="download-btn">Listen to Original</a>
+                    <h3 class="track-title">Perfect Storm</h3>
+                    <p class="track-mood">Cinematic Electronic</p>
+                    <p class="track-use">Ideal for: Action trailers, sports highlights, tech campaigns</p>
+                    <div class="track-player">
+                        [Audio Player / Spotify Embed]
+                    </div>
                 </div>
                 
-                <!-- Track 2 - PLACEHOLDER -->
+                <!-- Track 2 -->
                 <div class="track-card">
-                    <h3 class="track-title">[Song Title 2]</h3>
-                    <p class="track-info">From: Sunolicious Sessions Vol. 1</p>
-                    <a href="#" class="download-btn">Download Instrumental</a>
-                    <a href="#" class="download-btn">Download Lyrics</a>
-                    <a href="#" class="download-btn">Listen to Original</a>
+                    <h3 class="track-title">Midnight Reflection</h3>
+                    <p class="track-mood">Ambient / Ethereal</p>
+                    <p class="track-use">Ideal for: Drama scenes, luxury brands, contemplative moments</p>
+                    <div class="track-player">
+                        [Audio Player / Spotify Embed]
+                    </div>
                 </div>
                 
-                <!-- Track 3 - PLACEHOLDER -->
+                <!-- Track 3 -->
                 <div class="track-card">
-                    <h3 class="track-title">[Song Title 3]</h3>
-                    <p class="track-info">From: Sunolicious Sessions Vol. 2</p>
-                    <a href="#" class="download-btn">Download Instrumental</a>
-                    <a href="#" class="download-btn">Download Lyrics</a>
-                    <a href="#" class="download-btn">Listen to Original</a>
+                    <h3 class="track-title">Electric Pulse</h3>
+                    <p class="track-mood">Upbeat Pop-Electronic</p>
+                    <p class="track-use">Ideal for: Fashion campaigns, lifestyle content, product launches</p>
+                    <div class="track-player">
+                        [Audio Player / Spotify Embed]
+                    </div>
                 </div>
                 
             </div>
-            
-            <p style="text-align: center; margin-top: 3rem; font-size: 0.9rem; color: rgba(255, 255, 255, 0.7);">
-                More tracks coming soon! Check back regularly for new additions.
+        </div>
+    </section>
+
+    <!-- CATALOG REQUEST -->
+    <section id="catalog">
+        <div class="container center">
+            <h2>📁 Request Full Licensing Catalog</h2>
+            <p style="max-width: 600px; margin: 0 auto 2rem; font-size: 1rem;">Get access to our complete sync-ready catalog with detailed track information, mood boards, and licensing terms.</p>
+            <a href="#contact" class="cta-button">Request Catalog</a>
+            <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6); margin-top: 1rem;">Music supervisors and sync agents: we'll respond within 24 hours</p>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="container">
+            <h2>🧠 About the Artist / Sound</h2>
+            <p class="about-text">
+                NOAH® is the creative force behind Sunolicious™ — fusing human emotion and machine reflection into a cinematic, sync-ready sound. Each piece is written, produced, and mastered in-house, ensuring clean rights and seamless licensing. With a Billboard and Music Week charting history, NOAH® delivers professional-grade tracks purpose-built for visual media.
             </p>
         </div>
     </section>
 
-    <!-- USAGE TERMS -->
-    <section id="terms">
+    <!-- RIGHTS & LICENSING -->
+    <section id="rights">
         <div class="container">
-            <h2>📋 Usage Terms</h2>
-            
-            <div class="terms-box">
-                <h3>Free Instrumental & Lyrics - Cover Use Only</h3>
-                
-                <div class="terms-columns">
-                    <div class="terms-column">
-                        <h4>✓ YOU CAN:</h4>
-                        <ul class="can-list">
-                            <li>Record your own cover version</li>
-                            <li>Post to YouTube, TikTok, Instagram, etc.</li>
-                            <li>Monetize your cover video (ad revenue is yours)</li>
-                            <li>Perform live</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="terms-column">
-                        <h4>✗ YOU CANNOT:</h4>
-                        <ul class="cannot-list">
-                            <li>Use for commercial advertising</li>
-                            <li>Sell this instrumental</li>
-                            <li>Claim you wrote the song</li>
-                            <li>Re-distribute this instrumental</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="terms-footer">
-                    <p><strong>By downloading, you agree to these terms.</strong></p>
-                    <p style="margin-top: 1rem;">For licensing inquiries: <a href="mailto:sunolicious@noahmusic.com" style="color: #ffffff; text-decoration: none; font-weight: 400;">sunolicious@noahmusic.com</a></p>
-                </div>
+            <h2>⚖️ Rights & Licensing Info</h2>
+            <div style="text-align: center;">
+                <ul class="rights-list">
+                    <li>100% Master & Publishing controlled by artist</li>
+                    <li>One-stop clearance available</li>
+                    <li>Non-exclusive & exclusive sync terms offered</li>
+                    <li>Instrumentals & stems available upon request</li>
+                    <li>Quick turnaround on custom edits and versions</li>
+                    <li>Cleared for worldwide use</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- HOW TO CREDIT -->
-    <section id="credit">
+    <!-- CONTACT -->
+    <section id="contact">
         <div class="container">
-            <h2>🏷️ How to Credit</h2>
-            
-            <div class="credit-box">
-                <p style="margin-bottom: 1.5rem;">Please include this credit in your video description or post:</p>
-                
-                <div class="credit-example">
-                    Original by NOAH® | Sunolicious™<br>
-                    https://music.sunolicious.com
-                </div>
-                
-                <p style="margin-top: 2rem; font-size: 1.1rem;"><strong>Tag us on social media!</strong></p>
-                <p style="margin-top: 0.5rem;">Instagram: @sunoliciousmusic<br>
-                TikTok: @sunoliciousmusic<br>
-                YouTube: @sunolicious</p>
-                
-                <p style="margin-top: 2rem; font-size: 0.9rem; color: rgba(255, 255, 255, 0.7);">
-                    We love seeing what you create and may share your cover on our channels!
+            <h2>📨 Get In Touch</h2>
+            <div class="contact-info">
+                <p style="margin-bottom: 1.5rem; font-size: 1rem;">For licensing inquiries, catalog requests, or custom projects:</p>
+                <a href="mailto:sunolicious@noahmusic.com" class="contact-email">sunolicious@noahmusic.com</a>
+                <p style="margin-top: 2rem; font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">
+                    Available for: Film & TV placements • Video games • Advertising campaigns • Brand content • Trailers
                 </p>
             </div>
         </div>
@@ -446,7 +433,7 @@
                 <a href="https://tiktok.com/@sunoliciousmusic" class="social-link-plain" target="_blank">TikTok</a>
                 <a href="https://youtube.com/@sunolicious" class="social-link-plain" target="_blank">YouTube</a>
             </div>
-            <a href="music.html" class="back-link">← Back to Music</a>
+            <a href="https://music.sunolicious.com" class="back-link">← Back to Music</a>
             <a href="#" id="aiEthicsLink" style="display: block; color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem; transition: opacity 0.3s ease;">AI Ethics & Creative Statement</a>
             <p class="copyright">© 2025 NOAH® / Sunolicious™ • All Rights Reserved</p>
         </div>
