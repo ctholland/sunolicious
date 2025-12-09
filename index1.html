@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><!DOCTYPE html>
-<html lang="en">
 <head>
     <!-- Open Graph / Social Media Preview -->
 <meta property="og:image" content="https://sunolicious.com/images/Sunolicious_Logo_NOAH.png">
@@ -17,16 +15,6 @@
     <style>
         /* SUNOLICIOUS™ WEBSITE STYLES */
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOAH® | SUNOLICIOUS™ - Human. Machine. Manifest.</title>
-    <meta name="description" content="Billboard & Music Week Charting Recording Artist NOAH® - Listen to SUNOLICIOUS™. 100% owned. Available for licensing.">
-    
-    <style>
         * {
             margin: 0;
             padding: 0;
@@ -58,197 +46,343 @@
         }
         
         h1, h2, h3, h4, h5, h6 {
+            font-weight: 200;
+            letter-spacing: 2px;
             color: #ffffff !important;
         }
         
-        p, span, li {
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            font-weight: 200;
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+        }
+        
+        h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: #ffffff !important;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+        
+        p {
+            font-size: 1rem;
+            margin-bottom: 1.8rem;
+            font-weight: 300;
+            line-height: 2;
             color: #ffffff !important;
         }
         
         .container {
-            max-width: 900px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 4rem;
         }
         
-        header {
+        section {
+            padding: 10rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        section:last-child {
+            border-bottom: none;
+        }
+        
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 4rem 0 3rem;
+            padding: 6rem 0;
         }
         
         .logo {
-            max-width: 400px;
-            width: 70%;
+            max-width: 500px;
+            width: 80%;
             height: auto;
-            margin-bottom: 2rem;
+            margin-bottom: 5rem;
             opacity: 0.95;
+            animation: fadeInDown 1.2s ease-out;
         }
         
-        .tagline {
-            font-size: 0.9rem;
-            color: #ffffff !important;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 300;
-        }
-        
-        h1 {
-            font-size: 2rem;
-            font-weight: 200;
-            letter-spacing: 6px;
-            margin-bottom: 1rem;
-            color: #ffffff !important;
-        }
-        
-        .intro {
-            text-align: center;
-            max-width: 700px;
+        .hero-quote {
+            max-width: 800px;
             margin: 0 auto 5rem;
-            padding: 0 2rem;
+            animation: fadeIn 1.8s ease-out 0.6s both;
         }
         
-        .intro p {
-            font-size: 1rem;
-            color: #ffffff !important;
-            line-height: 2;
-            margin-bottom: 1.5rem;
-        }
-        
-        section {
-            padding: 3rem 0;
-        }
-        
-        .track-section {
-            margin-bottom: 4rem;
-        }
-        
-        .track-title {
-            font-size: 1.2rem;
-            font-weight: 300;
-            letter-spacing: 2px;
-            margin-bottom: 1.5rem;
-            color: #ffffff !important;
-            text-align: center;
-        }
-        
-        .soundcloud-embed {
-            width: 100%;
-            margin: 0 auto 3rem;
-        }
-        
-        .embed-placeholder {
-            background: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 4rem 2rem;
-            text-align: center;
+        .quote-text {
+            font-size: 1.05rem;
+            line-height: 2.2;
             margin-bottom: 2rem;
-        }
-        
-        .embed-placeholder p {
             color: #ffffff !important;
-            font-size: 0.9rem;
-            margin: 0.5rem 0;
+            font-weight: 300;
         }
         
-        .streaming-section {
-            text-align: center;
-            padding: 4rem 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        .quote-text.emphasis {
+            color: #ffffff !important;
+            font-weight: 300;
+            font-size: 1.1rem;
             margin-top: 3rem;
         }
         
-        .streaming-title {
-            font-size: 0.9rem;
-            color: #ffffff !important;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 2rem;
+        .quote-attribution {
+            font-size: 0.95rem;
+            color: var(--accent);
             font-weight: 300;
+            margin-top: 3rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
         }
         
-        .streaming-links {
+        .cta-buttons {
             display: flex;
             gap: 2rem;
             justify-content: center;
             flex-wrap: wrap;
+            animation: fadeIn 2.2s ease-out 1.2s both;
+        }
+        
+        .btn {
+            padding: 1.2rem 3rem;
+            font-size: 0.85rem;
+            font-weight: 300;
+            text-decoration: none;
+            border-radius: 0;
+            transition: all 0.4s ease;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #ffffff !important;
+        }
+        
+        .btn-primary {
+            background: transparent;
+            color: #ffffff !important;
+            border: 1px solid #ffffff;
+        }
+        
+        .btn-primary:hover {
+            background: var(--white);
+            color: var(--black) !important;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #ffffff !important;
+            border: 1px solid #ffffff;
+        }
+        
+        .btn-secondary:hover {
+            background: #ffffff;
+            color: #090329 !important;
+        }
+        
+        #legacy {
+            background: transparent;
+        }
+        
+        .legacy-content {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 6rem;
+            margin-bottom: 5rem;
+            flex-wrap: wrap;
+        }
+        
+        .legacy-stat {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            min-width: 200px;
+        }
+        
+        .stat-number {
+            font-size: 8rem;
+            font-weight: 100;
+            color: #ffffff !important;
+            line-height: 0.9;
+            letter-spacing: -2px;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #ffffff !important;
+            text-align: left;
+            margin-top: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 300;
+        }
+        
+        .legacy-points {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .legacy-point {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            color: #ffffff !important;
+            font-weight: 300;
+            line-height: 2;
+        }
+        
+        .legacy-statement {
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: var(--accent);
+            margin-top: 5rem;
+            letter-spacing: 1px;
+        }
+        
+        #manifesto {
+            background: transparent;
+        }
+        
+        .manifesto-title {
+            font-size: 1.8rem;
+            color: #ffffff !important;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        .manifesto-subtitle {
+            text-align: center;
+            font-size: 1rem;
+            color: #ffffff !important;
+            margin-bottom: 6rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .manifesto-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .manifesto-section {
+            margin-bottom: 5rem;
+            padding: 0;
+        }
+        
+        .manifesto-section h4 {
+            margin-bottom: 2rem;
+            font-weight: 300;
+            font-size: 1.1rem;
+        }
+        
+        .manifesto-section p {
+            color: #ffffff !important;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            line-height: 2.2;
+        }
+        
+        .manifesto-section p.emphasis {
+            color: #ffffff !important;
+            font-weight: 300;
+            font-size: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .pull-quote {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: var(--accent);
+            font-style: italic;
+            text-align: center;
+            margin: 4rem 0;
+            letter-spacing: 0.5px;
+        }
+        
+        .manifesto-closing {
+            text-align: center;
+            margin-top: 8rem;
+        }
+        
+        .closing-statement {
+            font-size: 1.5rem;
+            font-weight: 200;
+            color: #ffffff !important;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            margin-bottom: 1.5rem;
+        }
+        
+        #contact {
+            text-align: center;
+            padding: 8rem 0 5rem;
+        }
+        
+        .contact-text {
+            font-size: 1rem;
+            color: #ffffff !important;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .contact-email {
+            display: inline-block;
+            font-size: 1.2rem;
+            color: #ffffff !important;
+            text-decoration: none;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            transition: all 0.4s ease;
+            letter-spacing: 1px;
+        }
+        
+        .contact-email:hover {
+            opacity: 0.7;
         }
         
         .social-links {
             display: flex;
             gap: 3rem;
             justify-content: center;
+            margin: 3rem 0;
             flex-wrap: wrap;
         }
         
-        .streaming-btn {
-            padding: 1rem 2.5rem;
-            background: transparent;
-            color: #ffffff !important;
-            border: 1px solid #ffffff;
-            text-decoration: none;
-            font-weight: 300;
-            transition: all 0.4s ease;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            width: 200px;
-            display: inline-block;
-            text-align: center;
-        }
-        
-        .streaming-btn:hover {
-            background: #ffffff;
-            color: #090329 !important;
-            border-color: #ffffff;
-        }
-        
-        .social-link-plain {
+        .social-link {
             color: #ffffff !important;
             text-decoration: none;
             font-size: 0.9rem;
+            transition: opacity 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 2px;
-            transition: opacity 0.3s ease;
             font-weight: 300;
         }
         
-        .social-link-plain:hover {
-            opacity: 0.7;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 4rem 0 3rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        
-        .back-link {
-            display: inline-block;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 2rem;
-            font-weight: 300;
-            transition: opacity 0.3s ease;
-        }
-        
-        .back-link:hover {
+        .social-link:hover {
             opacity: 0.7;
         }
         
         .copyright {
+            margin-top: 5rem;
             font-size: 0.75rem;
             color: rgba(255, 255, 255, 0.75) !important;
             letter-spacing: 2px;
             text-transform: uppercase;
             font-weight: 300;
-            margin-top: 2rem;
         }
         
-        /* EMAIL SIGNUP POPUP STYLES */
-        
+        /* EMAIL POPUP STYLES */
         .signup-trigger {
             position: fixed;
             bottom: 30px;
@@ -284,7 +418,6 @@
             align-items: center;
             justify-content: center;
             z-index: 9999;
-            animation: fadeIn 0.3s ease;
         }
         
         .popup-overlay.active {
@@ -301,20 +434,9 @@
             animation: slideUp 0.4s ease;
         }
         
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
         @keyframes slideUp {
-            from {
-                transform: translateY(30px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
         
         .close-btn {
@@ -436,173 +558,111 @@
             left: -5000px;
         }
         
-        .response-message {
-            padding: 12px;
-            margin-top: 15px;
-            font-size: 13px;
-            text-align: center;
-            display: none;
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         
-        .response-message.success {
-            background: rgba(76, 175, 80, 0.2);
-            border: 1px solid rgba(76, 175, 80, 0.5);
-            color: #4CAF50;
-        }
-        
-        .response-message.error {
-            background: rgba(244, 67, 54, 0.2);
-            border: 1px solid rgba(244, 67, 54, 0.5);
-            color: #f44336;
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
         @media (max-width: 768px) {
-            .container {
-                padding: 0 2rem;
-            }
-            
-            h1 {
-                font-size: 1.5rem;
-                letter-spacing: 4px;
-            }
-            
-            .logo {
-                max-width: 300px;
-            }
-            
-            .streaming-links {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .streaming-btn {
-                width: 100%;
-                max-width: 250px;
-            }
-            
-            .popup-content {
-                padding: 30px 20px;
-            }
-            
-            .popup-header h1 {
-                font-size: 28px;
-            }
-            
-            .popup-header h2 {
-                font-size: 20px;
-            }
-            
-            .signup-trigger {
-                bottom: 20px;
-                right: 20px;
-                padding: 12px 20px;
-                font-size: 0.7rem;
-            }
+            body { font-size: 0.95rem; }
+            h2 { font-size: 1.8rem; letter-spacing: 4px; }
+            h3 { font-size: 1.4rem; }
+            h4 { font-size: 1rem; }
+            p, .quote-text { font-size: 0.95rem; }
+            .logo { max-width: 350px; }
+            section { padding: 6rem 0; }
+            .container { padding: 0 2rem; }
+            .legacy-content { flex-direction: column; gap: 3rem; }
+            .stat-number { font-size: 5rem; }
+            .cta-buttons { flex-direction: column; gap: 1.5rem; align-items: center; justify-content: center; }
+            .btn { min-width: 280px; margin: 0 auto; display: block; text-align: center; }
+            .manifesto-title { font-size: 1.4rem; }
+            .manifesto-subtitle { font-size: 0.9rem; }
+            .pull-quote { font-size: 1rem; }
+            .closing-statement { font-size: 1.2rem; letter-spacing: 4px; }
+            .social-links { gap: 2rem; }
+            .popup-content { padding: 30px 20px; }
+            .popup-header h1 { font-size: 28px; }
+            .popup-header h2 { font-size: 20px; }
+            .signup-trigger { bottom: 20px; right: 20px; padding: 12px 20px; font-size: 0.7rem; }
+        }
+        
+        @media (max-width: 480px) {
+            .container { padding: 0 1.5rem; }
+            .logo { max-width: 280px; }
+            .stat-number { font-size: 4rem; }
+            .social-links { flex-direction: column; gap: 1.5rem; align-items: center; }
+            .social-link { width: 100%; max-width: 250px; }
+            h2 { font-size: 1.5rem; letter-spacing: 3px; }
         }
     </style>
 </head>
 <body>
     
-    <header>
+    <!-- HERO SECTION -->
+    <section id="hero">
         <div class="container">
             <img src="images/Sunolicious_Logo_NOAH2.png" alt="NOAH SUNOLICIOUS Logo" class="logo">
-            <h1 style="font-size: 2.5rem; font-weight: 200; letter-spacing: 4px; margin: 3rem 0 2rem; line-height: 1.3;">Human. Machine. Manifest.</h1>
-            <p class="tagline" style="font-size: 1rem; line-height: 1.8; max-width: 700px; margin: 0 auto;">Billboard & Music Week Charting Recording Artist NOAH® collaborates with AI to reinvent classic tracks and create new hits. Premium multi-genre catalog: Pop • Dance • Country • Electro. 100% owned. Available for licensing.</p>
-        </div>
-    </header>
-    
-    <div class="intro">
-    </div>
-    
-    <main class="container">
-        
-        <!-- TRACK 1 -->
-        <section class="track-section">
-            <h2 class="track-title">Sunolicious Sessions Vol. 1</h2>
-            <p style="text-align: center; font-size: 0.85rem; color: #ffffff; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;">Released: [Date]</p>
-            <p style="text-align: center; font-size: 0.95rem; color: #ffffff; margin-bottom: 1rem; line-height: 1.8; max-width: 600px; margin-left: auto; margin-right: auto;">[Brief description of the vibe/style]</p>
-            <p style="text-align: center; font-size: 0.9rem; color: #ffffff; margin-bottom: 2rem;"><strong>Tracks:</strong> [Song Title 1], [Song Title 2], [Song Title 3]</p>
-            <div class="soundcloud-embed">
-                <!-- PASTE YOUR SOUNDCLOUD EMBED CODE HERE -->
-                <div class="embed-placeholder">
-                    <p>🎵 SoundCloud Player</p>
-                    <p style="font-size: 0.8rem;">Replace this div with your SoundCloud embed iframe</p>
-                </div>
+            <div class="hero-quote">
+                <p class="quote-text emphasis" style="font-size: 2.8rem; line-height: 1.3; margin-bottom: 4rem; font-weight: 200; letter-spacing: 4px;">
+                    Human. Machine. Manifest.
+                </p>
             </div>
-        </section>
-        
-        <!-- TRACK 2 -->
-        <section class="track-section">
-            <h2 class="track-title">Sunolicious Sessions Vol. 2</h2>
-            <p style="text-align: center; font-size: 0.85rem; color: #ffffff; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;">Released: [Date]</p>
-            <p style="text-align: center; font-size: 0.95rem; color: #ffffff; margin-bottom: 1rem; line-height: 1.8; max-width: 600px; margin-left: auto; margin-right: auto;">[Brief description of the vibe/style]</p>
-            <p style="text-align: center; font-size: 0.9rem; color: #ffffff; margin-bottom: 2rem;"><strong>Tracks:</strong> [Song Title 1], [Song Title 2], [Song Title 3]</p>
-            <div class="soundcloud-embed">
-                <!-- PASTE YOUR SOUNDCLOUD EMBED CODE HERE -->
-                <div class="embed-placeholder">
-                    <p>🎵 SoundCloud Player</p>
-                    <p style="font-size: 0.8rem;">Replace this div with your SoundCloud embed iframe</p>
-                </div>
+            <div class="cta-buttons">
+                <a href="music.html" class="btn btn-primary">Listen Now</a>
+                <a href="/manifesto.pdf" class="btn btn-secondary" target="_blank">Read The Manifesto</a>
             </div>
-        </section>
-        
-        <!-- TRACK 3 -->
-        <section class="track-section">
-            <h2 class="track-title">Sunolicious Sessions Vol. 3</h2>
-            <p style="text-align: center; font-size: 0.85rem; color: #ffffff; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;">Released: [Date]</p>
-            <p style="text-align: center; font-size: 0.95rem; color: #ffffff; margin-bottom: 1rem; line-height: 1.8; max-width: 600px; margin-left: auto; margin-right: auto;">[Brief description of the vibe/style]</p>
-            <p style="text-align: center; font-size: 0.9rem; color: #ffffff; margin-bottom: 2rem;"><strong>Tracks:</strong> [Song Title 1], [Song Title 2], [Song Title 3]</p>
-            <div class="soundcloud-embed">
-                <!-- PASTE YOUR SOUNDCLOUD EMBED CODE HERE -->
-                <div class="embed-placeholder">
-                    <p>🎵 SoundCloud Player</p>
-                    <p style="font-size: 0.8rem;">Replace this div with your SoundCloud embed iframe</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- STREAMING LINKS -->
-        <section class="streaming-section">
-            <p class="streaming-title">Stream Everywhere</p>
-            <div class="streaming-links">
-                <a href="#" class="streaming-btn" target="_blank">Spotify</a>
-                <a href="#" class="streaming-btn" target="_blank">Apple Music</a>
-                <a href="#" class="streaming-btn" target="_blank">Tidal</a>
-                <a href="https://soundcloud.com/noahofficial" class="streaming-btn" target="_blank">SoundCloud</a>
-            </div>
-        </section>
-        
-    </main>
-    
-    <section style="text-align: center; padding: 5rem 0; border-top: 1px solid rgba(255, 255, 255, 0.08); margin-top: 3rem;">
-        <div class="container">
-            <h2 style="font-size: 1.5rem; font-weight: 200; letter-spacing: 4px; margin-bottom: 2rem; color: #ffffff; text-transform: uppercase;">Licensing Inquiries</h2>
-            <p style="font-size: 1rem; color: #ffffff; line-height: 2; max-width: 600px; margin: 0 auto 1.5rem;">All tracks 100% owned and cleared for sync, film, TV, advertising, and commercial use.</p>
-            <a href="mailto:sunolicious@noahmusic.com" style="display: inline-block; font-size: 1.1rem; color: #ffffff; text-decoration: none; font-weight: 300; letter-spacing: 1px; transition: opacity 0.3s ease;">sunolicious@noahmusic.com</a>
         </div>
     </section>
-    
-    <footer>
+
+    <!-- CLOSING STATEMENT SECTION -->
+    <section id="manifesto" style="padding: 0 0 10rem 0; margin-top: -3rem;">
         <div class="container">
-            <div class="social-links" style="margin-bottom: 3rem;">
-                <a href="https://instagram.com/sunoliciousmusic" class="social-link-plain" target="_blank">Instagram</a>
-                <a href="https://tiktok.com/@sunoliciousmusic" class="social-link-plain" target="_blank">TikTok</a>
-                <a href="https://youtube.com/@sunolicious" class="social-link-plain" target="_blank">YouTube</a>
+            <div class="manifesto-closing">
+                <p class="closing-statement" style="font-size: 1.8rem; letter-spacing: 6px; margin-bottom: 1.5rem; font-weight: 200;">This is Sunolicious™.</p>
+                <p class="closing-statement" style="font-size: 1.8rem; letter-spacing: 6px; margin-bottom: 4rem; font-weight: 200;">This is the future we're already in.</p>
+                
+                <div class="cta-buttons">
+                    <a href="music.html" class="btn btn-primary">Listen to the Music</a>
+                </div>
             </div>
-            <div style="margin-bottom: 2rem;">
-                <a href="index.html" style="display: inline-block; color: #ffffff; text-decoration: none; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; margin: 0 1rem; transition: opacity 0.3s ease;">Home</a>
-                <a href="covers.html" style="display: inline-block; color: #ffffff; text-decoration: none; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; margin: 0 1rem; transition: opacity 0.3s ease;">Covers</a>
-                <a href="licensing.html" style="display: inline-block; color: #ffffff; text-decoration: none; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; margin: 0 1rem; transition: opacity 0.3s ease;">Licensing</a>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <div class="container">
+            <p style="font-size: 0.85rem; color: #ffffff; margin-bottom: 1rem; margin-top: 8rem; letter-spacing: 3px; text-transform: uppercase; font-weight: 300;">SUNOLICIOUS™ — A NOAH® PROJECT</p>
+            <h2>Connect</h2>
+            <p class="contact-text">For inquiries, collaborations, or booking:</p>
+            <a href="mailto:sunolicious@noahmusic.com" class="contact-email">sunolicious@noahmusic.com</a>
+            
+            <div class="social-links">
+                <a href="https://instagram.com/sunoliciousmusic" class="social-link" target="_blank">Instagram</a>
+                <a href="https://tiktok.com/@sunoliciousmusic" class="social-link" target="_blank">TikTok</a>
+                <a href="https://youtube.com/@sunolicious" class="social-link" target="_blank">YouTube</a>
             </div>
-        <a href="#" id="aiEthicsLink" style="display: block; color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem; transition: opacity 0.3s ease;">AI Ethics & Creative Statement</a>
+
+<a href="#" id="aiEthicsLink" style="display: block; color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem; transition: opacity 0.3s ease;">AI Ethics & Creative Statement</a>
 <p class="copyright">© 2025 NOAH® / Sunolicious™ • All Rights Reserved</p>
         </div>
-    </footer>
+    </section>
 
-    <!-- EMAIL SIGNUP TRIGGER BUTTON -->
+    <!-- EMAIL POPUP BUTTON -->
     <button class="signup-trigger" id="openPopup">Join the List</button>
 
-    <!-- EMAIL SIGNUP POPUP -->
+    <!-- EMAIL POPUP -->
     <div class="popup-overlay" id="popupOverlay">
         <div class="popup-content">
             <button class="close-btn" id="closePopup">&times;</button>
@@ -629,11 +689,6 @@
                 </div>
 
                 <button type="submit" class="submit-btn">Subscribe</button>
-
-                <div id="mce-responses">
-                    <div class="response-message" id="mce-error-response"></div>
-                    <div class="response-message success" id="mce-success-response"></div>
-                </div>
             </form>
         </div>
     </div>
@@ -651,7 +706,43 @@
     </script>
 
     <script>
-        // Email Popup functionality
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section:not(#hero)').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(section);
+        });
+
+        // Email popup
         const openPopupBtn = document.getElementById('openPopup');
         const closePopupBtn = document.getElementById('closePopup');
         const popupOverlay = document.getElementById('popupOverlay');
@@ -838,7 +929,6 @@
         }
     });
 })();
-</script>    
+</script>
 </body>
 </html>
- 

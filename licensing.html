@@ -9,7 +9,7 @@
     <meta name="twitter:image" content="https://music.sunolicious.com/images/Sunolicious_Logo_NOAH.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOAH® | SUNOLICIOUS™ Music Licensing</title>
+    <title>NOAH® | SUNOLICIOUS™ Premium Music Licensing</title>
     <meta name="description" content="Sync-ready music catalog for film, TV, games, and brand campaigns. 100% master and publishing controlled. One-stop clearance available.">
     
     <style>
@@ -163,6 +163,53 @@
             text-align: center;
             color: rgba(255, 255, 255, 0.5);
             font-size: 0.9rem;
+        }
+        
+        .track-meta {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0.3rem;
+            line-height: 1.6;
+        }
+        
+        .track-actions {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .track-btn {
+            flex: 1;
+            min-width: 120px;
+            padding: 0.7rem 1rem;
+            background: transparent;
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            text-decoration: none;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 300;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+            font-family: inherit;
+        }
+        
+        .track-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #ffffff;
+        }
+        
+        .track-btn-primary {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        
+        .track-btn-primary:hover {
+            background: var(--accent);
+            color: #090329;
         }
         
         /* Catalog Request */
@@ -327,9 +374,9 @@
     <header>
         <div class="container">
             <img src="images/Sunolicious_Logo_NOAH2.png" alt="NOAH SUNOLICIOUS Logo" class="logo">
-            <h1>Music Licensing</h1>
+            <h1>Premium Music Licensing</h1>
             <p class="tagline">Human. Machine. Manifest.</p>
-            <p class="subheader">Licensing-ready catalog for film, TV, games, and brand campaigns.</p>
+            <p class="subheader">Premium multi-genre catalog: Pop • Dance • Country • Electro. Curated for film, TV, games, and brand campaigns.</p>
         </div>
     </header>
 
@@ -343,30 +390,51 @@
                 <!-- Track 1 -->
                 <div class="track-card">
                     <h3 class="track-title">Perfect Storm</h3>
-                    <p class="track-mood">Cinematic Electronic</p>
-                    <p class="track-use">Ideal for: Action trailers, sports highlights, tech campaigns</p>
+                    <p class="track-meta"><strong>Genre:</strong> Cinematic / Electronic</p>
+                    <p class="track-meta"><strong>BPM:</strong> 128</p>
+                    <p class="track-meta"><strong>Mood:</strong> High-Energy, Epic, Intense</p>
+                    <p class="track-use"><strong>Ideal For:</strong> Action trailers, sports highlights, tech campaigns</p>
                     <div class="track-player">
                         [Audio Player / Spotify Embed]
+                    </div>
+                    <div class="track-actions">
+                        <button class="track-btn lyrics-btn" data-track="perfect-storm">View Lyrics</button>
+                        <a href="mailto:sunolicious@noahmusic.com?subject=Stems Request: Perfect Storm" class="track-btn">Request Stems</a>
+                        <a href="mailto:sunolicious@noahmusic.com?subject=Licensing Inquiry: Perfect Storm" class="track-btn track-btn-primary">Licensing Inquiry</a>
                     </div>
                 </div>
                 
                 <!-- Track 2 -->
                 <div class="track-card">
                     <h3 class="track-title">Midnight Reflection</h3>
-                    <p class="track-mood">Ambient / Ethereal</p>
-                    <p class="track-use">Ideal for: Drama scenes, luxury brands, contemplative moments</p>
+                    <p class="track-meta"><strong>Genre:</strong> Ambient / Ethereal</p>
+                    <p class="track-meta"><strong>BPM:</strong> 85</p>
+                    <p class="track-meta"><strong>Mood:</strong> Contemplative, Atmospheric, Emotional</p>
+                    <p class="track-use"><strong>Ideal For:</strong> Drama scenes, luxury brands, contemplative moments</p>
                     <div class="track-player">
                         [Audio Player / Spotify Embed]
+                    </div>
+                    <div class="track-actions">
+                        <button class="track-btn lyrics-btn" data-track="midnight-reflection">View Lyrics</button>
+                        <a href="mailto:sunolicious@noahmusic.com?subject=Stems Request: Midnight Reflection" class="track-btn">Request Stems</a>
+                        <a href="mailto:sunolicious@noahmusic.com?subject=Licensing Inquiry: Midnight Reflection" class="track-btn track-btn-primary">Licensing Inquiry</a>
                     </div>
                 </div>
                 
                 <!-- Track 3 -->
                 <div class="track-card">
                     <h3 class="track-title">Electric Pulse</h3>
-                    <p class="track-mood">Upbeat Pop-Electronic</p>
-                    <p class="track-use">Ideal for: Fashion campaigns, lifestyle content, product launches</p>
+                    <p class="track-meta"><strong>Genre:</strong> Pop / Electronic / Dance</p>
+                    <p class="track-meta"><strong>BPM:</strong> 124</p>
+                    <p class="track-meta"><strong>Mood:</strong> Upbeat, Modern, Energetic</p>
+                    <p class="track-use"><strong>Ideal For:</strong> Fashion campaigns, lifestyle content, product launches</p>
                     <div class="track-player">
                         [Audio Player / Spotify Embed]
+                    </div>
+                    <div class="track-actions">
+                        <button class="track-btn lyrics-btn" data-track="electric-pulse">View Lyrics</button>
+                        <a href="mailto:sunolicious@noahmusic.com?subject=Stems Request: Electric Pulse" class="track-btn">Request Stems</a>
+                        <a href="mailto:sunolicious@noahmusic.com?subject=Licensing Inquiry: Electric Pulse" class="track-btn track-btn-primary">Licensing Inquiry</a>
                     </div>
                 </div>
                 
@@ -389,7 +457,7 @@
         <div class="container">
             <h2>🧠 About the Artist / Sound</h2>
             <p class="about-text">
-                NOAH® is the creative force behind Sunolicious™ — fusing human emotion and machine reflection into a cinematic, sync-ready sound. Each piece is written, produced, and mastered in-house, ensuring clean rights and seamless licensing. With a Billboard and Music Week charting history, NOAH® delivers professional-grade tracks purpose-built for visual media.
+                NOAH® is the creative force behind Sunolicious™ — fusing human emotion and machine reflection into a cinematic, sync-ready sound. Each piece is written, produced, and mastered in-house, ensuring clean rights and seamless licensing. With a Billboard and Music Week charting history, NOAH® delivers premium, professional-grade tracks purpose-built for visual media.
             </p>
         </div>
     </section>
@@ -404,6 +472,7 @@
                     <li>One-stop clearance available</li>
                     <li>Non-exclusive & exclusive sync terms offered</li>
                     <li>Instrumentals & stems available upon request</li>
+                    <li>Stems available for professional licensing inquiries</li>
                     <li>Quick turnaround on custom edits and versions</li>
                     <li>Cleared for worldwide use</li>
                 </ul>
@@ -605,3 +674,184 @@
     
 </body>
 </html>
+
+    <!-- LYRICS MODAL -->
+    <div class="lyrics-overlay" id="lyricsOverlay">
+        <div class="lyrics-content">
+            <button class="lyrics-close-btn" id="closeLyrics">&times;</button>
+            <h2 class="lyrics-title" id="lyricsTitle">Song Title</h2>
+            <div class="lyrics-text" id="lyricsText">
+                <!-- Lyrics will be dynamically inserted here -->
+            </div>
+            <p style="margin-top: 2rem; font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); text-align: center;">
+                © 2025 NOAH® / Sunolicious™ • All Rights Reserved
+            </p>
+        </div>
+    </div>
+
+    <style>
+    /* LYRICS MODAL STYLES */
+    .lyrics-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 10001;
+    }
+
+    .lyrics-overlay.active {
+        display: flex;
+    }
+
+    .lyrics-content {
+        background: linear-gradient(161deg, #090329 10%, #3d1a94 35%, #c742c2 65%, #3d1a94 85%, #090329 100%);
+        border: 1px solid rgba(197, 183, 160, 0.3);
+        max-width: 600px;
+        width: 90%;
+        max-height: 85vh;
+        overflow-y: auto;
+        padding: 40px 35px;
+        position: relative;
+    }
+
+    .lyrics-close-btn {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        background: none;
+        border: none;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 32px;
+        cursor: pointer;
+        line-height: 1;
+        transition: all 0.3s ease;
+        padding: 5px 10px;
+        font-family: inherit;
+    }
+
+    .lyrics-close-btn:hover {
+        color: #C5B7A0;
+        transform: rotate(90deg);
+    }
+
+    .lyrics-title {
+        text-align: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        font-size: 1.5rem;
+        font-weight: 200;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #ffffff !important;
+    }
+
+    .lyrics-text {
+        color: #ffffff;
+        line-height: 2;
+        white-space: pre-line;
+        font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        .lyrics-content {
+            padding: 30px 25px;
+            max-height: 90vh;
+        }
+        
+        .lyrics-title {
+            font-size: 1.2rem;
+        }
+        
+        .lyrics-text {
+            font-size: 0.95rem;
+        }
+    }
+    </style>
+
+    <script>
+    // LYRICS MODAL FUNCTIONALITY
+    (function() {
+        const lyricsOverlay = document.getElementById('lyricsOverlay');
+        const closeLyrics = document.getElementById('closeLyrics');
+        const lyricsButtons = document.querySelectorAll('.lyrics-btn');
+        const lyricsTitle = document.getElementById('lyricsTitle');
+        const lyricsText = document.getElementById('lyricsText');
+
+        // Lyrics database - ADD YOUR REAL LYRICS HERE
+        const lyricsData = {
+            'perfect-storm': {
+                title: 'Perfect Storm',
+                lyrics: `[Verse 1]
+Thunder rolling in the distance
+Lightning strikes without resistance
+
+[Chorus]
+We're dancing in a perfect storm
+Hearts colliding, breaking form
+
+[Verse 2]
+Winds are howling through the city
+No escape, no room for pity`
+            },
+            'midnight-reflection': {
+                title: 'Midnight Reflection',
+                lyrics: `[Verse 1]
+Shadows dancing on the ceiling
+Memories come without warning
+
+[Chorus]
+Midnight reflection in my eyes
+Truths I can no longer disguise`
+            },
+            'electric-pulse': {
+                title: 'Electric Pulse',
+                lyrics: `[Verse 1]
+Feel the rhythm taking over
+Moving closer, getting bolder
+
+[Chorus]
+Electric pulse running through my veins
+Breaking free from all the chains`
+            }
+        };
+
+        // Open lyrics modal
+        lyricsButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const trackId = button.getAttribute('data-track');
+                if (lyricsData[trackId]) {
+                    lyricsTitle.textContent = lyricsData[trackId].title;
+                    lyricsText.textContent = lyricsData[trackId].lyrics;
+                    lyricsOverlay.classList.add('active');
+                }
+            });
+        });
+
+        // Close lyrics modal
+        closeLyrics.addEventListener('click', () => {
+            lyricsOverlay.classList.remove('active');
+        });
+
+        // Close on overlay click
+        lyricsOverlay.addEventListener('click', (e) => {
+            if (e.target === lyricsOverlay) {
+                lyricsOverlay.classList.remove('active');
+            }
+        });
+
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lyricsOverlay.classList.contains('active')) {
+                lyricsOverlay.classList.remove('active');
+            }
+        });
+    })();
+    </script>
