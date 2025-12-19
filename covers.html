@@ -105,44 +105,61 @@
         /* Track Cards */
         .tracks-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
             margin-top: 2rem;
         }
         
         .track-card {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 2rem;
+            padding: 0;
             transition: all 0.3s ease;
+            overflow: hidden;
         }
         
         .track-card:hover {
             background: rgba(255, 255, 255, 0.05);
             border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-4px);
+        }
+
+        .track-artwork {
+            width: 100%;
+            height: auto;
+            display: block;
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+
+        .track-info-section {
+            padding: 2rem;
         }
         
         .track-title {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: #ffffff;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             font-weight: 300;
+            letter-spacing: 1px;
         }
-        
-        .track-info {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
+
+        .track-album {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
             margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
         
         .download-btn {
             display: block;
-            padding: 0.8rem 1.5rem;
+            padding: 0.9rem 1.5rem;
             background: transparent;
             color: #ffffff;
-            border: 1px solid #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.4);
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             font-weight: 300;
@@ -152,8 +169,12 @@
         }
         
         .download-btn:hover {
-            background: #ffffff;
-            color: #090329;
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #ffffff;
+        }
+
+        .download-btn:last-child {
+            margin-bottom: 0;
         }
         
         /* Terms Section */
@@ -285,6 +306,97 @@
             letter-spacing: 2px;
             text-transform: uppercase;
         }
+
+        /* MODAL STYLES */
+        .ai-ethics-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .ai-ethics-overlay.active {
+            display: flex;
+        }
+
+        .ai-ethics-content {
+            background: linear-gradient(161deg, #090329 10%, #3d1a94 35%, #c742c2 65%, #3d1a94 85%, #090329 100%);
+            border: 1px solid rgba(197, 183, 160, 0.3);
+            max-width: 700px;
+            width: 90%;
+            max-height: 85vh;
+            overflow-y: auto;
+            padding: 40px 35px;
+            position: relative;
+            animation: slideUp 0.4s ease;
+        }
+
+        .ai-close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 32px;
+            cursor: pointer;
+            line-height: 1;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            font-family: inherit;
+        }
+
+        .ai-close-btn:hover {
+            color: #C5B7A0;
+            transform: rotate(90deg);
+        }
+
+        .ai-ethics-header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .ai-ethics-header h2 {
+            font-size: 1.5rem;
+            font-weight: 200;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #ffffff !important;
+        }
+
+        .ai-ethics-body {
+            color: #ffffff;
+        }
+
+        .ai-ethics-body p {
+            color: #ffffff !important;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
         
         @media (max-width: 768px) {
             .container {
@@ -309,6 +421,15 @@
             
             .terms-box {
                 padding: 1.5rem;
+            }
+
+            .ai-ethics-content {
+                padding: 30px 25px;
+                max-height: 90vh;
+            }
+            
+            .ai-ethics-header h2 {
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -336,35 +457,44 @@
     <!-- AVAILABLE TRACKS -->
     <section id="tracks">
         <div class="container">
-            <h2>🎵 Available Tracks</h2>
+            <h2>🎵 Sunolicious Sessions Vol. 1</h2>
             
             <div class="tracks-grid">
                 
-                <!-- Track 1 - PLACEHOLDER -->
+                <!-- Track 1: Wake Up -->
                 <div class="track-card">
-                    <h3 class="track-title">[Song Title 1]</h3>
-                    <p class="track-info">From: Sunolicious Sessions Vol. 1</p>
-                    <a href="#" class="download-btn">Download Instrumental</a>
-                    <a href="#" class="download-btn">Download Lyrics</a>
-                    <a href="#" class="download-btn">Listen to Original</a>
+                    <img src="images/wakeup.png" alt="Wake Up cover art" class="track-artwork">
+                    <div class="track-info-section">
+                        <h3 class="track-title">Wake Up</h3>
+                        <p class="track-album">Sunolicious Sessions Vol. 1</p>
+                        <a href="#" class="download-btn">Download Instrumental</a>
+                        <a href="#" class="download-btn">Download Lyrics</a>
+                        <a href="#" class="download-btn">Listen to Original</a>
+                    </div>
                 </div>
                 
-                <!-- Track 2 - PLACEHOLDER -->
+                <!-- Track 2: who am i -->
                 <div class="track-card">
-                    <h3 class="track-title">[Song Title 2]</h3>
-                    <p class="track-info">From: Sunolicious Sessions Vol. 1</p>
-                    <a href="#" class="download-btn">Download Instrumental</a>
-                    <a href="#" class="download-btn">Download Lyrics</a>
-                    <a href="#" class="download-btn">Listen to Original</a>
+                    <img src="images/whoami.png" alt="who am i cover art" class="track-artwork">
+                    <div class="track-info-section">
+                        <h3 class="track-title">who am i</h3>
+                        <p class="track-album">Sunolicious Sessions Vol. 1</p>
+                        <a href="#" class="download-btn">Download Instrumental</a>
+                        <a href="#" class="download-btn">Download Lyrics</a>
+                        <a href="#" class="download-btn">Listen to Original</a>
+                    </div>
                 </div>
                 
-                <!-- Track 3 - PLACEHOLDER -->
+                <!-- Track 3: Hard Times -->
                 <div class="track-card">
-                    <h3 class="track-title">[Song Title 3]</h3>
-                    <p class="track-info">From: Sunolicious Sessions Vol. 2</p>
-                    <a href="#" class="download-btn">Download Instrumental</a>
-                    <a href="#" class="download-btn">Download Lyrics</a>
-                    <a href="#" class="download-btn">Listen to Original</a>
+                    <img src="images/hardtimes.png" alt="Hard Times cover art" class="track-artwork">
+                    <div class="track-info-section">
+                        <h3 class="track-title">Hard Times</h3>
+                        <p class="track-album">Sunolicious Sessions Vol. 1</p>
+                        <a href="#" class="download-btn">Download Instrumental</a>
+                        <a href="#" class="download-btn">Download Lyrics</a>
+                        <a href="#" class="download-btn">Listen to Original</a>
+                    </div>
                 </div>
                 
             </div>
@@ -447,10 +577,54 @@
                 <a href="https://youtube.com/@sunolicious" class="social-link-plain" target="_blank">YouTube</a>
             </div>
             <a href="music.html" class="back-link">← Back to Music</a>
-            <a href="#" id="aiEthicsLink" style="display: block; color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem; transition: opacity 0.3s ease;">AI Ethics & Creative Statement</a>
+            <div style="display: flex; gap: 2rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap;">
+                <a href="#" id="bioLink" style="color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; transition: opacity 0.3s ease;">Artist Bio</a>
+                <a href="#" id="aiEthicsLink" style="color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; transition: opacity 0.3s ease;">AI Ethics & Creative Statement</a>
+            </div>
             <p class="copyright">© 2025 NOAH® / Sunolicious™ • All Rights Reserved</p>
         </div>
     </footer>
+
+    <!-- BIO MODAL -->
+    <div class="ai-ethics-overlay" id="bioOverlay">
+        <div class="ai-ethics-content">
+            <button class="ai-close-btn" id="closeBio">&times;</button>
+            
+            <div class="ai-ethics-header">
+                <h2>Artist Bio</h2>
+            </div>
+
+            <div class="ai-ethics-body">
+                <p style="margin-bottom: 1.5rem;">
+                    I came up in music before everything went fully digital.
+                </p>
+                
+                <p style="margin-bottom: 1.5rem;">
+                    I learned recording in analog studios where tape was finite, decisions mattered, and commitment was part of the craft. I worked across multiple eras and cities — from early multi-track systems and sampling keyboards to large-format tape, then into the digital shift that rewrote the industry entirely. I studied music business when the old rules still applied — and lived through watching them disappear.
+                </p>
+                
+                <p style="margin-bottom: 1.5rem;">
+                    I didn't arrive at AI as a shortcut. I arrived at it through decades of adapting to changing tools while protecting authorship.
+                </p>
+                
+                <p style="margin-bottom: 1.5rem; font-style: italic; color: #C5B7A0 !important;">
+                    Throughout my career, musicians have always modeled other musicians — singers studying phrasing, drummers internalizing feel, guitarists chasing tone. That's not new. What's new is that modeling has become explicit.
+                </p>
+                
+                <p style="margin-bottom: 1.5rem;">
+                    Today, I use AI as part of a creative feedback loop: prompting, responding, refining, and taking responsibility for the final work. While platforms introduce elements of variation and randomness, the core decisions — melody, lyrics, emotional direction, and what ultimately gets released — remain human.
+                </p>
+                
+                <p style="margin-bottom: 1.5rem;">
+                    Any vocals that aren't my physical voice are still extensions of my musical identity: my melodies, my words, my intent, my taste.
+                </p>
+                
+                <p style="margin-bottom: 0; font-weight: 400;">
+                    The tools evolve. The authorship doesn't.
+                </p>
+            </div>
+        </div>
+    </div>
 
     <!-- AI ETHICS MODAL -->
     <div class="ai-ethics-overlay" id="aiEthicsOverlay">
@@ -494,95 +668,35 @@
         </div>
     </div>
 
-    <style>
-    /* AI ETHICS MODAL STYLES */
-    .ai-ethics-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.95);
-        backdrop-filter: blur(10px);
-        display: none;
-        align-items: center;
-        justify-content: center;
-        z-index: 10000;
-        animation: fadeIn 0.3s ease;
-    }
-
-    .ai-ethics-overlay.active {
-        display: flex;
-    }
-
-    .ai-ethics-content {
-        background: linear-gradient(161deg, #090329 10%, #3d1a94 35%, #c742c2 65%, #3d1a94 85%, #090329 100%);
-        border: 1px solid rgba(197, 183, 160, 0.3);
-        max-width: 700px;
-        width: 90%;
-        max-height: 85vh;
-        overflow-y: auto;
-        padding: 40px 35px;
-        position: relative;
-        animation: slideUp 0.4s ease;
-    }
-
-    .ai-close-btn {
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        background: none;
-        border: none;
-        color: rgba(255, 255, 255, 0.6);
-        font-size: 32px;
-        cursor: pointer;
-        line-height: 1;
-        transition: all 0.3s ease;
-        padding: 5px 10px;
-        font-family: inherit;
-    }
-
-    .ai-close-btn:hover {
-        color: #C5B7A0;
-        transform: rotate(90deg);
-    }
-
-    .ai-ethics-header {
-        text-align: center;
-        margin-bottom: 25px;
-        padding-bottom: 20px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    }
-
-    .ai-ethics-header h2 {
-        font-size: 1.5rem;
-        font-weight: 200;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        color: #ffffff !important;
-    }
-
-    .ai-ethics-body {
-        color: #ffffff;
-    }
-
-    .ai-ethics-body p {
-        color: #ffffff !important;
-    }
-
-    @media (max-width: 768px) {
-        .ai-ethics-content {
-            padding: 30px 25px;
-            max-height: 90vh;
-        }
-        
-        .ai-ethics-header h2 {
-            font-size: 1.2rem;
-        }
-    }
-    </style>
-
     <script>
+    // BIO MODAL FUNCTIONALITY
+    (function() {
+        const bioOverlay = document.getElementById('bioOverlay');
+        const closeBio = document.getElementById('closeBio');
+        const bioLink = document.getElementById('bioLink');
+
+        bioLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            bioOverlay.classList.add('active');
+        });
+
+        closeBio.addEventListener('click', () => {
+            bioOverlay.classList.remove('active');
+        });
+
+        bioOverlay.addEventListener('click', (e) => {
+            if (e.target === bioOverlay) {
+                bioOverlay.classList.remove('active');
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && bioOverlay.classList.contains('active')) {
+                bioOverlay.classList.remove('active');
+            }
+        });
+    })();
+
     // AI ETHICS MODAL FUNCTIONALITY
     (function() {
         const overlay = document.getElementById('aiEthicsOverlay');

@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <!-- Open Graph / Social Media Preview -->
-    <meta property="og:image" content="https://sunolicious.com/images/Sunolicious_Logo_NOAH.png">
+    <meta property="og:image" content="https://music.sunolicious.com/images/sunovol1.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://sunolicious.com/images/Sunolicious_Logo_NOAH.png">
+    <meta name="twitter:image" content="https://music.sunolicious.com/images/sunovol1.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOAH® | SUNOLICIOUS™ - Music Library</title>
-    <meta name="description" content="Billboard & Music Week Charting Recording Artist NOAH® - Listen to SUNOLICIOUS™. 100% owned. Available for licensing.">
+    <title>Sunolicious Sessions Vol. 1 | NOAH®</title>
+    <meta name="description" content="Sunolicious Sessions Vol. 1 - featuring 'who am i', 'Wake Up', and 'Hard Times' by NOAH®">
     
     <style>
         * {
@@ -34,13 +34,9 @@
             min-height: 100vh;
         }
         
-        :root {
-            --accent: #C5B7A0;
-            --white: #FFFFFF;
-        }
-        
         h1, h2, h3, h4 {
             color: #ffffff !important;
+            font-weight: 200;
         }
         
         p, li {
@@ -48,94 +44,106 @@
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 4rem;
         }
         
-        header {
+        /* Album Hero Section */
+        .album-hero {
             text-align: center;
             padding: 4rem 0 3rem;
         }
-        
-        .logo {
+
+        .album-artwork-large {
             max-width: 400px;
-            width: 70%;
+            width: 80%;
             height: auto;
-            margin-bottom: 2rem;
-            opacity: 0.95;
+            margin: 0 auto 2rem;
+            display: block;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         }
-        
-        .tagline {
-            font-size: 0.9rem;
-            color: #ffffff !important;
+
+        .album-title {
+            font-size: 2.5rem;
+            font-weight: 200;
+            letter-spacing: 4px;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .album-artist {
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+        }
+
+        .album-stream-btns {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .stream-btn {
+            padding: 1rem 2.5rem;
+            background: transparent;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            text-decoration: none;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             font-weight: 300;
-        }
-        
-        h1 {
-            font-size: 2rem;
-            font-weight: 200;
-            letter-spacing: 6px;
-            margin-bottom: 1rem;
-            color: #ffffff !important;
-        }
-        
-        .intro {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 5rem;
-            padding: 0 2rem;
-        }
-        
-        .intro p {
-            font-size: 1rem;
-            color: #ffffff !important;
-            line-height: 2;
-            margin-bottom: 1.5rem;
-        }
-        
-        section {
-            padding: 3rem 0;
+            transition: all 0.3s ease;
+            min-width: 180px;
         }
 
-        h2 {
+        .stream-btn:hover {
+            background: #ffffff;
+            color: #090329;
+        }
+
+        /* Track Listing Section */
+        .track-listing {
+            padding: 5rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .section-title {
             font-size: 1.5rem;
             font-weight: 200;
             letter-spacing: 4px;
-            margin-bottom: 3rem;
-            color: #ffffff !important;
             text-align: center;
             text-transform: uppercase;
+            margin-bottom: 4rem;
         }
 
-        /* Volume Grid */
-        .volumes-grid {
+        .tracks-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
             max-width: 1100px;
             margin: 0 auto;
-            padding-bottom: 5rem;
         }
 
-        .volume-card {
+        .track-card {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
             overflow: hidden;
-            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
-        .volume-card:hover {
+        .track-card:hover {
             background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(255, 255, 255, 0.3);
-            transform: translateY(-8px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-4px);
         }
 
-        .volume-artwork {
+        .track-artwork {
             width: 100%;
             height: auto;
             display: block;
@@ -143,134 +151,87 @@
             object-fit: cover;
         }
 
-        .volume-info {
+        .track-info {
             padding: 2rem;
         }
 
-        .volume-title {
-            font-size: 1.3rem;
+        .track-number {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .track-title {
+            font-size: 1.4rem;
             font-weight: 300;
             letter-spacing: 2px;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
             color: #ffffff;
         }
 
-        .volume-subtitle {
-            font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.6);
-            text-transform: uppercase;
-            letter-spacing: 2px;
+        .track-metadata {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
             margin-bottom: 1.5rem;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
         }
 
-        .volume-btn {
-            display: block;
-            padding: 0.9rem 2rem;
+        .track-metadata span {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .metadata-label {
+            color: #C5B7A0;
+            margin-right: 0.3rem;
+        }
+
+        .track-actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+        }
+
+        .track-btn {
+            padding: 0.8rem 1rem;
             background: transparent;
             color: #ffffff;
             border: 1px solid rgba(255, 255, 255, 0.4);
             text-decoration: none;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             font-weight: 300;
             transition: all 0.3s ease;
             text-align: center;
+            cursor: pointer;
+            font-family: inherit;
         }
 
-        .volume-btn:hover {
+        .track-btn:hover {
             background: rgba(255, 255, 255, 0.1);
             border-color: #ffffff;
         }
 
-        /* Coming Soon Card */
-        .coming-soon-card {
-            background: rgba(255, 255, 255, 0.01);
-            border: 1px dashed rgba(255, 255, 255, 0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 400px;
-            cursor: default;
-        }
-
-        .coming-soon-card:hover {
-            transform: none;
-            box-shadow: none;
-        }
-
-        .coming-soon-text {
+        /* Footer */
+        footer {
             text-align: center;
-            padding: 2rem;
-        }
-
-        .coming-soon-text h3 {
-            font-size: 1.5rem;
-            font-weight: 200;
-            letter-spacing: 3px;
-            margin-bottom: 1rem;
-            color: rgba(255, 255, 255, 0.4);
-        }
-
-        .coming-soon-text p {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.3);
-            letter-spacing: 2px;
-        }
-
-        /* Streaming Links Section */
-        .streaming-section {
-            text-align: center;
-            padding: 4rem 0;
+            padding: 4rem 0 3rem;
             border-top: 1px solid rgba(255, 255, 255, 0.08);
-            margin-top: 3rem;
         }
-        
-        .streaming-title {
-            font-size: 0.9rem;
-            color: #ffffff !important;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 2rem;
-            font-weight: 300;
-        }
-        
-        .streaming-links {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
+
         .social-links {
             display: flex;
             gap: 3rem;
             justify-content: center;
             flex-wrap: wrap;
+            margin-bottom: 3rem;
         }
-        
-        .streaming-btn {
-            padding: 1rem 2.5rem;
-            background: transparent;
-            color: #ffffff !important;
-            border: 1px solid #ffffff;
-            text-decoration: none;
-            font-weight: 300;
-            transition: all 0.4s ease;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            width: 200px;
-            display: inline-block;
-            text-align: center;
-        }
-        
-        .streaming-btn:hover {
-            background: #ffffff;
-            color: #090329 !important;
-            border-color: #ffffff;
-        }
-        
+
         .social-link-plain {
             color: #ffffff !important;
             text-decoration: none;
@@ -280,39 +241,16 @@
             transition: opacity 0.3s ease;
             font-weight: 300;
         }
-        
+
         .social-link-plain:hover {
             opacity: 0.7;
         }
-        
-        footer {
-            text-align: center;
-            padding: 4rem 0 3rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        
-        .back-link {
-            display: inline-block;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 2rem;
-            font-weight: 300;
-            transition: opacity 0.3s ease;
-        }
-        
-        .back-link:hover {
-            opacity: 0.7;
-        }
-        
+
         .copyright {
             font-size: 0.75rem;
-            color: rgba(255, 255, 255, 0.75) !important;
+            color: rgba(255, 255, 255, 0.5);
             letter-spacing: 2px;
             text-transform: uppercase;
-            font-weight: 300;
             margin-top: 2rem;
         }
 
@@ -391,6 +329,25 @@
             color: #ffffff !important;
         }
 
+        /* LYRICS MODAL */
+        .lyrics-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 1.5rem;
+            font-weight: 200;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .lyrics-text {
+            color: #ffffff;
+            line-height: 2;
+            white-space: pre-line;
+            font-size: 1rem;
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -406,128 +363,146 @@
                 opacity: 1;
             }
         }
-        
+
         @media (max-width: 768px) {
             .container {
                 padding: 0 2rem;
             }
-            
-            h1 {
-                font-size: 1.5rem;
-                letter-spacing: 4px;
+
+            .album-title {
+                font-size: 1.8rem;
             }
-            
-            .logo {
+
+            .album-artist {
+                font-size: 1rem;
+            }
+
+            .album-artwork-large {
                 max-width: 300px;
             }
 
-            .volumes-grid {
+            .tracks-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
-            
-            .streaming-links {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .streaming-btn {
-                width: 100%;
-                max-width: 250px;
+
+            .track-actions {
+                grid-template-columns: 1fr;
             }
 
             .ai-ethics-content {
                 padding: 30px 25px;
                 max-height: 90vh;
             }
-            
-            .ai-ethics-header h2 {
+
+            .ai-ethics-header h2, .lyrics-title {
                 font-size: 1.2rem;
+            }
+
+            .album-stream-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .stream-btn {
+                width: 100%;
+                max-width: 280px;
             }
         }
     </style>
 </head>
 <body>
-    
-    <header>
+
+    <!-- ALBUM HERO -->
+    <section class="album-hero">
         <div class="container">
-            <img src="images/Sunolicious_Logo_NOAH2.png" alt="NOAH SUNOLICIOUS Logo" class="logo">
-            <h1 style="font-size: 2.5rem; font-weight: 200; letter-spacing: 4px; margin: 3rem 0 2rem; line-height: 1.3;">Human. Machine. Manifest.</h1>
-            <p class="tagline" style="font-size: 1rem; line-height: 1.8; max-width: 700px; margin: 0 auto;">Billboard & Music Week Charting Recording Artist NOAH® collaborates with AI to reinvent classic tracks and create new hits. Premium multi-genre catalog: Pop • Dance • Country • Electro. 100% owned. Available for licensing.</p>
-        </div>
-    </header>
-    
-    <div class="intro">
-    </div>
-    
-    <main class="container">
-        
-        <section>
-            <h2>Discography</h2>
+            <img src="images/sunovol1.png" alt="Sunolicious Sessions Vol. 1" class="album-artwork-large">
+            <h1 class="album-title">Sunolicious Sessions Vol. 1</h1>
+            <p class="album-artist">NOAH® / Sunolicious™</p>
             
-            <div class="volumes-grid">
-                
-                <!-- Volume 1 -->
-                <a href="vol1.html" style="text-decoration: none;">
-                    <div class="volume-card">
-                        <img src="images/sunovol1.png" alt="Sunolicious Sessions Vol. 1" class="volume-artwork">
-                        <div class="volume-info">
-                            <h3 class="volume-title">Sunolicious Sessions Vol. 1</h3>
-                            <p class="volume-subtitle">3 Tracks</p>
-                            <span class="volume-btn">View Album</span>
-                        </div>
-                    </div>
-                </a>
-                
-                <!-- Coming Soon - Volume 2 -->
-                <div class="volume-card coming-soon-card">
-                    <div class="coming-soon-text">
-                        <h3>Volume 2</h3>
-                        <p>Coming Soon</p>
-                    </div>
-                </div>
-                
-                <!-- Coming Soon - Volume 3 -->
-                <div class="volume-card coming-soon-card">
-                    <div class="coming-soon-text">
-                        <h3>Volume 3</h3>
-                        <p>Coming Soon</p>
-                    </div>
-                </div>
-                
+            <div class="album-stream-btns">
+                <a href="#" class="stream-btn" target="_blank">Stream on Spotify</a>
+                <a href="#" class="stream-btn" target="_blank">Stream on Apple Music</a>
+                <a href="#" class="stream-btn" target="_blank">Stream on Tidal</a>
             </div>
-        </section>
-        
-        <!-- STREAMING LINKS -->
-        <section class="streaming-section">
-            <p class="streaming-title">Stream Everywhere</p>
-            <div class="streaming-links">
-                <a href="#" class="streaming-btn" target="_blank">Spotify</a>
-                <a href="#" class="streaming-btn" target="_blank">Apple Music</a>
-                <a href="#" class="streaming-btn" target="_blank">Tidal</a>
-                <a href="https://soundcloud.com/noahofficial" class="streaming-btn" target="_blank">SoundCloud</a>
-            </div>
-        </section>
-        
-    </main>
-    
-    <section style="text-align: center; padding: 5rem 0; border-top: 1px solid rgba(255, 255, 255, 0.08); margin-top: 3rem;">
-        <div class="container">
-            <h2 style="font-size: 1.5rem; font-weight: 200; letter-spacing: 4px; margin-bottom: 2rem; color: #ffffff; text-transform: uppercase;">Licensing Inquiries</h2>
-            <p style="font-size: 1rem; color: #ffffff; line-height: 2; max-width: 600px; margin: 0 auto 1.5rem;">All tracks 100% owned and cleared for sync, film, TV, advertising, and commercial use.</p>
-            <a href="mailto:sunolicious@noahmusic.com" style="display: inline-block; font-size: 1.1rem; color: #ffffff; text-decoration: none; font-weight: 300; letter-spacing: 1px; transition: opacity 0.3s ease;">sunolicious@noahmusic.com</a>
         </div>
     </section>
-    
+
+    <!-- TRACK LISTING -->
+    <section class="track-listing">
+        <div class="container">
+            <h2 class="section-title">Tracks</h2>
+            
+            <div class="tracks-grid">
+                
+                <!-- Track 1: Wake Up -->
+                <div class="track-card">
+                    <img src="images/wakeup.png" alt="Wake Up" class="track-artwork">
+                    <div class="track-info">
+                        <p class="track-number">Track 01</p>
+                        <h3 class="track-title">Wake Up</h3>
+                        <div class="track-metadata">
+                            <span><span class="metadata-label">BPM:</span> [TBD]</span>
+                            <span><span class="metadata-label">Key:</span> [TBD]</span>
+                            <span><span class="metadata-label">Style:</span> [TBD]</span>
+                        </div>
+                        <div class="track-actions">
+                            <button class="track-btn lyrics-btn" data-track="wakeup">View Lyrics</button>
+                            <a href="#" class="track-btn">Stream Track</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Track 2: who am i -->
+                <div class="track-card">
+                    <img src="images/whoami.png" alt="who am i" class="track-artwork">
+                    <div class="track-info">
+                        <p class="track-number">Track 02</p>
+                        <h3 class="track-title">who am i</h3>
+                        <div class="track-metadata">
+                            <span><span class="metadata-label">BPM:</span> [TBD]</span>
+                            <span><span class="metadata-label">Key:</span> [TBD]</span>
+                            <span><span class="metadata-label">Style:</span> [TBD]</span>
+                        </div>
+                        <div class="track-actions">
+                            <button class="track-btn lyrics-btn" data-track="whoami">View Lyrics</button>
+                            <a href="#" class="track-btn">Stream Track</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Track 3: Hard Times -->
+                <div class="track-card">
+                    <img src="images/hardtimes.png" alt="Hard Times" class="track-artwork">
+                    <div class="track-info">
+                        <p class="track-number">Track 03</p>
+                        <h3 class="track-title">Hard Times</h3>
+                        <div class="track-metadata">
+                            <span><span class="metadata-label">BPM:</span> [TBD]</span>
+                            <span><span class="metadata-label">Key:</span> [TBD]</span>
+                            <span><span class="metadata-label">Style:</span> [TBD]</span>
+                        </div>
+                        <div class="track-actions">
+                            <button class="track-btn lyrics-btn" data-track="hardtimes">View Lyrics</button>
+                            <a href="#" class="track-btn">Stream Track</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
         <div class="container">
-            <div class="social-links" style="margin-bottom: 3rem;">
+            <div class="social-links">
                 <a href="https://instagram.com/sunoliciousmusic" class="social-link-plain" target="_blank">Instagram</a>
                 <a href="https://tiktok.com/@sunoliciousmusic" class="social-link-plain" target="_blank">TikTok</a>
                 <a href="https://youtube.com/@sunolicious" class="social-link-plain" target="_blank">YouTube</a>
             </div>
             <div style="margin-bottom: 2rem;">
-                <a href="index.html" style="display: inline-block; color: #ffffff; text-decoration: none; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; margin: 0 1rem; transition: opacity 0.3s ease;">Home</a>
+                <a href="music.html" style="display: inline-block; color: #ffffff; text-decoration: none; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; margin: 0 1rem; transition: opacity 0.3s ease;">← Back to Library</a>
                 <a href="covers.html" style="display: inline-block; color: #ffffff; text-decoration: none; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; margin: 0 1rem; transition: opacity 0.3s ease;">Covers</a>
                 <a href="licensing.html" style="display: inline-block; color: #ffffff; text-decoration: none; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; margin: 0 1rem; transition: opacity 0.3s ease;">Licensing</a>
             </div>
@@ -622,8 +597,22 @@
         </div>
     </div>
 
+    <!-- LYRICS MODAL -->
+    <div class="ai-ethics-overlay" id="lyricsOverlay">
+        <div class="ai-ethics-content">
+            <button class="ai-close-btn" id="closeLyrics">&times;</button>
+            <h2 class="lyrics-title" id="lyricsTitle">Song Title</h2>
+            <div class="lyrics-text" id="lyricsText">
+                <!-- Lyrics will be inserted here -->
+            </div>
+            <p style="margin-top: 2rem; font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); text-align: center;">
+                © 2025 NOAH® / Sunolicious™ • All Rights Reserved
+            </p>
+        </div>
+    </div>
+
     <script>
-        // BIO MODAL FUNCTIONALITY
+        // BIO MODAL
         (function() {
             const bioOverlay = document.getElementById('bioOverlay');
             const closeBio = document.getElementById('closeBio');
@@ -651,7 +640,7 @@
             });
         })();
 
-        // AI ETHICS MODAL FUNCTIONALITY
+        // AI ETHICS MODAL
         (function() {
             const overlay = document.getElementById('aiEthicsOverlay');
             const closeBtn = document.getElementById('closeAiEthics');
@@ -678,6 +667,68 @@
                 }
             });
         })();
+
+        // LYRICS MODAL
+        (function() {
+            const lyricsOverlay = document.getElementById('lyricsOverlay');
+            const closeLyrics = document.getElementById('closeLyrics');
+            const lyricsButtons = document.querySelectorAll('.lyrics-btn');
+            const lyricsTitle = document.getElementById('lyricsTitle');
+            const lyricsText = document.getElementById('lyricsText');
+
+            // Lyrics database - ADD YOUR REAL LYRICS HERE
+            const lyricsData = {
+                'whoami': {
+                    title: 'who am i',
+                    lyrics: `[Lyrics coming soon]
+
+Add your lyrics here when ready.`
+                },
+                'wakeup': {
+                    title: 'Wake Up',
+                    lyrics: `[Lyrics coming soon]
+
+Add your lyrics here when ready.`
+                },
+                'hardtimes': {
+                    title: 'Hard Times',
+                    lyrics: `[Lyrics coming soon]
+
+Add your lyrics here when ready.`
+                }
+            };
+
+            // Open lyrics modal
+            lyricsButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const trackId = button.getAttribute('data-track');
+                    if (lyricsData[trackId]) {
+                        lyricsTitle.textContent = lyricsData[trackId].title;
+                        lyricsText.textContent = lyricsData[trackId].lyrics;
+                        lyricsOverlay.classList.add('active');
+                    }
+                });
+            });
+
+            // Close lyrics modal
+            closeLyrics.addEventListener('click', () => {
+                lyricsOverlay.classList.remove('active');
+            });
+
+            lyricsOverlay.addEventListener('click', (e) => {
+                if (e.target === lyricsOverlay) {
+                    lyricsOverlay.classList.remove('active');
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && lyricsOverlay.classList.contains('active')) {
+                    lyricsOverlay.classList.remove('active');
+                }
+            });
+        })();
     </script>
+    
 </body>
 </html>

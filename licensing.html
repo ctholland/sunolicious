@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NOAH® | SUNOLICIOUS™ Premium Music Licensing</title>
-    <meta name="description" content="Sync-ready music catalog for film, TV, games, and brand campaigns. 100% master and publishing controlled. One-stop clearance available.">
+    <meta name="description" content="Sync-ready music catalog for film, TV, games, and brand campaigns. Multiple versions available per track. 100% master and publishing controlled.">
     
     <style>
         * {
@@ -50,7 +50,7 @@
         }
         
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 4rem;
         }
@@ -86,9 +86,22 @@
         .subheader {
             font-size: 1.1rem;
             color: #ffffff;
-            max-width: 700px;
+            max-width: 800px;
             margin: 0 auto;
             line-height: 1.8;
+        }
+
+        .premium-badge {
+            display: inline-block;
+            background: rgba(197, 183, 160, 0.2);
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 0.5rem 1.5rem;
+            margin: 2rem auto 0;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 400;
         }
         
         section {
@@ -108,86 +121,136 @@
             text-transform: uppercase;
         }
         
-        h3 {
-            font-size: 1.2rem;
-            letter-spacing: 2px;
-            margin-bottom: 1rem;
+        /* Song Group Sections */
+        .song-group {
+            margin-bottom: 5rem;
         }
-        
-        /* Featured Tracks */
-        .tracks-grid {
+
+        .song-group:last-child {
+            margin-bottom: 2rem;
+        }
+
+        .song-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .song-artwork-hero {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            margin: 0 auto 2rem;
+            display: block;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .song-title-main {
+            font-size: 2rem;
+            font-weight: 200;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        .versions-count {
+            font-size: 0.9rem;
+            color: var(--accent);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Version Cards Grid */
+        .versions-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
+            justify-items: center;
         }
         
-        .track-card {
+        .version-card {
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        .version-card {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 2rem;
             transition: all 0.3s ease;
         }
         
-        .track-card:hover {
+        .version-card:hover {
             background: rgba(255, 255, 255, 0.05);
             border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
         }
         
-        .track-title {
-            font-size: 1.1rem;
-            color: #ffffff;
-            margin-bottom: 0.5rem;
-            font-weight: 300;
-        }
-        
-        .track-mood {
-            font-size: 0.9rem;
-            color: var(--accent);
-            margin-bottom: 0.5rem;
-            font-style: italic;
-        }
-        
-        .track-use {
-            font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 1rem;
-        }
-        
-        .track-player {
-            width: 100%;
-            margin-top: 1rem;
-            padding: 2rem;
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            text-align: center;
+        .version-label {
+            font-size: 0.75rem;
             color: rgba(255, 255, 255, 0.5);
-            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        .version-title {
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 1px;
         }
         
-        .track-meta {
+        .version-meta {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .meta-item {
+            text-align: center;
+        }
+
+        .meta-label {
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.3rem;
+        }
+
+        .meta-value {
+            font-size: 1.1rem;
+            color: var(--accent);
+            font-weight: 400;
+        }
+
+        .mood-tag {
             font-size: 0.85rem;
             color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 0.3rem;
+            font-style: italic;
+            margin-bottom: 1.5rem;
             line-height: 1.6;
         }
         
-        .track-actions {
-            display: flex;
+        .version-actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 0.8rem;
-            margin-top: 1.5rem;
-            flex-wrap: wrap;
         }
         
-        .track-btn {
-            flex: 1;
-            min-width: 120px;
-            padding: 0.7rem 1rem;
+        .version-btn {
+            padding: 0.8rem 1rem;
             background: transparent;
             color: #ffffff;
             border: 1px solid rgba(255, 255, 255, 0.4);
             text-decoration: none;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             font-weight: 300;
@@ -197,89 +260,84 @@
             font-family: inherit;
         }
         
-        .track-btn:hover {
+        .version-btn:hover {
             background: rgba(255, 255, 255, 0.1);
             border-color: #ffffff;
         }
-        
-        .track-btn-primary {
+
+        .version-btn-primary {
+            grid-column: 1 / -1;
             border-color: var(--accent);
             color: var(--accent);
         }
-        
-        .track-btn-primary:hover {
+
+        .version-btn-primary:hover {
             background: var(--accent);
             color: #090329;
         }
-        
-        /* Catalog Request */
-        .cta-button {
-            display: inline-block;
-            padding: 1.2rem 3rem;
-            background: transparent;
-            color: #ffffff;
-            border: 2px solid #ffffff;
-            text-decoration: none;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 300;
-            transition: all 0.4s ease;
-            margin: 2rem auto;
-        }
-        
-        .cta-button:hover {
-            background: #ffffff;
-            color: #090329;
-        }
-        
-        .center {
-            text-align: center;
-        }
-        
-        /* About Section */
-        .about-text {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.05rem;
-            line-height: 2;
-            text-align: center;
-        }
-        
+
         /* Rights List */
-        .rights-list {
-            max-width: 600px;
-            margin: 2rem auto;
+        .rights-box {
+            max-width: 800px;
+            margin: 3rem auto 0;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+        }
+        
+        .rights-box h3 {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        
+        .rights-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .rights-column h4 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+            letter-spacing: 2px;
+        }
+
+        .rights-column ul {
             list-style: none;
             padding-left: 0;
-            display: inline-block;
-            text-align: left;
         }
-        
-        .rights-list li {
-            padding: 1rem 0 1rem 2.5rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 1rem;
+
+        .rights-column li {
+            padding: 0.6rem 0 0.6rem 1.8rem;
+            font-size: 0.95rem;
             position: relative;
-            text-align: left;
+            line-height: 1.6;
         }
-        
-        .rights-list li:before {
-            content: "✓";
+
+        .rights-column li:before {
             position: absolute;
             left: 0;
-            color: var(--accent);
             font-weight: bold;
+            font-size: 1.1rem;
         }
-        
-        .rights-list li:last-child {
-            border-bottom: none;
+
+        .available-list li:before {
+            content: "✓";
+            color: #4CAF50;
+        }
+
+        .included-list li:before {
+            content: "●";
+            color: var(--accent);
         }
         
         /* Contact */
-        .contact-info {
+        .contact-box {
             text-align: center;
-            padding: 2rem 0;
+            padding: 3rem 0;
         }
         
         .contact-email {
@@ -287,7 +345,7 @@
             font-size: 1.3rem;
             color: #ffffff;
             text-decoration: none;
-            margin: 1rem 0;
+            margin: 1.5rem 0;
             padding: 1rem 2rem;
             border: 1px solid rgba(255, 255, 255, 0.3);
             transition: all 0.3s ease;
@@ -327,26 +385,121 @@
             opacity: 0.7;
         }
         
-        .back-link {
-            display: inline-block;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 2rem;
-            transition: opacity 0.3s ease;
-        }
-        
-        .back-link:hover {
-            opacity: 0.7;
-        }
-        
         .copyright {
             font-size: 0.75rem;
             color: rgba(255, 255, 255, 0.5);
             letter-spacing: 2px;
             text-transform: uppercase;
+        }
+
+        /* MODAL STYLES */
+        .ai-ethics-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .ai-ethics-overlay.active {
+            display: flex;
+        }
+
+        .ai-ethics-content {
+            background: linear-gradient(161deg, #090329 10%, #3d1a94 35%, #c742c2 65%, #3d1a94 85%, #090329 100%);
+            border: 1px solid rgba(197, 183, 160, 0.3);
+            max-width: 700px;
+            width: 90%;
+            max-height: 85vh;
+            overflow-y: auto;
+            padding: 40px 35px;
+            position: relative;
+            animation: slideUp 0.4s ease;
+        }
+
+        .ai-close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 32px;
+            cursor: pointer;
+            line-height: 1;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            font-family: inherit;
+        }
+
+        .ai-close-btn:hover {
+            color: #C5B7A0;
+            transform: rotate(90deg);
+        }
+
+        .ai-ethics-header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .ai-ethics-header h2 {
+            font-size: 1.5rem;
+            font-weight: 200;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #ffffff !important;
+        }
+
+        .ai-ethics-body {
+            color: #ffffff;
+        }
+
+        .ai-ethics-body p {
+            color: #ffffff !important;
+        }
+
+        /* LYRICS MODAL */
+        .lyrics-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 1.5rem;
+            font-weight: 200;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .lyrics-text {
+            color: #ffffff;
+            line-height: 2;
+            white-space: pre-line;
+            font-size: 1rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
         
         @media (max-width: 768px) {
@@ -361,9 +514,43 @@
             h2 {
                 font-size: 1.4rem;
             }
+
+            .song-title-main {
+                font-size: 1.5rem;
+            }
+
+            .song-artwork-hero {
+                max-width: 250px;
+            }
             
-            .tracks-grid {
+            .versions-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .version-meta {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+
+            .meta-item {
+                text-align: left;
+            }
+
+            .version-actions {
+                grid-template-columns: 1fr;
+            }
+
+            .rights-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ai-ethics-content {
+                padding: 30px 25px;
+                max-height: 90vh;
+            }
+            
+            .ai-ethics-header h2, .lyrics-title {
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -376,106 +563,314 @@
             <img src="images/Sunolicious_Logo_NOAH2.png" alt="NOAH SUNOLICIOUS Logo" class="logo">
             <h1>Premium Music Licensing</h1>
             <p class="tagline">Human. Machine. Manifest.</p>
-            <p class="subheader">Premium multi-genre catalog: Pop • Dance • Country • Electro. Curated for film, TV, games, and brand campaigns.</p>
+            <p class="subheader">Premium multi-genre catalog with multiple versions per track. Curated for film, TV, games, and brand campaigns.</p>
+            <div class="premium-badge">Multiple BPM & Key Variations Available</div>
         </div>
     </header>
 
-    <!-- FEATURED TRACKS -->
-    <section id="featured">
-        <div class="container">
-            <h2>🎧 Featured Tracks (Sync-Ready)</h2>
-            
-            <div class="tracks-grid">
-                
-                <!-- Track 1 -->
-                <div class="track-card">
-                    <h3 class="track-title">Perfect Storm</h3>
-                    <p class="track-meta"><strong>Genre:</strong> Cinematic / Electronic</p>
-                    <p class="track-meta"><strong>BPM:</strong> 128</p>
-                    <p class="track-meta"><strong>Mood:</strong> High-Energy, Epic, Intense</p>
-                    <p class="track-use"><strong>Ideal For:</strong> Action trailers, sports highlights, tech campaigns</p>
-                    <div class="track-player">
-                        [Audio Player / Spotify Embed]
-                    </div>
-                    <div class="track-actions">
-                        <button class="track-btn lyrics-btn" data-track="perfect-storm">View Lyrics</button>
-                        <a href="mailto:sunolicious@noahmusic.com?subject=Stems Request: Perfect Storm" class="track-btn">Request Stems</a>
-                        <a href="mailto:sunolicious@noahmusic.com?subject=Licensing Inquiry: Perfect Storm" class="track-btn track-btn-primary">Licensing Inquiry</a>
-                    </div>
-                </div>
-                
-                <!-- Track 2 -->
-                <div class="track-card">
-                    <h3 class="track-title">Midnight Reflection</h3>
-                    <p class="track-meta"><strong>Genre:</strong> Ambient / Ethereal</p>
-                    <p class="track-meta"><strong>BPM:</strong> 85</p>
-                    <p class="track-meta"><strong>Mood:</strong> Contemplative, Atmospheric, Emotional</p>
-                    <p class="track-use"><strong>Ideal For:</strong> Drama scenes, luxury brands, contemplative moments</p>
-                    <div class="track-player">
-                        [Audio Player / Spotify Embed]
-                    </div>
-                    <div class="track-actions">
-                        <button class="track-btn lyrics-btn" data-track="midnight-reflection">View Lyrics</button>
-                        <a href="mailto:sunolicious@noahmusic.com?subject=Stems Request: Midnight Reflection" class="track-btn">Request Stems</a>
-                        <a href="mailto:sunolicious@noahmusic.com?subject=Licensing Inquiry: Midnight Reflection" class="track-btn track-btn-primary">Licensing Inquiry</a>
-                    </div>
-                </div>
-                
-                <!-- Track 3 -->
-                <div class="track-card">
-                    <h3 class="track-title">Electric Pulse</h3>
-                    <p class="track-meta"><strong>Genre:</strong> Pop / Electronic / Dance</p>
-                    <p class="track-meta"><strong>BPM:</strong> 124</p>
-                    <p class="track-meta"><strong>Mood:</strong> Upbeat, Modern, Energetic</p>
-                    <p class="track-use"><strong>Ideal For:</strong> Fashion campaigns, lifestyle content, product launches</p>
-                    <div class="track-player">
-                        [Audio Player / Spotify Embed]
-                    </div>
-                    <div class="track-actions">
-                        <button class="track-btn lyrics-btn" data-track="electric-pulse">View Lyrics</button>
-                        <a href="mailto:sunolicious@noahmusic.com?subject=Stems Request: Electric Pulse" class="track-btn">Request Stems</a>
-                        <a href="mailto:sunolicious@noahmusic.com?subject=Licensing Inquiry: Electric Pulse" class="track-btn track-btn-primary">Licensing Inquiry</a>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-    <!-- CATALOG REQUEST -->
-    <section id="catalog">
-        <div class="container center">
-            <h2>📁 Request Full Licensing Catalog</h2>
-            <p style="max-width: 600px; margin: 0 auto 2rem; font-size: 1rem;">Get access to our complete sync-ready catalog with detailed track information, mood boards, and licensing terms.</p>
-            <a href="#contact" class="cta-button">Request Catalog</a>
-            <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6); margin-top: 1rem;">Music supervisors and sync agents: we'll respond within 24 hours</p>
-        </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about">
-        <div class="container">
-            <h2>🧠 About the Artist / Sound</h2>
-            <p class="about-text">
-                NOAH® is the creative force behind Sunolicious™ — fusing human emotion and machine reflection into a cinematic, sync-ready sound. Each piece is written, produced, and mastered in-house, ensuring clean rights and seamless licensing. With a Billboard and Music Week charting history, NOAH® delivers premium, professional-grade tracks purpose-built for visual media.
+    <!-- CATALOG INTRO -->
+    <section>
+        <div class="container" style="max-width: 800px; text-align: center;">
+            <h2>Why Multiple Versions?</h2>
+            <p style="font-size: 1.05rem; line-height: 2; margin-bottom: 2rem;">
+                Each track includes multiple tempo and key variations, giving you maximum flexibility to match your edit without re-recording or expensive custom work. Different BPMs suit different scenes, moods, and pacing needs.
+            </p>
+            <p style="font-size: 0.95rem; color: rgba(255, 255, 255, 0.7); line-height: 1.8;">
+                <strong>70-90 BPM:</strong> Emotional scenes, contemplative moments, luxury brand spots<br>
+                <strong>100-120 BPM:</strong> Mid-tempo commercial, lifestyle content, montages<br>
+                <strong>130+ BPM:</strong> High-energy, sports highlights, action sequences
             </p>
         </div>
     </section>
 
-    <!-- RIGHTS & LICENSING -->
+    <!-- TRACK CATALOG -->
+    <section id="catalog">
+        <div class="container">
+            <h2>Available Tracks</h2>
+            
+            <!-- SONG 1: Wake Up -->
+            <div class="song-group">
+                <div class="song-header">
+                    <img src="images/wakeup.png" alt="Wake Up" class="song-artwork-hero">
+                    <h3 class="song-title-main">Wake Up</h3>
+                    <p class="versions-count">Multiple Versions Available</p>
+                </div>
+                
+                <div class="versions-grid">
+                    
+                    <!-- Version A -->
+                    <div class="version-card">
+                        <p class="version-label">Version A</p>
+                        <h4 class="version-title">Original Mix</h4>
+                        <div class="version-meta">
+                            <div class="meta-item">
+                                <p class="meta-label">BPM</p>
+                                <p class="meta-value">[TBD]</p>
+                            </div>
+                            <div class="meta-item">
+                                <p class="meta-label">Key</p>
+                                <p class="meta-value">[TBD]</p>
+                            </div>
+                            <div class="meta-item">
+                                <p class="meta-label">Length</p>
+                                <p class="meta-value">[TBD]</p>
+                            </div>
+                        </div>
+                        <p class="mood-tag">Mood: [Add mood description]</p>
+                        <div class="version-actions">
+                            <button class="version-btn lyrics-btn" data-track="wakeup">Lyrics</button>
+                            <a href="#" class="version-btn">Stream</a>
+                            <a href="mailto:sunolicious@noahmusic.com?subject=Licensing Inquiry: Wake Up (Version A)" class="version-btn version-btn-primary">License This Version</a>
+                        </div>
+                    </div>
+
+                    <!-- Version B -->
+                    <div class="version-card">
+                        <p class="version-label">Version B</p>
+                        <h4 class="version-title">Alternate Mix</h4>
+                        <div class="version-meta">
+                            <div class="meta-item">
+                                <p class="meta-label">BPM</p>
+                                <p class="meta-value">[TBD]</p>
+                            </div>
+                            <div class="meta-item">
+                                <p class="meta-label">Key</p>
+                                <p class="meta-value">[TBD]</p>
+                            </div>
+                            <div class="meta-item">
+                                <p class="meta-label">Length</p>
+                                <p class="meta-value">[TBD]</p>
+                            </div>
+                        </div>
+                        <p class="mood-tag">Mood: [Add mood description]</p>
+                        <div class="version-actions">
+                            <button class="version-btn lyrics-btn" data-track="wakeup">Lyrics</button>
+                            <a href="#" class="version-btn">Stream</a>
+                            <a href="mailto:sunolicious@noahmusic.com?subject=Licensing Inquiry: Wake Up (Version B)" class="version-btn version-btn-primary">License This Version</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- SONG 2: who am i -->
+            <div class="song-group">
+                <div class="song-header">
+                    <img src="images/whoami.png" alt="who am i" class="song-artwork-hero">
+                    <h3 class="song-title-main">who am i</h3>
+                    <p class="versions-count">Multiple Versions Available</p>
+                </div>
+                
+                <div class="versions-grid">
+                    
+                    <!-- Version A -->
+                    <div class="version-card">
+                        <p class="version-label">Version A</p>
+                        <h4 class="version-title">Original Mix</h4>
+                        <div class="version-meta">
+                            <div class="meta-item">
+                                <p class="meta-label">BPM</p>
+                                <p class="meta-value">[TBD]</p>
+                            </div>
+                            <div class="meta-item">
+                                <p class="meta-label">Key</p>
+                                <p class="meta-value">[TBD]</p>
+                            </div>
+                            <div class="meta-item">
+                                <p class="meta-label">Length</p>
+                                <p class="meta-value">[TBD]</p>
+                            </div>
+                        </div>
+                        <p class="mood-tag">Mood: [Add mood description]</p>
+                        <div class="version-actions">
+                            <button class="version-btn lyrics-btn" data-track="whoami">Lyrics</button>
+                            <a href="#" class="version-btn">Stream</a>
+                            <a href="mailto:sunolicious@noahmusic.com?subject=Licensing Inquiry: who am i (Version A)" class="version-btn version-btn-primary">License This Version</a>
+                        </div>
+                    </div>
+
+                    <!-- Version B -->
+                    <div class="version-card">
+                        <p class="version-label">Version B</p>
+                        <h4 class="version-title">Alternate Mix</h4>
+                        <div class="version-meta">
+                            <div class="meta-item">
+                                <p class="meta-label">BPM</p>
+                                <p class="meta-value">[TBD]</p>
+                            </div>
+                            <div class="meta-item">
+                                <p class="meta-label">Key</p>
+                                <p class="meta-value">[TBD]</p>
+                            </div>
+                            <div class="meta-item">
+                                <p class="meta-label">Length</p>
+                                <p class="meta-value">[TBD]</p>
+                            </div>
+                        </div>
+                        <p class="mood-tag">Mood: [Add mood description]</p>
+                        <div class="version-actions">
+                            <button class="version-btn lyrics-btn" data-track="whoami">Lyrics</button>
+                            <a href="#" class="version-btn">Stream</a>
+                            <a href="mailto:sunolicious@noahmusic.com?subject=Licensing Inquiry: who am i (Version B)" class="version-btn version-btn-primary">License This Version</a>
+                        </div>
+                    </div>
+
+                    <!-- Add more versions as needed -->
+                    
+                </div>
+            </div>
+
+            <!-- SONG 3: Hard Times -->
+            <div class="song-group">
+                <div class="song-header">
+                    <img src="images/hardtimes.png" alt="Hard Times" class="song-artwork-hero">
+                    <h3 class="song-title-main">Hard Times</h3>
+                    <p class="versions-count">Multiple Versions Available</p>
+                </div>
+                
+                <div class="versions-grid">
+                    
+                    <!-- Version A -->
+                    <div class="version-card">
+                        <p class="version-label">Version A</p>
+                        <h4 class="version-title">Original Mix</h4>
+                        <div class="version-meta">
+                            <div class="meta-item">
+                                <p class="meta-label">BPM</p>
+                                <p class="meta-value">[TBD]</p>
+                            </div>
+                            <div class="meta-item">
+                                <p class="meta-label">Key</p>
+                                <p class="meta-value">[TBD]</p>
+                            </div>
+                            <div class="meta-item">
+                                <p class="meta-label">Length</p>
+                                <p class="meta-value">[TBD]</p>
+                            </div>
+                        </div>
+                        <p class="mood-tag">Mood: [Add mood description]</p>
+                        <div class="version-actions">
+                            <button class="version-btn lyrics-btn" data-track="hardtimes">Lyrics</button>
+                            <a href="#" class="version-btn">Stream</a>
+                            <a href="mailto:sunolicious@noahmusic.com?subject=Licensing Inquiry: Hard Times (Version A)" class="version-btn version-btn-primary">License This Version</a>
+                        </div>
+                    </div>
+
+                    <!-- Version B -->
+                    <div class="version-card">
+                        <p class="version-label">Version B</p>
+                        <h4 class="version-title">Alternate Mix</h4>
+                        <div class="version-meta">
+                            <div class="meta-item">
+                                <p class="meta-label">BPM</p>
+                                <p class="meta-value">[TBD]</p>
+                            </div>
+                            <div class="meta-item">
+                                <p class="meta-label">Key</p>
+                                <p class="meta-value">[TBD]</p>
+                            </div>
+                            <div class="meta-item">
+                                <p class="meta-label">Length</p>
+                                <p class="meta-value">[TBD]</p>
+                            </div>
+                        </div>
+                        <p class="mood-tag">Mood: [Add mood description]</p>
+                        <div class="version-actions">
+                            <button class="version-btn lyrics-btn" data-track="hardtimes">Lyrics</button>
+                            <a href="#" class="version-btn">Stream</a>
+                            <a href="mailto:sunolicious@noahmusic.com?subject=Licensing Inquiry: Hard Times (Version B)" class="version-btn version-btn-primary">License This Version</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- RIGHTS & LICENSING INFO -->
     <section id="rights">
         <div class="container">
-            <h2>⚖️ Rights & Licensing Info</h2>
-            <div style="text-align: center;">
-                <ul class="rights-list">
-                    <li>100% Master & Publishing controlled by artist</li>
-                    <li>One-stop clearance available</li>
-                    <li>Non-exclusive & exclusive sync terms offered</li>
-                    <li>Instrumentals & stems available upon request</li>
-                    <li>Stems available for professional licensing inquiries</li>
-                    <li>Quick turnaround on custom edits and versions</li>
-                    <li>Cleared for worldwide use</li>
-                </ul>
+            <h2>Rights & Licensing</h2>
+            
+            <div class="rights-box">
+                <h3>What's Included</h3>
+                
+                <div class="rights-grid">
+                    <div class="rights-column">
+                        <h4>Available Rights</h4>
+                        <ul class="available-list">
+                            <li>Sync licensing (film, TV, games, ads)</li>
+                            <li>Non-exclusive & exclusive terms</li>
+                            <li>Worldwide use</li>
+                            <li>Quick turnaround on custom edits</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="rights-column">
+                        <h4>What You Get</h4>
+                        <ul class="included-list">
+                            <li>100% Master & Publishing controlled</li>
+                            <li>One-stop clearance</li>
+                            <li>Multiple BPM & key variations</li>
+                            <li>Stems available upon request</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STANDARD SYNC RATES -->
+    <section id="rates">
+        <div class="container">
+            <h2>Standard Sync Rates</h2>
+            
+            <div class="rights-box">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <p style="font-size: 1rem; line-height: 2; margin-bottom: 2rem;">
+                        Professional sync licensing rates for film, television, advertising, and interactive media. Custom quotes available for exclusive rights and multi-track packages.
+                    </p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                    <div style="text-align: center; padding: 1.5rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08);">
+                        <p style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.6); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.5rem;">Web/Digital</p>
+                        <p style="font-size: 1.5rem; color: var(--accent); font-weight: 300; margin-bottom: 0;">Starting at $1,000</p>
+                    </div>
+                    
+                    <div style="text-align: center; padding: 1.5rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08);">
+                        <p style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.6); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.5rem;">Regional TV</p>
+                        <p style="font-size: 1.5rem; color: var(--accent); font-weight: 300; margin-bottom: 0;">Starting at $3,500</p>
+                    </div>
+                    
+                    <div style="text-align: center; padding: 1.5rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08);">
+                        <p style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.6); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.5rem;">National TV</p>
+                        <p style="font-size: 1.5rem; color: var(--accent); font-weight: 300; margin-bottom: 0;">Starting at $12,500</p>
+                    </div>
+                    
+                    <div style="text-align: center; padding: 1.5rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08);">
+                        <p style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.6); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.5rem;">Film (Indie)</p>
+                        <p style="font-size: 1.5rem; color: var(--accent); font-weight: 300; margin-bottom: 0;">Starting at $3,500</p>
+                    </div>
+                    
+                    <div style="text-align: center; padding: 1.5rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08);">
+                        <p style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.6); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.5rem;">Film (Studio)</p>
+                        <p style="font-size: 1.5rem; color: var(--accent); font-weight: 300; margin-bottom: 0;">Starting at $20,000</p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+                        <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.8);">✓ Multiple BPM & key variations</p>
+                        <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.8);">✓ Volume discounts available</p>
+                        <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.8);">✓ Stems upon request</p>
+                        <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.8);">✓ Custom exclusive quotes</p>
+                    </div>
+                    <p style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); margin-top: 1rem;">
+                        All rates are starting points and negotiable based on usage, territory, and exclusivity. Contact us for a custom quote.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -483,8 +878,8 @@
     <!-- CONTACT -->
     <section id="contact">
         <div class="container">
-            <h2>📨 Get In Touch</h2>
-            <div class="contact-info">
+            <div class="contact-box">
+                <h2>Get In Touch</h2>
                 <p style="margin-bottom: 1.5rem; font-size: 1rem;">For licensing inquiries, catalog requests, or custom projects:</p>
                 <a href="mailto:sunolicious@noahmusic.com" class="contact-email">sunolicious@noahmusic.com</a>
                 <p style="margin-top: 2rem; font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">
@@ -502,11 +897,55 @@
                 <a href="https://tiktok.com/@sunoliciousmusic" class="social-link-plain" target="_blank">TikTok</a>
                 <a href="https://youtube.com/@sunolicious" class="social-link-plain" target="_blank">YouTube</a>
             </div>
-            <a href="music.html" class="back-link">← Back to Music</a>
-            <a href="#" id="aiEthicsLink" style="display: block; color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem; transition: opacity 0.3s ease;">AI Ethics & Creative Statement</a>
+            <a href="music.html" style="display: inline-block; color: #ffffff; text-decoration: none; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2rem; transition: opacity 0.3s ease;">← Back to Music</a>
+            <div style="display: flex; gap: 2rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap;">
+                <a href="#" id="bioLink" style="color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; transition: opacity 0.3s ease;">Artist Bio</a>
+                <a href="#" id="aiEthicsLink" style="color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; transition: opacity 0.3s ease;">AI Ethics & Creative Statement</a>
+            </div>
             <p class="copyright">© 2025 NOAH® / Sunolicious™ • All Rights Reserved</p>
         </div>
     </footer>
+
+    <!-- BIO MODAL -->
+    <div class="ai-ethics-overlay" id="bioOverlay">
+        <div class="ai-ethics-content">
+            <button class="ai-close-btn" id="closeBio">&times;</button>
+            
+            <div class="ai-ethics-header">
+                <h2>Artist Bio</h2>
+            </div>
+
+            <div class="ai-ethics-body">
+                <p style="margin-bottom: 1.5rem;">
+                    I came up in music before everything went fully digital.
+                </p>
+                
+                <p style="margin-bottom: 1.5rem;">
+                    I learned recording in analog studios where tape was finite, decisions mattered, and commitment was part of the craft. I worked across multiple eras and cities — from early multi-track systems and sampling keyboards to large-format tape, then into the digital shift that rewrote the industry entirely. I studied music business when the old rules still applied — and lived through watching them disappear.
+                </p>
+                
+                <p style="margin-bottom: 1.5rem;">
+                    I didn't arrive at AI as a shortcut. I arrived at it through decades of adapting to changing tools while protecting authorship.
+                </p>
+                
+                <p style="margin-bottom: 1.5rem; font-style: italic; color: #C5B7A0 !important;">
+                    Throughout my career, musicians have always modeled other musicians — singers studying phrasing, drummers internalizing feel, guitarists chasing tone. That's not new. What's new is that modeling has become explicit.
+                </p>
+                
+                <p style="margin-bottom: 1.5rem;">
+                    Today, I use AI as part of a creative feedback loop: prompting, responding, refining, and taking responsibility for the final work. While platforms introduce elements of variation and randomness, the core decisions — melody, lyrics, emotional direction, and what ultimately gets released — remain human.
+                </p>
+                
+                <p style="margin-bottom: 1.5rem;">
+                    Any vocals that aren't my physical voice are still extensions of my musical identity: my melodies, my words, my intent, my taste.
+                </p>
+                
+                <p style="margin-bottom: 0; font-weight: 400;">
+                    The tools evolve. The authorship doesn't.
+                </p>
+            </div>
+        </div>
+    </div>
 
     <!-- AI ETHICS MODAL -->
     <div class="ai-ethics-overlay" id="aiEthicsOverlay">
@@ -550,135 +989,10 @@
         </div>
     </div>
 
-    <style>
-    /* AI ETHICS MODAL STYLES */
-    .ai-ethics-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.95);
-        backdrop-filter: blur(10px);
-        display: none;
-        align-items: center;
-        justify-content: center;
-        z-index: 10000;
-        animation: fadeIn 0.3s ease;
-    }
-
-    .ai-ethics-overlay.active {
-        display: flex;
-    }
-
-    .ai-ethics-content {
-        background: linear-gradient(161deg, #090329 10%, #3d1a94 35%, #c742c2 65%, #3d1a94 85%, #090329 100%);
-        border: 1px solid rgba(197, 183, 160, 0.3);
-        max-width: 700px;
-        width: 90%;
-        max-height: 85vh;
-        overflow-y: auto;
-        padding: 40px 35px;
-        position: relative;
-        animation: slideUp 0.4s ease;
-    }
-
-    .ai-close-btn {
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        background: none;
-        border: none;
-        color: rgba(255, 255, 255, 0.6);
-        font-size: 32px;
-        cursor: pointer;
-        line-height: 1;
-        transition: all 0.3s ease;
-        padding: 5px 10px;
-        font-family: inherit;
-    }
-
-    .ai-close-btn:hover {
-        color: #C5B7A0;
-        transform: rotate(90deg);
-    }
-
-    .ai-ethics-header {
-        text-align: center;
-        margin-bottom: 25px;
-        padding-bottom: 20px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    }
-
-    .ai-ethics-header h2 {
-        font-size: 1.5rem;
-        font-weight: 200;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        color: #ffffff !important;
-    }
-
-    .ai-ethics-body {
-        color: #ffffff;
-    }
-
-    .ai-ethics-body p {
-        color: #ffffff !important;
-    }
-
-    @media (max-width: 768px) {
-        .ai-ethics-content {
-            padding: 30px 25px;
-            max-height: 90vh;
-        }
-        
-        .ai-ethics-header h2 {
-            font-size: 1.2rem;
-        }
-    }
-    </style>
-
-    <script>
-    // AI ETHICS MODAL FUNCTIONALITY
-    (function() {
-        const overlay = document.getElementById('aiEthicsOverlay');
-        const closeBtn = document.getElementById('closeAiEthics');
-        const aiEthicsLink = document.getElementById('aiEthicsLink');
-
-        // Open modal
-        aiEthicsLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            overlay.classList.add('active');
-        });
-
-        // Close modal
-        closeBtn.addEventListener('click', () => {
-            overlay.classList.remove('active');
-        });
-
-        // Close on overlay click
-        overlay.addEventListener('click', (e) => {
-            if (e.target === overlay) {
-                overlay.classList.remove('active');
-            }
-        });
-
-        // Close on escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && overlay.classList.contains('active')) {
-                overlay.classList.remove('active');
-            }
-        });
-    })();
-    </script>
-    
-</body>
-</html>
-
     <!-- LYRICS MODAL -->
-    <div class="lyrics-overlay" id="lyricsOverlay">
-        <div class="lyrics-content">
-            <button class="lyrics-close-btn" id="closeLyrics">&times;</button>
+    <div class="ai-ethics-overlay" id="lyricsOverlay">
+        <div class="ai-ethics-content">
+            <button class="ai-close-btn" id="closeLyrics">&times;</button>
             <h2 class="lyrics-title" id="lyricsTitle">Song Title</h2>
             <div class="lyrics-text" id="lyricsText">
                 <!-- Lyrics will be dynamically inserted here -->
@@ -689,94 +1003,64 @@
         </div>
     </div>
 
-    <style>
-    /* LYRICS MODAL STYLES */
-    .lyrics-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.95);
-        backdrop-filter: blur(10px);
-        display: none;
-        align-items: center;
-        justify-content: center;
-        z-index: 10001;
-    }
-
-    .lyrics-overlay.active {
-        display: flex;
-    }
-
-    .lyrics-content {
-        background: linear-gradient(161deg, #090329 10%, #3d1a94 35%, #c742c2 65%, #3d1a94 85%, #090329 100%);
-        border: 1px solid rgba(197, 183, 160, 0.3);
-        max-width: 600px;
-        width: 90%;
-        max-height: 85vh;
-        overflow-y: auto;
-        padding: 40px 35px;
-        position: relative;
-    }
-
-    .lyrics-close-btn {
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        background: none;
-        border: none;
-        color: rgba(255, 255, 255, 0.6);
-        font-size: 32px;
-        cursor: pointer;
-        line-height: 1;
-        transition: all 0.3s ease;
-        padding: 5px 10px;
-        font-family: inherit;
-    }
-
-    .lyrics-close-btn:hover {
-        color: #C5B7A0;
-        transform: rotate(90deg);
-    }
-
-    .lyrics-title {
-        text-align: center;
-        margin-bottom: 2rem;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-        font-size: 1.5rem;
-        font-weight: 200;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        color: #ffffff !important;
-    }
-
-    .lyrics-text {
-        color: #ffffff;
-        line-height: 2;
-        white-space: pre-line;
-        font-size: 1rem;
-    }
-
-    @media (max-width: 768px) {
-        .lyrics-content {
-            padding: 30px 25px;
-            max-height: 90vh;
-        }
-        
-        .lyrics-title {
-            font-size: 1.2rem;
-        }
-        
-        .lyrics-text {
-            font-size: 0.95rem;
-        }
-    }
-    </style>
-
     <script>
-    // LYRICS MODAL FUNCTIONALITY
+    // BIO MODAL
+    (function() {
+        const bioOverlay = document.getElementById('bioOverlay');
+        const closeBio = document.getElementById('closeBio');
+        const bioLink = document.getElementById('bioLink');
+
+        bioLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            bioOverlay.classList.add('active');
+        });
+
+        closeBio.addEventListener('click', () => {
+            bioOverlay.classList.remove('active');
+        });
+
+        bioOverlay.addEventListener('click', (e) => {
+            if (e.target === bioOverlay) {
+                bioOverlay.classList.remove('active');
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && bioOverlay.classList.contains('active')) {
+                bioOverlay.classList.remove('active');
+            }
+        });
+    })();
+
+    // AI ETHICS MODAL
+    (function() {
+        const overlay = document.getElementById('aiEthicsOverlay');
+        const closeBtn = document.getElementById('closeAiEthics');
+        const aiEthicsLink = document.getElementById('aiEthicsLink');
+
+        aiEthicsLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            overlay.classList.add('active');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            overlay.classList.remove('active');
+        });
+
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                overlay.classList.remove('active');
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && overlay.classList.contains('active')) {
+                overlay.classList.remove('active');
+            }
+        });
+    })();
+
+    // LYRICS MODAL
     (function() {
         const lyricsOverlay = document.getElementById('lyricsOverlay');
         const closeLyrics = document.getElementById('closeLyrics');
@@ -786,39 +1070,23 @@
 
         // Lyrics database - ADD YOUR REAL LYRICS HERE
         const lyricsData = {
-            'perfect-storm': {
-                title: 'Perfect Storm',
-                lyrics: `[Verse 1]
-Thunder rolling in the distance
-Lightning strikes without resistance
+            'whoami': {
+                title: 'who am i',
+                lyrics: `[Lyrics coming soon]
 
-[Chorus]
-We're dancing in a perfect storm
-Hearts colliding, breaking form
-
-[Verse 2]
-Winds are howling through the city
-No escape, no room for pity`
+Add your lyrics here when ready.`
             },
-            'midnight-reflection': {
-                title: 'Midnight Reflection',
-                lyrics: `[Verse 1]
-Shadows dancing on the ceiling
-Memories come without warning
+            'wakeup': {
+                title: 'Wake Up',
+                lyrics: `[Lyrics coming soon]
 
-[Chorus]
-Midnight reflection in my eyes
-Truths I can no longer disguise`
+Add your lyrics here when ready.`
             },
-            'electric-pulse': {
-                title: 'Electric Pulse',
-                lyrics: `[Verse 1]
-Feel the rhythm taking over
-Moving closer, getting bolder
+            'hardtimes': {
+                title: 'Hard Times',
+                lyrics: `[Lyrics coming soon]
 
-[Chorus]
-Electric pulse running through my veins
-Breaking free from all the chains`
+Add your lyrics here when ready.`
             }
         };
 
@@ -840,14 +1108,12 @@ Breaking free from all the chains`
             lyricsOverlay.classList.remove('active');
         });
 
-        // Close on overlay click
         lyricsOverlay.addEventListener('click', (e) => {
             if (e.target === lyricsOverlay) {
                 lyricsOverlay.classList.remove('active');
             }
         });
 
-        // Close on escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && lyricsOverlay.classList.contains('active')) {
                 lyricsOverlay.classList.remove('active');
@@ -855,3 +1121,6 @@ Breaking free from all the chains`
         });
     })();
     </script>
+    
+</body>
+</html>
