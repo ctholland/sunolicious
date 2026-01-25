@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <!-- Open Graph / Social Media Preview -->
-<meta property="og:image" content="https://sunolicious.com/images/Sunolicious_Logo_NOAH.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://sunolicious.com/images/Sunolicious_Logo_NOAH.png">
+    <meta property="og:image" content="https://sunolicious.com/images/Sunolicious_Logo_NOAH.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://sunolicious.com/images/Sunolicious_Logo_NOAH.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOAH® | SUNOLICIOUS™ - Human. Machine. Manifest.</title>
+    <title>NOAH® | SUNOLICIOUS™ - Music Library</title>
     <meta name="description" content="Billboard & Music Week Charting Recording Artist NOAH® - Listen to SUNOLICIOUS™. 100% owned. Available for licensing.">
     
     <style>
@@ -36,23 +36,19 @@
         
         :root {
             --accent: #C5B7A0;
-            --black: #000000;
             --white: #FFFFFF;
-            --off-white: #E8E8E8;
-            --gray-light: #999999;
-            --gray-dark: #666666;
         }
         
-        h1, h2, h3, h4, h5, h6 {
+        h1, h2, h3, h4 {
             color: #ffffff !important;
         }
         
-        p, span, li {
+        p, li {
             color: #ffffff !important;
         }
         
         .container {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 4rem;
         }
@@ -103,39 +99,126 @@
         section {
             padding: 3rem 0;
         }
-        
-        .track-section {
-            margin-bottom: 4rem;
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 200;
+            letter-spacing: 4px;
+            margin-bottom: 3rem;
+            color: #ffffff !important;
+            text-align: center;
+            text-transform: uppercase;
         }
-        
-        .track-title {
-            font-size: 1.2rem;
+
+        /* Volume Grid */
+        .volumes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 3rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding-bottom: 5rem;
+        }
+
+        .volume-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .volume-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .volume-artwork {
+            width: 100%;
+            height: auto;
+            display: block;
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+
+        .volume-info {
+            padding: 2rem;
+        }
+
+        .volume-title {
+            font-size: 1.3rem;
             font-weight: 300;
             letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        .volume-subtitle {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 2px;
             margin-bottom: 1.5rem;
-            color: #ffffff !important;
-            text-align: center;
         }
-        
-        .soundcloud-embed {
-            width: 100%;
-            margin: 0 auto 3rem;
-        }
-        
-        .embed-placeholder {
+
+        .volume-btn {
+            display: block;
+            padding: 0.9rem 2rem;
             background: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 4rem 2rem;
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            text-decoration: none;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 300;
+            transition: all 0.3s ease;
             text-align: center;
-            margin-bottom: 2rem;
         }
-        
-        .embed-placeholder p {
-            color: #ffffff !important;
+
+        .volume-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #ffffff;
+        }
+
+        /* Coming Soon Card */
+        .coming-soon-card {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px dashed rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+            cursor: default;
+        }
+
+        .coming-soon-card:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .coming-soon-text {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .coming-soon-text h3 {
+            font-size: 1.5rem;
+            font-weight: 200;
+            letter-spacing: 3px;
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .coming-soon-text p {
             font-size: 0.9rem;
-            margin: 0.5rem 0;
+            color: rgba(255, 255, 255, 0.3);
+            letter-spacing: 2px;
         }
-        
+
+        /* Streaming Links Section */
         .streaming-section {
             text-align: center;
             padding: 4rem 0;
@@ -232,215 +315,6 @@
             font-weight: 300;
             margin-top: 2rem;
         }
-        
-        /* EMAIL SIGNUP POPUP STYLES */
-        
-        .signup-trigger {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            padding: 14px 28px;
-            font-size: 0.75rem;
-            font-weight: 300;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            background: transparent;
-            color: #ffffff;
-            border: 2px solid #ffffff;
-            cursor: pointer;
-            z-index: 1000;
-            transition: all 0.4s ease;
-            font-family: inherit;
-        }
-        
-        .signup-trigger:hover {
-            background: #ffffff;
-            color: #090329;
-        }
-        
-        .popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.95);
-            backdrop-filter: blur(10px);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-            animation: fadeIn 0.3s ease;
-        }
-        
-        .popup-overlay.active {
-            display: flex;
-        }
-        
-        .popup-content {
-            background: linear-gradient(161deg, #090329 10%, #3d1a94 35%, #c742c2 65%, #3d1a94 85%, #090329 100%);
-            border: 1px solid rgba(197, 183, 160, 0.3);
-            max-width: 500px;
-            width: 90%;
-            padding: 40px 30px;
-            position: relative;
-            animation: slideUp 0.4s ease;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        @keyframes slideUp {
-            from {
-                transform: translateY(30px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-        
-        .close-btn {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: none;
-            border: none;
-            color: var(--gray-light);
-            font-size: 28px;
-            cursor: pointer;
-            line-height: 1;
-            transition: all 0.3s ease;
-            padding: 5px 10px;
-            font-family: inherit;
-        }
-        
-        .close-btn:hover {
-            color: var(--accent);
-            transform: rotate(90deg);
-        }
-        
-        .popup-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        .popup-header h1 {
-            font-size: 36px;
-            font-weight: 200;
-            letter-spacing: 4px;
-            margin-bottom: 5px;
-        }
-        
-        .popup-header h2 {
-            font-size: 24px;
-            font-weight: 300;
-            color: var(--accent);
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-        }
-        
-        .popup-header p {
-            font-size: 12px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--gray-light);
-        }
-        
-        .popup-description {
-            font-size: 14px;
-            line-height: 1.8;
-            color: var(--gray-light);
-            margin-bottom: 25px;
-            text-align: center;
-        }
-        
-        .popup-form {
-            margin-bottom: 15px;
-        }
-        
-        .form-group {
-            margin-bottom: 15px;
-        }
-        
-        label {
-            display: block;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-            color: #ffffff;
-        }
-        
-        input[type="email"] {
-            width: 100%;
-            padding: 12px 15px;
-            font-size: 15px;
-            background: rgba(255, 255, 255, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            color: #ffffff;
-            transition: all 0.3s ease;
-            font-family: inherit;
-        }
-        
-        input[type="email"]:focus {
-            outline: none;
-            background: rgba(255, 255, 255, 0.2);
-            border-color: #ffffff;
-        }
-        
-        input[type="email"]::placeholder {
-            color: rgba(255, 255, 255, 0.6);
-        }
-        
-        .submit-btn {
-            width: 100%;
-            padding: 14px;
-            font-size: 0.75rem;
-            font-weight: 300;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            background: transparent;
-            color: #ffffff;
-            border: 2px solid #ffffff;
-            cursor: pointer;
-            transition: all 0.4s ease;
-            font-family: inherit;
-        }
-        
-        .submit-btn:hover {
-            background: #ffffff;
-            color: #090329;
-        }
-        
-        .hidden-field {
-            position: absolute;
-            left: -5000px;
-        }
-        
-        .response-message {
-            padding: 12px;
-            margin-top: 15px;
-            font-size: 13px;
-            text-align: center;
-            display: none;
-        }
-        
-        .response-message.success {
-            background: rgba(76, 175, 80, 0.2);
-            border: 1px solid rgba(76, 175, 80, 0.5);
-            color: #4CAF50;
-        }
-        
-        .response-message.error {
-            background: rgba(244, 67, 54, 0.2);
-            border: 1px solid rgba(244, 67, 54, 0.5);
-            color: #f44336;
-        }
 
         /* MODAL STYLES */
         .ai-ethics-overlay {
@@ -516,6 +390,22 @@
         .ai-ethics-body p {
             color: #ffffff !important;
         }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
         
         @media (max-width: 768px) {
             .container {
@@ -530,6 +420,11 @@
             .logo {
                 max-width: 300px;
             }
+
+            .volumes-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
             
             .streaming-links {
                 flex-direction: column;
@@ -539,25 +434,6 @@
             .streaming-btn {
                 width: 100%;
                 max-width: 250px;
-            }
-            
-            .popup-content {
-                padding: 30px 20px;
-            }
-            
-            .popup-header h1 {
-                font-size: 28px;
-            }
-            
-            .popup-header h2 {
-                font-size: 20px;
-            }
-            
-            .signup-trigger {
-                bottom: 20px;
-                right: 20px;
-                padding: 12px 20px;
-                font-size: 0.7rem;
             }
 
             .ai-ethics-content {
@@ -586,48 +462,39 @@
     
     <main class="container">
         
-        <!-- TRACK 1 -->
-        <section class="track-section">
-            <h2 class="track-title">Sunolicious Sessions Vol. 1</h2>
-            <p style="text-align: center; font-size: 0.85rem; color: #ffffff; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;">Released: [Date]</p>
-            <p style="text-align: center; font-size: 0.95rem; color: #ffffff; margin-bottom: 1rem; line-height: 1.8; max-width: 600px; margin-left: auto; margin-right: auto;">[Brief description of the vibe/style]</p>
-            <p style="text-align: center; font-size: 0.9rem; color: #ffffff; margin-bottom: 2rem;"><strong>Tracks:</strong> [Song Title 1], [Song Title 2], [Song Title 3]</p>
-            <div class="soundcloud-embed">
-                <!-- PASTE YOUR SOUNDCLOUD EMBED CODE HERE -->
-                <div class="embed-placeholder">
-                    <p>🎵 SoundCloud Player</p>
-                    <p style="font-size: 0.8rem;">Replace this div with your SoundCloud embed iframe</p>
+        <section>
+            <h2>Discography</h2>
+            
+            <div class="volumes-grid">
+                
+                <!-- Volume 1 -->
+                <a href="vol1.html" style="text-decoration: none;">
+                    <div class="volume-card">
+                        <img src="images/sunovol1.png" alt="Sunolicious Sessions Vol. 1" class="volume-artwork">
+                        <div class="volume-info">
+                            <h3 class="volume-title">Sunolicious Sessions Vol. 1</h3>
+                            <p class="volume-subtitle">3 Tracks</p>
+                            <span class="volume-btn">View Album</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Coming Soon - Volume 2 -->
+                <div class="volume-card coming-soon-card">
+                    <div class="coming-soon-text">
+                        <h3>Volume 2</h3>
+                        <p>Coming Soon</p>
+                    </div>
                 </div>
-            </div>
-        </section>
-        
-        <!-- TRACK 2 -->
-        <section class="track-section">
-            <h2 class="track-title">Sunolicious Sessions Vol. 2</h2>
-            <p style="text-align: center; font-size: 0.85rem; color: #ffffff; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;">Released: [Date]</p>
-            <p style="text-align: center; font-size: 0.95rem; color: #ffffff; margin-bottom: 1rem; line-height: 1.8; max-width: 600px; margin-left: auto; margin-right: auto;">[Brief description of the vibe/style]</p>
-            <p style="text-align: center; font-size: 0.9rem; color: #ffffff; margin-bottom: 2rem;"><strong>Tracks:</strong> [Song Title 1], [Song Title 2], [Song Title 3]</p>
-            <div class="soundcloud-embed">
-                <!-- PASTE YOUR SOUNDCLOUD EMBED CODE HERE -->
-                <div class="embed-placeholder">
-                    <p>🎵 SoundCloud Player</p>
-                    <p style="font-size: 0.8rem;">Replace this div with your SoundCloud embed iframe</p>
+                
+                <!-- Coming Soon - Volume 3 -->
+                <div class="volume-card coming-soon-card">
+                    <div class="coming-soon-text">
+                        <h3>Volume 3</h3>
+                        <p>Coming Soon</p>
+                    </div>
                 </div>
-            </div>
-        </section>
-        
-        <!-- TRACK 3 -->
-        <section class="track-section">
-            <h2 class="track-title">Sunolicious Sessions Vol. 3</h2>
-            <p style="text-align: center; font-size: 0.85rem; color: #ffffff; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;">Released: [Date]</p>
-            <p style="text-align: center; font-size: 0.95rem; color: #ffffff; margin-bottom: 1rem; line-height: 1.8; max-width: 600px; margin-left: auto; margin-right: auto;">[Brief description of the vibe/style]</p>
-            <p style="text-align: center; font-size: 0.9rem; color: #ffffff; margin-bottom: 2rem;"><strong>Tracks:</strong> [Song Title 1], [Song Title 2], [Song Title 3]</p>
-            <div class="soundcloud-embed">
-                <!-- PASTE YOUR SOUNDCLOUD EMBED CODE HERE -->
-                <div class="embed-placeholder">
-                    <p>🎵 SoundCloud Player</p>
-                    <p style="font-size: 0.8rem;">Replace this div with your SoundCloud embed iframe</p>
-                </div>
+                
             </div>
         </section>
         
@@ -671,45 +538,6 @@
             <p class="copyright">© 2025 NOAH® / Sunolicious™ • All Rights Reserved</p>
         </div>
     </footer>
-
-    <!-- EMAIL SIGNUP TRIGGER BUTTON -->
-    <button class="signup-trigger" id="openPopup">Join the List</button>
-
-    <!-- EMAIL SIGNUP POPUP -->
-    <div class="popup-overlay" id="popupOverlay">
-        <div class="popup-content">
-            <button class="close-btn" id="closePopup">&times;</button>
-            
-            <div class="popup-header">
-                <h1>NOAH<sup style="font-size: 0.3em">®</sup></h1>
-                <h2>SUNOLICIOUS<sup style="font-size: 0.3em">™</sup></h2>
-                <p>Human. Machine. Manifest.</p>
-            </div>
-
-            <p class="popup-description">
-                Join the journey. Get exclusive updates, new releases, and insights into the evolution of human-machine musical collaboration.
-            </p>
-
-            <form class="popup-form" action="https://noahmusic.us6.list-manage.com/subscribe/post?u=634485f7f15097e5aecc9af5f&id=c2b49f4fa3&f_id=004911e2f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
-                
-                <div class="form-group">
-                    <label for="mce-EMAIL">Email Address *</label>
-                    <input type="email" name="EMAIL" id="mce-EMAIL" required placeholder="your@email.com">
-                </div>
-
-                <div class="hidden-field" aria-hidden="true">
-                    <input type="text" name="b_634485f7f15097e5aecc9af5f_c2b49f4fa3" tabindex="-1" value="">
-                </div>
-
-                <button type="submit" class="submit-btn">Subscribe</button>
-
-                <div id="mce-responses">
-                    <div class="response-message" id="mce-error-response"></div>
-                    <div class="response-message success" id="mce-success-response"></div>
-                </div>
-            </form>
-        </div>
-    </div>
 
     <!-- BIO MODAL -->
     <div class="ai-ethics-overlay" id="bioOverlay">
@@ -794,44 +622,7 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-    <script type="text/javascript">
-        (function($) {
-            window.fnames = new Array(); 
-            window.ftypes = new Array();
-            fnames[0]='EMAIL';
-            ftypes[0]='email';
-        }(jQuery));
-        var $mcj = jQuery.noConflict(true);
-    </script>
-
     <script>
-        // Email Popup functionality
-        const openPopupBtn = document.getElementById('openPopup');
-        const closePopupBtn = document.getElementById('closePopup');
-        const popupOverlay = document.getElementById('popupOverlay');
-
-        openPopupBtn.addEventListener('click', () => {
-            popupOverlay.classList.add('active');
-        });
-
-        closePopupBtn.addEventListener('click', () => {
-            popupOverlay.classList.remove('active');
-        });
-
-        popupOverlay.addEventListener('click', (e) => {
-            if (e.target === popupOverlay) {
-                popupOverlay.classList.remove('active');
-            }
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && popupOverlay.classList.contains('active')) {
-                popupOverlay.classList.remove('active');
-            }
-        });
-
         // BIO MODAL FUNCTIONALITY
         (function() {
             const bioOverlay = document.getElementById('bioOverlay');

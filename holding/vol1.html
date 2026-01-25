@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <!-- Open Graph / Social Media Preview -->
-    <meta property="og:image" content="https://music.sunolicious.com/images/Sunolicious_Logo_NOAH.png">
+    <meta property="og:image" content="https://music.sunolicious.com/images/sunovol1.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://music.sunolicious.com/images/Sunolicious_Logo_NOAH.png">
+    <meta name="twitter:image" content="https://music.sunolicious.com/images/sunovol1.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cover Sunolicious™ Tracks | NOAH®</title>
-    <meta name="description" content="Free instrumentals and lyrics for covering Sunolicious™ tracks. Make it yours, share it, tag us!">
+    <title>Sunolicious Sessions Vol. 1 | NOAH®</title>
+    <meta name="description" content="Sunolicious Sessions Vol. 1 - featuring 'who am i', 'Wake Up', and 'Hard Times' by NOAH®">
     
     <style>
         * {
@@ -44,80 +44,99 @@
         }
         
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 4rem;
         }
         
-        header {
+        /* Album Hero Section */
+        .album-hero {
             text-align: center;
-            padding: 4rem 0 2rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 4rem 0 3rem;
         }
-        
-        .logo {
-            max-width: 350px;
-            width: 60%;
+
+        .album-artwork-large {
+            max-width: 400px;
+            width: 80%;
             height: auto;
-            margin-bottom: 2rem;
-            opacity: 0.95;
+            margin: 0 auto 2rem;
+            display: block;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         }
-        
-        h1 {
-            font-size: 2rem;
+
+        .album-title {
+            font-size: 2.5rem;
+            font-weight: 200;
             letter-spacing: 4px;
             margin-bottom: 1rem;
-        }
-        
-        .tagline {
-            font-size: 1.1rem;
-            color: #ffffff;
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.8;
-        }
-        
-        section {
-            padding: 4rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        
-        section:last-of-type {
-            border-bottom: none;
-        }
-        
-        h2 {
-            font-size: 1.8rem;
-            letter-spacing: 3px;
-            margin-bottom: 2rem;
-            text-align: center;
             text-transform: uppercase;
         }
-        
-        .intro-text {
-            max-width: 700px;
-            margin: 0 auto 3rem;
-            font-size: 1.05rem;
-            line-height: 2;
-            text-align: center;
+
+        .album-artist {
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
         }
-        
-        /* Track Cards */
-        .tracks-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 3rem;
+
+        .album-stream-btns {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
             margin-top: 2rem;
         }
-        
+
+        .stream-btn {
+            padding: 1rem 2.5rem;
+            background: transparent;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            text-decoration: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 300;
+            transition: all 0.3s ease;
+            min-width: 180px;
+        }
+
+        .stream-btn:hover {
+            background: #ffffff;
+            color: #090329;
+        }
+
+        /* Track Listing Section */
+        .track-listing {
+            padding: 5rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 200;
+            letter-spacing: 4px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 4rem;
+        }
+
+        .tracks-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
         .track-card {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 0;
-            transition: all 0.3s ease;
             overflow: hidden;
+            transition: all 0.3s ease;
         }
-        
+
         .track-card:hover {
             background: rgba(255, 255, 255, 0.05);
             border-color: rgba(255, 255, 255, 0.2);
@@ -132,137 +151,79 @@
             object-fit: cover;
         }
 
-        .track-info-section {
+        .track-info {
             padding: 2rem;
         }
-        
-        .track-title {
-            font-size: 1.3rem;
-            color: #ffffff;
+
+        .track-number {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 2px;
+            text-transform: uppercase;
             margin-bottom: 0.5rem;
-            font-weight: 300;
-            letter-spacing: 1px;
         }
 
-        .track-album {
-            font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.6);
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
+        .track-title {
+            font-size: 1.4rem;
+            font-weight: 300;
             letter-spacing: 2px;
+            margin-bottom: 1rem;
+            color: #ffffff;
         }
-        
-        .download-btn {
-            display: block;
-            padding: 0.9rem 1.5rem;
+
+        .track-metadata {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .track-metadata span {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .metadata-label {
+            color: #C5B7A0;
+            margin-right: 0.3rem;
+        }
+
+        .track-actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+        }
+
+        .track-btn {
+            padding: 0.8rem 1rem;
             background: transparent;
             color: #ffffff;
             border: 1px solid rgba(255, 255, 255, 0.4);
             text-decoration: none;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             font-weight: 300;
             transition: all 0.3s ease;
-            margin-bottom: 0.8rem;
             text-align: center;
+            cursor: pointer;
+            font-family: inherit;
         }
-        
-        .download-btn:hover {
+
+        .track-btn:hover {
             background: rgba(255, 255, 255, 0.1);
             border-color: #ffffff;
         }
 
-        .download-btn:last-child {
-            margin-bottom: 0;
-        }
-        
-        /* Terms Section */
-        .terms-box {
-            max-width: 800px;
-            margin: 2rem auto;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 2.5rem;
-        }
-        
-        .terms-box h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-        
-        .terms-columns {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .terms-column h4 {
-            font-size: 1rem;
-            margin-bottom: 1rem;
-            color: #C5B7A0;
-        }
-        
-        .terms-column ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .terms-column li {
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        
-        .terms-column li:before {
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-        
-        .can-list li:before {
-            content: "✓";
-            color: #4CAF50;
-        }
-        
-        .cannot-list li:before {
-            content: "✗";
-            color: #f44336;
-        }
-        
-        .terms-footer {
-            margin-top: 2rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            text-align: center;
-            font-size: 0.9rem;
-        }
-        
-        /* Credit Section */
-        .credit-box {
-            max-width: 700px;
-            margin: 2rem auto;
-            text-align: center;
-        }
-        
-        .credit-example {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            border-left: 3px solid #C5B7A0;
-            font-family: monospace;
-            font-size: 0.95rem;
-        }
-        
         /* Footer */
         footer {
             text-align: center;
-            padding: 3rem 0 2rem;
+            padding: 4rem 0 3rem;
             border-top: 1px solid rgba(255, 255, 255, 0.08);
         }
-        
+
         .social-links {
             display: flex;
             gap: 3rem;
@@ -270,7 +231,7 @@
             flex-wrap: wrap;
             margin-bottom: 3rem;
         }
-        
+
         .social-link-plain {
             color: #ffffff !important;
             text-decoration: none;
@@ -280,31 +241,17 @@
             transition: opacity 0.3s ease;
             font-weight: 300;
         }
-        
+
         .social-link-plain:hover {
             opacity: 0.7;
         }
-        
-        .back-link {
-            display: inline-block;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 2rem;
-            transition: opacity 0.3s ease;
-        }
-        
-        .back-link:hover {
-            opacity: 0.7;
-        }
-        
+
         .copyright {
             font-size: 0.75rem;
             color: rgba(255, 255, 255, 0.5);
             letter-spacing: 2px;
             text-transform: uppercase;
+            margin-top: 2rem;
         }
 
         /* MODAL STYLES */
@@ -382,6 +329,25 @@
             color: #ffffff !important;
         }
 
+        /* LYRICS MODAL */
+        .lyrics-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 1.5rem;
+            font-weight: 200;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .lyrics-text {
+            color: #ffffff;
+            line-height: 2;
+            white-space: pre-line;
+            font-size: 1rem;
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -397,173 +363,132 @@
                 opacity: 1;
             }
         }
-        
+
         @media (max-width: 768px) {
             .container {
                 padding: 0 2rem;
             }
-            
-            h1 {
-                font-size: 1.5rem;
+
+            .album-title {
+                font-size: 1.8rem;
             }
-            
-            h2 {
-                font-size: 1.4rem;
+
+            .album-artist {
+                font-size: 1rem;
             }
-            
+
+            .album-artwork-large {
+                max-width: 300px;
+            }
+
             .tracks-grid {
                 grid-template-columns: 1fr;
+                gap: 2rem;
             }
-            
-            .terms-columns {
+
+            .track-actions {
                 grid-template-columns: 1fr;
-            }
-            
-            .terms-box {
-                padding: 1.5rem;
             }
 
             .ai-ethics-content {
                 padding: 30px 25px;
                 max-height: 90vh;
             }
-            
-            .ai-ethics-header h2 {
+
+            .ai-ethics-header h2, .lyrics-title {
                 font-size: 1.2rem;
+            }
+
+            .album-stream-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .stream-btn {
+                width: 100%;
+                max-width: 280px;
             }
         }
     </style>
 </head>
 <body>
-    
-    <!-- HEADER -->
-    <header>
-        <div class="container">
-            <img src="images/Sunolicious_Logo_NOAH2.png" alt="NOAH SUNOLICIOUS Logo" class="logo">
-            <h1>Cover Sunolicious™ Tracks</h1>
-            <p class="tagline">Free instrumentals. Clear terms. Make it yours.</p>
-        </div>
-    </header>
 
-    <!-- INTRO -->
-    <section>
+    <!-- ALBUM HERO -->
+    <section class="album-hero">
         <div class="container">
-            <p class="intro-text">
-                Want to put your own spin on a Sunolicious™ track? Download free instrumentals and lyrics below. Record your cover, post it anywhere, and tag us so we can hear what you created!
-            </p>
+            <img src="images/sunovol1.png" alt="Sunolicious Sessions Vol. 1" class="album-artwork-large">
+            <h1 class="album-title">Sunolicious Sessions Vol. 1</h1>
+            <p class="album-artist">NOAH® / Sunolicious™</p>
+            
+            <div class="album-stream-btns">
+                <a href="#" class="stream-btn" target="_blank">Stream on Spotify</a>
+                <a href="#" class="stream-btn" target="_blank">Stream on Apple Music</a>
+                <a href="#" class="stream-btn" target="_blank">Stream on Tidal</a>
+            </div>
         </div>
     </section>
 
-    <!-- AVAILABLE TRACKS -->
-    <section id="tracks">
+    <!-- TRACK LISTING -->
+    <section class="track-listing">
         <div class="container">
-            <h2>🎵 Sunolicious Sessions Vol. 1</h2>
+            <h2 class="section-title">Tracks</h2>
             
             <div class="tracks-grid">
                 
                 <!-- Track 1: Wake Up -->
                 <div class="track-card">
-                    <img src="images/wakeup.png" alt="Wake Up cover art" class="track-artwork">
-                    <div class="track-info-section">
+                    <img src="images/wakeup.png" alt="Wake Up" class="track-artwork">
+                    <div class="track-info">
+                        <p class="track-number">Track 01</p>
                         <h3 class="track-title">Wake Up</h3>
-                        <p class="track-album">Sunolicious Sessions Vol. 1</p>
-                        <a href="#" class="download-btn">Download Instrumental</a>
-                        <a href="#" class="download-btn">Download Lyrics</a>
-                        <a href="#" class="download-btn">Listen to Original</a>
+                        <div class="track-metadata">
+                            <span><span class="metadata-label">BPM:</span> [TBD]</span>
+                            <span><span class="metadata-label">Key:</span> [TBD]</span>
+                            <span><span class="metadata-label">Style:</span> [TBD]</span>
+                        </div>
+                        <div class="track-actions">
+                            <button class="track-btn lyrics-btn" data-track="wakeup">View Lyrics</button>
+                            <a href="#" class="track-btn">Stream Track</a>
+                        </div>
                     </div>
                 </div>
-                
+
                 <!-- Track 2: who am i -->
                 <div class="track-card">
-                    <img src="images/whoami.png" alt="who am i cover art" class="track-artwork">
-                    <div class="track-info-section">
+                    <img src="images/whoami.png" alt="who am i" class="track-artwork">
+                    <div class="track-info">
+                        <p class="track-number">Track 02</p>
                         <h3 class="track-title">who am i</h3>
-                        <p class="track-album">Sunolicious Sessions Vol. 1</p>
-                        <a href="#" class="download-btn">Download Instrumental</a>
-                        <a href="#" class="download-btn">Download Lyrics</a>
-                        <a href="#" class="download-btn">Listen to Original</a>
+                        <div class="track-metadata">
+                            <span><span class="metadata-label">BPM:</span> [TBD]</span>
+                            <span><span class="metadata-label">Key:</span> [TBD]</span>
+                            <span><span class="metadata-label">Style:</span> [TBD]</span>
+                        </div>
+                        <div class="track-actions">
+                            <button class="track-btn lyrics-btn" data-track="whoami">View Lyrics</button>
+                            <a href="#" class="track-btn">Stream Track</a>
+                        </div>
                     </div>
                 </div>
-                
+
                 <!-- Track 3: Hard Times -->
                 <div class="track-card">
-                    <img src="images/hardtimes.png" alt="Hard Times cover art" class="track-artwork">
-                    <div class="track-info-section">
+                    <img src="images/hardtimes.png" alt="Hard Times" class="track-artwork">
+                    <div class="track-info">
+                        <p class="track-number">Track 03</p>
                         <h3 class="track-title">Hard Times</h3>
-                        <p class="track-album">Sunolicious Sessions Vol. 1</p>
-                        <a href="#" class="download-btn">Download Instrumental</a>
-                        <a href="#" class="download-btn">Download Lyrics</a>
-                        <a href="#" class="download-btn">Listen to Original</a>
+                        <div class="track-metadata">
+                            <span><span class="metadata-label">BPM:</span> [TBD]</span>
+                            <span><span class="metadata-label">Key:</span> [TBD]</span>
+                            <span><span class="metadata-label">Style:</span> [TBD]</span>
+                        </div>
+                        <div class="track-actions">
+                            <button class="track-btn lyrics-btn" data-track="hardtimes">View Lyrics</button>
+                            <a href="#" class="track-btn">Stream Track</a>
+                        </div>
                     </div>
                 </div>
-                
-            </div>
-            
-            <p style="text-align: center; margin-top: 3rem; font-size: 0.9rem; color: rgba(255, 255, 255, 0.7);">
-                More tracks coming soon! Check back regularly for new additions.
-            </p>
-        </div>
-    </section>
 
-    <!-- USAGE TERMS -->
-    <section id="terms">
-        <div class="container">
-            <h2>📋 Usage Terms</h2>
-            
-            <div class="terms-box">
-                <h3>Free Instrumental & Lyrics - Cover Use Only</h3>
-                
-                <div class="terms-columns">
-                    <div class="terms-column">
-                        <h4>✓ YOU CAN:</h4>
-                        <ul class="can-list">
-                            <li>Record your own cover version</li>
-                            <li>Post to YouTube, TikTok, Instagram, etc.</li>
-                            <li>Monetize your cover video (ad revenue is yours)</li>
-                            <li>Perform live</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="terms-column">
-                        <h4>✗ YOU CANNOT:</h4>
-                        <ul class="cannot-list">
-                            <li>Use for commercial advertising</li>
-                            <li>Sell this instrumental</li>
-                            <li>Claim you wrote the song</li>
-                            <li>Re-distribute this instrumental</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="terms-footer">
-                    <p><strong>By downloading, you agree to these terms.</strong></p>
-                    <p style="margin-top: 1rem;">For licensing inquiries: <a href="mailto:sunolicious@noahmusic.com" style="color: #ffffff; text-decoration: none; font-weight: 400;">sunolicious@noahmusic.com</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- HOW TO CREDIT -->
-    <section id="credit">
-        <div class="container">
-            <h2>🏷️ How to Credit</h2>
-            
-            <div class="credit-box">
-                <p style="margin-bottom: 1.5rem;">Please include this credit in your video description or post:</p>
-                
-                <div class="credit-example">
-                    Original by NOAH® | Sunolicious™<br>
-                    https://music.sunolicious.com
-                </div>
-                
-                <p style="margin-top: 2rem; font-size: 1.1rem;"><strong>Tag us on social media!</strong></p>
-                <p style="margin-top: 0.5rem;">Instagram: @sunoliciousmusic<br>
-                TikTok: @sunoliciousmusic<br>
-                YouTube: @sunolicious</p>
-                
-                <p style="margin-top: 2rem; font-size: 0.9rem; color: rgba(255, 255, 255, 0.7);">
-                    We love seeing what you create and may share your cover on our channels!
-                </p>
             </div>
         </div>
     </section>
@@ -576,7 +501,11 @@
                 <a href="https://tiktok.com/@sunoliciousmusic" class="social-link-plain" target="_blank">TikTok</a>
                 <a href="https://youtube.com/@sunolicious" class="social-link-plain" target="_blank">YouTube</a>
             </div>
-            <a href="music.html" class="back-link">← Back to Music</a>
+            <div style="margin-bottom: 2rem;">
+                <a href="music.html" style="display: inline-block; color: #ffffff; text-decoration: none; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; margin: 0 1rem; transition: opacity 0.3s ease;">← Back to Library</a>
+                <a href="covers.html" style="display: inline-block; color: #ffffff; text-decoration: none; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; margin: 0 1rem; transition: opacity 0.3s ease;">Covers</a>
+                <a href="licensing.html" style="display: inline-block; color: #ffffff; text-decoration: none; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; margin: 0 1rem; transition: opacity 0.3s ease;">Licensing</a>
+            </div>
             <div style="display: flex; gap: 2rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap;">
                 <a href="#" id="bioLink" style="color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; transition: opacity 0.3s ease;">Artist Bio</a>
                 <a href="#" id="aiEthicsLink" style="color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; transition: opacity 0.3s ease;">AI Ethics & Creative Statement</a>
@@ -668,66 +597,137 @@
         </div>
     </div>
 
+    <!-- LYRICS MODAL -->
+    <div class="ai-ethics-overlay" id="lyricsOverlay">
+        <div class="ai-ethics-content">
+            <button class="ai-close-btn" id="closeLyrics">&times;</button>
+            <h2 class="lyrics-title" id="lyricsTitle">Song Title</h2>
+            <div class="lyrics-text" id="lyricsText">
+                <!-- Lyrics will be inserted here -->
+            </div>
+            <p style="margin-top: 2rem; font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); text-align: center;">
+                © 2025 NOAH® / Sunolicious™ • All Rights Reserved
+            </p>
+        </div>
+    </div>
+
     <script>
-    // BIO MODAL FUNCTIONALITY
-    (function() {
-        const bioOverlay = document.getElementById('bioOverlay');
-        const closeBio = document.getElementById('closeBio');
-        const bioLink = document.getElementById('bioLink');
+        // BIO MODAL
+        (function() {
+            const bioOverlay = document.getElementById('bioOverlay');
+            const closeBio = document.getElementById('closeBio');
+            const bioLink = document.getElementById('bioLink');
 
-        bioLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            bioOverlay.classList.add('active');
-        });
+            bioLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                bioOverlay.classList.add('active');
+            });
 
-        closeBio.addEventListener('click', () => {
-            bioOverlay.classList.remove('active');
-        });
-
-        bioOverlay.addEventListener('click', (e) => {
-            if (e.target === bioOverlay) {
+            closeBio.addEventListener('click', () => {
                 bioOverlay.classList.remove('active');
-            }
-        });
+            });
 
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && bioOverlay.classList.contains('active')) {
-                bioOverlay.classList.remove('active');
-            }
-        });
-    })();
+            bioOverlay.addEventListener('click', (e) => {
+                if (e.target === bioOverlay) {
+                    bioOverlay.classList.remove('active');
+                }
+            });
 
-    // AI ETHICS MODAL FUNCTIONALITY
-    (function() {
-        const overlay = document.getElementById('aiEthicsOverlay');
-        const closeBtn = document.getElementById('closeAiEthics');
-        const aiEthicsLink = document.getElementById('aiEthicsLink');
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && bioOverlay.classList.contains('active')) {
+                    bioOverlay.classList.remove('active');
+                }
+            });
+        })();
 
-        // Open modal
-        aiEthicsLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            overlay.classList.add('active');
-        });
+        // AI ETHICS MODAL
+        (function() {
+            const overlay = document.getElementById('aiEthicsOverlay');
+            const closeBtn = document.getElementById('closeAiEthics');
+            const aiEthicsLink = document.getElementById('aiEthicsLink');
 
-        // Close modal
-        closeBtn.addEventListener('click', () => {
-            overlay.classList.remove('active');
-        });
+            aiEthicsLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                overlay.classList.add('active');
+            });
 
-        // Close on overlay click
-        overlay.addEventListener('click', (e) => {
-            if (e.target === overlay) {
+            closeBtn.addEventListener('click', () => {
                 overlay.classList.remove('active');
-            }
-        });
+            });
 
-        // Close on escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && overlay.classList.contains('active')) {
-                overlay.classList.remove('active');
-            }
-        });
-    })();
+            overlay.addEventListener('click', (e) => {
+                if (e.target === overlay) {
+                    overlay.classList.remove('active');
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && overlay.classList.contains('active')) {
+                    overlay.classList.remove('active');
+                }
+            });
+        })();
+
+        // LYRICS MODAL
+        (function() {
+            const lyricsOverlay = document.getElementById('lyricsOverlay');
+            const closeLyrics = document.getElementById('closeLyrics');
+            const lyricsButtons = document.querySelectorAll('.lyrics-btn');
+            const lyricsTitle = document.getElementById('lyricsTitle');
+            const lyricsText = document.getElementById('lyricsText');
+
+            // Lyrics database - ADD YOUR REAL LYRICS HERE
+            const lyricsData = {
+                'whoami': {
+                    title: 'who am i',
+                    lyrics: `[Lyrics coming soon]
+
+Add your lyrics here when ready.`
+                },
+                'wakeup': {
+                    title: 'Wake Up',
+                    lyrics: `[Lyrics coming soon]
+
+Add your lyrics here when ready.`
+                },
+                'hardtimes': {
+                    title: 'Hard Times',
+                    lyrics: `[Lyrics coming soon]
+
+Add your lyrics here when ready.`
+                }
+            };
+
+            // Open lyrics modal
+            lyricsButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const trackId = button.getAttribute('data-track');
+                    if (lyricsData[trackId]) {
+                        lyricsTitle.textContent = lyricsData[trackId].title;
+                        lyricsText.textContent = lyricsData[trackId].lyrics;
+                        lyricsOverlay.classList.add('active');
+                    }
+                });
+            });
+
+            // Close lyrics modal
+            closeLyrics.addEventListener('click', () => {
+                lyricsOverlay.classList.remove('active');
+            });
+
+            lyricsOverlay.addEventListener('click', (e) => {
+                if (e.target === lyricsOverlay) {
+                    lyricsOverlay.classList.remove('active');
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && lyricsOverlay.classList.contains('active')) {
+                    lyricsOverlay.classList.remove('active');
+                }
+            });
+        })();
     </script>
     
 </body>

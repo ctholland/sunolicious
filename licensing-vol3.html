@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume 3 Licensing | NOAH® SUNOLICIOUS™</title>
+    <meta name="description" content="License tracks from Sunolicious Sessions Vol. 3 by NOAH®. Coming Soon, Coming Soon, and Coming Soon - multiple versions available.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', 'Arial', sans-serif;
+            background: linear-gradient(161deg, #090329 10%, #3d1a94 35%, #c742c2 65%, #3d1a94 85%, #090329 100%);
+            color: #E8E8E8;
+            line-height: 1.9;
+            font-weight: 300;
+            min-height: 100vh;
+        }
+        :root {
+            --accent: #C5B7A0;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 4rem;
+        }
+        header {
+            text-align: center;
+            padding: 4rem 0 3rem;
+        }
+        .logo {
+            max-width: 300px;
+            width: 60%;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: 200;
+            letter-spacing: 4px;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+        .tagline {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+        section {
+            padding: 4rem 0;
+        }
+        .version-btn {
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            background: transparent;
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-decoration: none;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 300;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .version-btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+        /* Hamburger Menu */
+        .hamburger-menu {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            cursor: pointer;
+        }
+        .hamburger-icon {
+            width: 26px;
+            height: 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .hamburger-icon span {
+            width: 100%;
+            height: 1.5px;
+            background: rgba(255, 255, 255, 0.6);
+            transition: all 0.3s ease;
+        }
+        .hamburger-icon:hover span {
+            background: rgba(197, 183, 160, 0.9);
+        }
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            max-width: 380px;
+            height: 100vh;
+            background: rgba(9, 3, 41, 0.97);
+            backdrop-filter: blur(10px);
+            z-index: 999;
+            transition: right 0.4s ease;
+            padding: 6rem 3rem;
+            overflow-y: auto;
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .menu-overlay.active {
+            right: 0;
+        }
+        .menu-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 32px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            line-height: 1;
+        }
+        .menu-close:hover {
+            color: #C5B7A0;
+            transform: rotate(90deg);
+        }
+        .menu-nav {
+            list-style: none;
+        }
+        .menu-nav > li {
+            margin-bottom: 2rem;
+        }
+        .menu-nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 300;
+            transition: all 0.3s ease;
+            display: block;
+        }
+        .menu-nav a:hover {
+            color: #C5B7A0;
+            padding-left: 0.5rem;
+        }
+        .menu-nav .submenu {
+            list-style: none;
+            margin-top: 1rem;
+            padding-left: 1.5rem;
+        }
+        .menu-nav .submenu li {
+            margin-bottom: 0.8rem;
+        }
+        .menu-nav .submenu a {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            letter-spacing: 1px;
+        }
+        footer {
+            text-align: center;
+            padding: 4rem 0 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hamburger Menu -->
+    <div class="hamburger-menu" onclick="toggleMenu()">
+        <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    
+    <!-- Menu Overlay -->
+    <nav class="menu-overlay" id="menuOverlay">
+        <button class="menu-close" onclick="toggleMenu()">&times;</button>
+        <ul class="menu-nav">
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="music.html">Music</a>
+                <ul class="submenu">
+                    <li><a href="vol3.html">Volume 3</a></li>
+                    <li><a href="vol3.html">Volume 3</a></li>
+                    <li><a href="vol3.html">Volume 3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="licensing.html">Licensing</a>
+                <ul class="submenu">
+                    <li><a href="licensing.html">Browse All Volumes</a></li>
+                    <li><a href="licensing-vol1.html">Volume 1</a></li>
+                    <li><a href="licensing-vol2.html">Volume 2</a></li>
+                    <li><a href="licensing-vol3.html">Volume 3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <img src="images/Sunolicious_Logo_NOAH2.png" alt="NOAH SUNOLICIOUS Logo" class="logo">
+            <h1>Sunolicious Sessions Vol. 3</h1>
+            <p class="tagline">Licensing Information</p>
+        </div>
+    </header>
+    
+    <!-- TRACK ARTWORK -->
+    <section>
+        <div class="container">
+            <!-- Volume Navigation -->
+            <div style="display: flex; gap: 1.5rem; justify-content: center; margin: 0 auto 4rem; max-width: 600px;">
+                <a href="licensing-vol1.html" style="text-decoration: none; text-align: center; transition: all 0.3s ease; opacity: 0.4;">
+                    <img src="images/sunovol1.png" alt="Volume 1" style="width: 100px; height: 100px; object-fit: cover; margin-bottom: 0.5rem; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);">
+                    <p style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: #ffffff; font-weight: 300;">Volume 1</p>
+                </a>
+                <a href="licensing-vol2.html" style="text-decoration: none; text-align: center; transition: all 0.3s ease; opacity: 0.4;">
+                    <img src="images/sunovol2.png" alt="Volume 2" style="width: 100px; height: 100px; object-fit: cover; margin-bottom: 0.5rem; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);">
+                    <p style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: #ffffff; font-weight: 300;">Volume 2</p>
+                </a>
+                <a href="licensing-vol3.html" style="text-decoration: none; text-align: center; transition: all 0.3s ease;">
+                    <img src="images/sunovol3.png" alt="Volume 3" style="width: 100px; height: 100px; object-fit: cover; margin-bottom: 0.5rem; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); opacity: 1;">
+                    <p style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); font-weight: 300;">Volume 3</p>
+                </a>
+            </div>
+            
+            <!-- Prev/Next Navigation -->
+            <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 4rem;">
+                <a href="licensing-vol2.html" style="text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; color: rgba(255,255,255,0.7); transition: all 0.3s ease;" onmouseover="this.style.color='#C5B7A0'; this.style.transform='translateX(0px)'" onmouseout="this.style.color='rgba(255,255,255,0.7)'; this.style.transform='translateX(0)'">← Previous</a>
+                <div style="opacity: 0.3; cursor: not-allowed; font-size: 0.85rem; letter-spacing: 1px; color: rgba(255,255,255,0.4);">Next →</div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 900px; margin: 0 auto 4rem;">
+                <div style="text-align: center;">
+                    <img src="images/sunovol3.png" alt="Coming Soon" style="width: 100%; height: auto; margin-bottom: 1.5rem; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);">
+                    <h4 style="font-size: 1rem; margin-bottom: 0.5rem; letter-spacing: 2px; color: #ffffff; font-weight: 300;">Coming Soon</h4>
+                </div>
+                <div style="text-align: center;">
+                    <img src="images/sunovol3.png" alt="Coming Soon" style="width: 100%; height: auto; margin-bottom: 1.5rem; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);">
+                    <h4 style="font-size: 1rem; margin-bottom: 0.5rem; letter-spacing: 2px; color: #ffffff; font-weight: 300;">Coming Soon</h4>
+                </div>
+                <div style="text-align: center;">
+                    <img src="images/sunovol3.png" alt="Coming Soon" style="width: 100%; height: auto; margin-bottom: 1.5rem; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);">
+                    <h4 style="font-size: 1rem; margin-bottom: 0.5rem; letter-spacing: 2px; color: #ffffff; font-weight: 300;">Coming Soon</h4>
+                </div>
+            </div>
+            
+            <!-- SOUNDCLOUD PLAYERS -->
+            <div style="margin-bottom: 2rem;">
+                <div style="max-width: 900px; margin: 0 auto 2rem;">
+                    <p style="text-align: center; font-size: 1.2rem; color: rgba(255,255,255,0.6); padding: 2rem 0;">Coming Soon</p>
+                </div>
+                <div style="max-width: 900px; margin: 0 auto 2rem;">
+                    <p style="text-align: center; font-size: 1.2rem; color: rgba(255,255,255,0.6); padding: 2rem 0;">Coming Soon</p>
+                </div>
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <p style="text-align: center; font-size: 1.2rem; color: rgba(255,255,255,0.6); padding: 2rem 0;">Coming Soon</p>
+                </div>
+            </div>
+            
+            <!-- INQUIRY BUTTON -->
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="mailto:sunolicious@noahmusic.com?subject=Licensing Inquiry: Sunolicious Vol. 3" class="version-btn" style="padding: 1rem 2.5rem; font-size: 0.9rem;">Inquire About Licensing</a>
+            </div>
+            
+            <!-- BACK LINK -->
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="licensing.html" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; transition: color 0.3s ease;">← Back to All Volumes</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p style="font-size: 0.75rem; color: rgba(255, 255, 255, 0.5); letter-spacing: 2px; text-transform: uppercase;">© 2025 NOAH® / Sunolicious™ • All Rights Reserved</p>
+        </div>
+    </footer>
+    
+    <script>
+        function toggleMenu() {
+            const menuOverlay = document.getElementById('menuOverlay');
+            menuOverlay.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
