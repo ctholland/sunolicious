@@ -185,7 +185,7 @@
         <ul class="menu-nav">
             <li><a href="index.html">Home</a></li>
             <li>
-                <a href="music.html">Music</a>
+                <a href="music.html">Volumes</a>
                 <ul class="submenu">
                     <li><a href="vol1.html">Volume 1</a></li>
                     <li><a href="vol2.html">Volume 2</a></li>
@@ -197,7 +197,6 @@
             <li>
                 <a href="licensing.html">Licensing</a>
                 <ul class="submenu">
-                    <li><a href="licensing.html">Browse All Volumes</a></li>
                     <li><a href="licensing-vol1.html">Volume 1</a></li>
                     <li><a href="licensing-vol2.html">Volume 2</a></li>
                     <li><a href="licensing-vol3.html">Volume 3</a></li>
@@ -244,18 +243,35 @@
                 <a href="licensing-vol2.html" style="text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; color: rgba(255,255,255,0.7); transition: all 0.3s ease;" onmouseover="this.style.color='#C5B7A0'; this.style.transform='translateX(0px)'" onmouseout="this.style.color='rgba(255,255,255,0.7)'; this.style.transform='translateX(0)'">Next →</a>
             </div>
             
+            <!-- TRACKS SECTION -->
+            <h2 style="font-size: 1.4rem; text-align: center; letter-spacing: 3px; margin-bottom: 3rem; font-weight: 300;">Tracks</h2>
             <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 900px; margin: 0 auto 4rem;">
-                <div style="text-align: center;">
-                    <img src="images/hardtimes.png" alt="Hard Times" style="width: 100%; height: auto; margin-bottom: 1.5rem; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);">
-                    <h4 style="font-size: 1rem; margin-bottom: 0.5rem; letter-spacing: 2px; color: #ffffff; font-weight: 300;">Hard Times</h4>
+                <!-- Track 1: Hard Times -->
+                <div style="background: rgba(255, 255, 255, 0.03); border-radius: 0; overflow: hidden; transition: all 0.3s ease;">
+                    <img src="images/hardtimes.png" alt="Hard Times" style="width: 100%; height: auto; display: block;">
+                    <div style="padding: 1.5rem;">
+                        <p style="font-size: 0.7rem; color: rgba(255, 255, 255, 0.5); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.3rem;">Track 01</p>
+                        <h3 style="font-size: 1rem; margin-bottom: 1rem; letter-spacing: 1px; color: #ffffff; font-weight: 300;">Hard Times</h3>
+                        <button class="lyrics-btn" data-track="hardtimes" style="display: block; width: 100%; padding: 0.6rem; background: transparent; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.3); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; cursor: pointer; transition: all 0.3s ease; font-family: inherit; font-weight: 300;">View Lyrics</button>
+                    </div>
                 </div>
-                <div style="text-align: center;">
-                    <img src="images/wakeup.png" alt="Wake Up" style="width: 100%; height: auto; margin-bottom: 1.5rem; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);">
-                    <h4 style="font-size: 1rem; margin-bottom: 0.5rem; letter-spacing: 2px; color: #ffffff; font-weight: 300;">Wake Up</h4>
+                <!-- Track 2: Wake Up -->
+                <div style="background: rgba(255, 255, 255, 0.03); border-radius: 0; overflow: hidden; transition: all 0.3s ease;">
+                    <img src="images/wakeup.png" alt="Wake Up" style="width: 100%; height: auto; display: block;">
+                    <div style="padding: 1.5rem;">
+                        <p style="font-size: 0.7rem; color: rgba(255, 255, 255, 0.5); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.3rem;">Track 02</p>
+                        <h3 style="font-size: 1rem; margin-bottom: 1rem; letter-spacing: 1px; color: #ffffff; font-weight: 300;">Wake Up</h3>
+                        <button class="lyrics-btn" data-track="wakeup" style="display: block; width: 100%; padding: 0.6rem; background: transparent; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.3); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; cursor: pointer; transition: all 0.3s ease; font-family: inherit; font-weight: 300;">View Lyrics</button>
+                    </div>
                 </div>
-                <div style="text-align: center;">
-                    <img src="images/whoami.png" alt="who am i" style="width: 100%; height: auto; margin-bottom: 1.5rem; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);">
-                    <h4 style="font-size: 1rem; margin-bottom: 0.5rem; letter-spacing: 2px; color: #ffffff; font-weight: 300;">who am i</h4>
+                <!-- Track 3: who am i -->
+                <div style="background: rgba(255, 255, 255, 0.03); border-radius: 0; overflow: hidden; transition: all 0.3s ease;">
+                    <img src="images/whoami.png" alt="who am i" style="width: 100%; height: auto; display: block;">
+                    <div style="padding: 1.5rem;">
+                        <p style="font-size: 0.7rem; color: rgba(255, 255, 255, 0.5); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.3rem;">Track 03</p>
+                        <h3 style="font-size: 1rem; margin-bottom: 1rem; letter-spacing: 1px; color: #ffffff; font-weight: 300;">who am i</h3>
+                        <button class="lyrics-btn" data-track="whoami" style="display: block; width: 100%; padding: 0.6rem; background: transparent; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.3); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; cursor: pointer; transition: all 0.3s ease; font-family: inherit; font-weight: 300;">View Lyrics</button>
+                    </div>
                 </div>
             </div>
             
@@ -283,6 +299,262 @@
             </div>
         </div>
     </section>
+    
+    <!-- LYRICS MODAL -->
+    <div class="ai-ethics-overlay" id="lyricsOverlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: rgba(0, 0, 0, 0.95); z-index: 10000; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease;">
+        <div class="ai-ethics-content" style="background: linear-gradient(161deg, #090329 10%, #3d1a94 35%, #c742c2 65%, #3d1a94 85%, #090329 100%); padding: 3rem; max-width: 800px; width: 90%; max-height: 85vh; overflow-y: auto; position: relative; border: 1px solid rgba(255, 255, 255, 0.1);">
+            <button class="ai-close-btn" id="closeLyrics" style="position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: rgba(255, 255, 255, 0.6); font-size: 32px; cursor: pointer; transition: all 0.3s ease; font-family: inherit; line-height: 1;">&times;</button>
+            <h2 class="lyrics-title" id="lyricsTitle" style="font-size: 1.8rem; margin-bottom: 1rem; letter-spacing: 3px; font-weight: 300; text-align: center;">Song Title</h2>
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <button id="copyLyricsBtn" style="padding: 0.6rem 1.5rem; background: transparent; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.4); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; cursor: pointer; transition: all 0.3s ease; font-family: inherit; font-weight: 300;">Copy Lyrics</button>
+                <span id="copyConfirm" style="display: none; margin-left: 1rem; font-size: 0.75rem; color: #C5B7A0;">Copied!</span>
+            </div>
+            <div class="lyrics-text" id="lyricsText" style="white-space: pre-wrap; line-height: 1.9; font-size: 0.95rem; color: rgba(255, 255, 255, 0.9); user-select: text;">
+                <!-- Lyrics will be inserted here -->
+            </div>
+            <p style="margin-top: 2rem; font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); text-align: center;">
+                © 2025 NOAH® / Sunolicious™ • All Rights Reserved
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // LYRICS MODAL
+        (function() {
+            const lyricsButtons = document.querySelectorAll('.lyrics-btn');
+            const lyricsOverlay = document.getElementById('lyricsOverlay');
+            const closeLyrics = document.getElementById('closeLyrics');
+            const lyricsTitle = document.getElementById('lyricsTitle');
+            const lyricsText = document.getElementById('lyricsText');
+            const copyBtn = document.getElementById('copyLyricsBtn');
+            const copyConfirm = document.getElementById('copyConfirm');
+            
+            // Lyrics data
+            const lyricsData = {
+                'wakeup': {
+                    title: 'Wake Up',
+                    lyrics: `They say you gotta pray, keep your head held high,
+But the world just breaks you down when you're barely getting by.
+They want you docile, soft, broken down inside,
+While they stack the chips against you and decide which rules apply.
+
+Oh they want your silence, they want you tired and small,
+Chasing empty comforts while they're standing tall.
+But what if waking up means calling out the game?
+What if breaking through means learning how to claim—
+
+Wake up—
+This is not the way it has to be.
+Wake up—
+You don't have to smile and agree.
+Wake up—
+There's fire in you if you just believe,
+Wake up — you're stronger than the life they need you to lead.
+
+Ambition isn't selfish, anger has its place,
+Not every gentle word deserves to win the race.
+They tell you healing means you swallow what they deal,
+But sometimes breaking free's the only way to feel real.
+
+Don't confuse the peace they want with peace you choose,
+Don't stay small and kind if all you do is lose.
+What if waking up means standing in the storm?
+What if breaking through means taking back your form?
+
+Wake up—
+This is not the way it has to be.
+Wake up—
+You don't have to smile and agree.
+Wake up—
+There's fire in you if you just believe,
+Wake up — you're stronger than the life they need you to lead.
+
+Yeah they tell you healing, growth, self-work, and light,
+But some of that's designed to keep you from the fight.
+Not all forgiveness frees, not all anger kills,
+Sometimes waking up is learning when to feel—
+
+Wake up—
+You're sharper than they want you to know.
+Wake up—
+Don't stay stuck in that comfortable low.
+Wake up—
+There's more to this if you just let it show,
+Wake up — there's strength in you they don't want you to grow.
+
+Wake up — don't let them tell you who to be.
+Wake up — reclaim your right to clarity.
+Wake up — the game is rigged but you can see,
+Wake up — you're stronger than the life they want you to lead.`
+                },
+                'whoami': {
+                    title: 'who am i',
+                    lyrics: `Who am I if I'm not who I was before?
+Not the name, not the face I've been holding to the floor.
+They want an answer clean, something I can prove,
+But I'm caught between the past and the next move.
+
+Tell me who I am when the mirror doesn't speak,
+When the ground beneath my feet feels too weak.
+Is it the battles that I've lost, the wars I didn't win?
+Or the quiet way I kept trying to begin again?
+
+Who am I — if I strip it all away?
+Who am I — when there's nothing left to say?
+Who am I — if I'm no longer chasing pain,
+Who am I without the weight of my own name?
+
+I've been told that change is growth, that letting go is free,
+But what if all I've known is falling endlessly?
+They say find yourself — like it's buried in the sand,
+But what if I'm just learning how to stand?
+
+Tell me who I am when I'm tired of the roles,
+When I can't keep playing parts to fill the holes.
+Is it the person I became when nobody could see?
+Or the version I've been running from that's calling out to me?
+
+Who am I — if I strip it all away?
+Who am I — when there's nothing left to say?
+Who am I — if I'm no longer chasing pain,
+Who am I without the weight of my own name?
+
+Maybe I'm the question more than I'm the answer found,
+Maybe I'm the silence when there's too much sound.
+Maybe I'm the fracture and the way it holds,
+Maybe I'm the story that's still being told.
+
+Who am I — if I'm more than what I've been?
+Who am I — if I let the light back in?
+Who am I — if I choose to start again,
+Who am I if I release the need to win?
+
+Who am I — standing here without disguise?
+Who am I — if I look behind the lies?
+Who am I — if I'm learning to forgive,
+Who am I if I finally choose to live?`
+                },
+                'hardtimes': {
+                    title: 'Hard Times',
+                    lyrics: `Hard times hit the ones who care the most,
+The quiet ones who give until they're ghosts.
+You hold the weight while others walk away,
+Hard times don't care who's kind — they come to stay.
+
+You learn real quick when no one's holding on,
+You feel the cold when everyone is gone.
+They take your heart, your hope, your second try,
+Hard times — they find the good and drain them dry.
+
+Hard times — they come for those who feel,
+Hard times — they break what's real.
+Hard times — they don't forgive,
+They take the ones who still believe and give.
+
+You built them up, you stayed when it got rough,
+You gave your all but it was never enough.
+They wanted more, they wanted what you bled,
+Hard times took what you had and left you for dead.
+
+But here's the truth they never want you to see,
+Hard times don't mean you're weak — they mean you're free.
+Free from the weight of carrying the ones who won't,
+Free from the ones who take but never show they don't.
+
+Hard times — they come for those who fight,
+Hard times — they steal your light.
+Hard times — they leave you raw,
+But you're still standing when they're gone for sure.
+
+Yeah, you gave your best to people who couldn't care,
+You showed up when they vanished in the air.
+But don't forget — you carried what they dropped,
+Hard times came but you never stopped.
+
+You never stopped loving, you never stopped trying,
+You never stopped even when you were dying inside.
+Hard times showed you who would stay and who would leave,
+Hard times taught you the truth of what you believe.
+
+Hard times — they come for those who feel,
+Hard times — they shatter what's real.
+Hard times — they leave their mark,
+But you're the one still holding light inside the dark.
+
+Don't lose that fire, don't lose your fight,
+Hard times don't get to steal your light.
+You're stronger now, you know the cost,
+Hard times came — but you're not lost.
+
+Cause here's the truth when it all falls apart,
+Hard times only break a fragile heart.
+But yours kept beating when it should've quit,
+Hard times came but you're still in it.
+
+They'll tell you to forgive, to let it slide,
+To be the bigger person, swallow pride.
+But let me tell you something they don't say,
+Not everyone deserves your love that way.
+
+Some people drain you, some people take,
+Some leave you hollow for their own sake.
+Balance ain't weakness, truth ain't war,
+We all need love — that's what it's for.
+
+So next time you win, next time you shine,
+Remember the hands that held the line.
+'Cause hard times, yeah they always find,
+Every heart that's left behind`
+                }
+            };
+            
+            // Style for active modal
+            const activeStyle = 'opacity: 1; pointer-events: auto;';
+            
+            // Open lyrics modal
+            lyricsButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const trackId = button.getAttribute('data-track');
+                    if (lyricsData[trackId]) {
+                        lyricsTitle.textContent = lyricsData[trackId].title;
+                        lyricsText.textContent = lyricsData[trackId].lyrics;
+                        lyricsOverlay.style.cssText += activeStyle;
+                        copyConfirm.style.display = 'none';
+                    }
+                });
+            });
+            
+            // Copy lyrics button
+            copyBtn.addEventListener('click', () => {
+                const lyrics = lyricsText.textContent;
+                navigator.clipboard.writeText(lyrics).then(() => {
+                    copyConfirm.style.display = 'inline';
+                    setTimeout(() => {
+                        copyConfirm.style.display = 'none';
+                    }, 2000);
+                });
+            });
+            
+            // Close lyrics modal
+            closeLyrics.addEventListener('click', () => {
+                lyricsOverlay.style.opacity = '0';
+                lyricsOverlay.style.pointerEvents = 'none';
+            });
+            lyricsOverlay.addEventListener('click', (e) => {
+                if (e.target === lyricsOverlay) {
+                    lyricsOverlay.style.opacity = '0';
+                    lyricsOverlay.style.pointerEvents = 'none';
+                }
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && lyricsOverlay.style.opacity === '1') {
+                    lyricsOverlay.style.opacity = '0';
+                    lyricsOverlay.style.pointerEvents = 'none';
+                }
+            });
+        })();
+    </script>
     
     <!-- FOOTER -->
     <footer>
