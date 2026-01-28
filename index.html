@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,7 +66,6 @@
         }
         section {
             padding: 10rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
         section:last-child {
             border-bottom: none;
@@ -574,7 +574,8 @@
                 </ul>
             </li>
             <li><a href="#" class="bio-trigger">Artist Bio</a></li>
-            <li><a href="#" class="ethics-trigger">AI Ethics Statement</a></li>
+            <li><a href="#" class="ethics-trigger">AI Ethics</a></li>
+            <li><a href="#contact" class="scroll-link">Contact</a></li>
         </ul>
     </nav>
     
@@ -588,7 +589,7 @@
                 </p>
             </div>
             <div class="cta-buttons">
-                <a href="music.html" class="btn btn-primary">Listen Now</a>
+                <a class='btn btn-primary' href='/music'>Listen Now</a>
                 <a href="/manifesto.pdf" class="btn btn-secondary" target="_blank">Read The Manifesto</a>
             </div>
         </div>
@@ -600,7 +601,7 @@
                 <p class="closing-statement" style="font-size: 1.3rem; letter-spacing: 4px;">This is Sunolicious™.</p>
                 <p class="closing-statement" style="font-size: 1.3rem; letter-spacing: 4px; margin-bottom: 3rem;">This is the future we're already in.</p>
                 <div class="cta-buttons">
-                    <a href="music.html" class="btn btn-primary">Listen to the Music</a>
+                    <a class='btn btn-primary' href='/music'>Listen to the Music</a>
                 </div>
             </div>
         </div>
@@ -611,7 +612,7 @@
             <p style="font-size: 0.85rem; color: #ffffff; margin-bottom: 1rem; margin-top: 8rem; letter-spacing: 3px; text-transform: uppercase; font-weight: 300;">SUNOLICIOUS™ — A NOAH® PROJECT</p>
             <h2>Connect</h2>
             <p class="contact-text">For inquiries, collaborations, or booking:</p>
-            <a href="mailto:sunolicious@noahmusic.com" class="contact-email">sunolicious@noahmusic.com</a>
+            <a href="/cdn-cgi/l/email-protection#1360667d7c7f7a707a7c6660537d7c727b7e66607a703d707c7e" class="contact-email"><span class="__cf_email__" data-cfemail="8cfff9e2e3e0e5efe5e3f9ffcce2e3ede4e1f9ffe5efa2efe3e1">[email&#160;protected]</span></a>
             <div class="social-links">
                 <a href="https://instagram.com/sunoliciousmusic" class="social-link" target="_blank">Instagram</a>
                 <a href="https://tiktok.com/@sunoliciousmusic" class="social-link" target="_blank">TikTok</a>
@@ -721,7 +722,7 @@
             </div>
         </div>
     </div>
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
     <script type="text/javascript">
         (function($) {
@@ -858,6 +859,9 @@
                 }, 400);
             });
         });
-    </script>
-</body>
-</html>
+        
+        // Smooth scroll to Contact section
+        document.querySelectorAll('.scroll-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('

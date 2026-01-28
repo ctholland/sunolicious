@@ -50,24 +50,24 @@
             padding: 4rem 0 3rem;
         }
         .logo {
-            max-width: 280px;
+            max-width: 300px;
             width: 60%;
             height: auto;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             opacity: 0.95;
         }
         .tagline {
-            font-size: 0.75rem;
+            font-size: 0.9rem;
             color: #ffffff !important;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 2px;
             font-weight: 300;
         }
         h1 {
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             font-weight: 200;
-            letter-spacing: 4px;
-            margin-bottom: 0.8rem;
+            letter-spacing: 6px;
+            margin-bottom: 1rem;
             color: #ffffff !important;
         }
         .intro {
@@ -94,104 +94,12 @@
             text-align: center;
             text-transform: uppercase;
         }
-        /* Hamburger Menu */
-        .hamburger-menu {
-            position: fixed;
-            top: 2rem;
-            right: 2rem;
-            z-index: 1000;
-            cursor: pointer;
-        }
-        .hamburger-icon {
-            width: 26px;
-            height: 18px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .hamburger-icon span {
-            width: 100%;
-            height: 1.5px;
-            background: rgba(255, 255, 255, 0.6);
-            transition: all 0.3s ease;
-        }
-        .hamburger-icon:hover span {
-            background: rgba(197, 183, 160, 0.9);
-        }
-        .menu-overlay {
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 100%;
-            max-width: 380px;
-            height: 100vh;
-            background: rgba(9, 3, 41, 0.97);
-            backdrop-filter: blur(10px);
-            z-index: 999;
-            transition: right 0.4s ease;
-            padding: 6rem 3rem;
-            overflow-y: auto;
-            border-left: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .menu-overlay.active {
-            right: 0;
-        }
-        .menu-close {
-            position: absolute;
-            top: 2rem;
-            right: 2rem;
-            background: none;
-            border: none;
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 32px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: inherit;
-            line-height: 1;
-        }
-        .menu-close:hover {
-            color: #C5B7A0;
-            transform: rotate(90deg);
-        }
-        .menu-nav {
-            list-style: none;
-        }
-        .menu-nav > li {
-            margin-bottom: 2rem;
-        }
-        .menu-nav a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 300;
-            transition: all 0.3s ease;
-            display: block;
-        }
-        .menu-nav a:hover {
-            color: #C5B7A0;
-            padding-left: 0.5rem;
-        }
-        .menu-nav .submenu {
-            list-style: none;
-            margin-top: 1rem;
-            padding-left: 1.5rem;
-        }
-        .menu-nav .submenu li {
-            margin-bottom: 0.8rem;
-        }
-        .menu-nav .submenu a {
-            font-size: 0.85rem;
-            opacity: 0.8;
-            letter-spacing: 1px;
-        }
         /* Volume Grid */
         .volumes-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 3rem;
-            max-width: 1100px;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2.5rem;
+            max-width: 900px;
             margin: 0 auto;
             padding-bottom: 5rem;
         }
@@ -216,32 +124,32 @@
             object-fit: cover;
         }
         .volume-info {
-            padding: 1.5rem;
+            padding: 2rem;
         }
         .volume-title {
             font-size: 0.95rem;
             font-weight: 300;
-            letter-spacing: 1.5px;
-            margin-bottom: 0.4rem;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
             color: #ffffff;
         }
         .volume-subtitle {
             font-size: 0.7rem;
             color: rgba(255, 255, 255, 0.6);
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
         }
         .volume-btn {
             display: block;
-            padding: 0.6rem 1.2rem;
+            padding: 0.9rem 2rem;
             background: transparent;
             color: #ffffff;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.4);
             text-decoration: none;
-            font-size: 0.65rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 2px;
             font-weight: 300;
             transition: all 0.3s ease;
             text-align: center;
@@ -284,7 +192,6 @@
         .streaming-section {
             text-align: center;
             padding: 4rem 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
             margin-top: 3rem;
         }
         .streaming-title {
@@ -342,7 +249,7 @@
         footer {
             text-align: center;
             padding: 4rem 0 3rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            
         }
         .back-link {
             display: inline-block;
@@ -451,11 +358,11 @@
                 padding: 0 2rem;
             }
             h1 {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
                 letter-spacing: 4px;
             }
             .logo {
-                max-width: 300px;
+                max-width: 180px;
             }
             .volumes-grid {
                 grid-template-columns: 1fr;
@@ -477,10 +384,220 @@
                 font-size: 1.2rem;
             }
         }
+    
+        .hamburger-icon {
+            width: 26px;
+            height: 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .hamburger-icon span {
+            width: 100%;
+            height: 1.5px;
+            background: rgba(255, 255, 255, 0.6);
+            transition: all 0.3s ease;
+        }
+        .hamburger-icon:hover span {
+            background: rgba(197, 183, 160, 0.9);
+        }
+        
+        .menu-close:hover {
+            color: #C5B7A0;
+            transform: rotate(90deg);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 4rem 0 2rem;
+            
+        }
+    
+    .hamburger-menu {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            cursor: pointer;
+        }
+        .hamburger-icon {
+            width: 26px;
+            height: 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .hamburger-icon span {
+            width: 100%;
+            height: 1.5px;
+            background: rgba(255, 255, 255, 0.6);
+            transition: all 0.3s ease;
+        }
+        .hamburger-icon:hover span {
+            background: rgba(197, 183, 160, 0.9);
+        }
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            max-width: 380px;
+            height: 100vh;
+            background: rgba(9, 3, 41, 0.97);
+            backdrop-filter: blur(10px);
+            z-index: 999;
+            transition: right 0.4s ease;
+            padding: 6rem 3rem;
+            overflow-y: auto;
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .menu-overlay.active {
+            right: 0;
+        }
+        .menu-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 32px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            line-height: 1;
+        }
+        .menu-close:hover {
+            color: #C5B7A0;
+            transform: rotate(90deg);
+        }
+        .menu-nav {
+            list-style: none;
+        }
+        .menu-nav > li {
+            margin-bottom: 2rem;
+        }
+        .menu-nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 300;
+            transition: all 0.3s ease;
+            display: block;
+        }
+        .menu-nav a:hover {
+            color: #C5B7A0;
+            padding-left: 0.5rem;
+        }
+        .menu-nav .submenu {
+            list-style: none;
+            margin-top: 1rem;
+            padding-left: 1.5rem;
+        }
+        .menu-nav .submenu li {
+            margin-bottom: 0.8rem;
+        }
+        .menu-nav .submenu a {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            letter-spacing: 1px;
+        }
+        footer {
+            text-align: center;
+            padding: 4rem 0 2rem;
+            
+        }
+        /* Join the List Popup */
+        .signup-trigger {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 14px 28px;
+            font-size: 0.75rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.4s ease;
+            font-family: inherit;
+        }
+        .signup-trigger:hover {
+            background: #ffffff;
+            color: #090329;
+        }
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+        .popup-overlay.active {
+            display: flex;
+        }
+        .popup-content {
+            background: linear-gradient(161deg, #090329 10%, #3d1a94 35%, #c742c2 65%, #3d1a94 85%, #090329 100%);
+            border: 1px solid rgba(197, 183, 160, 0.3);
+            max-width: 500px;
+            width: 90%;
+            padding: 40px 30px;
+            position: relative;
+            animation: slideUp 0.4s ease;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .popup-form {
+            margin-bottom: 15px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .popup-description {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #999999;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            font-size: 0.75rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            font-family: inherit;
+        }
+        .submit-btn:hover {
+            background: #ffffff;
+            color: #090329;
+        }
+        .hidden-field {
+            position: absolute;
+            left: -5000px;
+        }
     </style>
 </head>
 <body>
-    <!-- Hamburger Menu -->
     <div class="hamburger-menu" onclick="toggleMenu()">
         <div class="hamburger-icon">
             <span></span>
@@ -511,9 +628,12 @@
                 </ul>
             </li>
             <li><a href="#" class="bio-trigger">Artist Bio</a></li>
-            <li><a href="#" class="ethics-trigger">AI Ethics Statement</a></li>
+            <li><a href="#" class="ethics-trigger">AI Ethics</a></li>
+            <li><a href="#connect-section" class="scroll-link">Contact</a></li>
         </ul>
     </nav>
+    
+    
     
     <header>
         <div class="container">
@@ -542,7 +662,7 @@
                 <!-- Volume 2 -->
                 <a href="vol2.html" style="text-decoration: none;">
                     <div class="volume-card">
-                        <img src="images/sunovol2.png" alt="Sunolicious Sessions Vol. 2" class="volume-artwork">
+                        <img src="images/sunovol1.png" alt="Sunolicious Sessions Vol. 2" class="volume-artwork">
                         <div class="volume-info">
                             <h3 class="volume-title">Sunolicious Sessions Vol. 2</h3>
                             <p class="volume-subtitle">3 Tracks</p>
@@ -553,7 +673,7 @@
                 <!-- Volume 3 -->
                 <a href="vol3.html" style="text-decoration: none;">
                     <div class="volume-card">
-                        <img src="images/sunovol3.png" alt="Sunolicious Sessions Vol. 3" class="volume-artwork">
+                        <img src="images/sunovol1.png" alt="Sunolicious Sessions Vol. 3" class="volume-artwork">
                         <div class="volume-info">
                             <h3 class="volume-title">Sunolicious Sessions Vol. 3</h3>
                             <p class="volume-subtitle">3 Tracks</p>
@@ -573,11 +693,11 @@
             </div>
         </section>
     </main>
-    <section style="text-align: center; padding: 5rem 0; border-top: 1px solid rgba(255, 255, 255, 0.08); margin-top: 3rem;">
+    <section id="connect-section" style="text-align: center; padding: 5rem 0; margin-top: 3rem;">
         <div class="container">
-            <h2 style="font-size: 1.5rem; font-weight: 200; letter-spacing: 4px; margin-bottom: 2rem; color: #ffffff; text-transform: uppercase;">Licensing Inquiries</h2>
+            <h2 style="font-size: 1.5rem; font-weight: 200; letter-spacing: 4px; margin-bottom: 2rem; color: #ffffff; text-transform: uppercase;">CONNECT</h2>
             <p style="font-size: 1rem; color: #ffffff; line-height: 2; max-width: 600px; margin: 0 auto 1.5rem;">All tracks 100% owned and cleared for sync, film, TV, advertising, and commercial use.</p>
-            <a href="/cdn-cgi/l/email-protection#7300061d1c1f1a101a1c0600331d1c121b1e06001a105d101c1e" style="display: inline-block; font-size: 1.1rem; color: #ffffff; text-decoration: none; font-weight: 300; letter-spacing: 1px; transition: opacity 0.3s ease;"><span class="__cf_email__" data-cfemail="cfbcbaa1a0a3a6aca6a0babc8fa1a0aea7a2babca6ace1aca0a2">[email&#160;protected]</span></a>
+            <a href="mailto:sunolicious@noahmusic.com" style="display: inline-block; font-size: 1.1rem; color: #ffffff; text-decoration: none; font-weight: 300; letter-spacing: 1px; transition: opacity 0.3s ease;">sunolicious@noahmusic.com</a>
         </div>
     </section>
     <footer>
@@ -598,6 +718,35 @@
             <p class="copyright">© 2025 NOAH® / Sunolicious™ • All Rights Reserved</p>
         </div>
     </footer>
+    
+    <!-- EMAIL POPUP BUTTON -->
+    <button class="signup-trigger" id="openPopup">Join the List</button>
+    
+    <!-- EMAIL POPUP -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content">
+            <button class="close-btn" id="closePopup">&times;</button>
+            <div class="popup-header">
+                <h1>NOAH<sup style="font-size: 0.3em">®</sup></h1>
+                <h2>SUNOLICIOUS<sup style="font-size: 0.3em">™</sup></h2>
+                <p>Human. Machine. Manifest.</p>
+            </div>
+            <p class="popup-description">
+                Join the journey. Get exclusive updates, new releases, and insights into the evolution of human-machine musical collaboration.
+            </p>
+            <form class="popup-form" action="https://noahmusic.us6.list-manage.com/subscribe/post?u=634485f7f15097e5aecc9af5f&id=c2b49f4fa3&f_id=004911e2f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+                <div class="form-group">
+                    <label for="mce-EMAIL">Email Address *</label>
+                    <input type="email" name="EMAIL" id="mce-EMAIL" required placeholder="your@email.com">
+                </div>
+                <div class="hidden-field" aria-hidden="true">
+                    <input type="text" name="b_634485f7f15097e5aecc9af5f_c2b49f4fa3" tabindex="-1" value="">
+                </div>
+                <button type="submit" class="submit-btn">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    
     <!-- BIO MODAL -->
     <div class="ai-ethics-overlay" id="bioOverlay">
         <div class="ai-ethics-content">
@@ -610,18 +759,12 @@
                     I came up in music before everything went fully digital.
                 </p>
                 <p style="margin-bottom: 1.5rem;">
-                    I learned recording in analog studios where tape was finite, decisions mattered, and commitment was part of the craft. I majored in music business at Columbia College Chicago under Irwin Steinberg — co-founder of Mercury Records and chairman of PolyGram for over 30 years. I worked across multiple eras and cities: Chicago, London, New York — from early multi-track systems and sampling keyboards to large-format tape, then into the digital age that rewrote the industry entirely.
-                </p>
-                <p style="margin-bottom: 1.5rem;">
-                    As NOAH® (trademark holder since 2012, ASCAP member), I've built a career spanning over a decade with more than twenty UK Music Week chart placements, Billboard and DJ Times chart entries, and a sync placement in Blumhouse's <em>Truth or Dare</em>. My work has topped UK club charts, charted across Europe, and earned both underground credibility and commercial recognition.
-                </p>
-                <p style="margin-bottom: 1.5rem;">
-                    My name is Christofer Holland. I'm based in Manhattan, where I sell luxury properties to creatives.
+                    I learned recording in analog studios where tape was finite, decisions mattered, and commitment was part of the craft. I worked across multiple eras and cities — from early multi-track systems and sampling keyboards to large-format tape, then into the digital shift that rewrote the industry entirely. I studied music business when the old rules still applied — and lived through watching them disappear.
                 </p>
                 <p style="margin-bottom: 1.5rem;">
                     I didn't arrive at AI as a shortcut. I arrived at it through decades of adapting to changing tools while protecting authorship.
                 </p>
-                <p style="margin-bottom: 1.5rem; font-style: italic; color: #ffffff !important;">
+                <p style="margin-bottom: 1.5rem; font-style: italic; color: #C5B7A0 !important;">
                     Throughout my career, musicians have always modeled other musicians — singers studying phrasing, drummers internalizing feel, guitarists chasing tone. That's not new. What's new is that modeling has become explicit.
                 </p>
                 <p style="margin-bottom: 1.5rem;">
@@ -669,7 +812,55 @@
             </div>
         </div>
     </div>
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
+        function toggleMenu() {
+            const menuOverlay = document.getElementById('menuOverlay');
+            menuOverlay.classList.toggle('active');
+        }
+
+        // Email popup
+        const openPopupBtn = document.getElementById('openPopup');
+        const closePopupBtn = document.getElementById('closePopup');
+        const popupOverlay = document.getElementById('popupOverlay');
+        
+        if (openPopupBtn) {
+            openPopupBtn.addEventListener('click', () => {
+                popupOverlay.classList.add('active');
+            });
+        }
+        
+        if (closePopupBtn) {
+            closePopupBtn.addEventListener('click', () => {
+                popupOverlay.classList.remove('active');
+            });
+        }
+        
+        if (popupOverlay) {
+            popupOverlay.addEventListener('click', (e) => {
+                if (e.target === popupOverlay) {
+                    popupOverlay.classList.remove('active');
+                }
+            });
+            
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && popupOverlay.classList.contains('active')) {
+                    popupOverlay.classList.remove('active');
+                }
+            });
+        }
+
+        // Smooth scroll to Connect section
+        document.querySelectorAll('.scroll-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    toggleMenu(); // Close hamburger menu
+                }
+            });
+        });
+
         // BIO MODAL FUNCTIONALITY
         (function() {
             const bioOverlay = document.getElementById('bioOverlay');
@@ -717,13 +908,7 @@
             });
         })();
         
-        // HAMBURGER MENU
-        function toggleMenu() {
-            const menuOverlay = document.getElementById('menuOverlay');
-            menuOverlay.classList.toggle('active');
-        }
-        
-        // Close menu when clicking bio/ethics triggers
+        // Hamburger menu Bio and Ethics triggers
         document.querySelectorAll('.bio-trigger').forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();

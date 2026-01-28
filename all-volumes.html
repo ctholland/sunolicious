@@ -144,7 +144,7 @@
         /* Volume Grid */
         .volumes-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
             gap: 3rem;
             padding: 4rem 0 6rem;
         }
@@ -168,7 +168,7 @@
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
         }
         .volume-title {
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             letter-spacing: 2px;
             color: #ffffff;
             font-weight: 300;
@@ -213,30 +213,24 @@
     <nav class="menu-overlay" id="menuOverlay">
         <button class="menu-close" onclick="toggleMenu()">&times;</button>
         <ul class="menu-nav">
-            <li><a href="index.html">Home</a></li>
             <li>
-                <a href="music.html">Music</a>
+                <a href="music.html">Volumes</a>
                 <ul class="submenu">
-                    <li><a href="all-volumes.html">All Volumes</a></li>
                     <li><a href="vol1.html">Volume 1</a></li>
                     <li><a href="vol2.html">Volume 2</a></li>
                     <li><a href="vol3.html">Volume 3</a></li>
-                            <li><a href="#" class="bio-trigger">Artist Bio</a></li>
-            <li><a href="#" class="ethics-trigger">AI Ethics Statement</a></li>
-        </ul>
+                </ul>
             </li>
             <li>
                 <a href="licensing.html">Licensing</a>
                 <ul class="submenu">
-                    <li><a href="licensing.html">Browse All Volumes</a></li>
                     <li><a href="licensing-vol1.html">Volume 1</a></li>
                     <li><a href="licensing-vol2.html">Volume 2</a></li>
                     <li><a href="licensing-vol3.html">Volume 3</a></li>
-                            <li><a href="#" class="bio-trigger">Artist Bio</a></li>
-            <li><a href="#" class="ethics-trigger">AI Ethics Statement</a></li>
-        </ul>
+                </ul>
             </li>
-                    <li><a href="#" class="bio-trigger">Artist Bio</a></li>
+            <li><a href="/cdn-cgi/l/email-protection#93e0e6fdfcfffaf0fafce6e0d3fdfcf2fbfee6e0faf0bdf0fcfe">Contact</a></li>
+            <li><a href="#" class="bio-trigger">Artist Bio</a></li>
             <li><a href="#" class="ethics-trigger">AI Ethics Statement</a></li>
         </ul>
     </nav>
@@ -363,11 +357,43 @@
         </div>
     </footer>
     
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         function toggleMenu() {
             const menuOverlay = document.getElementById('menuOverlay');
             menuOverlay.classList.toggle('active');
         }
     </script>
-</body>
-</html>
+    <!-- BIO MODAL -->
+    <div class="ai-ethics-overlay" id="bioOverlay">
+        <div class="ai-ethics-content">
+            <button class="ai-close-btn" id="closeBio">&times;</button>
+            <div class="ai-ethics-header"><h2>Artist Bio</h2></div>
+            <div class="ai-ethics-body">
+                <p style="margin-bottom: 1.5rem;">I came up in music before everything went fully digital.</p>
+                <p style="margin-bottom: 1.5rem;">I learned recording in analog studios where tape was finite, decisions mattered, and commitment was part of the craft. I majored in music business at Columbia College Chicago under Irwin Steinberg — co-founder of Mercury Records and chairman of PolyGram for over 30 years. I worked across multiple eras and cities: Chicago, London, New York — from early multi-track systems and sampling keyboards to large-format tape, then into the digital age that rewrote the industry entirely.</p>
+                <p style="margin-bottom: 1.5rem;">As NOAH® (trademark holder since 2012, ASCAP member), I've built a career spanning over a decade with more than twenty UK Music Week chart placements, Billboard and DJ Times chart entries, and a sync placement in Blumhouse's <em>Truth or Dare</em>. My work has topped UK club charts, charted across Europe, and earned both underground credibility and commercial recognition.</p>
+                <p style="margin-bottom: 1.5rem;">My name is Christofer Holland. I'm based in Manhattan, where I sell luxury properties to creatives.</p>
+                <p style="margin-bottom: 1.5rem;">I didn't arrive at AI as a shortcut. I arrived at it through decades of adapting to changing tools while protecting authorship.</p>
+                <p style="margin-bottom: 1.5rem; font-style: italic; color: #ffffff !important;">Throughout my career, musicians have always modeled other musicians — singers studying phrasing, drummers internalizing feel, guitarists chasing tone. That's not new. What's new is that modeling has become explicit.</p>
+                <p style="margin-bottom: 1.5rem;">Today, I use AI as part of a creative feedback loop—prompting, responding, refining, and taking responsibility for the final work. While platforms introduce elements of variation and randomness, the core decisions — melody, lyrics, emotional direction, and what ultimately gets released — remain human.</p>
+                <p style="margin-bottom: 1.5rem;">Any vocals that aren't my physical voice are still extensions of my musical identity: my melodies, my words, my intent, my taste.</p>
+                <p style="margin-bottom: 0; font-weight: 400;">The tools evolve.<br>The authorship doesn't.</p>
+            </div>
+        </div>
+    </div>
+    <div class="ai-ethics-overlay" id="aiEthicsOverlay">
+        <div class="ai-ethics-content">
+            <button class="ai-close-btn" id="closeAiEthics">&times;</button>
+            <div class="ai-ethics-header"><h2>AI Ethics & Creative Statement</h2></div>
+            <div class="ai-ethics-body">
+                <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.9;"><strong>Sunolicious™ is where human artistry meets technological possibility.</strong><br>Every track begins with my melodies, my lyrics, my phrasing, and my emotional direction.</p>
+                <p style="margin-bottom: 1.5rem;">AI doesn't originate my music — it extends it. It's a tool, not a ghostwriter; an instrument, not a replacement for the artist.</p>
+                <p style="margin-bottom: 1.5rem;">I design the concepts. I write the songs. I shape the sonic identity. I work through an iterative creative feedback loop—prompting, responding, refining, editing, and making the final call on what gets released.</p>
+                <p style="margin-bottom: 1.5rem;">AI enters the process the way synthesizers, samplers, drum machines, autotune, and guitar-amp modeling always have: as technology that amplifies human intention, not technology that authors the work.</p>
+                <p style="margin-bottom: 1.5rem;">Every Sunolicious™ song is created, curated, arranged, and produced under my authorship. Vocal models, textures, and generative tools appear only as elements inside a human-built composition.</p>
+                <p style="margin-bottom: 1.5rem;"><strong>There is no "fully AI-generated music" here</strong> — only human creation with machine-assisted expression.</p>
+                <p style="margin-bottom: 0;">Human first.<br>Machine second.<br>The art is mine.<br>The expansion is shared.</p>
+            </div>
+        </div>
+    </div>
+    <script>(function(){const e=document.getElementById("bioOverlay"),t=document.getElementById("closeBio"),o=document.getElementById("bioLink");o.addEventListener("click",o=>{o.preventDefault(),e.classList.add("active")}),t.addEventListener("click",()=>{e.classList.remove("active")}),e.addEventListener("click",t=>{t.target===e&&e.classList.remove("active")}),document.addEventListener("keydown",t=>{"Escape"===t.key&&e.classList.contains("active")&&e.classList.remove("active")})})(),function(){const e=document.getElementById("aiEthicsOverlay"),t=document.getElementById("closeAiEthics"),o=document.getElementById("aiEthicsLink");o.addEventListener("click",o=>{o.preventDefault(),e.classList.add("active")}),t.addEventListener("click",()=>{e.classList.remove("active")}),e.addEventListener("click",t=>{t.target===e&&e.classList.remove("activ

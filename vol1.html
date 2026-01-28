@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Open Graph / Social Media Preview -->
-    <meta property="og:image" content="https://music.sunolicious.com/images/sunovol1.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://music.sunolicious.com/images/sunovol1.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunolicious Sessions Vol. 1 | NOAH®</title>
@@ -17,30 +11,64 @@
             padding: 0;
             box-sizing: border-box;
         }
-        html {
-            scroll-behavior: smooth;
-        }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', 'Arial', sans-serif;
             background: linear-gradient(161deg, #090329 10%, #3d1a94 35%, #c742c2 65%, #3d1a94 85%, #090329 100%);
             color: #E8E8E8;
             line-height: 1.9;
-            overflow-x: hidden;
             font-weight: 300;
-            letter-spacing: 0.3px;
             min-height: 100vh;
         }
-        h1, h2, h3, h4 {
-            color: #ffffff !important;
-            font-weight: 200;
-        }
-        p, li {
-            color: #ffffff !important;
+        :root {
+            --accent: #C5B7A0;
         }
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 0 4rem;
+        }
+        header {
+            text-align: center;
+            padding: 4rem 0 3rem;
+        }
+        .logo {
+            max-width: 300px;
+            width: 60%;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: 200;
+            letter-spacing: 4px;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+        .tagline {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+        section {
+            padding: 4rem 0;
+        }
+        .version-btn {
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            background: transparent;
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-decoration: none;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 300;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .version-btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.6);
         }
         /* Hamburger Menu */
         .hamburger-menu {
@@ -134,311 +162,224 @@
             opacity: 0.8;
             letter-spacing: 1px;
         }
-        /* Album Hero Section */
-        .album-hero {
-            text-align: center;
-            padding: 4rem 0 3rem;
-        }
-        .album-artwork-large {
-            max-width: 400px;
-            width: 100%;
-            height: auto;
-            margin: 0 auto 2rem;
-            display: block;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-        }
-        .album-title {
-            font-size: 1.8rem;
-            font-weight: 200;
-            letter-spacing: 1.5px;
-            margin-bottom: 0.8rem;
-            text-transform: uppercase;
-        }
-        .album-artist {
-            font-size: 0.9rem;
-            font-weight: 300;
-            letter-spacing: 2px;
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 2rem;
-        }
-        .album-stream-btns {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-        .stream-btn {
-            padding: 0.6rem 1.2rem;
-            background: transparent;
-            color: #ffffff;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            text-decoration: none;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-weight: 300;
-            transition: all 0.3s ease;
-            min-width: 160px;
-        }
-        .stream-btn:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.8);
-        }
-        /* SoundCloud Player Section */
-        .player-section {
-            padding: 3rem 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .soundcloud-embed {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        /* Track Listing Section */
-        .track-listing {
-            padding: 5rem 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .section-title {
-            font-size: 1.5rem;
-            font-weight: 200;
-            letter-spacing: 4px;
-            text-align: center;
-            text-transform: uppercase;
-            margin-bottom: 4rem;
-        }
-        .tracks-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2.5rem;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        .track-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-        .track-card:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-4px);
-        }
-        .track-artwork {
-            width: 100%;
-            height: auto;
-            display: block;
-            aspect-ratio: 1;
-            object-fit: cover;
-        }
-        .track-info {
-            padding: 2rem;
-        }
-        .track-number {
-            font-size: 0.75rem;
-            color: rgba(255, 255, 255, 0.5);
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
-        }
-        .track-title {
-            font-size: 1.4rem;
-            font-weight: 300;
-            letter-spacing: 2px;
-            margin-bottom: 1.5rem;
-            color: #ffffff;
-        }
-        .track-actions {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 0.8rem;
-            margin-top: 1.5rem;
-        }
-        .track-btn {
-            padding: 0.8rem 1rem;
-            background: transparent;
-            color: #ffffff;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            text-decoration: none;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-weight: 300;
-            transition: all 0.3s ease;
-            text-align: center;
-            cursor: pointer;
-            font-family: inherit;
-        }
-        .track-btn:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: #ffffff;
-        }
-        /* Footer */
         footer {
             text-align: center;
-            padding: 4rem 0 3rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 4rem 0 2rem;
+            
         }
-        .social-links {
-            display: flex;
-            gap: 3rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 3rem;
-        }
-        .social-link-plain {
-            color: #ffffff !important;
-            text-decoration: none;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: opacity 0.3s ease;
-            font-weight: 300;
-        }
-        .social-link-plain:hover {
-            opacity: 0.7;
-        }
-        .copyright {
-            font-size: 0.75rem;
-            color: rgba(255, 255, 255, 0.5);
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-top: 2rem;
-        }
-        /* MODAL STYLES */
-        .ai-ethics-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.95);
-            backdrop-filter: blur(10px);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 10000;
-            animation: fadeIn 0.3s ease;
-        }
-        .ai-ethics-overlay.active {
-            display: flex;
-        }
-        .ai-ethics-content {
-            background: linear-gradient(161deg, #090329 10%, #3d1a94 35%, #c742c2 65%, #3d1a94 85%, #090329 100%);
-            border: 1px solid rgba(197, 183, 160, 0.3);
-            max-width: 700px;
-            width: 90%;
-            max-height: 85vh;
-            overflow-y: auto;
-            padding: 40px 35px;
-            position: relative;
-            animation: slideUp 0.4s ease;
-        }
-        .ai-close-btn {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            background: none;
-            border: none;
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 32px;
-            cursor: pointer;
-            line-height: 1;
-            transition: all 0.3s ease;
-            padding: 5px 10px;
-            font-family: inherit;
-        }
-        .ai-close-btn:hover {
-            color: #C5B7A0;
-            transform: rotate(90deg);
-        }
-        .ai-ethics-header {
-            text-align: center;
-            margin-bottom: 25px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-        }
-        .ai-ethics-header h2 {
-            font-size: 1.5rem;
-            font-weight: 200;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #ffffff !important;
-        }
-        .ai-ethics-body {
-            color: #ffffff;
-        }
-        .ai-ethics-body p {
-            color: #ffffff !important;
-        }
-        /* LYRICS MODAL */
-        .lyrics-title {
-            text-align: center;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-            font-size: 1.5rem;
-            font-weight: 200;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-        }
-        .lyrics-text {
-            color: #ffffff;
-            line-height: 2;
-            white-space: pre-line;
-            font-size: 1rem;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideUp {
-            from {
-                transform: translateY(30px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 2rem;
-            }
-            .album-title {
-                font-size: 1.8rem;
-            }
-            .album-artist {
-                font-size: 1rem;
-            }
-            .album-artwork-large {
-                max-width: 300px;
-            }
-            .tracks-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            .track-actions {
-                grid-template-columns: 1fr;
-            }
-            .ai-ethics-content {
-                padding: 30px 25px;
-                max-height: 90vh;
-            }
-            .ai-ethics-header h2, .lyrics-title {
-                font-size: 1.2rem;
-            }
-            .album-stream-btns {
-                flex-direction: column;
-                align-items: center;
-            }
-            .stream-btn {
-                width: 100%;
-                max-width: 280px;
-            }
-        }
+    
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(9, 3, 41, 0.97);
+        backdrop-filter: blur(10px);
+        z-index: 10000;
+        overflow-y: auto;
+        padding: 4rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .modal-overlay.active {
+        display: flex !important;
+    }
+    .ai-ethics-content {
+        max-width: 700px;
+        width: 90%;
+        max-height: 85vh;
+        padding: 40px 35px;
+        overflow-y: auto;
+        background: linear-gradient(161deg, #090329 10%, #3d1a94 35%, #c742c2 65%, #3d1a94 85%, #090329 100%);
+        border: 1px solid rgba(197, 183, 160, 0.3);
+        position: relative;
+        border-radius: 2px;
+    }
+    .ai-close-btn {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 32px;
+        color: rgba(255, 255, 255, 0.6);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-family: inherit;
+        line-height: 1;
+        padding: 0;
+    }
+    .ai-close-btn:hover {
+        color: #C5B7A0;
+        transform: rotate(90deg);
+    }
+    .ai-ethics-header h2 {
+        font-size: 1.8rem;
+        font-weight: 200;
+        letter-spacing: 3px;
+        margin-bottom: 2rem;
+        color: #ffffff;
+        text-align: center;
+    }
+    .ai-ethics-body {
+        color: #E8E8E8;
+        line-height: 1.9;
+    }
+    .signup-trigger {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        padding: 14px 28px;
+        font-size: 0.75rem;
+        font-weight: 300;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        background: transparent;
+        color: #ffffff;
+        border: 2px solid #ffffff;
+        cursor: pointer;
+        z-index: 1000;
+        transition: all 0.4s ease;
+        font-family: inherit;
+    }
+    .signup-trigger:hover {
+        background: #ffffff;
+        color: #090329;
+    }
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+    }
+    .popup-overlay.active {
+        display: flex;
+    }
+    .popup-content {
+        background: linear-gradient(161deg, #090329 10%, #3d1a94 35%, #c742c2 65%, #3d1a94 85%, #090329 100%);
+        border: 1px solid rgba(197, 183, 160, 0.3);
+        max-width: 500px;
+        width: 90%;
+        padding: 40px 30px;
+        position: relative;
+        animation: slideUp 0.4s ease;
+    }
+    @keyframes slideUp {
+        from { transform: translateY(30px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+    .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: none;
+        border: none;
+        color: #999999;
+        font-size: 28px;
+        cursor: pointer;
+        line-height: 1;
+        transition: all 0.3s ease;
+        padding: 5px 10px;
+        font-family: inherit;
+    }
+    .close-btn:hover {
+        color: #C5B7A0;
+        transform: rotate(90deg);
+    }
+    .popup-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .popup-header h1 {
+        font-size: 36px;
+        font-weight: 200;
+        letter-spacing: 4px;
+        margin-bottom: 5px;
+    }
+    .popup-header h2 {
+        font-size: 24px;
+        font-weight: 300;
+        color: #C5B7A0;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+    .popup-header p {
+        font-size: 12px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #999999;
+    }
+    .popup-description {
+        font-size: 14px;
+        line-height: 1.8;
+        color: #999999;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    .popup-form {
+        margin-bottom: 15px;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    label {
+        display: block;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        color: #ffffff;
+    }
+    input[type="email"] {
+        width: 100%;
+        padding: 12px 15px;
+        font-size: 15px;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        color: #ffffff;
+        transition: all 0.3s ease;
+        font-family: inherit;
+    }
+    input[type="email"]:focus {
+        outline: none;
+        background: rgba(255, 255, 255, 0.2);
+        border-color: #ffffff;
+    }
+    input[type="email"]::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+    .submit-btn {
+        width: 100%;
+        padding: 14px;
+        font-size: 0.75rem;
+        font-weight: 300;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        background: transparent;
+        color: #ffffff;
+        border: 2px solid #ffffff;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        font-family: inherit;
+    }
+    .submit-btn:hover {
+        background: #ffffff;
+        color: #090329;
+    }
+    .hidden-field {
+        position: absolute;
+        left: -5000px;
+    }
     </style>
 </head>
 <body>
@@ -472,181 +413,106 @@
                     <li><a href="licensing-vol3.html">Volume 3</a></li>
                 </ul>
             </li>
-            <li><a href="#" class="bio-trigger">Artist Bio</a></li>
-            <li><a href="#" class="ethics-trigger">AI Ethics Statement</a></li>
+            <li><a href="#" id="bioLink">Artist Bio</a></li>
+            <li><a href="#" id="aiEthicsLink">AI Ethics</a></li>
+            <li><a href="#connect-section" class="scroll-link">Contact</a></li>
         </ul>
     </nav>
     
-    <!-- ALBUM HERO -->
-    <section class="album-hero">
+    <!-- HEADER -->
+    <header>
         <div class="container">
-            <img src="images/sunovol1.png" alt="Sunolicious Sessions Vol. 1" class="album-artwork-large" style="width: 280px; max-width: 100%; height: auto;">
-            <h1 class="album-title">Sunolicious Sessions Vol. 1</h1>
-            <p class="album-artist">NOAH® / Sunolicious™</p>
-            <div class="album-stream-btns">
-                <a href="#" class="stream-btn" target="_blank">Stream on Spotify</a>
-                <a href="#" class="stream-btn" target="_blank">Stream on Apple Music</a>
-                <a href="https://soundcloud.com/noahofficialusa/sets/sunolicious-vol-1/s-KeIZ6YDSSPI" class="stream-btn" target="_blank">Stream on SoundCloud</a>
+            <img src="images/Sunolicious_Logo_NOAH2.png" alt="NOAH SUNOLICIOUS Logo" class="logo">
+            <h1>Sunolicious Sessions Vol. 1</h1>
+            <p class="tagline">3 Tracks</p>
+        </div>
+    </header>
+    
+    <!-- TRACK ARTWORK -->
+    <section>
+        <div class="container">
+            <!-- Volume Navigation -->
+            <div style="display: flex; gap: 1.5rem; justify-content: center; margin: 0 auto 4rem; max-width: 600px;">
+                <a href="vol1.html" style="text-decoration: none; text-align: center; transition: all 0.3s ease;">
+                    <img src="images/sunovol1.png" alt="Volume 1" style="width: 100px; height: 100px; object-fit: cover; margin-bottom: 0.5rem; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); opacity: 1;">
+                    <p style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); font-weight: 300;">Volume 1</p>
+                </a>
+                <a href="vol2.html" style="text-decoration: none; text-align: center; transition: all 0.3s ease; opacity: 0.4;">
+                    <img src="images/sunovol2.png" alt="Volume 2" style="width: 100px; height: 100px; object-fit: cover; margin-bottom: 0.5rem; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);">
+                    <p style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: #ffffff; font-weight: 300;">Volume 2</p>
+                </a>
+                <a href="vol3.html" style="text-decoration: none; text-align: center; transition: all 0.3s ease; opacity: 0.4;">
+                    <img src="images/sunovol3.png" alt="Volume 3" style="width: 100px; height: 100px; object-fit: cover; margin-bottom: 0.5rem; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);">
+                    <p style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: #ffffff; font-weight: 300;">Volume 3</p>
+                </a>
             </div>
             
             <!-- Prev/Next Navigation -->
-            <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 2.5rem;">
+            <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 4rem;">
                 <div style="opacity: 0.3; cursor: not-allowed; font-size: 0.85rem; letter-spacing: 1px; color: rgba(255,255,255,0.4);">← Previous</div>
                 <a href="vol2.html" style="text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; color: rgba(255,255,255,0.7); transition: all 0.3s ease;" onmouseover="this.style.color='#C5B7A0'; this.style.transform='translateX(0px)'" onmouseout="this.style.color='rgba(255,255,255,0.7)'; this.style.transform='translateX(0)'">Next →</a>
             </div>
-        </div>
-    </section>
-    
-    <!-- TRACK LISTING -->
-    <section class="track-listing">
-        <div class="container">
-            <h2 class="section-title">Tracks</h2>
-            <div class="tracks-grid">
+            
+            <!-- TRACKS SECTION -->
+            <h2 style="font-size: 1.4rem; text-align: center; letter-spacing: 3px; margin-bottom: 3rem; font-weight: 300;">Tracks</h2>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 900px; margin: 0 auto 4rem;">
                 <!-- Track 1: Hard Times -->
-                <div class="track-card">
-                    <img src="images/hardtimes.png" alt="Hard Times" class="track-artwork">
-                    <div class="track-info">
-                        <p class="track-number">Track 01</p>
-                        <h3 class="track-title">Hard Times</h3>
-                        <div class="track-actions">
-                            <button class="track-btn lyrics-btn" data-track="hardtimes">View Lyrics</button>
-                        </div>
+                <div style="background: rgba(255, 255, 255, 0.03); border-radius: 0; overflow: hidden; transition: all 0.3s ease;">
+                    <img src="images/hardtimes.png" alt="Hard Times" style="width: 100%; height: auto; display: block;">
+                    <div style="padding: 1.5rem;">
+                        <p style="font-size: 0.7rem; color: rgba(255, 255, 255, 0.5); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.3rem;">Track 01</p>
+                        <h3 style="font-size: 1rem; margin-bottom: 1rem; letter-spacing: 1px; color: #ffffff; font-weight: 300;">Hard Times</h3>
+                        <button class="lyrics-btn" data-track="hardtimes" style="display: block; width: 100%; padding: 0.6rem; background: transparent; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.3); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; cursor: pointer; transition: all 0.3s ease; font-family: inherit; font-weight: 300;">View Lyrics</button>
                     </div>
                 </div>
                 <!-- Track 2: Wake Up -->
-                <div class="track-card">
-                    <img src="images/wakeup.png" alt="Wake Up" class="track-artwork">
-                    <div class="track-info">
-                        <p class="track-number">Track 02</p>
-                        <h3 class="track-title">Wake Up</h3>
-                        <div class="track-actions">
-                            <button class="track-btn lyrics-btn" data-track="wakeup">View Lyrics</button>
-                        </div>
+                <div style="background: rgba(255, 255, 255, 0.03); border-radius: 0; overflow: hidden; transition: all 0.3s ease;">
+                    <img src="images/wakeup.png" alt="Wake Up" style="width: 100%; height: auto; display: block;">
+                    <div style="padding: 1.5rem;">
+                        <p style="font-size: 0.7rem; color: rgba(255, 255, 255, 0.5); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.3rem;">Track 02</p>
+                        <h3 style="font-size: 1rem; margin-bottom: 1rem; letter-spacing: 1px; color: #ffffff; font-weight: 300;">Wake Up</h3>
+                        <button class="lyrics-btn" data-track="wakeup" style="display: block; width: 100%; padding: 0.6rem; background: transparent; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.3); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; cursor: pointer; transition: all 0.3s ease; font-family: inherit; font-weight: 300;">View Lyrics</button>
                     </div>
                 </div>
                 <!-- Track 3: who am i -->
-                <div class="track-card">
-                    <img src="images/whoami.png" alt="who am i" class="track-artwork">
-                    <div class="track-info">
-                        <p class="track-number">Track 03</p>
-                        <h3 class="track-title">who am i</h3>
-                        <div class="track-actions">
-                            <button class="track-btn lyrics-btn" data-track="whoami">View Lyrics</button>
-                        </div>
+                <div style="background: rgba(255, 255, 255, 0.03); border-radius: 0; overflow: hidden; transition: all 0.3s ease;">
+                    <img src="images/whoami.png" alt="who am i" style="width: 100%; height: auto; display: block;">
+                    <div style="padding: 1.5rem;">
+                        <p style="font-size: 0.7rem; color: rgba(255, 255, 255, 0.5); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.3rem;">Track 03</p>
+                        <h3 style="font-size: 1rem; margin-bottom: 1rem; letter-spacing: 1px; color: #ffffff; font-weight: 300;">who am i</h3>
+                        <button class="lyrics-btn" data-track="whoami" style="display: block; width: 100%; padding: 0.6rem; background: transparent; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.3); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; cursor: pointer; transition: all 0.3s ease; font-family: inherit; font-weight: 300;">View Lyrics</button>
                     </div>
                 </div>
             </div>
+            
+            <!-- SOUNDCLOUD PLAYER -->
+            <div style="margin: 4rem auto; max-width: 900px;">
+                <h2 style="font-size: 1.4rem; text-align: center; letter-spacing: 3px; margin-bottom: 2rem; font-weight: 300;">Listen Now</h2>
+                <div style="margin-bottom: 3rem;">
+                    <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1951882316&color=%23c742c2&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                </div>
+                
+                <!-- Stream Buttons -->
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                    <a href="#" style="padding: 0.7rem 1.5rem; min-width: 140px; text-align: center; background: transparent; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.3); text-decoration: none; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 300; transition: all 0.3s ease; display: inline-block;" target="_blank">Spotify</a>
+                    <a href="#" style="padding: 0.7rem 1.5rem; min-width: 140px; text-align: center; background: transparent; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.3); text-decoration: none; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 300; transition: all 0.3s ease; display: inline-block;" target="_blank">Apple Music</a>
+                    <a href="https://soundcloud.com/noahofficialusa/sets/sunolicious-vol-1/s-KeIZ6YDSSPI" style="padding: 0.7rem 1.5rem; min-width: 140px; text-align: center; background: transparent; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.3); text-decoration: none; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 300; transition: all 0.3s ease; display: inline-block;" target="_blank">SoundCloud</a>
+                </div>
+            </div>
+
         </div>
     </section>
-    
-    <!-- SOUNDCLOUD PLAYER -->
-    <section class="player-section">
-        <div class="container">
-            <div class="soundcloud-embed">
-                <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1951882316&color=%23c742c2&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-            </div>
-        </div>
-    </section>
-    
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <div class="social-links">
-                <a href="https://instagram.com/sunoliciousmusic" class="social-link-plain" target="_blank">Instagram</a>
-                <a href="https://tiktok.com/@sunoliciousmusic" class="social-link-plain" target="_blank">TikTok</a>
-                <a href="https://youtube.com/@sunolicious" class="social-link-plain" target="_blank">YouTube</a>
-            </div>
-            <div style="margin-bottom: 2rem;">
-                <a href="music.html" style="display: inline-block; color: #ffffff; text-decoration: none; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; margin: 0 1rem; transition: opacity 0.3s ease;">← Back to Library</a>
-                <a href="licensing.html" style="display: inline-block; color: #ffffff; text-decoration: none; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; margin: 0 1rem; transition: opacity 0.3s ease;">Licensing</a>
-            </div>
-            <div style="display: flex; gap: 2rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap;">
-                <a href="#" id="bioLink" style="color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; transition: opacity 0.3s ease;">Artist Bio</a>
-                <a href="#" id="aiEthicsLink" style="color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; transition: opacity 0.3s ease;">AI Ethics & Creative Statement</a>
-            </div>
-            <p class="copyright">© 2025 NOAH® / Sunolicious™ • All Rights Reserved</p>
-        </div>
-    </footer>
-    
-    <!-- BIO MODAL -->
-    <div class="ai-ethics-overlay" id="bioOverlay">
-        <div class="ai-ethics-content">
-            <button class="ai-close-btn" id="closeBio">&times;</button>
-            <div class="ai-ethics-header">
-                <h2>Artist Bio</h2>
-            </div>
-            <div class="ai-ethics-body">
-                <p style="margin-bottom: 1.5rem;">
-                    I came up in music before everything went fully digital.
-                </p>
-                <p style="margin-bottom: 1.5rem;">
-                    I learned recording in analog studios where tape was finite, decisions mattered, and commitment was part of the craft. I majored in music business at Columbia College Chicago under Irwin Steinberg — co-founder of Mercury Records and chairman of PolyGram for over 30 years. I worked across multiple eras and cities: Chicago, London, New York — from early multi-track systems and sampling keyboards to large-format tape, then into the digital age that rewrote the industry entirely.
-                </p>
-                <p style="margin-bottom: 1.5rem;">
-                    As NOAH® (trademark holder since 2012, ASCAP member), I've built a career spanning over a decade with more than twenty UK Music Week chart placements, Billboard and DJ Times chart entries, and a sync placement in Blumhouse's <em>Truth or Dare</em>. My work has topped UK club charts, charted across Europe, and earned both underground credibility and commercial recognition.
-                </p>
-                <p style="margin-bottom: 1.5rem;">
-                    My name is Christofer Holland. I'm based in Manhattan, where I sell luxury properties to creatives.
-                </p>
-                <p style="margin-bottom: 1.5rem;">
-                    I didn't arrive at AI as a shortcut. I arrived at it through decades of adapting to changing tools while protecting authorship.
-                </p>
-                <p style="margin-bottom: 1.5rem; font-style: italic; color: #ffffff !important;">
-                    Throughout my career, musicians have always modeled other musicians — singers studying phrasing, drummers internalizing feel, guitarists chasing tone. That's not new. What's new is that modeling has become explicit.
-                </p>
-                <p style="margin-bottom: 1.5rem;">
-                    Today, I use AI as part of a creative feedback loop—prompting, responding, refining, and taking responsibility for the final work. While platforms introduce elements of variation and randomness, the core decisions — melody, lyrics, emotional direction, and what ultimately gets released — remain human.
-                </p>
-                <p style="margin-bottom: 1.5rem;">
-                    Any vocals that aren't my physical voice are still extensions of my musical identity: my melodies, my words, my intent, my taste.
-                </p>
-                <p style="margin-bottom: 0; font-weight: 400;">
-                    The tools evolve.<br>The authorship doesn't.
-                </p>
-            </div>
-        </div>
-    </div>
-    
-    <!-- AI ETHICS MODAL -->
-    <div class="ai-ethics-overlay" id="aiEthicsOverlay">
-        <div class="ai-ethics-content">
-            <button class="ai-close-btn" id="closeAiEthics">&times;</button>
-            <div class="ai-ethics-header">
-                <h2>AI Ethics & Creative Statement</h2>
-            </div>
-            <div class="ai-ethics-body">
-                <p style="margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.9;">
-                    <strong>Sunolicious™ is where human artistry meets technological possibility.</strong><br>
-                    Every track begins with my melodies, my lyrics, my phrasing, and my emotional direction.
-                </p>
-                <p style="margin-bottom: 1.5rem;">
-                    AI doesn't originate my music — it extends it. It's a tool, not a ghostwriter; an instrument, not a replacement for the artist.
-                </p>
-                <p style="margin-bottom: 1.5rem;">
-                    I design the concepts. I write the songs. I shape the sonic identity. I work through an iterative creative feedback loop—prompting, responding, refining, editing, and making the final call on what gets released.
-                </p>
-                <p style="margin-bottom: 1.5rem;">
-                    AI enters the process the way synthesizers, samplers, drum machines, autotune, and guitar-amp modeling always have: as technology that amplifies human intention, not technology that authors the work.
-                </p>
-                <p style="margin-bottom: 1.5rem;">
-                    Every Sunolicious™ song is created, curated, arranged, and produced under my authorship. Vocal models, textures, and generative tools appear only as elements inside a human-built composition.
-                </p>
-                <p style="margin-bottom: 1.5rem;">
-                    <strong>There is no "fully AI-generated music" here</strong> — only human creation with machine-assisted expression.
-                </p>
-                <p style="margin-bottom: 0;">
-                    Human first.<br>Machine second.<br>The art is mine.<br>The expansion is shared.
-                </p>
-            </div>
-        </div>
-    </div>
     
     <!-- LYRICS MODAL -->
-    <div class="ai-ethics-overlay" id="lyricsOverlay">
-        <div class="ai-ethics-content">
-            <button class="ai-close-btn" id="closeLyrics">&times;</button>
-            <h2 class="lyrics-title" id="lyricsTitle">Song Title</h2>
-            <div class="lyrics-text" id="lyricsText">
+    <div class="ai-ethics-overlay" id="lyricsOverlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: rgba(0, 0, 0, 0.95); z-index: 10000; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease;">
+        <div class="ai-ethics-content" style="background: linear-gradient(161deg, #090329 10%, #3d1a94 35%, #c742c2 65%, #3d1a94 85%, #090329 100%); padding: 3rem; max-width: 800px; width: 90%; max-height: 85vh; overflow-y: auto; position: relative; border: 1px solid rgba(255, 255, 255, 0.1);">
+            <button class="ai-close-btn" id="closeLyrics" style="position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: rgba(255, 255, 255, 0.6); font-size: 32px; cursor: pointer; transition: all 0.3s ease; font-family: inherit; line-height: 1;">&times;</button>
+            <h2 class="lyrics-title" id="lyricsTitle" style="font-size: 1.8rem; margin-bottom: 1rem; letter-spacing: 3px; font-weight: 300; text-align: center;">Song Title</h2>
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <button id="copyLyricsBtn" style="padding: 0.6rem 1.5rem; background: transparent; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.4); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; cursor: pointer; transition: all 0.3s ease; font-family: inherit; font-weight: 300;">Copy Lyrics</button>
+                <span id="copyConfirm" style="display: none; margin-left: 1rem; font-size: 0.75rem; color: #C5B7A0;">Copied!</span>
+            </div>
+            <div class="lyrics-text" id="lyricsText" style="white-space: pre-wrap; line-height: 1.9; font-size: 0.95rem; color: rgba(255, 255, 255, 0.9); user-select: text;">
                 <!-- Lyrics will be inserted here -->
             </div>
             <p style="margin-top: 2rem; font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); text-align: center;">
@@ -655,198 +521,186 @@
         </div>
     </div>
     
-    <script>
-        // BIO MODAL
-        (function() {
-            const bioOverlay = document.getElementById('bioOverlay');
-            const closeBio = document.getElementById('closeBio');
-            const bioLink = document.getElementById('bioLink');
-            bioLink.addEventListener('click', (e) => {
-                e.preventDefault();
-                bioOverlay.classList.add('active');
-            });
-            closeBio.addEventListener('click', () => {
-                bioOverlay.classList.remove('active');
-            });
-            bioOverlay.addEventListener('click', (e) => {
-                if (e.target === bioOverlay) {
-                    bioOverlay.classList.remove('active');
-                }
-            });
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && bioOverlay.classList.contains('active')) {
-                    bioOverlay.classList.remove('active');
-                }
-            });
-        })();
-        
-        // AI ETHICS MODAL
-        (function() {
-            const overlay = document.getElementById('aiEthicsOverlay');
-            const closeBtn = document.getElementById('closeAiEthics');
-            const aiEthicsLink = document.getElementById('aiEthicsLink');
-            aiEthicsLink.addEventListener('click', (e) => {
-                e.preventDefault();
-                overlay.classList.add('active');
-            });
-            closeBtn.addEventListener('click', () => {
-                overlay.classList.remove('active');
-            });
-            overlay.addEventListener('click', (e) => {
-                if (e.target === overlay) {
-                    overlay.classList.remove('active');
-                }
-            });
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && overlay.classList.contains('active')) {
-                    overlay.classList.remove('active');
-                }
-            });
-        })();
-        
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // LYRICS MODAL
         (function() {
+            const lyricsButtons = document.querySelectorAll('.lyrics-btn');
             const lyricsOverlay = document.getElementById('lyricsOverlay');
             const closeLyrics = document.getElementById('closeLyrics');
-            const lyricsButtons = document.querySelectorAll('.lyrics-btn');
             const lyricsTitle = document.getElementById('lyricsTitle');
             const lyricsText = document.getElementById('lyricsText');
+            const copyBtn = document.getElementById('copyLyricsBtn');
+            const copyConfirm = document.getElementById('copyConfirm');
             
-            // Lyrics database
+            // Lyrics data
             const lyricsData = {
-                'whoami': {
-                    title: 'who am i',
-                    lyrics: `who am i to make you
-who am i to wake you
-who am i to break you
-make you wanna open your eyes
-
-who am i to make you
-who am i to wake you
-who am i to break you
-make you wanna open your eyes
-
-we're from the same damn family
-from the same damn tree
-I don't know why we've got to see these things so differently
-we've gotta make 'em shake the crazy
-cause it's no way to be
-ain't no way we're gonna fix it
-when we're too blind to see
-
-who am i to make you
-who am i to wake you
-who am i to break you
-make you wanna open your eyes
-
-who am i to make you
-who am i to wake you
-who am i to break you
-make you wanna open your eyes
-
-wake up, wake up
-you know you feel it rising
-wake up, wake up
-the truth is in the timing
-wake up, wake up
-the walls are all unwinding
-wake up, wake up
-we're finally realizing
-
-open your eyes now
-open your eyes
-
-we're from the same damn family
-from the same damn tree
-I don't know why we've got to see these things so differently
-we've gotta make 'em shake the crazy
-cause it's no way to be
-ain't no way we're gonna fix it
-when we're too blind to see
-
-who am i to make you
-who am i to wake you
-who am i to break you
-make you wanna open your eyes
-
-who am i to make you
-who am i to wake you
-who am i to break you
-make you wanna open your eyes`
-                },
                 'wakeup': {
                     title: 'Wake Up',
-                    lyrics: `We're praying with our eyes half-shut,
-Building towers out of rust.
-Bless the flag, forget the flood,
-Say its love while we draw blood.
+                    lyrics: `They say you gotta pray, keep your head held high,
+But the world just breaks you down when you're barely getting by.
+They want you docile, soft, broken down inside,
+While they stack the chips against you and decide which rules apply.
 
-It's easy to look but never see,
-To trade your truth for certainty.
+Oh they want your silence, they want you tired and small,
+Chasing empty comforts while they're standing tall.
+But what if waking up means calling out the game?
+What if breaking through means learning how to claim—
 
-Wake up before you die,
-Don't let the lies lull you to quiet.
-You're breathing, but barely alive,
-Kneeling down to your own denial.
-Wake up, before you die.
+Wake up—
+This is not the way it has to be.
+Wake up—
+You don't have to smile and agree.
+Wake up—
+There's fire in you if you just believe,
+Wake up — you're stronger than the life they need you to lead.
 
-Preachers preach, lawyers lie,
-Every saint has a headline crime.
-We're selling heaven, renting hell,
-And calling the chaos "God's will."
+Ambition isn't selfish, anger has its place,
+Not every gentle word deserves to win the race.
+They tell you healing means you swallow what they deal,
+But sometimes breaking free's the only way to feel real.
 
-Every saint has a headline crime,
-We're selling heaven, renting hell,
-And calling the chaos "God's will."
+Don't confuse the peace they want with peace you choose,
+Don't stay small and kind if all you do is lose.
+What if waking up means standing in the storm?
+What if breaking through means taking back your form?
 
-There's a mother watching from her chair,
-Hands folded like a quiet prayer.
-She taught me faith, but I've begun
-To wonder what we've really done.
+Wake up—
+This is not the way it has to be.
+Wake up—
+You don't have to smile and agree.
+Wake up—
+There's fire in you if you just believe,
+Wake up — you're stronger than the life they need you to lead.
 
-Wake up before you die,
-Before the truth is sterilized.
-The light still burns behind your eyes,
-But it's fading, fading fast tonight.
-Wake up — before you die.
+Yeah they tell you healing, growth, self-work, and light,
+But some of that's designed to keep you from the fight.
+Not all forgiveness frees, not all anger kills,
+Sometimes waking up is learning when to feel—
 
-Maybe grace was never blind,
-Maybe we just closed our eyes.`
+Wake up—
+You're sharper than they want you to know.
+Wake up—
+Don't stay stuck in that comfortable low.
+Wake up—
+There's more to this if you just let it show,
+Wake up — there's strength in you they don't want you to grow.
+
+Wake up — don't let them tell you who to be.
+Wake up — reclaim your right to clarity.
+Wake up — the game is rigged but you can see,
+Wake up — you're stronger than the life they want you to lead.`
+                },
+                'whoami': {
+                    title: 'who am i',
+                    lyrics: `Who am I if I'm not who I was before?
+Not the name, not the face I've been holding to the floor.
+They want an answer clean, something I can prove,
+But I'm caught between the past and the next move.
+
+Tell me who I am when the mirror doesn't speak,
+When the ground beneath my feet feels too weak.
+Is it the battles that I've lost, the wars I didn't win?
+Or the quiet way I kept trying to begin again?
+
+Who am I — if I strip it all away?
+Who am I — when there's nothing left to say?
+Who am I — if I'm no longer chasing pain,
+Who am I without the weight of my own name?
+
+I've been told that change is growth, that letting go is free,
+But what if all I've known is falling endlessly?
+They say find yourself — like it's buried in the sand,
+But what if I'm just learning how to stand?
+
+Tell me who I am when I'm tired of the roles,
+When I can't keep playing parts to fill the holes.
+Is it the person I became when nobody could see?
+Or the version I've been running from that's calling out to me?
+
+Who am I — if I strip it all away?
+Who am I — when there's nothing left to say?
+Who am I — if I'm no longer chasing pain,
+Who am I without the weight of my own name?
+
+Maybe I'm the question more than I'm the answer found,
+Maybe I'm the silence when there's too much sound.
+Maybe I'm the fracture and the way it holds,
+Maybe I'm the story that's still being told.
+
+Who am I — if I'm more than what I've been?
+Who am I — if I let the light back in?
+Who am I — if I choose to start again,
+Who am I if I release the need to win?
+
+Who am I — standing here without disguise?
+Who am I — if I look behind the lies?
+Who am I — if I'm learning to forgive,
+Who am I if I finally choose to live?`
                 },
                 'hardtimes': {
                     title: 'Hard Times',
-                    lyrics: `You preach the gospel of the self-made man,
-Till your castle's sinking in the sand.
-You say "stand tall, don't need no grace,"
-But now you're praying with a pale face.
+                    lyrics: `Hard times hit the ones who care the most,
+The quiet ones who give until they're ghosts.
+You hold the weight while others walk away,
+Hard times don't care who's kind — they come to stay.
 
-Funny how fast the tables spin,
-When the storm rolls in.
+You learn real quick when no one's holding on,
+You feel the cold when everyone is gone.
+They take your heart, your hope, your second try,
+Hard times — they find the good and drain them dry.
 
-Hard times — they don't take sides,
-They'll tear down your walls and your pride.
-You can't buy mercy, you can't buy peace,
-When the ground shakes under your feet.
-Hard times — they don't take sides,
-We all bleed the same inside.
+Hard times — they come for those who feel,
+Hard times — they break what's real.
+Hard times — they don't forgive,
+They take the ones who still believe and give.
 
-You shout "no handouts, earn your keep,"
-Then cry for help when you're in deep.
-The same bridge you burned for show,
-Is the only way back home, you know.
+You built them up, you stayed when it got rough,
+You gave your all but it was never enough.
+They wanted more, they wanted what you bled,
+Hard times took what you had and left you for dead.
 
-You call it freedom when it's yours to gain,
-But cry "unfair" when you feel the pain.
+But here's the truth they never want you to see,
+Hard times don't mean you're weak — they mean you're free.
+Free from the weight of carrying the ones who won't,
+Free from the ones who take but never show they don't.
 
-Hard times — they don't take sides,
-They'll tear down your walls and your pride.
-You can't buy mercy, you can't buy peace,
-When the ground shakes under your feet.
-Hard times — they don't take sides,
-We all bleed the same inside.
+Hard times — they come for those who fight,
+Hard times — they steal your light.
+Hard times — they leave you raw,
+But you're still standing when they're gone for sure.
 
-Red or blue, it's the same old sky,
-You can't outrun the reason why.
+Yeah, you gave your best to people who couldn't care,
+You showed up when they vanished in the air.
+But don't forget — you carried what they dropped,
+Hard times came but you never stopped.
+
+You never stopped loving, you never stopped trying,
+You never stopped even when you were dying inside.
+Hard times showed you who would stay and who would leave,
+Hard times taught you the truth of what you believe.
+
+Hard times — they come for those who feel,
+Hard times — they shatter what's real.
+Hard times — they leave their mark,
+But you're the one still holding light inside the dark.
+
+Don't lose that fire, don't lose your fight,
+Hard times don't get to steal your light.
+You're stronger now, you know the cost,
+Hard times came — but you're not lost.
+
+Cause here's the truth when it all falls apart,
+Hard times only break a fragile heart.
+But yours kept beating when it should've quit,
+Hard times came but you're still in it.
+
+They'll tell you to forgive, to let it slide,
+To be the bigger person, swallow pride.
+But let me tell you something they don't say,
+Not everyone deserves your love that way.
+
+Some people drain you, some people take,
+Some leave you hollow for their own sake.
 Balance ain't weakness, truth ain't war,
 We all need love — that's what it's for.
 
@@ -857,6 +711,9 @@ Every heart that's left behind`
                 }
             };
             
+            // Style for active modal
+            const activeStyle = 'opacity: 1; pointer-events: auto;';
+            
             // Open lyrics modal
             lyricsButtons.forEach(button => {
                 button.addEventListener('click', (e) => {
@@ -865,51 +722,255 @@ Every heart that's left behind`
                     if (lyricsData[trackId]) {
                         lyricsTitle.textContent = lyricsData[trackId].title;
                         lyricsText.textContent = lyricsData[trackId].lyrics;
-                        lyricsOverlay.classList.add('active');
+                        lyricsOverlay.style.cssText += activeStyle;
+                        copyConfirm.style.display = 'none';
                     }
+                });
+            });
+            
+            // Copy lyrics button
+            copyBtn.addEventListener('click', () => {
+                const lyrics = lyricsText.textContent;
+                navigator.clipboard.writeText(lyrics).then(() => {
+                    copyConfirm.style.display = 'inline';
+                    setTimeout(() => {
+                        copyConfirm.style.display = 'none';
+                    }, 2000);
                 });
             });
             
             // Close lyrics modal
             closeLyrics.addEventListener('click', () => {
-                lyricsOverlay.classList.remove('active');
+                lyricsOverlay.style.opacity = '0';
+                lyricsOverlay.style.pointerEvents = 'none';
             });
             lyricsOverlay.addEventListener('click', (e) => {
                 if (e.target === lyricsOverlay) {
-                    lyricsOverlay.classList.remove('active');
+                    lyricsOverlay.style.opacity = '0';
+                    lyricsOverlay.style.pointerEvents = 'none';
                 }
             });
             document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && lyricsOverlay.classList.contains('active')) {
-                    lyricsOverlay.classList.remove('active');
+                if (e.key === 'Escape' && lyricsOverlay.style.opacity === '1') {
+                    lyricsOverlay.style.opacity = '0';
+                    lyricsOverlay.style.pointerEvents = 'none';
                 }
             });
         })();
-        
-        // HAMBURGER MENU
+    </script>
+    
+
+            <!-- Contact & Links Section -->
+            <div id="connect-section" style="text-align: center; margin-top: 6rem; padding-top: 4rem; ">
+                <h2 style="font-size: 1.6rem; font-weight: 200; letter-spacing: 3px; margin-bottom: 2rem; text-transform: uppercase;">CONNECT</h2>
+                <p style="margin-bottom: 2rem; font-size: 0.9rem;">For inquiries, collaborations, or booking:</p>
+                <a href="mailto:sunolicious@noahmusic.com" style="color: #ffffff; text-decoration: none; font-size: 1rem; letter-spacing: 1px; transition: opacity 0.3s ease; cursor: pointer;">sunolicious@noahmusic.com</a>
+            </div>
+
+        </div>
+    </section>
+    
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div style="display: flex; gap: 2rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap;">
+                <a href="https://instagram.com/sunoliciousmusic" target="_blank" style="color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; transition: opacity 0.3s ease;">Instagram</a>
+                <a href="https://tiktok.com/@sunoliciousmusic" target="_blank" style="color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; transition: opacity 0.3s ease;">TikTok</a>
+                <a href="https://youtube.com/@sunolicious" target="_blank" style="color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; transition: opacity 0.3s ease;">YouTube</a>
+            </div>
+            <div style="display: flex; gap: 2rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap;">
+                <a href="index.html" style="color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; transition: opacity 0.3s ease;">Home</a>
+                <a href="licensing.html" style="color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; transition: opacity 0.3s ease;">Licensing</a>
+            </div>
+            <div style="display: flex; gap: 2rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap;">
+                <a href="#" class="bio-trigger" style="color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; transition: opacity 0.3s ease;">Artist Bio</a>
+                <a href="#" class="ethics-trigger" style="color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; transition: opacity 0.3s ease;">AI Ethics & Creative Statement</a>
+            </div>
+            <p style="font-size: 0.75rem; color: rgba(255, 255, 255, 0.5); letter-spacing: 2px; text-transform: uppercase;">© 2025 NOAH® / Sunolicious™ • All Rights Reserved</p>
+        </div>
+    </footer>
+    
+    <!-- EMAIL POPUP BUTTON -->
+    <button class="signup-trigger" id="openPopup">Join the List</button>
+    
+    <!-- EMAIL POPUP -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content">
+            <button class="close-btn" id="closePopup">&times;</button>
+            <div class="popup-header">
+                <h1>NOAH<sup style="font-size: 0.3em">®</sup></h1>
+                <h2>SUNOLICIOUS<sup style="font-size: 0.3em">™</sup></h2>
+                <p>Human. Machine. Manifest.</p>
+            </div>
+            <p class="popup-description">
+                Join the journey. Get exclusive updates, new releases, and insights into the evolution of human-machine musical collaboration.
+            </p>
+            <form class="popup-form" action="https://noahmusic.us6.list-manage.com/subscribe/post?u=634485f7f15097e5aecc9af5f&id=c2b49f4fa3&f_id=004911e2f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+                <div class="form-group">
+                    <label for="mce-EMAIL">Email Address *</label>
+                    <input type="email" name="EMAIL" id="mce-EMAIL" required placeholder="your@email.com">
+                </div>
+                <div class="hidden-field" aria-hidden="true">
+                    <input type="text" name="b_634485f7f15097e5aecc9af5f_c2b49f4fa3" tabindex="-1" value="">
+                </div>
+                <button type="submit" class="submit-btn">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- BIO MODAL -->
+    <div id="bioOverlay" class="modal-overlay" style="display: none;">
+        <div class="ai-ethics-content">
+            <button class="ai-close-btn" id="closeBio">&times;</button>
+            <div class="ai-ethics-header"><h2>Artist Bio</h2></div>
+            <div class="ai-ethics-body">
+                <p style="margin-bottom: 1.5rem;">I came up in music before everything went fully digital.</p>
+                <p style="margin-bottom: 1.5rem;">I learned recording in analog studios where tape was finite, decisions mattered, and commitment was part of the craft. I majored in music business at Columbia College Chicago under Irwin Steinberg — co-founder of Mercury Records and chairman of PolyGram for over 30 years. I worked across multiple eras and cities: Chicago, London, New York — from early multi-track systems and sampling keyboards to large-format tape, then into the digital age that rewrote the industry entirely.</p>
+                <p style="margin-bottom: 1.5rem;">As NOAH® (trademark holder since 2012, ASCAP member), I've built a career spanning over a decade with more than twenty UK Music Week chart placements, Billboard and DJ Times chart entries, and a sync placement in Blumhouse's Truth or Dare. My work has topped UK club charts, charted across Europe, and earned both underground credibility and commercial recognition.</p>
+                <p style="margin-bottom: 1.5rem;">My name is Christofer Holland. I'm based in Manhattan, where I sell luxury properties to creatives.</p>
+                <p style="margin-bottom: 1.5rem;">I didn't arrive at AI as a shortcut. I arrived at it through decades of adapting to changing tools while protecting authorship.</p>
+                <p style="margin-bottom: 1.5rem; font-style: italic;">Throughout my career, musicians have always modeled other musicians — singers studying phrasing, drummers internalizing feel, guitarists chasing tone. That's not new. What's new is that modeling has become explicit.</p>
+                <p style="margin-bottom: 1.5rem;">Today, I use AI as part of a creative feedback loop—prompting, responding, refining, and taking responsibility for the final work. While platforms introduce elements of variation and randomness, the core decisions — melody, lyrics, emotional direction, and what ultimately gets released — remain human.</p>
+                <p style="margin-bottom: 1.5rem;">Any vocals that aren't my physical voice are still extensions of my musical identity: my melodies, my words, my intent, my taste.</p>
+                <p style="margin-bottom: 0;">The tools evolve.<br>The authorship doesn't.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- AI ETHICS MODAL -->
+    <div id="aiEthicsOverlay" class="modal-overlay" style="display: none;">
+        <div class="ai-ethics-content">
+            <button class="ai-close-btn" id="closeAiEthics">&times;</button>
+            <div class="ai-ethics-header"><h2>AI Ethics & Creative Statement</h2></div>
+            <div class="ai-ethics-body">
+                <p style="margin-bottom: 1.5rem;">Sunolicious™ is where human artistry meets technological possibility.</p>
+                <p style="margin-bottom: 1.5rem;">Every track begins with my melodies, my lyrics, my phrasing, and my emotional direction. I design the concepts, write the songs, and shape the sonic identity from the ground up.</p>
+                <p style="margin-bottom: 1.5rem;">AI doesn't originate the work—it extends it. I use it the way artists have always used new instruments: as a means of amplification, not authorship. Synthesizers, samplers, drum machines, autotune, amp modeling—this is simply the next tool in a long tradition of creative technology serving human intention.</p>
+                <p style="margin-bottom: 1.5rem;">My process is iterative and hands-on: prompting, responding, refining, editing—listening closely and making the final call on what gets released. Every Sunolicious™ track is composed, curated, arranged, and produced under my authorship, with generative tools appearing only as elements inside a human-built composition.</p>
+                <p style="margin-bottom: 0;">Human first.<br>Machine second.<br>The art is mine.<br>The expansion is shared.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Hamburger menu toggle
         function toggleMenu() {
             const menuOverlay = document.getElementById('menuOverlay');
             menuOverlay.classList.toggle('active');
         }
+
+        // Email popup
+        const openPopupBtn = document.getElementById('openPopup');
+        const closePopupBtn = document.getElementById('closePopup');
+        const popupOverlay = document.getElementById('popupOverlay');
         
-        // Close menu when clicking bio/ethics triggers
-        document.querySelectorAll('.bio-trigger').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                toggleMenu();
-                setTimeout(() => {
-                    document.getElementById('bioLink').click();
-                }, 400);
-            });
+        openPopupBtn.addEventListener('click', () => {
+            popupOverlay.classList.add('active');
         });
         
-        document.querySelectorAll('.ethics-trigger').forEach(link => {
+        closePopupBtn.addEventListener('click', () => {
+            popupOverlay.classList.remove('active');
+        });
+        
+        popupOverlay.addEventListener('click', (e) => {
+            if (e.target === popupOverlay) {
+                popupOverlay.classList.remove('active');
+            }
+        });
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && popupOverlay.classList.contains('active')) {
+                popupOverlay.classList.remove('active');
+            }
+        });
+
+        // Bio Modal handlers
+        const bioOverlay = document.getElementById('bioOverlay');
+        const closeBio = document.getElementById('closeBio');
+        const bioLink = document.getElementById('bioLink');
+        const bioTriggers = document.querySelectorAll('.bio-trigger');
+
+        // Open Bio from hamburger menu
+        if (bioLink) {
+            bioLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                bioOverlay.classList.add('active');
+                toggleMenu(); // Close hamburger menu
+            });
+        }
+
+        // Open Bio from footer links
+        bioTriggers.forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                bioOverlay.classList.add('active');
+            });
+        });
+
+        // Close Bio modal
+        closeBio.addEventListener('click', () => {
+            bioOverlay.classList.remove('active');
+        });
+
+        // Close Bio on overlay click
+        bioOverlay.addEventListener('click', (e) => {
+            if (e.target === bioOverlay) {
+                bioOverlay.classList.remove('active');
+            }
+        });
+
+        // AI Ethics Modal handlers
+        const aiEthicsOverlay = document.getElementById('aiEthicsOverlay');
+        const closeAiEthics = document.getElementById('closeAiEthics');
+        const aiEthicsLink = document.getElementById('aiEthicsLink');
+        const ethicsTriggers = document.querySelectorAll('.ethics-trigger');
+
+        // Open AI Ethics from hamburger menu
+        if (aiEthicsLink) {
+            aiEthicsLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                aiEthicsOverlay.classList.add('active');
+                toggleMenu(); // Close hamburger menu
+            });
+        }
+
+        // Open AI Ethics from footer links
+        ethicsTriggers.forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                aiEthicsOverlay.classList.add('active');
+            });
+        });
+
+        // Close AI Ethics modal
+        closeAiEthics.addEventListener('click', () => {
+            aiEthicsOverlay.classList.remove('active');
+        });
+
+        // Close AI Ethics on overlay click
+        aiEthicsOverlay.addEventListener('click', (e) => {
+            if (e.target === aiEthicsOverlay) {
+                aiEthicsOverlay.classList.remove('active');
+            }
+        });
+
+        // Close modals on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                bioOverlay.classList.remove('active');
+                aiEthicsOverlay.classList.remove('active');
+            }
+        });
+
+        // Smooth scroll to Connect section when Contact is clicked
+        document.querySelectorAll('.scroll-link').forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
-                toggleMenu();
-                setTimeout(() => {
-                    document.getElementById('aiEthicsLink').click();
-                }, 400);
+                const target = document.querySelector(link.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    toggleMenu(); // Close hamburger menu
+                }
             });
         });
     </script>
