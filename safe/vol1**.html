@@ -380,6 +380,16 @@
         position: absolute;
         left: -5000px;
     }
+    
+    /* MOBILE RESPONSIVE */
+    @media (max-width: 768px) {
+        .container {
+            padding: 0 1.5rem;
+        }
+        .track-grid {
+            grid-template-columns: 1fr !important;
+        }
+    }
     </style>
 </head>
 <body>
@@ -455,7 +465,7 @@
             
             <!-- TRACKS SECTION -->
             <h2 style="font-size: 1.4rem; text-align: center; letter-spacing: 3px; margin-bottom: 3rem; font-weight: 300;">Tracks</h2>
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 900px; margin: 0 auto 4rem;">
+            <div class="track-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 900px; margin: 0 auto 4rem;">
                 <!-- Track 1: Hard Times -->
                 <div style="background: rgba(255, 255, 255, 0.03); border-radius: 0; overflow: hidden; transition: all 0.3s ease;">
                     <img src="images/hardtimes.png" alt="Hard Times" style="width: 100%; height: auto; display: block;">
