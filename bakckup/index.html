@@ -45,103 +45,126 @@
             --gray-dark: #666666;
         }
         
-        /* HAMBURGER MENU */
-        .hamburger-menu {
-            position: fixed;
-            top: 2rem;
-            right: 2rem;
-            width: 30px;
-            height: 22px;
-            cursor: pointer;
-            z-index: 1000;
+        .hamburger-icon {
+            width: 26px;
+            height: 18px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
-        
-        .hamburger-menu span {
+        .hamburger-icon span {
             width: 100%;
-            height: 2px;
-            background: #ffffff;
+            height: 1.5px;
+            background: rgba(255, 255, 255, 0.6);
             transition: all 0.3s ease;
         }
-        
-        .hamburger-menu:hover span {
-            background: var(--accent);
+        .hamburger-icon:hover span {
+            background: rgba(197, 183, 160, 0.9);
         }
         
-        .nav-menu {
+        .menu-close:hover {
+            color: #C5B7A0;
+            transform: rotate(90deg);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 4rem 0 2rem;
+            
+        }
+    
+    .hamburger-menu {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            cursor: pointer;
+        }
+        .hamburger-icon {
+            width: 26px;
+            height: 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .hamburger-icon span {
+            width: 100%;
+            height: 1.5px;
+            background: rgba(255, 255, 255, 0.6);
+            transition: all 0.3s ease;
+        }
+        .hamburger-icon:hover span {
+            background: rgba(197, 183, 160, 0.9);
+        }
+        .menu-overlay {
             position: fixed;
             top: 0;
-            right: -250px;
-            width: 250px;
+            right: -100%;
+            width: 100%;
+            max-width: 380px;
             height: 100vh;
-            background: linear-gradient(161deg, #090329 10%, #3d1a94 35%, #c742c2 65%, #3d1a94 85%, #090329 100%);
+            background: rgba(9, 3, 41, 0.97);
+            backdrop-filter: blur(10px);
             z-index: 999;
-            transition: right 0.3s ease;
-            padding: 4rem 2rem 2rem;
-            border-left: 1px solid rgba(255, 255, 255, 0.15);
+            transition: right 0.4s ease;
+            padding: 6rem 3rem;
             overflow-y: auto;
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
-        .nav-menu.active {
+        .menu-overlay.active {
             right: 0;
         }
-        
-        .nav-close {
+        .menu-close {
             position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
+            top: 2rem;
+            right: 2rem;
             background: none;
             border: none;
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 2rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 32px;
             cursor: pointer;
+            transition: all 0.3s ease;
             font-family: inherit;
-            transition: color 0.3s ease;
+            line-height: 1;
         }
-        
-        .nav-close:hover {
-            color: var(--accent);
+        .menu-close:hover {
+            color: #C5B7A0;
+            transform: rotate(90deg);
         }
-        
-        .nav-list {
+        .menu-nav {
             list-style: none;
-            padding: 0;
         }
-        
-        .nav-list > li {
-            margin-bottom: 1.5rem;
+        .menu-nav > li {
+            margin-bottom: 2rem;
         }
-        
-        .nav-list > li > a {
+        .menu-nav a {
             color: #ffffff;
             text-decoration: none;
             font-size: 1rem;
-            letter-spacing: 2px;
             text-transform: uppercase;
+            letter-spacing: 2px;
             font-weight: 300;
             transition: all 0.3s ease;
             display: block;
         }
-        
-        .nav-list > li > a:hover {
-            color: var(--accent);
+        .menu-nav a:hover {
+            color: #C5B7A0;
+            padding-left: 0.5rem;
         }
-        
-        .nav-section-title {
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 0.75rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-weight: 300;
-            display: block;
+        .menu-nav .submenu {
+            list-style: none;
+            margin-top: 1rem;
+            padding-left: 1.5rem;
+        }
+        .menu-nav .submenu li {
             margin-bottom: 0.8rem;
         }
-        
-        .nav-submenu {
-            list-style: none;
-            padding-left: 1rem;
+        .menu-nav .submenu a {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            letter-spacing: 1px;
+        }
+        footer {
             margin-top: 0.8rem;
         }
         
@@ -753,20 +776,38 @@
 <body>
     
     <!-- HAMBURGER MENU -->
-    <div class="hamburger-menu" id="hamburgerMenu">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div class="hamburger-menu" onclick="toggleMenu()">
+        <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
     
-    <nav class="nav-menu" id="navMenu">
-        <button class="nav-close" id="navClose">&times;</button>
-        <ul>
+    <!-- Menu Overlay -->
+    <nav class="menu-overlay" id="menuOverlay">
+        <button class="menu-close" onclick="toggleMenu()">&times;</button>
+        <ul class="menu-nav">
             <li><a href="index.html">Home</a></li>
-            <li><a href="music.html">Music</a></li>
-            <li><a href="covers.html">Covers</a></li>
-            <li><a href="licensing.html">Licensing</a></li>
-            <li><a href="links.html">Links</a></li>
+            <li>
+                <a href="music.html">Volumes</a>
+                <ul class="submenu">
+                    <li><a href="vol1.html">Volume 1</a></li>
+                    <li><a href="vol2.html">Volume 2</a></li>
+                    <li><a href="vol3.html">Volume 3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="licensing.html">Licensing</a>
+                <ul class="submenu">
+                    <li><a href="licensing-vol1.html">Volume 1</a></li>
+                    <li><a href="licensing-vol2.html">Volume 2</a></li>
+                    <li><a href="licensing-vol3.html">Volume 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="bio-trigger">Artist Bio</a></li>
+            <li><a href="#" id="aiEthicsNavLink">AI Ethics</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     
@@ -814,7 +855,10 @@
                 <a href="https://youtube.com/@sunolicious" class="social-link" target="_blank">YouTube</a>
             </div>
 
-<a href="#" id="aiEthicsLink" style="display: block; color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem; transition: opacity 0.3s ease;">AI Ethics & Creative Statement</a>
+<div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem;">
+    <a href="#" id="bioLink" style="color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; transition: opacity 0.3s ease;">Artist Bio</a>
+    <a href="#" id="aiEthicsLink" style="color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; transition: opacity 0.3s ease;">AI Ethics & Creative Statement</a>
+</div>
 <p class="copyright">© 2025 NOAH® / Sunolicious™ • All Rights Reserved</p>
         </div>
     </section>
@@ -927,7 +971,69 @@
             }
         });
     </script>
+    <div class="ai-ethics-overlay" id="bioOverlay">
+        <div class="ai-ethics-content">
+            <button class="ai-close-btn" id="closeBio">&times;</button>
+            <div class="ai-ethics-header">
+                <h2>Artist Bio</h2>
+            </div>
+            <div class="ai-ethics-body">
+                <p style="margin-bottom: 1.5rem;">
+                    I came up in music before everything went fully digital.
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    I learned recording in analog studios where tape was finite, decisions mattered, and commitment was part of the craft. I worked across multiple eras and cities — from early multi-track systems and sampling keyboards to large-format tape, then into the digital shift that rewrote the industry entirely. I studied music business when the old rules still applied — and lived through watching them disappear.
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    I didn't arrive at AI as a shortcut. I arrived at it through decades of adapting to changing tools while protecting authorship.
+                </p>
+                <p style="margin-bottom: 1.5rem; font-style: italic; color: #C5B7A0 !important;">
+                    Throughout my career, musicians have always modeled other musicians — singers studying phrasing, drummers internalizing feel, guitarists chasing tone. That's not new. What's new is that modeling has become explicit.
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    Today, I use AI as part of a creative feedback loop—prompting, responding, refining, and taking responsibility for the final work. While platforms introduce elements of variation and randomness, the core decisions — melody, lyrics, emotional direction, and what ultimately gets released — remain human.
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    Any vocals that aren't my physical voice are still extensions of my musical identity: my melodies, my words, my intent, my taste.
+                </p>
+                <p style="margin-bottom: 0; font-weight: 400;">
+                    The tools evolve.<br>The authorship doesn't.
+                </p>
+            </div>
+        </div>
+    </div>
 <!-- AI ETHICS MODAL -->
+    <div class="ai-ethics-overlay" id="bioOverlay">
+        <div class="ai-ethics-content">
+            <button class="ai-close-btn" id="closeBio">&times;</button>
+            <div class="ai-ethics-header">
+                <h2>Artist Bio</h2>
+            </div>
+            <div class="ai-ethics-body">
+                <p style="margin-bottom: 1.5rem;">
+                    I came up in music before everything went fully digital.
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    I learned recording in analog studios where tape was finite, decisions mattered, and commitment was part of the craft. I worked across multiple eras and cities — from early multi-track systems and sampling keyboards to large-format tape, then into the digital shift that rewrote the industry entirely. I studied music business when the old rules still applied — and lived through watching them disappear.
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    I didn't arrive at AI as a shortcut. I arrived at it through decades of adapting to changing tools while protecting authorship.
+                </p>
+                <p style="margin-bottom: 1.5rem; font-style: italic; color: #C5B7A0 !important;">
+                    Throughout my career, musicians have always modeled other musicians — singers studying phrasing, drummers internalizing feel, guitarists chasing tone. That's not new. What's new is that modeling has become explicit.
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    Today, I use AI as part of a creative feedback loop—prompting, responding, refining, and taking responsibility for the final work. While platforms introduce elements of variation and randomness, the core decisions — melody, lyrics, emotional direction, and what ultimately gets released — remain human.
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    Any vocals that aren't my physical voice are still extensions of my musical identity: my melodies, my words, my intent, my taste.
+                </p>
+                <p style="margin-bottom: 0; font-weight: 400;">
+                    The tools evolve.<br>The authorship doesn't.
+                </p>
+            </div>
+        </div>
+    </div>
 <div class="ai-ethics-overlay" id="aiEthicsOverlay">
     <div class="ai-ethics-content">
         <button class="ai-close-btn" id="closeAiEthics">&times;</button>
@@ -1059,6 +1165,48 @@
 
 <script>
 // AI ETHICS MODAL FUNCTIONALITY
+
+// BIO MODAL FUNCTIONALITY
+const bioOverlay = document.getElementById('bioOverlay');
+const closeBio = document.getElementById('closeBio');
+const bioLink = document.getElementById('bioLink');
+
+if (bioLink) {
+    bioLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        bioOverlay.classList.add('active');
+    });
+}
+
+if (closeBio) {
+    closeBio.addEventListener('click', () => {
+        bioOverlay.classList.remove('active');
+    });
+}
+
+bioOverlay.addEventListener('click', (e) => {
+    if (e.target === bioOverlay) {
+        bioOverlay.classList.remove('active');
+    }
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && bioOverlay.classList.contains('active')) {
+        bioOverlay.classList.remove('active');
+    }
+});
+
+// Bio trigger in nav menu
+document.querySelectorAll('.bio-trigger').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        toggleMenu();
+        setTimeout(() => {
+            bioOverlay.classList.add('active');
+        }, 400);
+    });
+});
+
 (function() {
     const overlay = document.getElementById('aiEthicsOverlay');
     const closeBtn = document.getElementById('closeAiEthics');
@@ -1091,60 +1239,23 @@
 })();
 
 // HAMBURGER MENU FUNCTIONALITY
-(function() {
-    const hamburger = document.getElementById('hamburgerMenu');
-    const navMenu = document.getElementById('navMenu');
-    const navClose = document.getElementById('navClose');
-    const navJoinBtn = document.getElementById('navJoinBtn');
-    const bioLinkNav = document.getElementById('bioLinkNav');
-    const aiEthicsLinkNav = document.getElementById('aiEthicsLinkNav');
-    const popupOverlay = document.getElementById('popupOverlay');
-    const bioOverlay = document.getElementById('bioOverlay');
-    const aiEthicsOverlay = document.getElementById('aiEthicsOverlay');
-    
-    // Open menu
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.add('active');
-    });
-    
-    // Close menu
-    navClose.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-    });
-    
-    // Join button in nav
-    if (navJoinBtn && popupOverlay) {
-        navJoinBtn.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            popupOverlay.classList.add('active');
-        });
-    }
-    
-    // Artist Bio link in nav
-    if (bioLinkNav && bioOverlay) {
-        bioLinkNav.addEventListener('click', (e) => {
-            e.preventDefault();
-            navMenu.classList.remove('active');
-            bioOverlay.classList.add('active');
-        });
-    }
-    
-    // AI Ethics link in nav
-    if (aiEthicsLinkNav && aiEthicsOverlay) {
-        aiEthicsLinkNav.addEventListener('click', (e) => {
-            e.preventDefault();
-            navMenu.classList.remove('active');
-            aiEthicsOverlay.classList.add('active');
-        });
-    }
-    
-    // Close on escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-            navMenu.classList.remove('active');
+function toggleMenu() {
+    const menuOverlay = document.getElementById('menuOverlay');
+    menuOverlay.classList.toggle('active');
+}
+
+// AI Ethics link in nav
+const aiEthicsNavLink = document.getElementById('aiEthicsNavLink');
+if (aiEthicsNavLink) {
+    aiEthicsNavLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        const aiOverlay = document.getElementById('aiEthicsOverlay');
+        if (aiOverlay) {
+            aiOverlay.classList.add('active');
+            toggleMenu();
         }
     });
-})();
+}
 </script>
 </body>
 </html>
