@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Open Graph / Social Media Preview -->
+    <meta property="og:image" content="https://sunolicious.com/images/Sunolicious_Logo_NOAH.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:title" content="NOAH® | SUNOLICIOUS™ - Human. Machine. Manifest.">
+    <meta property="og:description" content="Stream Sunolicious Vol. 1 on Spotify, Apple Music, and SoundCloud">
+    <meta property="og:url" content="https://sunolicious.com/links.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://sunolicious.com/images/Sunolicious_Logo_NOAH.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links | NOAH® SUNOLICIOUS™</title>
+    <meta name="description" content="Stream Sunolicious music, read the manifesto, and connect with NOAH®">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', 'Arial', sans-serif;
+            background: linear-gradient(161deg, #090329 10%, #3d1a94 35%, #c742c2 65%, #3d1a94 85%, #090329 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.5rem;
+        }
+        
+        .container {
+            max-width: 480px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            max-width: 350px;
+            width: 70%;
+            height: auto;
+            margin: 0 auto 2rem;
+            display: block;
+            opacity: 0.95;
+        }
+        
+        .tagline {
+            text-align: center;
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            margin-bottom: 3rem;
+            opacity: 0.8;
+            font-weight: 200;
+        }
+        
+        /* CURRENT SINGLE - The star of the show */
+        .current-single {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        .current-label {
+            text-align: center;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #C5B7A0;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+        
+        .link-btn {
+            display: block;
+            width: 100%;
+            padding: 1.2rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid #ffffff;
+            color: #ffffff;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 300;
+            transition: all 0.3s ease;
+            margin-bottom: 1rem;
+        }
+        
+        .link-btn:hover {
+            background: #ffffff;
+            color: #090329;
+            transform: translateY(-2px);
+        }
+        
+        .link-btn.primary {
+            border-color: #C5B7A0;
+            color: #C5B7A0;
+            font-size: 1.1rem;
+            padding: 1.5rem 1.5rem;
+        }
+        
+        .link-btn.primary:hover {
+            background: #C5B7A0;
+            color: #090329;
+        }
+        
+        /* STREAMING PLATFORM BUTTONS */
+        .platform-buttons {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .platform-btn {
+            flex: 1;
+            min-width: 70px;
+            padding: 0.8rem 0.3rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #ffffff;
+            text-decoration: none;
+            text-align: center;
+            font-size: 0.6rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-weight: 300;
+            transition: all 0.3s ease;
+            line-height: 1.2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .platform-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #ffffff;
+        }
+        
+        /* SECTION HEADERS */
+        .section-header {
+            text-align: center;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.5);
+            margin: 2.5rem 0 1rem;
+            font-weight: 300;
+        }
+        
+        /* ALL SINGLES - Simple list */
+        .singles-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2.5rem;
+        }
+        
+        .singles-list li {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .singles-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .single-title {
+            font-size: 1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ffffff;
+            margin-bottom: 0.8rem;
+            font-weight: 300;
+        }
+        
+        /* MANIFESTO - Quiet but powerful */
+        .manifesto-link {
+            display: block;
+            text-align: center;
+            padding: 1rem;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            font-weight: 200;
+        }
+        
+        .manifesto-link:hover {
+            color: #C5B7A0;
+        }
+        
+        /* FOOTER */
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .social-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            font-weight: 300;
+        }
+        
+        .social-link:hover {
+            color: #C5B7A0;
+        }
+        
+        .copyright {
+            font-size: 0.65rem;
+            color: rgba(255, 255, 255, 0.4);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 1.5rem 1rem;
+            }
+            
+            .logo {
+                max-width: 180px;
+            }
+            
+            .link-btn {
+                font-size: 0.9rem;
+                padding: 1rem 1.2rem;
+            }
+            
+            .link-btn.primary {
+                font-size: 1rem;
+                padding: 1.3rem 1.2rem;
+            }
+            
+            .platform-buttons {
+                gap: 0.4rem;
+            }
+            
+            .platform-btn {
+                min-width: 65px;
+                padding: 0.75rem 0.2rem;
+                font-size: 0.55rem;
+                letter-spacing: 0.3px;
+            }
+            
+            .single-title {
+                font-size: 0.9rem;
+            }
+            
+            .social-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+        
+        /* HAMBURGER MENU */
+        .hamburger-menu {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 1001;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .hamburger-icon {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .hamburger-icon span {
+            width: 28px;
+            height: 2px;
+            background: #ffffff;
+            transition: all 0.3s ease;
+        }
+        
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            max-width: 380px;
+            height: 100vh;
+            background: rgba(9, 3, 41, 0.98);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: right 0.4s ease;
+            overflow-y: auto;
+            padding: 6rem 2rem 2rem;
+        }
+        
+        .menu-overlay.active {
+            right: 0;
+        }
+        
+        .menu-overlay ul {
+            list-style: none;
+        }
+        
+        .menu-overlay > ul > li {
+            margin-bottom: 1.5rem;
+        }
+        
+        .menu-overlay a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 300;
+            transition: color 0.3s ease;
+            display: block;
+            padding: 0.5rem 0;
+        }
+        
+        .menu-overlay a:hover {
+            color: #C5B7A0;
+        }
+        
+        .submenu {
+            padding-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .submenu li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .submenu a {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- HAMBURGER MENU -->
+    <div class="hamburger-menu" onclick="toggleMenu()">
+        <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    
+    <nav class="menu-overlay" id="menuOverlay">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="music.html">Volumes</a>
+                <ul class="submenu">
+                    <li><a href="vol1.html">Volume 1</a></li>
+                    <li><a href="vol2.html">Volume 2</a></li>
+                    <li><a href="vol3.html">Volume 3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="licensing.html">Licensing</a>
+                <ul class="submenu">
+                    <li><a href="licensing-vol1.html">Volume 1</a></li>
+                    <li><a href="licensing-vol2.html">Volume 2</a></li>
+                    <li><a href="licensing-vol3.html">Volume 3</a></li>
+                </ul>
+            </li>
+            <li><a href="blog/index.html">Blog</a></li>
+            <li><a href="#" id="contactLink">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        
+        <!-- LOGO -->
+        <img src="images/Sunolicious_Logo_NOAH2.png" alt="NOAH SUNOLICIOUS Logo" class="logo">
+        
+        <!-- TAGLINE -->
+        <p class="tagline">Human. Machine. Manifest.</p>
+        
+        <!-- VOL 1 ARTWORK -->
+        <div style="margin: 3rem 0 2rem;">
+            <img src="images/sunovol1.png" alt="Sunolicious Vol. 1" style="max-width: 300px; width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 4px;">
+        </div>
+        
+        <!-- VOL 1 BUTTONS -->
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <p style="font-size: 0.7rem; color: #ffffff; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">Stream Sunolicious Vol. 1</p>
+            <div class="platform-buttons">
+                <a href="https://open.spotify.com/album/YOUR_ALBUM_ID" class="platform-btn" target="_blank">Spotify</a>
+                <a href="https://music.apple.com/us/album/YOUR_ALBUM_ID" class="platform-btn" target="_blank">Apple Music</a>
+                <a href="https://on.soundcloud.com/o5ubMaySnJJHzN5Ukm" class="platform-btn" target="_blank">SoundCloud</a>
+            </div>
+        </div>
+        
+        <!-- MANIFESTO -->
+        <a href="index.html" class="manifesto-link">What Sunolicious is about →</a>
+        
+        <!-- FOOTER -->
+        <footer>
+            <div class="social-links">
+                <a href="https://instagram.com/sunoliciousmusic" class="social-link" target="_blank">Instagram</a>
+                <a href="https://tiktok.com/@sunoliciousmusic" class="social-link" target="_blank">TikTok</a>
+                <a href="https://youtube.com/@sunolicious" class="social-link" target="_blank">YouTube</a>
+            </div>
+            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin: 2rem 0 2rem;">
+                <a href="#" id="bioLink" style="color: #ffffff; text-decoration: none; font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; transition: color 0.3s;">Artist Bio</a>
+                <a href="#" id="aiEthicsLink" style="color: #ffffff; text-decoration: none; font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; transition: color 0.3s;">AI Ethics</a>
+            </div>
+            <p style="text-align: center; font-size: 0.75rem; color: #ffffff; margin-bottom: 2rem; letter-spacing: 1px;">www.sunolicious.com</p>
+            <p class="copyright">© 2025 NOAH® / Sunolicious™</p>
+        </footer>
+        
+    </div>
+    
+    <!-- BIO MODAL -->
+    <div class="modal-overlay" id="bioOverlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: rgba(0, 0, 0, 0.95); z-index: 10000; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s;">
+        <div class="modal-content" style="background: linear-gradient(161deg, #090329 10%, #3d1a94 35%, #c742c2 65%, #3d1a94 85%, #090329 100%); padding: 3rem; max-width: 700px; width: 90%; max-height: 85vh; overflow-y: auto; position: relative; border: 1px solid rgba(255, 255, 255, 0.1);">
+            <button class="modal-close" id="closeBio" style="position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: rgba(255, 255, 255, 0.6); font-size: 2rem; cursor: pointer; transition: color 0.3s; font-family: inherit;">&times;</button>
+            <h2 style="font-size: 1.3rem; margin-bottom: 1.5rem; letter-spacing: 2px; font-weight: 300; color: #ffffff;">Artist Bio</h2>
+            <div style="font-size: 0.9rem; line-height: 1.8; color: #ffffff;">
+                <p style="margin-bottom: 1.5rem;">I came up in music before everything went fully digital.</p>
+                <p style="margin-bottom: 1.5rem;">I learned recording in analog studios where tape was finite, decisions mattered, and commitment was part of the craft. I worked across multiple eras and cities — from early multi-track systems and sampling keyboards to large-format tape, then into the digital shift that rewrote the industry entirely.</p>
+                <p style="margin-bottom: 1.5rem;">I didn't arrive at AI as a shortcut. I arrived at it through decades of adapting to changing tools while protecting authorship.</p>
+                <p style="margin-bottom: 1.5rem; font-style: italic; color: #C5B7A0;">Throughout my career, musicians have always modeled other musicians — singers studying phrasing, drummers internalizing feel, guitarists chasing tone. That's not new. What's new is that modeling has become explicit.</p>
+                <p style="margin-bottom: 1.5rem;">Today, I use AI as part of a creative feedback loop—prompting, responding, refining, and taking responsibility for the final work.</p>
+                <p style="margin-bottom: 0; font-weight: 400;">The tools evolve. The authorship doesn't.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- AI ETHICS MODAL -->
+    <div class="modal-overlay" id="aiEthicsOverlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: rgba(0, 0, 0, 0.95); z-index: 10000; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s;">
+        <div class="modal-content" style="background: linear-gradient(161deg, #090329 10%, #3d1a94 35%, #c742c2 65%, #3d1a94 85%, #090329 100%); padding: 3rem; max-width: 700px; width: 90%; max-height: 85vh; overflow-y: auto; position: relative; border: 1px solid rgba(255, 255, 255, 0.1);">
+            <button class="modal-close" id="closeAiEthics" style="position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: rgba(255, 255, 255, 0.6); font-size: 2rem; cursor: pointer; transition: color 0.3s; font-family: inherit;">&times;</button>
+            <h2 style="font-size: 1.3rem; margin-bottom: 1.5rem; letter-spacing: 2px; font-weight: 300; color: #ffffff;">AI Ethics & Creative Statement</h2>
+            <div style="font-size: 0.9rem; line-height: 1.8; color: #ffffff;">
+                <p style="margin-bottom: 1.5rem;"><strong>Sunolicious™ is where human artistry meets technological possibility.</strong></p>
+                <p style="margin-bottom: 1.5rem;">I don't use AI to replace creativity—I use it to expand what's possible. Every melody, lyric, and emotional arc originates from human intention.</p>
+                <p style="margin-bottom: 1.5rem;">I own 100% of the masters and publishing. Every release is cleared for sync licensing, free from sample issues or uncredited contributions.</p>
+                <p style="margin-bottom: 1.5rem; font-style: italic; color: #C5B7A0;">Transparency matters. I'm not hiding behind AI—I'm using it openly as part of a larger creative toolkit.</p>
+                <p style="margin-bottom: 0;">The debate isn't whether AI should exist in music. It's already here. The question is whether artists will use it responsibly.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- CONTACT MODAL -->
+    <div class="modal-overlay" id="contactOverlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: rgba(0, 0, 0, 0.95); z-index: 10000; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s;">
+        <div class="modal-content" style="background: linear-gradient(161deg, #090329 10%, #3d1a94 35%, #c742c2 65%, #3d1a94 85%, #090329 100%); padding: 3rem; max-width: 600px; width: 90%; max-height: 85vh; overflow-y: auto; position: relative; border: 1px solid rgba(255, 255, 255, 0.1);">
+            <button class="modal-close" id="closeContact" style="position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: rgba(255, 255, 255, 0.6); font-size: 2rem; cursor: pointer; transition: color 0.3s; font-family: inherit;">&times;</button>
+            <h2 style="font-size: 1.3rem; margin-bottom: 1.5rem; letter-spacing: 2px; font-weight: 300; color: #ffffff; text-align: center;">Get In Touch</h2>
+            
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleSubmit(event)" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <input type="hidden" name="form-name" value="contact">
+                <p style="display: none;">
+                    <label>Don't fill this out: <input name="bot-field"></label>
+                </p>
+                
+                <div id="form-success" style="display: none; padding: 1rem; background: rgba(197, 183, 160, 0.2); border: 1px solid #C5B7A0; border-radius: 4px; text-align: center; color: #C5B7A0;">
+                    <p style="margin: 0; font-size: 0.9rem; letter-spacing: 1px;">Message sent successfully! We'll get back to you soon.</p>
+                </div>
+                
+                <div id="form-fields" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                
+                <div>
+                    <label style="display: block; font-size: 0.85rem; color: rgba(255, 255, 255, 0.8); margin-bottom: 0.5rem; letter-spacing: 1px; text-transform: uppercase;">Name *</label>
+                    <input type="text" name="name" required style="width: 100%; padding: 0.8rem; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.3); color: #ffffff; font-size: 1rem; font-family: inherit; border-radius: 0;">
+                </div>
+                
+                <div>
+                    <label style="display: block; font-size: 0.85rem; color: rgba(255, 255, 255, 0.8); margin-bottom: 0.5rem; letter-spacing: 1px; text-transform: uppercase;">Email *</label>
+                    <input type="email" name="email" required style="width: 100%; padding: 0.8rem; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.3); color: #ffffff; font-size: 1rem; font-family: inherit; border-radius: 0;">
+                </div>
+                
+                <div>
+                    <label style="display: block; font-size: 0.85rem; color: rgba(255, 255, 255, 0.8); margin-bottom: 0.5rem; letter-spacing: 1px; text-transform: uppercase;">Message *</label>
+                    <textarea name="message" required rows="6" style="width: 100%; padding: 0.8rem; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.3); color: #ffffff; font-size: 1rem; font-family: inherit; resize: vertical; border-radius: 0;"></textarea>
+                </div>
+                
+                <button type="submit" style="padding: 1rem 2rem; background: transparent; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.5); font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: all 0.3s; font-family: inherit; font-weight: 300;">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <style>
+    .modal-overlay.active {
+        opacity: 1 !important;
+        pointer-events: all !important;
+    }
+    </style>
+    
+    <script>
+        const bioOverlay = document.getElementById('bioOverlay');
+        const bioLink = document.getElementById('bioLink');
+        const closeBio = document.getElementById('closeBio');
+        
+        bioLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            bioOverlay.classList.add('active');
+        });
+        
+        closeBio.addEventListener('click', () => {
+            bioOverlay.classList.remove('active');
+        });
+        
+        bioOverlay.addEventListener('click', (e) => {
+            if (e.target === bioOverlay) {
+                bioOverlay.classList.remove('active');
+            }
+        });
+        
+        const aiEthicsOverlay = document.getElementById('aiEthicsOverlay');
+        const aiEthicsLink = document.getElementById('aiEthicsLink');
+        const closeAiEthics = document.getElementById('closeAiEthics');
+        
+        aiEthicsLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            aiEthicsOverlay.classList.add('active');
+        });
+        
+        closeAiEthics.addEventListener('click', () => {
+            aiEthicsOverlay.classList.remove('active');
+        });
+        
+        aiEthicsOverlay.addEventListener('click', (e) => {
+            if (e.target === aiEthicsOverlay) {
+                aiEthicsOverlay.classList.remove('active');
+            }
+        });
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                bioOverlay.classList.remove('active');
+                aiEthicsOverlay.classList.remove('active');
+                contactOverlay.classList.remove('active');
+            }
+        });
+        
+        // Contact Modal
+        const contactOverlay = document.getElementById('contactOverlay');
+        const contactLink = document.getElementById('contactLink');
+        const closeContact = document.getElementById('closeContact');
+        
+        contactLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            const menuOverlay = document.getElementById('menuOverlay');
+            if (menuOverlay) {
+                menuOverlay.classList.remove('active');
+            }
+            setTimeout(() => {
+                contactOverlay.classList.add('active');
+            }, 400);
+        });
+        
+        closeContact.addEventListener('click', () => {
+            contactOverlay.classList.remove('active');
+        });
+        
+        contactOverlay.addEventListener('click', (e) => {
+            if (e.target === contactOverlay) {
+                contactOverlay.classList.remove('active');
+            }
+        });
+        
+        // Handle form submission
+        function handleSubmit(e) {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            
+            fetch('/', {
+                method: 'POST',
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(() => {
+                document.getElementById('form-fields').style.display = 'none';
+                document.getElementById('form-success').style.display = 'block';
+                form.reset();
+                setTimeout(() => {
+                    contactOverlay.classList.remove('active');
+                    document.getElementById('form-fields').style.display = 'flex';
+                    document.getElementById('form-success').style.display = 'none';
+                }, 3000);
+            })
+            .catch((error) => console.error('Error:', error));
+        }
+    </script>
+    
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menuOverlay');
+            menu.classList.toggle('active');
+        }
+        
+        document.getElementById('menuOverlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('active');
+            }
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.getElementById('menuOverlay').classList.remove('active');
+            }
+        });
+    </script>
+    
+</body>
+</html>
