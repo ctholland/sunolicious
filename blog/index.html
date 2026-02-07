@@ -135,6 +135,59 @@
             color: rgba(255, 255, 255, 0.8);
         }
         
+        /* MODALS */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+        
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        .modal-content {
+            background: rgba(26, 26, 26, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            max-width: 600px;
+            width: 90%;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .ai-close-btn {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 32px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            line-height: 1;
+        }
+        
+        .ai-close-btn:hover {
+            color: #ffffff;
+            transform: rotate(90deg);
+        }
+        
         /* HERO SECTION */
         .hero {
             position: relative;
@@ -241,81 +294,69 @@
             color: rgba(255, 255, 255, 0.5);
             letter-spacing: 1px;
             margin-bottom: 1.5rem;
-            text-transform: uppercase;
         }
         
         .post-excerpt {
             font-size: 1.05rem;
             line-height: 1.8;
             margin-bottom: 2rem;
-            color: rgba(255, 255, 255, 0.85);
+            color: rgba(255, 255, 255, 0.9);
         }
         
         .read-more {
             display: inline-block;
-            padding: 0.8rem 2rem;
-            background: transparent;
-            color: #ffffff;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: var(--accent);
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             letter-spacing: 2px;
             text-transform: uppercase;
-            transition: all 0.3s ease;
-            font-weight: 300;
+            border-bottom: 1px solid var(--accent);
+            padding-bottom: 2px;
+            transition: all 0.3s;
         }
         
         .read-more:hover {
-            background: #ffffff;
-            color: #1a1a1a;
+            color: #ffffff;
             border-color: #ffffff;
         }
         
-        /* RECENT POSTS GRID */
+        /* SECTION HEADER */
         .section-header {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 400;
+            font-size: 2rem;
             letter-spacing: 3px;
             margin-bottom: 3rem;
-            text-align: center;
+            font-weight: 400;
         }
         
+        /* POSTS GRID */
         .posts-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 3rem;
-            margin-bottom: 4rem;
         }
         
         .post-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            overflow: hidden;
-            transition: all 0.3s ease;
+            transition: transform 0.3s;
         }
         
         .post-card:hover {
-            border-color: rgba(255, 255, 255, 0.3);
             transform: translateY(-5px);
         }
         
         .post-card-image {
             width: 100%;
-            height: 280px;
+            height: 250px;
             object-fit: cover;
-        }
-        
-        .post-card-content {
-            padding: 2rem;
+            margin-bottom: 1.5rem;
         }
         
         .post-card h3 {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 400;
             letter-spacing: 1px;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.5rem;
             line-height: 1.2;
         }
         
@@ -438,7 +479,7 @@
             <li><a href="index.html">Blog</a></li>
             <li><a href="#" class="bio-trigger">Artist Bio</a></li>
             <li><a href="#" class="ai-trigger">AI Ethics</a></li>
-            <li><a href="mailto:contact@sunolicious.com">Contact</a></li>
+            <li><a href="#" id="contactLink">Contact</a></li>
         </ul>
     </nav>
     
@@ -464,7 +505,7 @@
                     <h2>The Human Element in AI-Assisted Music</h2>
                     <p class="post-meta">January 31, 2026 • 8 min read</p>
                     <p class="post-excerpt">Throughout my career, musicians have always modeled other musicians—singers studying phrasing, drummers internalizing feel, guitarists chasing tone. That's not new. What's new is that modeling has become explicit. Here's why that matters.</p>
-                    <a href="posts/human-element-ai-music.html" class="read-more">Read Article</a>
+                    <a href="human-element-ai-music.html" class="read-more">Read Article</a>
                 </div>
             </div>
         </article>
@@ -475,11 +516,11 @@
         <div class="posts-grid">
             
             <article class="post-card">
-                <a href="posts/transparency-matters.html">
-                    <img src="images/transparency-post.jpg" alt="Transparency in AI Music" class="post-card-image">
+                <a href="why-transparency-matters.html">
+                    <img src="images/transparencypc.png" alt="Transparency in AI Music" class="post-card-image">
                     <div class="post-card-content">
                         <h3>Why Transparency Matters</h3>
-                        <p class="post-meta">January 28, 2026 • 5 min read</p>
+                        <p class="post-meta">Date: TBD • 8 min read</p>
                         <p class="post-excerpt">The debate isn't whether AI should exist in music. It's already here. The question is whether artists will use it responsibly, with intention, and with respect for their audience.</p>
                         <span class="read-more">Read More</span>
                     </div>
@@ -487,36 +528,60 @@
             </article>
             
             <article class="post-card">
-                <a href="posts/analog-to-ai.html">
-                    <img src="images/analog-studio.jpg" alt="Analog Studio" class="post-card-image">
+                <a href="from-analog-studios-to-ai.html">
+                    <img src="images/analogstudiopc.png" alt="Analog Studio" class="post-card-image">
                     <div class="post-card-content">
                         <h3>From Analog Studios to AI</h3>
-                        <p class="post-meta">January 25, 2026 • 6 min read</p>
-                        <p class="post-excerpt">I learned recording in analog studios where tape was finite, decisions mattered, and commitment was part of the craft. Here's what that taught me about working with AI tools today.</p>
+                        <p class="post-meta">Date: TBD • 7 min read</p>
+                        <p class="post-excerpt">Long before artificial intelligence entered music production, the industry had already made peace with imitation, abstraction, and modeling.</p>
                         <span class="read-more">Read More</span>
                     </div>
                 </a>
             </article>
             
             <article class="post-card">
-                <a href="posts/licensing-variations.html">
-                    <img src="images/sync-licensing.jpg" alt="Music Licensing" class="post-card-image">
-                    <div class="post-card-content">
-                        <h3>The Licensing Advantage</h3>
-                        <p class="post-meta">January 22, 2026 • 4 min read</p>
-                        <p class="post-excerpt">How AI-generated variations in BPM and key create unprecedented flexibility for music supervisors—without expensive re-recording or custom production work.</p>
-                        <span class="read-more">Read More</span>
-                    </div>
-                </a>
-            </article>
-            
-            <article class="post-card">
-                <a href="posts/tools-evolve.html">
-                    <img src="images/music-evolution.jpg" alt="Music Technology" class="post-card-image">
+                <a href="the-tools-evolve.html">
+                    <img src="images/aitoolspc.png" alt="Music Technology" class="post-card-image">
                     <div class="post-card-content">
                         <h3>The Tools Evolve. The Authorship Doesn't.</h3>
-                        <p class="post-meta">January 20, 2026 • 7 min read</p>
-                        <p class="post-excerpt">A reflection on adapting to technological change throughout my career—from sampling keyboards and DAWs to AI—while maintaining creative control and artistic identity.</p>
+                        <p class="post-meta">Date: TBD • 7 min read</p>
+                        <p class="post-excerpt">Every generation of musicians inherits new tools. What changes is the surface—what hasn't changed is where authorship lives.</p>
+                        <span class="read-more">Read More</span>
+                    </div>
+                </a>
+            </article>
+            
+            <article class="post-card">
+                <a href="the-licensing-advantage.html">
+                    <img src="images/licensingpc.png" alt="Music Licensing" class="post-card-image">
+                    <div class="post-card-content">
+                        <h3>The Licensing Advantage</h3>
+                        <p class="post-meta">Date: TBD • 4 min read</p>
+                        <p class="post-excerpt">For most of the history of recorded music, licensing flexibility came at a cost. AI doesn't change what music is—it changes how easily music can fit.</p>
+                        <span class="read-more">Read More</span>
+                    </div>
+                </a>
+            </article>
+            
+            <article class="post-card">
+                <a href="happy-accidents-in-music-production-what-happens-after-the-luck.html">
+                    <img src="images/happyaccidentpc.png" alt="Happy Accidents" class="post-card-image">
+                    <div class="post-card-content">
+                        <h3>Happy Accidents in Music Production</h3>
+                        <p class="post-meta">Date: TBD • 7 min read</p>
+                        <p class="post-excerpt">History is full of great accidents. It's not full of great accidents that succeeded on their own. That distinction matters more than most creative debates admit.</p>
+                        <span class="read-more">Read More</span>
+                    </div>
+                </a>
+            </article>
+            
+            <article class="post-card">
+                <a href="dance-music-told-the-truth-first.html">
+                    <img src="images/dancemusicpc.png" alt="Dance Music and AI" class="post-card-image">
+                    <div class="post-card-content">
+                        <h3>Dance Music Told the Truth First</h3>
+                        <p class="post-meta">Date: TBD • 6 min read</p>
+                        <p class="post-excerpt">Long before AI entered the conversation, dance music had already crossed the lines everyone now pretends are new.</p>
                         <span class="read-more">Read More</span>
                     </div>
                 </a>
@@ -524,6 +589,44 @@
             
         </div>
         
+    </div>
+    
+    <!-- CONTACT MODAL -->
+    <div id="contactOverlay" class="modal-overlay">
+        <div class="modal-content">
+            <button class="ai-close-btn" id="closeContact">&times;</button>
+            <h2 style="font-size: 1.3rem; margin-bottom: 1.5rem; letter-spacing: 2px; font-weight: 300; color: #ffffff; text-align: center;">Get In Touch</h2>
+            
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleSubmit(event)" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <input type="hidden" name="form-name" value="contact">
+                <p style="display: none;">
+                    <label>Don't fill this out: <input name="bot-field"></label>
+                </p>
+                
+                <div id="form-success" style="display: none; padding: 1rem; background: rgba(197, 183, 160, 0.2); border: 1px solid #C5B7A0; text-align: center; color: #C5B7A0;">
+                    <p style="margin: 0; font-size: 0.9rem; letter-spacing: 1px;">Message sent successfully! We'll get back to you soon.</p>
+                </div>
+                
+                <div id="form-fields" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div>
+                        <label style="display: block; font-size: 0.85rem; color: rgba(255, 255, 255, 0.8); margin-bottom: 0.5rem; letter-spacing: 1px; text-transform: uppercase;">Name *</label>
+                        <input type="text" name="name" required style="width: 100%; padding: 0.8rem; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.3); color: #ffffff; font-size: 1rem; font-family: inherit;">
+                    </div>
+                    
+                    <div>
+                        <label style="display: block; font-size: 0.85rem; color: rgba(255, 255, 255, 0.8); margin-bottom: 0.5rem; letter-spacing: 1px; text-transform: uppercase;">Email *</label>
+                        <input type="email" name="email" required style="width: 100%; padding: 0.8rem; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.3); color: #ffffff; font-size: 1rem; font-family: inherit;">
+                    </div>
+                    
+                    <div>
+                        <label style="display: block; font-size: 0.85rem; color: rgba(255, 255, 255, 0.8); margin-bottom: 0.5rem; letter-spacing: 1px; text-transform: uppercase;">Message *</label>
+                        <textarea name="message" required rows="6" style="width: 100%; padding: 0.8rem; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.3); color: #ffffff; font-size: 1rem; font-family: inherit; resize: vertical;"></textarea>
+                    </div>
+                    
+                    <button type="submit" style="padding: 1rem 2rem; background: transparent; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.5); font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: all 0.3s; font-family: inherit; font-weight: 300;">Send Message</button>
+                </div>
+            </form>
+        </div>
     </div>
     
     <!-- FOOTER -->
@@ -553,10 +656,65 @@
             }
         });
         
-        // Close menu on ESC key
+        // Contact Modal
+        const contactOverlay = document.getElementById('contactOverlay');
+        const contactLink = document.getElementById('contactLink');
+        const closeContact = document.getElementById('closeContact');
+        
+        if (contactLink) {
+            contactLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                const menuOverlay = document.getElementById('menuOverlay');
+                if (menuOverlay) {
+                    menuOverlay.classList.remove('active');
+                }
+                setTimeout(() => {
+                    contactOverlay.classList.add('active');
+                }, 400);
+            });
+        }
+        
+        if (closeContact) {
+            closeContact.addEventListener('click', () => {
+                contactOverlay.classList.remove('active');
+            });
+        }
+        
+        contactOverlay.addEventListener('click', (e) => {
+            if (e.target === contactOverlay) {
+                contactOverlay.classList.remove('active');
+            }
+        });
+        
+        // Handle form submission
+        function handleSubmit(e) {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            
+            fetch('/', {
+                method: 'POST',
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(() => {
+                document.getElementById('form-fields').style.display = 'none';
+                document.getElementById('form-success').style.display = 'block';
+                form.reset();
+                setTimeout(() => {
+                    contactOverlay.classList.remove('active');
+                    document.getElementById('form-fields').style.display = 'flex';
+                    document.getElementById('form-success').style.display = 'none';
+                }, 3000);
+            })
+            .catch((error) => console.error('Error:', error));
+        }
+        
+        // Close modals on ESC key
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 document.getElementById('menuOverlay').classList.remove('active');
+                contactOverlay.classList.remove('active');
             }
         });
     </script>
