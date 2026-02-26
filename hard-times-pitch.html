@@ -173,6 +173,84 @@
                 margin-bottom: 4rem;
             }
         }
+        
+        /* LYRICS MODAL */
+        .lyrics-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .lyrics-modal.active {
+            display: flex;
+        }
+        
+        .lyrics-content {
+            background: rgba(26, 26, 26, 0.98);
+            border: 1px solid rgba(232, 230, 227, 0.2);
+            padding: 3rem;
+            max-width: 700px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        .lyrics-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            color: rgba(232, 230, 227, 0.6);
+            font-size: 2rem;
+            cursor: pointer;
+            transition: color 0.3s;
+            font-family: inherit;
+        }
+        
+        .lyrics-close:hover {
+            color: #ffffff;
+        }
+        
+        .lyrics-content h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            color: #f5f5f5;
+        }
+        
+        .lyrics-content .lyrics-meta {
+            font-size: 0.85rem;
+            color: rgba(232, 230, 227, 0.6);
+            margin-bottom: 2rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .lyrics-text {
+            font-size: 1rem;
+            line-height: 1.9;
+            color: #e8e6e3;
+            white-space: pre-line;
+        }
+        
+        .lyrics-text p {
+            margin-bottom: 1.5rem;
+        }
+        
+        #lyricsLink:hover {
+            background: rgba(197, 183, 160, 0.1);
+            border-color: #c5b7a0;
+        }
     </style>
 </head>
 <body>
@@ -191,7 +269,7 @@
         <!-- THE SONG -->
         <section class="song-description">
             <h2>The Song</h2>
-            <p>"Hard Times" is an acoustic anthem about struggle, hypocrisy, and the need for compassion when the world forgets its balance. It calls out the double standards of power and pride — the ones who preach self-reliance until the storm hits their own door. Honest, raw, and unfiltered, it's a song about unity, humility, and remembering that hard times don't take sides.</p>
+            <p>"Hard Times" is an acoustic country-soul record built on plainspoken storytelling and a chant-driven hook. The verses confront pride under pressure, while the chorus lands with a simple truth: hard times don't take sides. Stripped back and performance-forward, the song moves from tension to release, giving space for a vocal that can carry grit, restraint, and lift.</p>
         </section>
         
         <hr>
@@ -199,7 +277,7 @@
         <!-- WHY IT FITS -->
         <section class="fit">
             <h2>Why It Fits</h2>
-            <p>This song sits naturally in the emotional territory Teddy Swims commands — where grit meets tenderness. It offers room for interpretation and ownership, not imitation, and is structured to support a performance that feels personal and lived-in.</p>
+            <p>The song sits naturally in the country-soul territory Teddy Swims inhabits — where raw honesty meets power. The hook is built for a voice that can deliver both edge and empathy, allowing the performance to feel lived-in rather than produced. It offers room for ownership, not imitation, and is structured to let the vocal lead the record.</p>
         </section>
         
         <hr>
@@ -209,7 +287,10 @@
             <h2>Private Listening</h2>
             <div class="embed-container">
                 <p class="embed-note">Private stream. No public release. Fully controlled composition.</p>
-                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1990395056&color=%23c5b7a0&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"></iframe>
+                <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2253997211&color=%23c5b7a0&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"></iframe>
+                <p style="margin-top: 1.5rem; text-align: center;">
+                    <a href="#" id="lyricsLink" style="display: inline-block; padding: 0.75rem 2rem; background: transparent; color: #c5b7a0; border: 1px solid rgba(197, 183, 160, 0.5); font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; transition: all 0.3s; font-family: 'Inter', sans-serif; font-weight: 300;">View Lyrics</a>
+                </p>
             </div>
         </section>
         
@@ -218,7 +299,7 @@
         <!-- RIGHTS -->
         <section class="rights">
             <h2>Rights & Control</h2>
-            <p class="rights-text">Composition is 100% owned and controlled by Christofer Holland. No co-writers. No third-party claims. SRU registered with the Library of Congress.</p>
+            <p class="rights-text">Composition is 100% owned and controlled by Christofer Holland. No co-writers. No third-party claims. SRU registered with the Library of Congress. Writer affiliated with ASCAP.</p>
         </section>
         
         <hr>
@@ -227,10 +308,89 @@
         <section class="contact">
             <p><strong>Christofer Holland</strong></p>
             <p><a href="mailto:noah@noahmusic.com" class="email">noah@noahmusic.com</a></p>
+            <p>917·207·1414</p>
             <p class="availability">Available for licensing and recording discussions.</p>
         </section>
         
     </div>
+    
+    <!-- LYRICS MODAL -->
+    <div class="lyrics-modal" id="lyricsModal">
+        <div class="lyrics-content">
+            <button class="lyrics-close" id="closeLyrics">&times;</button>
+            <h3>Hard Times</h3>
+            <p class="lyrics-meta">Written by Christofer Holland • SRU 1-15081814261 • 1/21/2026</p>
+            <div class="lyrics-text">
+                <p>You preach the gospel of the self-made man,
+Till your castle's sinking in the sand.
+You say "stand tall, don't need no grace,"
+But now you're praying with a pale face.</p>
+
+                <p>Funny how fast the tables spin,
+When the storm rolls in.</p>
+
+                <p>Hard times — they don't take sides,
+They'll tear down your walls and your pride.
+You can't buy mercy, you can't buy peace,
+When the ground shakes under your feet.
+Hard times — they don't take sides,
+We all bleed the same inside.</p>
+
+                <p>You shout "no handouts, earn your keep,"
+Then cry for help when you're in deep.
+The same bridge you burned for show,
+Is the only way back home, you know.</p>
+
+                <p>You call it freedom when it's yours to gain,
+But cry "unfair" when you feel the pain.</p>
+
+                <p>Hard times — they don't take sides,
+They'll tear down your walls and your pride.
+You can't buy mercy, you can't buy peace,
+When the ground shakes under your feet.
+Hard times — they don't take sides,
+We all bleed the same inside.</p>
+
+                <p>Red or blue, it's the same old sky,
+You can't outrun the reason why.
+Balance ain't weakness, truth ain't war,
+We all need love — that's what it's for.</p>
+
+                <p>So next time you win, next time you shine,
+Remember the hands that held the line.
+'Cause hard times, yeah they always find,
+Every heart that's left behind</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Lyrics modal
+        const lyricsModal = document.getElementById('lyricsModal');
+        const lyricsLink = document.getElementById('lyricsLink');
+        const closeLyrics = document.getElementById('closeLyrics');
+        
+        lyricsLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            lyricsModal.classList.add('active');
+        });
+        
+        closeLyrics.addEventListener('click', () => {
+            lyricsModal.classList.remove('active');
+        });
+        
+        lyricsModal.addEventListener('click', (e) => {
+            if (e.target === lyricsModal) {
+                lyricsModal.classList.remove('active');
+            }
+        });
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                lyricsModal.classList.remove('active');
+            }
+        });
+    </script>
     
 </body>
 </html>
