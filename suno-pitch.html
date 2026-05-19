@@ -62,6 +62,8 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; padding: 16px 48
 .pill-r:hover { background: rgba(239,68,68,0.24); }
 .pill-radio { background: rgba(168,85,247,0.14); border: 1px solid rgba(168,85,247,0.4); color: #c084fc; }
 .pill-radio:hover { background: rgba(168,85,247,0.24); }
+.pill-amp { background: rgba(255,187,85,0.14); border: 1px solid rgba(255,187,85,0.4); color: var(--amber); }
+.pill-amp:hover { background: rgba(255,187,85,0.24); }
 .scroll-arrow { position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 6px; color: #555; font-family: 'Space Mono', monospace; font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0; animation: up 1s ease 1.2s forwards; }
 .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, #555, transparent); animation: pulse 2s ease-in-out infinite; }
 
@@ -71,7 +73,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; padding: 16px 48
 /* ── SECTIONS ── */
 .section { padding: 110px 48px; position: relative; overflow: hidden; background: #080808; }
 .section-inner { max-width: 1160px; margin: 0 auto; }
-.section-label { font-family: 'Space Mono', monospace; font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 14px; display: flex; align-items: center; gap: 12px; }
+.section-label { font-family: 'Space Mono', monospace; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 14px; display: flex; align-items: center; gap: 12px; }
 .section-label::after { content: ''; display: block; height: 1px; width: 44px; background: currentColor; opacity: 0.3; }
 .section h2 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(1.6rem, 4.5vw, 4rem); line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 16px; color: #ffffff; }
 .section-tag { font-size: 1rem; color: #cccccc; max-width: 500px; line-height: 1.75; margin-bottom: 60px; }
@@ -265,6 +267,7 @@ footer { padding: 32px 48px; border-top: 1px solid rgba(255,255,255,0.07); displ
     <li><a href="#sync">Sync</a></li>
     <li><a href="#live">Connect Live</a></li>
     <li><a href="#radio">Radio</a></li>
+    <li><a href="#amplify">Amplify</a></li>
     <li><a href="#ownership">Thesis</a></li>
     <li><a href="#cta">Let's Talk</a></li>
   </ul>
@@ -281,17 +284,33 @@ footer { padding: 32px 48px; border-top: 1px solid rgba(255,255,255,0.07); displ
   <p class="hero-sub-title">Humans made the music.<br>AI modeled it.<br>Now put the human back at the center.</p>
   <p class="hero-desc">Every note Suno generates is downstream of human creative output. The songwriter wrote the melody. The lyricist crafted the words. The musician played the chord. AI learned from all of it. What comes next has to honor that — not as a legal obligation, but as the foundation of everything worth building.</p>
   <div class="hero-callout">
-    <p>Four ideas for an ecosystem that serves everyone — from someone making their first track on a lunch break to a seasoned songwriter building a catalog. The casual creator gets a community and a stage. The power user gets a marketplace and protection. Every level belongs here.</p>
+    <p>Five ideas for an ecosystem that serves everyone — from someone making their first track on a lunch break to a seasoned songwriter building a catalog. The casual creator gets a community and a stage. The power user gets a marketplace and protection. Every level belongs here.</p>
   </div>
   <div class="hero-pills">
     <a href="#connect" class="pill pill-o">Suno Connect</a>
     <a href="#sync" class="pill pill-c">Suno Sync</a>
     <a href="#live" class="pill pill-r">Connect Live</a>
     <a href="#radio" class="pill pill-radio">Suno Radio</a>
+    <a href="#amplify" class="pill pill-amp">Suno Amplify</a>
   </div>
   <div class="scroll-arrow">
     <div class="scroll-line"></div>
     <span>Scroll</span>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- INTRO -->
+<section style="background:#080808;padding:72px 48px;">
+  <div style="max-width:680px;margin:0 auto;text-align:center;">
+    <p style="font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.22em;color:var(--orange);text-transform:uppercase;margin-bottom:20px;">Who's Behind This</p>
+    <p style="font-family:'Syne',sans-serif;font-weight:700;font-size:clamp(1.1rem,2.5vw,1.5rem);color:#ffffff;line-height:1.5;margin-bottom:20px;letter-spacing:-0.01em;">Christofer Holland / <a href="https://noahmusic.com" target="_blank" style="color:var(--orange);text-decoration:none;border-bottom:1px solid rgba(255,107,43,0.4);">NOAH®</a></p>
+    <p style="font-size:0.95rem;color:#cccccc;line-height:1.9;margin-bottom:14px;">Recording artist, songwriter, and creator of <a href="https://noahmusic.com" target="_blank" style="color:var(--orange);text-decoration:none;border-bottom:1px solid rgba(255,107,43,0.4);">NOAH®</a>. Longtime student of Neurolinguistic Programming (NLP) — the study of subjective experience, language, perception, behavior, and internal modeling.</p>
+    <p style="font-size:0.95rem;color:#cccccc;line-height:1.9;margin-bottom:14px;">From Chicago to London to more than three decades in New York, the work evolved across music, technology, communication, identity, and human influence — eventually informing a long-developing framework I have been working on called Mind of Your Own, to evolve publicly via <a href="https://substack.com/@mindofyourownofficial" target="_blank" style="color:var(--orange);text-decoration:none;border-bottom:1px solid rgba(255,107,43,0.4);">Substack</a> for the intellectual discourse.</p>
+    <p style="font-size:0.95rem;color:#cccccc;line-height:1.9;margin-bottom:14px;">What interests me isn't just AI music generation itself. What interests me is the ecosystem forming around it: the human layer. Discovery. Curation. Identity. Collaboration. Live experience. Community. Emotional context. Cultural meaning.</p>
+    <p style="font-size:0.95rem;color:#cccccc;line-height:1.9;margin-bottom:14px;">In addition to the platform ideas, I've been thinking about the larger cultural infrastructure surrounding AI music — and how these systems might evolve in ways that still feel human, emotionally resonant, creatively alive, and culturally sustainable.</p>
+    <p style="font-size:1rem;color:#ffffff;font-weight:500;line-height:1.85;">That's where I naturally see myself contributing: at the intersection of technology, music, culture, identity, and human experience. Someone who understands both the technology and the human dynamics forming around it.</p>
   </div>
 </section>
 
@@ -307,7 +326,7 @@ footer { padding: 32px 48px; border-top: 1px solid rgba(255,255,255,0.07); displ
       <div style="background:#141414;border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:32px;">
         <div style="font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.18em;color:#888888;text-transform:uppercase;margin-bottom:14px;">The Casual Creator</div>
         <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.15rem;color:#ffffff;margin-bottom:12px;line-height:1.3;">Making music for the joy of it.</h3>
-        <p style="font-size:0.88rem;color:#cccccc;line-height:1.75;">They're not thinking about publishing rights or sync deals. They made something they love and want to share it. Suno Connect gives them an audience. Suno Radio gives them airplay. Connect Live puts them in a room with people who get it. This is the culture. You don't build without them.</p>
+        <p style="font-size:0.88rem;color:#cccccc;line-height:1.75;">They're not thinking about publishing rights or sync deals. They made something they love and want to share it. Suno Connect gives them an audience. Suno Radio gives them airplay. Connect Live puts them in a room with people who get it. This is the culture — and culture is the foundation everything else is built on.</p>
       </div>
       <div style="background:#141414;border:1px solid rgba(255,107,43,0.2);border-radius:16px;padding:32px;">
         <div style="font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.18em;color:var(--orange);text-transform:uppercase;margin-bottom:14px;">The Power User</div>
@@ -618,7 +637,7 @@ footer { padding: 32px 48px; border-top: 1px solid rgba(255,255,255,0.07); displ
   <div class="section-inner">
     <p class="section-label" style="color:#c084fc">04 — Suno Radio</p>
     <h2>The <span style="color:#c084fc">Signal.</span></h2>
-    <p class="section-tag">Suno already lets you listen without joining. That's the seed. Radio is what it grows into — programmed, creator-attributed, mood-intelligent, and eventually monetizable. The difference between autoplay and an actual station.</p>
+    <p class="section-tag">Suno's discover feed already points toward something bigger. The difference between autoplay and a station is curation, creator attribution, and a potential revenue model. That's what Radio builds toward.</p>
     <div class="two-col">
       <div class="points">
         <div class="point">
@@ -663,6 +682,42 @@ footer { padding: 32px 48px; border-top: 1px solid rgba(255,255,255,0.07); displ
 
 <div class="divider"></div>
 
+<!-- SUNO AMPLIFY -->
+<section class="section" id="amplify" style="background:#080808;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 50%,rgba(255,187,85,0.04) 0%,transparent 70%);pointer-events:none;"></div>
+  <div class="section-inner">
+    <p class="section-label" style="color:var(--amber)">05 — Suno Amplify</p>
+    <h2>The <span style="color:var(--amber)">Recognition.</span></h2>
+    <p class="section-tag" style="max-width:580px;">The influence is already in there — audibly. Everyone who's used Suno knows it. Amplify is Suno saying so out loud — and making something out of that acknowledgment instead of hiding from it.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:60px;" class="tier-grid">
+      <div style="background:#141414;border:1px solid rgba(255,187,85,0.2);border-radius:16px;padding:32px;">
+        <div style="font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.18em;color:var(--amber);text-transform:uppercase;margin-bottom:14px;">The Greats</div>
+        <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.15rem;color:#ffffff;margin-bottom:12px;line-height:1.3;">Their sound is in the model. Say it.</h3>
+        <p style="font-size:0.88rem;color:#cccccc;line-height:1.75;">The model didn't just learn from the greats — it learned from everyone who already internalized them. Influence on top of influence, layered across generations. Amplify surfaces those names, gives them a platform spotlight, and turns recognition into a PR story the music world actually wants to tell. Visibility as the first act of respect.</p>
+      </div>
+      <div style="background:#141414;border:1px solid rgba(255,187,85,0.1);border-radius:16px;padding:32px;">
+        <div style="font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.18em;color:#888888;text-transform:uppercase;margin-bottom:14px;">The Come-Up</div>
+        <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.15rem;color:#ffffff;margin-bottom:12px;line-height:1.3;">Emerging creators. Platform-powered spotlight.</h3>
+        <p style="font-size:0.88rem;color:#cccccc;line-height:1.75;">Curation becomes more valuable as generation becomes infinite. Anyone can make a track now. Being seen, named, and amplified is the scarce thing. Suno Amplify gives the come-up creators editorial attention — playlist placement, feature slots, press outreach. And the most promising ones feed directly into Connect Live. The Come-Up Tour: platform-discovered artists, performing on a platform-powered stage.</p>
+      </div>
+    </div>
+
+    <div style="max-width:760px;margin:0 auto 40px;padding:36px 40px;background:#111111;border:1px solid rgba(255,187,85,0.15);border-radius:16px;">
+      <div style="font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.2em;color:var(--amber);text-transform:uppercase;margin-bottom:20px;">The Real Question</div>
+      <p style="font-size:1.05rem;color:#ffffff;font-weight:500;line-height:1.75;margin-bottom:16px;letter-spacing:-0.01em;">The model learned from artists who had already internalized other artists. Influence absorbed, transformed, re-expressed — across decades, across genres, across generations. By the time it reaches the output, the lineage is deep and tangled.</p>
+      <p style="font-size:0.92rem;color:#cccccc;line-height:1.85;">Whose intelligence is it, anyway? That question isn't going away. Amplify is Suno's answer — not in a courtroom, but in the culture. Visibility as the first act of recognition. The platform that names what everyone already hears is the platform that earns the trust of the people who made it possible.</p>
+    </div>
+
+    <div style="max-width:680px;margin:0 auto;padding:28px 32px;background:#0d0d0d;border:1px solid rgba(255,255,255,0.06);border-radius:14px;">
+      <div style="font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.16em;color:#888888;text-transform:uppercase;margin-bottom:16px;">Why This Works for Suno</div>
+      <p style="font-size:0.88rem;color:#cccccc;line-height:1.85;">Artists whose sonic fingerprints are detectably present in the model have fanbases. Those fanbases search. When Suno surfaces and celebrates those names, the traffic follows. The goodwill follows. And for artists already in active conversations about AI and compensation, being recognized — publicly, editorially, on the platform itself — changes the tone of that conversation before it becomes adversarial.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <!-- MANIFESTO / THESIS -->
 <section id="ownership" style="background:#101010;padding:100px 48px;">
   <div class="ownership-inner">
@@ -690,12 +745,12 @@ footer { padding: 32px 48px; border-top: 1px solid rgba(255,255,255,0.07); displ
     <!-- COLLECTIVE KNOWLEDGE + CULTURAL POSITIONING -->
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:860px;margin:40px auto;" class="tier-grid">
       <div style="background:#181818;border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:28px;">
-        <div style="font-family:'Space Mono',monospace;font-size:0.58rem;letter-spacing:0.16em;color:#c084fc;text-transform:uppercase;margin-bottom:12px;">The Gift</div>
+        <div style="font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.16em;color:#c084fc;text-transform:uppercase;margin-bottom:12px;">The Gift</div>
         <h4 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;color:#ffffff;margin-bottom:10px;line-height:1.3;">Access to collective musical knowledge.</h4>
-        <p style="font-size:0.84rem;color:#cccccc;line-height:1.75;">Every musical tradition, every genre, every production technique developed over centuries of human creativity — AI has modeled all of it. A songwriter in a bedroom in the Bronx now has access to the same harmonic vocabulary as someone who studied at Berklee for four years. A musician anywhere can draw on production knowledge that used to require years of training and expensive studio time. Even with a subscription cost. Even with a label tax baked in. The access is worth it.</p>
+        <p style="font-size:0.84rem;color:#cccccc;line-height:1.75;">Every musical tradition, every genre, every production technique developed over centuries of human creativity — AI has modeled all of it. A songwriter in a bedroom in the Bronx now has access to the same harmonic vocabulary as someone who studied at Berklee for four years. A musician anywhere can draw on production knowledge that used to require years of training and expensive studio time. Even with a subscription cost. Even with a potential label tax on the horizon. The access is worth it.</p>
       </div>
       <div style="background:#181818;border:1px solid rgba(255,107,43,0.18);border-radius:14px;padding:28px;">
-        <div style="font-family:'Space Mono',monospace;font-size:0.58rem;letter-spacing:0.16em;color:var(--orange);text-transform:uppercase;margin-bottom:12px;">Suno's PR Opportunity</div>
+        <div style="font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.16em;color:var(--orange);text-transform:uppercase;margin-bottom:12px;">Suno's PR Opportunity</div>
         <h4 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;color:#ffffff;margin-bottom:10px;line-height:1.3;">Every AI company is fighting the doomsday narrative. Suno doesn't have to.</h4>
         <p style="font-size:0.84rem;color:#cccccc;line-height:1.75;">Water supply fears. Job displacement. Loss of human agency. AI is carrying that weight culturally right now. But music is the most human thing there is — and Suno's entire platform exists to help humans make more of it. That's not the AI doomsday story. That's the opposite. The Human Machine Manifest is that counter-narrative, built in. Suno positions itself as human-centric not just as a legal defense — but as a genuine cultural contribution.</p>
       </div>
@@ -703,14 +758,14 @@ footer { padding: 32px 48px; border-top: 1px solid rgba(255,255,255,0.07); displ
 
     <!-- HONEST CREATOR POSITION ON SPLITS -->
     <div style="max-width:680px;margin:0 auto 40px;padding:28px 32px;background:#181818;border:1px solid rgba(255,255,255,0.07);border-radius:14px;">
-      <div style="font-family:'Space Mono',monospace;font-size:0.58rem;letter-spacing:0.16em;color:#888888;text-transform:uppercase;margin-bottom:14px;">A Creator's Honest Position on Splits</div>
+      <div style="font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.16em;color:#888888;text-transform:uppercase;margin-bottom:14px;">A Creator's Honest Position on Splits</div>
       <p style="font-size:0.9rem;color:#cccccc;line-height:1.85;margin-bottom:14px;">When a songwriter feeds a complete production into Suno — original composition, lyrics, melody, existing copyright — and what comes back is genuinely better, a fair exchange is worth having. That's not a 50/50 split. The songwriter's original creative work is the foundation everything is built on. The AI contribution is the processing and the collective knowledge layer. The split should reflect that.</p>
       <p style="font-size:0.9rem;color:#cccccc;line-height:1.85;">Nobody knows exactly what those numbers look like yet — that's being worked out in courtrooms and boardrooms right now. But the principle is clear: <strong style="color:#ffffff;">the human creative input is the most valuable part.</strong> The platform that honors that — and builds its economics around it — is the one songwriters will trust.</p>
     </div>
 
     <!-- THE MORAL ARGUMENT -->
     <div style="max-width:760px;margin:0 auto 40px;padding:36px 40px;background:linear-gradient(135deg,#0f0f0f,#181818);border:1px solid rgba(255,255,255,0.08);border-radius:16px;text-align:center;">
-      <div style="font-family:'Space Mono',monospace;font-size:0.58rem;letter-spacing:0.2em;color:#888888;text-transform:uppercase;margin-bottom:20px;">The Moral Argument</div>
+      <div style="font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.2em;color:#888888;text-transform:uppercase;margin-bottom:20px;">The Moral Argument</div>
       <h4 style="font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.2rem,3vw,1.7rem);color:#ffffff;line-height:1.3;margin-bottom:20px;letter-spacing:-0.01em;">AI didn't create the inequality.<br>It inherited it.</h4>
       <p style="font-size:0.92rem;color:#cccccc;line-height:1.85;margin-bottom:16px;max-width:580px;margin-left:auto;margin-right:auto;">Session musicians were already being replaced by samples. Live bands by loops. Studios by bedroom producers. The industry was doing that long before AI arrived. A songwriter contributing lyrics and melody, a vocalist who phrased a line in a way nobody had before, a musician who developed a chord voicing that became a reference — AI modeled all of them. Every contributor in that chain. Most of whom were never going to get hired anyway because the budget wasn't there.</p>
       <p style="font-size:0.92rem;color:#cccccc;line-height:1.85;margin-bottom:20px;max-width:580px;margin-left:auto;margin-right:auto;">So the question isn't whether AI replaces the musician. The question is whether the platform built on top of all that human creative contribution finally gives those people something back — access, recognition, a cut. A songwriter who couldn't afford a string section now has one. A vocalist who couldn't afford a producer now has one. The collective knowledge becomes the equalizer.</p>
@@ -719,7 +774,7 @@ footer { padding: 32px 48px; border-top: 1px solid rgba(255,255,255,0.07); displ
 
     <div class="suno-callout">
       <div class="suno-callout-eyebrow">Why This Matters for Suno</div>
-      <p>Suno is currently in a costly legal battle with Universal, Sony, and Warner over training data. The path forward isn't just settlement — it's building a platform where <strong>human songwriters are recognized, protected, and paid from the start.</strong> Suno Connect and Suno Sync are that platform. They don't just serve creators — they give Suno a defensible, creator-first model at exactly the moment the industry demands one.</p>
+      <p>Suno settled with Warner Music in November 2025 — a landmark partnership that includes licensed models and Suno's acquisition of Songkick. Universal and Sony are still in active litigation, with a pivotal fair-use ruling expected in summer 2026. The legal picture is moving fast. The platform that gets ahead of it — building a genuinely creator-first model before the dust settles — is the one that emerges with the trust of the music industry and the artists inside it. <strong>Suno Connect, Suno Sync, and Suno Amplify are that platform.</strong></p>
     </div>
   </div>
 </section>
@@ -749,19 +804,29 @@ footer { padding: 32px 48px; border-top: 1px solid rgba(255,255,255,0.07); displ
           <div class="cred-fact">ASCAP member · Icon Worldwide Music</div>
         </div>
         <div class="cred-block cred-block-o">
-          <div class="cred-block-eyebrow" style="color:var(--orange)">NLP × Human Agency</div>
-          <p>NLP is fundamentally the study of subjective experience — how people construct meaning, creativity, and identity from the inside out. That lens shapes everything about how I approach AI music. The songwriter isn't just a user of the tool. They're the origin of the experience the tool is modeling. That distinction matters — and it's what these four ideas are built on.</p>
+          <div class="cred-block-eyebrow" style="color:var(--orange)">Neurolinguistic Programming (NLP) × Human Agency</div>
+          <p>Neurolinguistic Programming (NLP) is the study of subjective experience — how humans construct internal models of reality, identity, behavior, and meaning. I've been deep in this work for decades, long before AI entered the public conversation. It was never a side interest. It shaped how I think about everything.</p>
+          <p style="margin-top:10px;">Human agency has never mattered more than right now. For the last few decades I've been developing Mind of Your Own™ — exploring NLP, consciousness, human agency, and influence and what it means to remain self-directed in environments constantly shaping perception and behavior. This work has new urgency with the advent of AI. This intellectual framework will be forthcoming via <a href="https://substack.com/@mindofyourownofficial" target="_blank" style="color:var(--orange);text-decoration:none;border-bottom:1px solid rgba(255,107,43,0.4);">Substack</a>.</p>
         </div>
 
         <div style="background:#141414;border:1px solid rgba(255,255,255,0.1);border-left:3px solid #ffffff;border-radius:0 11px 11px 0;padding:22px 24px;margin-bottom:22px;">
           <div style="font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.18em;color:#aaaaaa;text-transform:uppercase;margin-bottom:12px;">Skin in the Game</div>
-          <p style="font-size:0.9rem;color:#ffffff;line-height:1.85;">This goes back to Columbia College Chicago, where I majored in Music Business under the late Irwin Steinberg. Post-graduation, London, where I continued songwriting and recording — and ultimately another 30 years in NYC. Billboard and Music Week chart placements followed. <a href="https://noahmusic.com/about" target="_blank" style="color:var(--orange);text-decoration:none;border-bottom:1px solid rgba(255,107,43,0.4);">noahmusic.com/about</a>. And now... Sunolicious Vol 1 — three original Suno collaborations written for this cultural moment — is unreleased and waiting. Nearly three decades in. Well over the 10,000 hour mark. This isn't a pitch from someone who just discovered the platform.</p>
+          <p style="font-size:0.9rem;color:#ffffff;line-height:1.85;">This goes back to Columbia College Chicago, where I majored in Music Business under the late Irwin Steinberg. Post-graduation, London, where I continued songwriting and recording — and ultimately another 30 years in NYC. I lived through the analog-to-digital conversion — from studios built around tape to DAWs, from physical distribution to streaming. Every shift changed the rules. Billboard and Music Week chart placements followed. <a href="https://noahmusic.com/about" target="_blank" style="color:var(--orange);text-decoration:none;border-bottom:1px solid rgba(255,107,43,0.4);">noahmusic.com/about</a>. Sunolicious Vol 1 is the first body of work under this chapter — <a href="https://sunolicious.com/vol1" target="_blank" style="color:var(--orange);text-decoration:none;border-bottom:1px solid rgba(255,107,43,0.4);">sunolicious.com/vol1</a> — with future Sunolicious projects already in motion. This isn't a pitch from someone who just discovered the platform.</p>
+          <p style="font-size:0.85rem;color:#888888;line-height:1.8;margin-top:14px;font-style:italic;">I have maintained a private Suno account for Sunolicious while awaiting legal clarity on copyright registration, publishing, and DSP flagging of Suno collaborative projects.</p>
         </div>
-        <div class="cred-block cred-block-a">
-          <div class="cred-block-eyebrow" style="color:var(--amber)">Coming Soon — Mind of Your Own</div>
-          <p>A forthcoming platform and publication exploring human agency in the age of AI — how we think, create, and stay authoring our own lives when machines can do almost everything. Suno Connect, Suno Sync, Connect Live, and Suno Radio are expressions of that same thesis in the music world.</p>
-        </div>
-        <div class="cred-quote">"I'm not pitching from the outside looking in. I'm a working songwriter who has lived both sides of this — the scraping-together-studio-money side and the human-machine creative side. I want to be in this conversation. Not just as a user. As a resource, a collaborator, a voice for what songwriters actually need from this platform."</div>
+        <div style="margin-top:28px;padding:32px;background:#111111;border:1px solid rgba(255,255,255,0.08);border-radius:14px;margin-bottom:22px;">
+          <div style="font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.18em;color:#888888;text-transform:uppercase;margin-bottom:20px;">In My Own Words</div>
+          <p style="font-size:0.92rem;color:#dddddd;line-height:1.9;margin-bottom:16px;font-style:italic;">I came to Suno with a long history already in motion.</p>
+          <p style="font-size:0.92rem;color:#cccccc;line-height:1.9;margin-bottom:16px;">Music Business at Columbia College Chicago under Irwin Steinberg, co-founder of Mercury Records and CEO of PolyGram Records. I began recording in Chicago, followed by a time in London, and eventually New York, where I've now spent more than three decades. I have been living inside music history's analog to digital evolution... every shift in how we make, distribute, and promote music. Premiered on the <a href="https://www.noahmusic.com/about" target="_blank" style="color:var(--orange);text-decoration:none;border-bottom:1px solid rgba(255,107,43,0.4);">Billboard Dance Charts in 2013</a> and held several Top 20 positions on the UK Music Week Commercial Dance Charts. I've been participating in the evolution of music technology for decades.</p>
+          <p style="font-size:0.92rem;color:#cccccc;line-height:1.9;margin-bottom:16px;">Years later, my path expanded into Neurolinguistic Programming (NLP) — the study of subjective experience, internal models, language, perception, and human behavior. Long before AI entered public conversation, I was already deeply interested in how people absorb influence, construct identity, and model each other through language and experience.</p>
+          <p style="font-size:0.92rem;color:#cccccc;line-height:1.9;margin-bottom:16px;">For the last few decades I've been developing Mind of Your Own™ — exploring NLP, consciousness, human agency, and influence and what it means to remain self-directed in environments constantly shaping perception and behavior. This work has new urgency with the advent of AI. Human agency is paramount. This intellectual framework will be forthcoming via <a href="https://substack.com/@mindofyourownofficial" target="_blank" style="color:var(--orange);text-decoration:none;border-bottom:1px solid rgba(255,107,43,0.4);">Substack</a>.</p>
+          <p style="font-size:0.92rem;color:#cccccc;line-height:1.9;margin-bottom:16px;">Over time, I began realizing that music, modeling, influence, technology, and identity were never really separate conversations. Humans were always training on humans. Culture was always iterative. Music was always modeled. AI didn't invent that dynamic. It exposed it.</p>
+          <p style="font-size:0.95rem;color:#ffffff;font-weight:500;line-height:1.85;">And Suno is one of the first places where all of those ideas visibly collide.</p>
+
+          <div style="margin-top:28px;">
+            <div style="font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.18em;color:#888888;text-transform:uppercase;margin-bottom:14px;">My most recent Suno collaboration</div>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//on.soundcloud.com/OmpgSFmYRkwuwlfuzu&color=%23ff6b00&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false" style="border-radius:8px;"></iframe>
+          </div>
 
         <div style="margin-top:28px;padding-top:28px;border-top:1px solid rgba(255,255,255,0.07);">
           <div style="font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.18em;color:#888888;text-transform:uppercase;margin-bottom:16px;">Further Reading — Perspectives</div>
