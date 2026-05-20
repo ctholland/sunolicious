@@ -45,7 +45,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; padding: 16px 48
 /* ── HERO ── */
 .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 120px 32px 80px; position: relative; overflow: hidden; background: #080808; }
 .hero-glow { position: absolute; top: -10%; left: 50%; transform: translateX(-50%); width: 900px; height: 600px; background: radial-gradient(ellipse, rgba(255,107,43,0.14) 0%, transparent 70%); pointer-events: none; }
-.hero-eyebrow { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.25em; color: var(--orange); text-transform: uppercase; margin-bottom: 28px; opacity: 0; animation: up 0.8s cubic-bezier(.16,1,.3,1) 0.1s forwards; }
+.hero-eyebrow { font-family: 'Space Mono', monospace; font-size: 0.78rem; letter-spacing: 0.25em; color: var(--orange); text-transform: uppercase; margin-bottom: 28px; opacity: 0; animation: up 0.8s cubic-bezier(.16,1,.3,1) 0.1s forwards; }
 .hero h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(3rem, 9vw, 8rem); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 24px; color: #ffffff; opacity: 0; animation: up 0.8s cubic-bezier(.16,1,.3,1) 0.22s forwards; }
 .hero h1 .grad { background: linear-gradient(120deg, var(--orange), var(--amber)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .hero-sub-title { font-family: 'Syne', sans-serif; font-weight: 600; font-size: clamp(1rem, 2.2vw, 1.6rem); color: #dddddd; line-height: 1.5; margin-bottom: 28px; opacity: 0; animation: up 0.8s cubic-bezier(.16,1,.3,1) 0.34s forwards; }
@@ -344,7 +344,7 @@ footer { padding: 32px 48px; border-top: 1px solid rgba(255,255,255,0.07); displ
   <div class="section-inner">
     <p class="section-label" style="color:var(--orange)">01 — Suno Connect</p>
     <h2>The Social <span style="color:var(--orange-light)">Layer.</span></h2>
-    <p class="section-tag">Suno already has creators. Give them each other. A profile, a following, a way to pitch — and the network effects that follow.</p>
+    <p class="section-tag">Suno already has creators. What it doesn't yet have is the full social infrastructure to connect them — messaging, deeper profiles, network effects, a way to pitch.</p>
     <div class="two-col">
       <div>
         <div class="phone">
@@ -643,7 +643,7 @@ footer { padding: 32px 48px; border-top: 1px solid rgba(255,255,255,0.07); displ
         <div class="point">
           <div class="point-num" style="color:#c084fc">04.1 — Always-On Listening</div>
           <h3>A lean-back experience that's missing.</h3>
-          <p>Right now there's no way to just listen to Suno as a platform. You have to search. Radio changes that — curated streams by mood, genre, time of day. The casual creator gets airplay. The power user gets discovered. Everyone stays longer.</p>
+          <p>Suno is already moving toward a lean-back experience — CarPlay, curated playlists, passive discovery. Radio is what that becomes when it's fully programmed: creator-attributed streams by mood, genre, time of day. The casual creator gets airplay. The power user gets discovered. Everyone stays longer.</p>
         </div>
         <div class="point">
           <div class="point-num" style="color:#c084fc">04.2 — Owned Monetization</div>
@@ -810,9 +810,10 @@ footer { padding: 32px 48px; border-top: 1px solid rgba(255,255,255,0.07); displ
         </div>
 
         <div style="background:#141414;border:1px solid rgba(255,255,255,0.1);border-left:3px solid #ffffff;border-radius:0 11px 11px 0;padding:22px 24px;margin-bottom:22px;">
-          <div style="font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.18em;color:#aaaaaa;text-transform:uppercase;margin-bottom:12px;">Skin in the Game</div>
-          <p style="font-size:0.9rem;color:#ffffff;line-height:1.85;">This goes back to Columbia College Chicago, where I majored in Music Business under the late Irwin Steinberg. Post-graduation, London, where I continued songwriting and recording — and ultimately another 30 years in NYC. I lived through the analog-to-digital conversion — from studios built around tape to DAWs, from physical distribution to streaming. Every shift changed the rules. Billboard and Music Week chart placements followed. <a href="https://noahmusic.com/about" target="_blank" style="color:var(--orange);text-decoration:none;border-bottom:1px solid rgba(255,107,43,0.4);">noahmusic.com/about</a>. Sunolicious Vol 1 is the first body of work under this chapter — <a href="https://sunolicious.com/vol1" target="_blank" style="color:var(--orange);text-decoration:none;border-bottom:1px solid rgba(255,107,43,0.4);">sunolicious.com/vol1</a> — with future Sunolicious projects already in motion. This isn't a pitch from someone who just discovered the platform.</p>
-          <p style="font-size:0.85rem;color:#888888;line-height:1.8;margin-top:14px;font-style:italic;">I have maintained a private Suno account for Sunolicious while awaiting legal clarity on copyright registration, publishing, and DSP flagging of Suno collaborative projects.</p>
+          <div style="font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.18em;color:#aaaaaa;text-transform:uppercase;margin-bottom:12px;">Skin in the Game</div>
+          <p style="font-size:0.9rem;color:#ffffff;line-height:1.85;">Music Business at Columbia College Chicago under Irwin Steinberg, co-founder of Mercury Records and CEO of PolyGram Records. I began recording in Chicago, followed by a time in London, and eventually New York, where I've now spent more than three decades. I have been living inside music history's analog to digital evolution — every shift in how we make, distribute, and promote music. Premiered on the <a href="https://www.noahmusic.com/about" target="_blank" style="color:var(--orange);text-decoration:none;border-bottom:1px solid rgba(255,107,43,0.4);">Billboard Dance Charts in 2013</a> and held several Top 20 positions on the UK Music Week Commercial Dance Charts. I've been participating in the evolution of music technology for decades.</p>
+          <p style="font-size:0.9rem;color:#ffffff;line-height:1.85;margin-top:12px;">Sunolicious Vol 1 — <a href="https://sunolicious.com/vol1" target="_blank" style="color:var(--orange);text-decoration:none;border-bottom:1px solid rgba(255,107,43,0.4);">sunolicious.com/vol1</a> — is the first in a planned series of volumes, held back pending legal clarity on DSP flagging of AI-collaborative work. Also in development: NOAH® Reimagined — Suno-produced remixes of my previously charted material.</p>
+
         </div>
         <div style="margin-top:28px;padding:32px;background:#111111;border:1px solid rgba(255,255,255,0.08);border-radius:14px;margin-bottom:22px;">
           <div style="font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.18em;color:#888888;text-transform:uppercase;margin-bottom:20px;">In My Own Words</div>
@@ -866,6 +867,7 @@ footer { padding: 32px 48px; border-top: 1px solid rgba(255,255,255,0.07); displ
     <p class="cta-sub">Five ideas worth a conversation.</p>
     <p style="font-size:0.95rem;color:#dddddd;max-width:480px;margin:0 auto 36px;line-height:1.8;">If any of this resonates — I'd love to connect.</p>
     <a href="mailto:christofer@christoferholland.com" class="cta-btn">Start the Conversation →</a>
+    <p style="margin-top:24px;font-size:0.85rem;color:#888888;line-height:1.8;"><a href="mailto:christofer@christoferholland.com" style="color:#888888;text-decoration:none;">christofer@christoferholland.com</a> · <a href="tel:+19172071414" style="color:#888888;text-decoration:none;">917 207-1414</a></p>
   </div>
 </section>
 
