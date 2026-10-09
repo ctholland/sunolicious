@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <!-- Open Graph / Social Media Preview -->
-<meta property="og:image" content="https://sunolicious.com/images/Sunolicious_Logo_NOAH.png">
+<meta property="og:image" content="https://sunolicious.com/images/Sunolicious_Share.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://sunolicious.com/images/Sunolicious_Logo_NOAH.png">
+<meta name="twitter:image" content="https://sunolicious.com/images/Sunolicious_Share.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOAH® | SUNOLICIOUS™ - Human. Machine. Manifest.</title>
-    <meta name="description" content="Billboard & Music Week Charting Recording Artist NOAH® presents SUNOLICIOUS™. Human. Machine. Manifest.">
+    <title>SUNOLICIOUS™ - Human. Machine. Manifest.</title>
+    <meta name="description" content="SUNOLICIOUS™. Human. Machine. Manifest.">
     
     <style>
         /* SUNOLICIOUS™ WEBSITE STYLES */
@@ -269,11 +269,16 @@
             justify-content: center;
             text-align: center;
             padding: 6rem 0;
+            background: #090329 url('images/hero-desktop.webp') center / cover no-repeat;
+        }
+        
+        @media (max-width: 768px), (orientation: portrait) {
+            #hero { background-image: url('images/hero-mobile.webp'); }
         }
         
         .logo {
-            max-width: 280px;
-            width: 60%;
+            max-width: 520px;
+            width: 70%;
             height: auto;
             margin-bottom: 3rem;
             opacity: 0.95;
@@ -745,7 +750,7 @@
             h3 { font-size: 1.4rem; }
             h4 { font-size: 1rem; }
             p, .quote-text { font-size: 0.95rem; }
-            .logo { max-width: 350px; }
+            .logo { max-width: 440px; width: 75%; }
             section { padding: 6rem 0; }
             .container { padding: 0 2rem; }
             .legacy-content { flex-direction: column; gap: 3rem; }
@@ -765,7 +770,7 @@
         
         @media (max-width: 480px) {
             .container { padding: 0 1.5rem; }
-            .logo { max-width: 280px; }
+            .logo { max-width: 340px; width: 85%; }
             .stat-number { font-size: 4rem; }
             .social-links { flex-direction: column; gap: 1.5rem; align-items: center; }
             .social-link { width: 100%; max-width: 250px; }
@@ -815,7 +820,7 @@
     <!-- HERO SECTION -->
     <section id="hero">
         <div class="container">
-            <img src="images/Sunolicious_Logo_NOAH2.png" alt="NOAH SUNOLICIOUS Logo" class="logo">
+            <img src="images/Sunolicious_Logo.png" alt="SUNOLICIOUS Logo" class="logo">
             <div class="hero-quote">
                 <p class="quote-text emphasis" style="font-size: 2rem; line-height: 1.3; margin-bottom: 4rem; font-weight: 200; letter-spacing: 4px;">
                     Human. Machine. Manifest.
@@ -845,10 +850,10 @@
     <!-- CONTACT SECTION -->
     <section id="contact">
         <div class="container">
-            <p style="font-size: 0.85rem; color: #ffffff; margin-bottom: 1rem; margin-top: 8rem; letter-spacing: 3px; text-transform: uppercase; font-weight: 300;">SUNOLICIOUS™ — A NOAH® PROJECT</p>
+            <p style="font-size: 0.85rem; color: #ffffff; margin-bottom: 1rem; margin-top: 8rem; letter-spacing: 3px; text-transform: uppercase; font-weight: 300;">SUNOLICIOUS™</p>
             <h2>Connect</h2>
             <p class="contact-text">For inquiries, collaborations, or booking:</p>
-            <a href="mailto:sunolicious@noahmusic.com" class="contact-email">sunolicious@noahmusic.com</a>
+            <a href="mailto:info@sunolicious.com" class="contact-email">info@sunolicious.com</a>
             
             <div class="social-links">
                 <a href="https://instagram.com/sunoliciousmusic" class="social-link" target="_blank">Instagram</a>
@@ -860,7 +865,7 @@
     <a href="#" id="bioLink" style="color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; transition: opacity 0.3s ease;">Artist Bio</a>
     <a href="#" id="aiEthicsLink" style="color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; transition: opacity 0.3s ease;">AI Ethics & Creative Statement</a>
 </div>
-<p class="copyright">© 2025 NOAH® / Sunolicious™ • All Rights Reserved</p>
+<p class="copyright">© 2025 Sunolicious™ • A Project of NOAH® • All Rights Reserved</p>
         </div>
     </section>
 
@@ -873,8 +878,7 @@
             <button class="close-btn" id="closePopup">&times;</button>
             
             <div class="popup-header">
-                <h1>NOAH<sup style="font-size: 0.3em">®</sup></h1>
-                <h2>SUNOLICIOUS<sup style="font-size: 0.3em">™</sup></h2>
+                <h1>SUNOLICIOUS<sup style="font-size: 0.3em">™</sup></h1>
                 <p>Human. Machine. Manifest.</p>
             </div>
 
