@@ -1,0 +1,15 @@
+# Retired volume pages -> single-release structure
+/vol1                 /music.html      301!
+/vol1.html            /music.html      301!
+/vol2                 /music.html      301!
+/vol2.html            /music.html      301!
+/vol3                 /music.html      301!
+/vol3.html            /music.html      301!
+/all-volumes          /music.html      301!
+/all-volumes.html     /music.html      301!
+/licensing-vol1       /licensing.html  301!
+/licensing-vol1.html  /licensing.html  301!
+/licensing-vol2       /licensing.html  301!
+/licensing-vol2.html  /licensing.html  301!
+/licensing-vol3       /licensing.html  301!
+/licensing-vol3.html  /licensing.html  301!

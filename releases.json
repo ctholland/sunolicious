@@ -1,0 +1,38 @@
+{
+  "_readme": "Edit this file to add a release, then run: python3 build_music.py  (it rewrites the release grid + lyrics in music.html). Releases display in the order listed unless newest_first is true.",
+  "newest_first": false,
+  "soundcloud_profile": "https://soundcloud.com/sunolicious",
+  "playlist": {
+    "embed_src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2313046836&color=%2348525a&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
+    "height": 360,
+    "credit_profile": "https://soundcloud.com/sunolicious",
+    "credit_set": "https://soundcloud.com/sunolicious/sets/sunolicious-2026",
+    "credit_set_name": "SUNOLICIOUS - 2026"
+  },
+  "releases": [
+    {
+      "id": "hardtimes",
+      "title": "Hard Times",
+      "type": "Single",
+      "cover": "images/hardtimes.webp",
+      "soundcloud": "https://soundcloud.com/sunolicious/hardtimes",
+      "lyrics": "Hard times hit the ones who care the most,\nThe quiet ones who give until they're ghosts.\nYou hold the weight while others walk away,\nHard times don't care who's kind — they come to stay.\n\nYou learn real quick when no one's holding on,\nYou feel the cold when everyone is gone.\nThey take your heart, your hope, your second try,\nHard times — they find the good and drain them dry.\n\nHard times — they come for those who feel,\nHard times — they break what's real.\nHard times — they don't forgive,\nThey take the ones who still believe and give.\n\nYou built them up, you stayed when it got rough,\nYou gave your all but it was never enough.\nThey wanted more, they wanted what you bled,\nHard times took what you had and left you for dead.\n\nBut here's the truth they never want you to see,\nHard times don't mean you're weak — they mean you're free.\nFree from the weight of carrying the ones who won't,\nFree from the ones who take but never show they don't.\n\nHard times — they come for those who fight,\nHard times — they steal your light.\nHard times — they leave you raw,\nBut you're still standing when they're gone for sure.\n\nYeah, you gave your best to people who couldn't care,\nYou showed up when they vanished in the air.\nBut don't forget — you carried what they dropped,\nHard times came but you never stopped.\n\nYou never stopped loving, you never stopped trying,\nYou never stopped even when you were dying inside.\nHard times showed you who would stay and who would leave,\nHard times taught you the truth of what you believe.\n\nHard times — they come for those who feel,\nHard times — they shatter what's real.\nHard times — they leave their mark,\nBut you're the one still holding light inside the dark.\n\nDon't lose that fire, don't lose your fight,\nHard times don't get to steal your light.\nYou're stronger now, you know the cost,\nHard times came — but you're not lost.\n\nCause here's the truth when it all falls apart,\nHard times only break a fragile heart.\nBut yours kept beating when it should've quit,\nHard times came but you're still in it.\n\nThey'll tell you to forgive, to let it slide,\nTo be the bigger person, swallow pride.\nBut let me tell you something they don't say,\nNot everyone deserves your love that way.\n\nSome people drain you, some people take,\nSome leave you hollow for their own sake.\nBalance ain't weakness, truth ain't war,\nWe all need love — that's what it's for.\n\nSo next time you win, next time you shine,\nRemember the hands that held the line.\n'Cause hard times, yeah they always find,\nEvery heart that's left behind"
+    },
+    {
+      "id": "wakeup",
+      "title": "Wake Up",
+      "type": "Single",
+      "cover": "images/wakeup.webp",
+      "soundcloud": "https://soundcloud.com/sunolicious/wakeup",
+      "lyrics": "They say you gotta pray, keep your head held high,\nBut the world just breaks you down when you're barely getting by.\nThey want you docile, soft, broken down inside,\nWhile they stack the chips against you and decide which rules apply.\n\nOh they want your silence, they want you tired and small,\nChasing empty comforts while they're standing tall.\nBut what if waking up means calling out the game?\nWhat if breaking through means learning how to claim—\n\nWake up—\nThis is not the way it has to be.\nWake up—\nYou don't have to smile and agree.\nWake up—\nThere's fire in you if you just believe,\nWake up — you're stronger than the life they need you to lead.\n\nAmbition isn't selfish, anger has its place,\nNot every gentle word deserves to win the race.\nThey tell you healing means you swallow what they deal,\nBut sometimes breaking free's the only way to feel real.\n\nDon't confuse the peace they want with peace you choose,\nDon't stay small and kind if all you do is lose.\nWhat if waking up means standing in the storm?\nWhat if breaking through means taking back your form?\n\nWake up—\nThis is not the way it has to be.\nWake up—\nYou don't have to smile and agree.\nWake up—\nThere's fire in you if you just believe,\nWake up — you're stronger than the life they need you to lead.\n\nYeah they tell you healing, growth, self-work, and light,\nBut some of that's designed to keep you from the fight.\nNot all forgiveness frees, not all anger kills,\nSometimes waking up is learning when to feel—\n\nWake up—\nYou're sharper than they want you to know.\nWake up—\nDon't stay stuck in that comfortable low.\nWake up—\nThere's more to this if you just let it show,\nWake up — there's strength in you they don't want you to grow.\n\nWake up — don't let them tell you who to be.\nWake up — reclaim your right to clarity.\nWake up — the game is rigged but you can see,\nWake up — you're stronger than the life they want you to lead."
+    },
+    {
+      "id": "whoami",
+      "title": "who am i",
+      "type": "Single",
+      "cover": "images/whoami.webp",
+      "soundcloud": "https://soundcloud.com/sunolicious/whoami",
+      "lyrics": "Who am I if I'm not who I was before?\nNot the name, not the face I've been holding to the floor.\nThey want an answer clean, something I can prove,\nBut I'm caught between the past and the next move.\n\nTell me who I am when the mirror doesn't speak,\nWhen the ground beneath my feet feels too weak.\nIs it the battles that I've lost, the wars I didn't win?\nOr the quiet way I kept trying to begin again?\n\nWho am I — if I strip it all away?\nWho am I — when there's nothing left to say?\nWho am I — if I'm no longer chasing pain,\nWho am I without the weight of my own name?\n\nI've been told that change is growth, that letting go is free,\nBut what if all I've known is falling endlessly?\nThey say find yourself — like it's buried in the sand,\nBut what if I'm just learning how to stand?\n\nTell me who I am when I'm tired of the roles,\nWhen I can't keep playing parts to fill the holes.\nIs it the person I became when nobody could see?\nOr the version I've been running from that's calling out to me?\n\nWho am I — if I strip it all away?\nWho am I — when there's nothing left to say?\nWho am I — if I'm no longer chasing pain,\nWho am I without the weight of my own name?\n\nMaybe I'm the question more than I'm the answer found,\nMaybe I'm the silence when there's too much sound.\nMaybe I'm the fracture and the way it holds,\nMaybe I'm the story that's still being told.\n\nWho am I — if I'm more than what I've been?\nWho am I — if I let the light back in?\nWho am I — if I choose to start again,\nWho am I if I release the need to win?\n\nWho am I — standing here without disguise?\nWho am I — if I look behind the lies?\nWho am I — if I'm learning to forgive,\nWho am I if I finally choose to live?"
+    }
+  ]
+}

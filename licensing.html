@@ -46,16 +46,16 @@
             margin-bottom: 2rem;
         }
         h1 {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 200;
             letter-spacing: 4px;
             margin-bottom: 1rem;
             color: #ffffff;
         }
         .tagline {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.8);
-            letter-spacing: 2px;
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.85);
+            letter-spacing: 3px;
             margin-bottom: 1rem;
         }
         section {
@@ -108,13 +108,13 @@
             top: 0;
             right: -100%;
             width: 100%;
-            max-width: 380px;
+            max-width: 320px;
             height: 100vh;
             background: rgba(9, 3, 41, 0.97);
             backdrop-filter: blur(10px);
             z-index: 999;
             transition: right 0.4s ease;
-            padding: 6rem 3rem;
+            padding: 6rem 2.5rem;
             overflow-y: auto;
             border-left: 1px solid rgba(255, 255, 255, 0.1);
         }
@@ -142,14 +142,14 @@
             list-style: none;
         }
         .menu-nav > li {
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
         .menu-nav a {
             color: #ffffff;
             text-decoration: none;
-            font-size: 1rem;
+            font-size: 0.875rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             font-weight: 300;
             transition: all 0.3s ease;
             display: block;
@@ -388,6 +388,17 @@
         position: absolute;
         left: -5000px;
     }
+        /* Release cards (same look as Music page) */
+        .volumes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 2.5rem; max-width: 900px; margin: 0 auto 3rem; }
+        .volume-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s ease; overflow: hidden; }
+        .volume-card:hover { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.3); transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.4); }
+        .volume-artwork { width: 100%; height: auto; display: block; aspect-ratio: 1; object-fit: cover; }
+        .volume-info { padding: 2rem; }
+        .volume-title { font-size: 0.95rem; font-weight: 300; letter-spacing: 2px; margin-bottom: 0.5rem; color: #ffffff; }
+        .volume-subtitle { font-size: 0.7rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.5rem; }
+        .volume-btn { display: block; padding: 0.9rem 2rem; background: transparent; color: #ffffff; border: 1px solid rgba(255,255,255,0.4); text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 300; transition: all 0.3s ease; text-align: center; }
+        .volume-btn:hover { background: rgba(255,255,255,0.1); border-color: #ffffff; }
+        @media (max-width: 768px) { .volumes-grid { grid-template-columns: 1fr; gap: 2rem; } }
     </style>
 </head>
 <body>
@@ -405,22 +416,9 @@
         <button class="menu-close" onclick="toggleMenu()">&times;</button>
         <ul class="menu-nav">
             <li><a href="index.html">Home</a></li>
-            <li>
-                <a href="music.html">Volumes</a>
-                <ul class="submenu">
-                    <li><a href="vol1.html">Volume 1</a></li>
-                    <li><a href="vol2.html">Volume 2</a></li>
-                    <li><a href="vol3.html">Volume 3</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="licensing.html">Licensing</a>
-                <ul class="submenu">
-                    <li><a href="licensing-vol1.html">Volume 1</a></li>
-                    <li><a href="licensing-vol2.html">Volume 2</a></li>
-                    <li><a href="licensing-vol3.html">Volume 3</a></li>
-                </ul>
-            </li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="licensing.html">Licensing</a></li>
+            <li><a href="blog/index.html">Blog</a></li>
             <li><a href="#" id="bioLink">Artist Bio</a></li>
             <li><a href="#" id="aiEthicsLink">AI Ethics</a></li>
             <li><a href="#connect-section" class="scroll-link">Contact</a></li>
@@ -433,51 +431,50 @@
             <img src="images/Sunolicious_Logo.png" alt="SUNOLICIOUS Logo" class="logo">
             <h1>Premium Music Licensing</h1>
             <p class="tagline">Human. Machine. Manifest.</p>
-            <p style="font-size: 1rem; line-height: 1.8; max-width: 700px; margin: 1.5rem auto;">Premium multi-genre catalog with multiple versions per track. Curated for film, TV, games, and brand campaigns.</p>
-            <div style="display: inline-block; padding: 1rem 2rem; background: rgba(197, 183, 160, 0.1); border: 1px solid rgba(197, 183, 160, 0.3); margin-top: 1rem; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase;">Multiple Versions Available • Stems & Instrumentals Included</div>
+            <p style="font-size: 1rem; line-height: 1.9; letter-spacing: 1.5px; max-width: 700px; margin: 2.5rem auto 2.5rem; padding: 0 1.5rem;">Premium multi-genre catalog. Curated for film, TV, games, and brand campaigns.</p>
+            <div style="display: inline-block; padding: 1rem 2rem; background: rgba(197, 183, 160, 0.1); border: 1px solid rgba(197, 183, 160, 0.3); margin-top: 0.5rem; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase;">Stems & Instrumentals Included</div>
         </div>
     </header>
     
     <!-- TRACK ARTWORK -->
     <section>
         <div class="container">
-            <h2 style="font-size: 1.6rem; text-align: center; letter-spacing: 3px; margin-bottom: 1rem; font-weight: 200;">Browse Catalog by Volume</h2>
-            <p style="text-align: center; max-width: 700px; margin: 0 auto 4rem; font-size: 0.95rem; line-height: 1.8; color: rgba(255,255,255,0.8);">
-                Each Sunolicious Sessions volume features 3 original tracks with multiple versions — perfect for sync placements.
+            <h2 style="font-size: 1.6rem; text-align: center; letter-spacing: 3px; margin-bottom: 1rem; font-weight: 200;">Browse the Catalog</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 4rem; font-size: 0.95rem; line-height: 1.8; letter-spacing: 1px; color: rgba(255,255,255,0.8);">
+                Original tracks, 100% owned and cleared for sync.
             </p>
-            
-            <!-- Volume Grid -->
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; max-width: 1000px; margin: 0 auto 4rem;">
-                <!-- Volume 1 -->
-                <a href="licensing-vol1.html" style="text-decoration: none; display: block;">
-                    <div style="text-align: center; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <img src="images/sunovol1.png" alt="Volume 1" style="width: 100%; height: auto; margin-bottom: 1rem; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);">
-                        <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; letter-spacing: 2px; color: #ffffff; font-weight: 300;">Volume 1</h3>
-                        <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.7); margin-bottom: 1rem;">3 Tracks Available</p>
-                        <span style="display: inline-block; padding: 0.7rem 1.5rem; min-width: 140px; text-align: center; background: transparent; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.3); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 300; transition: all 0.3s ease;">View Licensing Options</span>
+            <!-- LICENSING-GRID:START -->
+            <div class="volumes-grid">
+                <div class="volume-card">
+                    <img src="images/hardtimes.webp" alt="Hard Times" class="volume-artwork">
+                    <div class="volume-info">
+                        <h3 class="volume-title">Hard Times</h3>
+                        <p class="volume-subtitle">Single</p>
+                        <a class="volume-btn" href="mailto:info@sunolicious.com?subject=Licensing%20Inquiry%3A%20Hard%20Times">License This Track</a>
                     </div>
-                </a>
-                
-                <!-- Volume 2 -->
-                <a href="licensing-vol2.html" style="text-decoration: none; display: block;">
-                    <div style="text-align: center; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <img src="images/sunovol2.png" alt="Volume 2" style="width: 100%; height: auto; margin-bottom: 1rem; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);">
-                        <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; letter-spacing: 2px; color: #ffffff; font-weight: 300;">Volume 2</h3>
-                        <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.7); margin-bottom: 1rem;">3 Tracks Available</p>
-                        <span style="display: inline-block; padding: 0.7rem 1.5rem; min-width: 140px; text-align: center; background: transparent; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.3); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 300; transition: all 0.3s ease;">View Licensing Options</span>
+                </div>
+                <div class="volume-card">
+                    <img src="images/wakeup.webp" alt="Wake Up" class="volume-artwork">
+                    <div class="volume-info">
+                        <h3 class="volume-title">Wake Up</h3>
+                        <p class="volume-subtitle">Single</p>
+                        <a class="volume-btn" href="mailto:info@sunolicious.com?subject=Licensing%20Inquiry%3A%20Wake%20Up">License This Track</a>
                     </div>
-                </a>
-                
-                <!-- Volume 3 -->
-                <a href="licensing-vol3.html" style="text-decoration: none; display: block;">
-                    <div style="text-align: center; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <img src="images/sunovol3.png" alt="Volume 3" style="width: 100%; height: auto; margin-bottom: 1rem; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);">
-                        <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; letter-spacing: 2px; color: #ffffff; font-weight: 300;">Volume 3</h3>
-                        <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.7); margin-bottom: 1rem;">3 Tracks Available</p>
-                        <span style="display: inline-block; padding: 0.7rem 1.5rem; min-width: 140px; text-align: center; background: transparent; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.3); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 300; transition: all 0.3s ease;">View Licensing Options</span>
+                </div>
+                <div class="volume-card">
+                    <img src="images/whoami.webp" alt="who am i" class="volume-artwork">
+                    <div class="volume-info">
+                        <h3 class="volume-title">who am i</h3>
+                        <p class="volume-subtitle">Single</p>
+                        <a class="volume-btn" href="mailto:info@sunolicious.com?subject=Licensing%20Inquiry%3A%20who%20am%20i">License This Track</a>
                     </div>
-                </a>
+                </div>
             </div>
+            <div style="max-width: 900px; margin: 0 auto 3rem;">
+                <iframe width="100%" height="360" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" title="SUNOLICIOUS on SoundCloud" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2313046836&color=%2348525a&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                <div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif; font-weight: 100; text-align: left;"><a href="https://soundcloud.com/sunolicious" title="SUNOLICIOUS™" target="_blank" rel="noopener" style="color: #cccccc; text-decoration: none;">SUNOLICIOUS™</a> · <a href="https://soundcloud.com/sunolicious/sets/sunolicious-2026" title="SUNOLICIOUS - 2026" target="_blank" rel="noopener" style="color: #cccccc; text-decoration: none;">SUNOLICIOUS - 2026</a></div>
+            </div>
+            <!-- LICENSING-GRID:END -->
         </div>
     </section>
     
@@ -503,9 +500,6 @@
                             </li>
                             <li style="font-size: 0.95rem; margin-bottom: 0.7rem; padding-left: 1.5rem; position: relative; color: rgba(255,255,255,0.8);">
                                 <span style="position: absolute; left: 0; color: #4CAF50;">✓</span> Worldwide use
-                            </li>
-                            <li style="font-size: 0.95rem; margin-bottom: 0.7rem; padding-left: 1.5rem; position: relative; color: rgba(255,255,255,0.8);">
-                                <span style="position: absolute; left: 0; color: #4CAF50;">✓</span> Multiple versions per track
                             </li>
                         </ul>
                     </div>
@@ -669,7 +663,7 @@
             <div class="ai-ethics-header"><h2>Artist Bio</h2></div>
             <div class="ai-ethics-body">
                 <p style="margin-bottom: 1.5rem;">I came up in music before everything went fully digital.</p>
-                <p style="margin-bottom: 1.5rem;">I learned recording in analog studios where tape was finite, decisions mattered, and commitment was part of the craft. I majored in music business at Columbia College Chicago under Irwin Steinberg — co-founder of Mercury Records and chairman of PolyGram for over 30 years. I worked across multiple eras and cities: Chicago, London, New York — from early multi-track systems and sampling keyboards to large-format tape, then into the digital age that rewrote the industry entirely.</p>
+                <p style="margin-bottom: 1.5rem;">I learned recording in analog studios where tape was finite, decisions mattered, and commitment was part of the craft. I worked across multiple eras and cities: Chicago, London, New York — from early multi-track systems and sampling keyboards to large-format tape, then into the digital age that rewrote the industry entirely.</p>
                 <p style="margin-bottom: 1.5rem;">As NOAH®, an ASCAP member, I've built a career spanning over a decade with more than twenty UK Music Week chart placements and Billboard and DJ Times chart entries. My work has topped UK club charts, charted across Europe, and earned both underground credibility and commercial recognition.</p>
                 <p style="margin-bottom: 1.5rem;">My name is Christofer Holland.</p>
                 <p style="margin-bottom: 1.5rem;">I didn't arrive at AI as a shortcut. I arrived at it through decades of adapting to changing tools while protecting authorship.</p>
