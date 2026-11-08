@@ -17,6 +17,11 @@ def song_slug(r):
     return r.get('slug') or (r.get('pitch') or {}).get('slug') or re.sub(r'[^a-z0-9]+', '-', r['title'].lower()).strip('-')
 
 
+def concept_shown(fc):
+    """Concept section is public only when a concept exists and featured_concept.show is not false (old records have no 'show' = visible)."""
+    return bool(fc) and fc.get('show', True) is not False
+
+
 def enhanced(r):
     """a release gets sync-concept content only if it has a pitch block that is not switched off ("enabled": false)"""
     p = r.get('pitch')
@@ -55,6 +60,7 @@ def validate_release(r, seen):
         for k, v in list(p.items()) + list(fc.items()):
             if isinstance(v, str) and '{{' in v:
                 errs.append(f'"{k}" contains "{{{{" (not allowed)')
+        if not concept_shown(fc): fc = {}      # hidden concept: content is kept, not validated or rendered
         if fc.get('video_url'):
             try: video_embed(fc['video_url'])
             except ValueError as e: errs.append(str(e))
@@ -164,13 +170,14 @@ def build_pitch(r):
     video_js = ''
     if p:   # enhanced song: every piece below is optional and only shown when it has content
         fc = p.get('featured_concept') or {}
+        if not concept_shown(fc): fc = {}      # "Show Sync Concept Section" off: no section, no hero button, no player; saved fields stay in releases.json
         esc_ = esc
         concepts = p.get('additional_concepts') or []
         tiles = '\n'.join(f'                <div class="tile"><h3>{esc(c["title"])}</h3><p>{esc(c["text"])}</p></div>' for c in concepts)
         desc = p.get('page_description') or f'{t} by SUNOLICIOUS™. Listen, read the lyrics and inquire about sync licensing.'
         lede = f'                <p class="pitch-lede">{esc(p["short_pitch"])}</p>\n' if p.get('short_pitch') else ''
         secondary = '                    <a class="version-btn" href="#in-context">See it in action</a>\n' if fc else ''
-        theme_p = f'            <p class="pitch-theme">{esc(p["lyrical_theme"])}</p>' if p.get('lyrical_theme') else ''
+        theme_p = '\n'.join(f'            <p class="pitch-theme">{esc(x)}</p>' for x in p['lyrical_theme'].split('\n') if x.strip()) if p.get('lyrical_theme') else ''
         heading = 'Lyrical theme' if theme_p else 'Lyrics'
         poster = fc.get('poster')
         video_btn = ''
