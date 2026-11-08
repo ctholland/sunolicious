@@ -40,19 +40,21 @@ s, n2 = re.subn(r'/\*LYRICS_START\*/.*?/\*LYRICS_END\*/',
 assert n1 == 1 and n2 == 1, (n1, n2)
 open('music.html', 'w', encoding='utf-8').write(s)
 
+def song_slug(r):
+    """URL slug for a song's licensing page: pitch.slug if set, else derived from the title."""
+    return (r.get('pitch') or {}).get('slug') or re.sub(r'[^a-z0-9]+', '-', r['title'].lower()).strip('-')
+
 # licensing page grid: same cards as Music, one License button each, player underneath
 lic = []
 for r in rels:
     t = html.escape(r['title'])
     subj = quote('Licensing Inquiry: ' + r['title'], safe='')
-    pitch_btn = (f'                        <a class="volume-btn" href="licensing/{r["pitch"]["slug"]}.html" style="margin-bottom: 0.75rem;">Hear it in context</a>\n'
-                 if r.get('pitch') else '')
     lic.append(f'''                <div class="volume-card">
                     <img src="{r['cover']}" alt="{t}" class="volume-artwork">
                     <div class="volume-info">
                         <h3 class="volume-title">{t}</h3>
                         <p class="volume-subtitle">{html.escape(r.get('type','Single'))}</p>
-{pitch_btn}                        <a class="volume-btn" href="mailto:info@sunolicious.com?subject={subj}">License This Track</a>
+                        <a class="volume-btn" href="licensing/{song_slug(r)}.html">Explore This Track</a>
                     </div>
                 </div>''')
 lgrid = '<div class="volumes-grid">\n' + '\n'.join(lic) + '\n            </div>\n            <div style="max-width: 900px; margin: 0 auto 3rem;">\n' + player_html + '\n            </div>'
@@ -62,7 +64,7 @@ L, n3 = re.subn(r'(<!-- LICENSING-GRID:START -->).*?(<!-- LICENSING-GRID:END -->
 assert n3 == 1
 open('licensing.html', 'w', encoding='utf-8').write(L)
 
-# ---- song pitch pages: licensing/<slug>.html for every release that has a "pitch" block ----
+# ---- song licensing pages: licensing/<slug>.html for EVERY release (basic), plus sync concepts when it has a "pitch" block ----
 # Menu, footer, signup pop-up, CSS and script are lifted from licensing.html so these pages always match it.
 # Template: pitch_template.html. To add a song, give its releases.json entry a "pitch" block and re-run this script.
 def _nested(h):
@@ -86,27 +88,42 @@ shared = {
 tpl = open('pitch_template.html', encoding='utf-8').read()
 
 def build_pitch(r):
-    p = r['pitch']; slug = p['slug']; esc = html.escape
+    p = r.get('pitch'); slug = song_slug(r); esc = html.escape
     assert re.fullmatch(r'[a-z0-9-]+', slug), slug
-    t = r['title']; fc = p['featured_concept']
+    t = r['title']
     sc = r['soundcloud']
     src = ('https://w.soundcloud.com/player/?url=' + quote(sc, safe='/') +
            '&color=%23c5b7a0&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false')
     player = (f'            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" title="{esc(t)} on SoundCloud" src="{src}"></iframe>\n'
               f'            <div class="pitch-credit"><a href="{data["soundcloud_profile"]}" target="_blank" rel="noopener">SUNOLICIOUS™</a> · <a href="{sc}" target="_blank" rel="noopener">{esc(t)}</a></div>')
-    tiles = '\n'.join(f'                <div class="tile"><h3>{esc(c["title"])}</h3><p>{esc(c["text"])}</p></div>' for c in p['additional_concepts'])
     lyr = '\n'.join('                <p>' + esc(st).replace('\n', '<br>') + '</p>' for st in r['lyrics'].strip().split('\n\n'))
     # facts: only what is verified. Add more via "facts": [["Duration","3:12"], ...] in the pitch block.
-    rows = [('Artist', 'SUNOLICIOUS™'), ('Track', t.upper()), ('Release', r.get('type', 'Single'))] + [tuple(x) for x in p.get('facts', [])]
+    rows = [('Artist', 'SUNOLICIOUS™'), ('Track', t.upper()), ('Release', r.get('type', 'Single'))] + [tuple(x) for x in (p or {}).get('facts', [])]
     facts = '\n'.join(f'                <dt>{esc(k)}</dt><dd>{esc(v)}</dd>' for k, v in rows)
     facts += '\n                <dt>Licensing</dt><dd><a href="mailto:info@sunolicious.com">info@sunolicious.com</a></dd>'
     mailto = 'mailto:info@sunolicious.com?subject=' + quote('Licensing Inquiry: ' + t, safe='')
-    vals = dict(shared, TITLE=esc(f'{t} | Sync Licensing | SUNOLICIOUS™'), DESC=esc(p['page_description']), SLUG=slug,
-                COVER=r['cover'], COVER_ALT=esc(f'{t} cover art'), SONG_TITLE_UPPER=esc(t.upper()),
-                SHORT_PITCH=esc(p['short_pitch']), PLAYER=player, CONCEPT_TITLE=esc(fc['title']),
-                CONCEPT_STATUS=esc(fc['status']), CONCEPT_DISCLAIMER=esc(fc['disclaimer']), CONCEPT_DESC=esc(fc['description']),
-                TILES=tiles, THEME=esc(p['lyrical_theme']), LYRICS=lyr, FACTS=facts, MAILTO=mailto)
     out = tpl
+    if p:   # enhanced song: sync concepts, lede and lyrical theme
+        fc = p['featured_concept']
+        tiles = '\n'.join(f'                <div class="tile"><h3>{esc(c["title"])}</h3><p>{esc(c["text"])}</p></div>' for c in p['additional_concepts'])
+        desc = p['page_description']
+        lede = f'                <p class="pitch-lede">{esc(p["short_pitch"])}</p>\n'
+        secondary = '                    <a class="version-btn" href="#in-context">See it in action</a>\n'
+        theme_p = f'            <p class="pitch-theme">{esc(p["lyrical_theme"])}</p>'
+        heading = 'Lyrical theme'
+        concept = dict(CONCEPT_TITLE=esc(fc['title']), CONCEPT_STATUS=esc(fc['status']), CONCEPT_DISCLAIMER=esc(fc['disclaimer']),
+                       CONCEPT_DESC=esc(fc['description']), TILES=tiles)
+    else:   # basic song: verified data only, no concepts
+        out = re.sub(r'<!--PITCH-ONLY:START-->.*?<!--PITCH-ONLY:END-->\n', '', out, flags=re.S)
+        desc = f'{t} by SUNOLICIOUS™. Listen, read the lyrics and inquire about sync licensing.'
+        lede = secondary = theme_p = ''
+        heading = 'Lyrics'
+        concept = {}
+    out = out.replace('<!--PITCH-ONLY:START-->\n', '').replace('<!--PITCH-ONLY:END-->\n', '')
+    vals = dict(shared, **concept, LEDE=lede, HERO_SECONDARY=secondary, THEME_P=theme_p, LYRICS_HEADING=heading,
+                TITLE=esc(f'{t} | Sync Licensing | SUNOLICIOUS™'), DESC=esc(desc), SLUG=slug,
+                COVER=r['cover'], COVER_ALT=esc(f'{t} cover art'), SONG_TITLE_UPPER=esc(t.upper()),
+                PLAYER=player, LYRICS=lyr, FACTS=facts, MAILTO=mailto)
     for k, v in vals.items():
         out = out.replace('{{' + k + '}}', v)
     assert '{{' not in out, re.findall(r'\{\{\w+\}\}', out)
@@ -114,5 +131,5 @@ def build_pitch(r):
     open(f'licensing/{slug}.html', 'w', encoding='utf-8').write(out)
     return slug
 
-built = [build_pitch(r) for r in data['releases'] if r.get('pitch')]
-print(f'music.html + licensing.html rebuilt: {len(rels)} releases; pitch pages: {built or "none"}')
+built = [build_pitch(r) for r in data['releases']]
+print(f'music.html + licensing.html rebuilt: {len(rels)} releases; song pages: {built}')
