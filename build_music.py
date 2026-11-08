@@ -20,7 +20,7 @@ for r in rels:
                         <h3 class="volume-title">{t}</h3>
                         <p class="volume-subtitle">{html.escape(r.get('type','Single'))}</p>
                         <button class="volume-btn lyrics-btn" data-track="{r['id']}" style="width: 100%; cursor: pointer; font-family: inherit; margin-bottom: 0.75rem;">View Lyrics</button>
-                        <a class="volume-btn" href="mailto:info@sunolicious.com?subject={subj}">License This Track</a>
+                        <a class="volume-btn" href="/licensing">Explore Licensing</a>
                     </div>
                 </div>''')
 
