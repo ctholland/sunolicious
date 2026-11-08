@@ -92,7 +92,7 @@ def balanced_end(s, start):
 
 def process(path):
     s = open(path, encoding='utf-8').read()
-    prefix = '../' if path.startswith('blog/') else ''
+    prefix = '../' if path.startswith(('blog/', 'licensing/')) else ''
     link = '<link rel="stylesheet" href="%spopups.css">' % prefix
     changed = False
 
@@ -134,7 +134,7 @@ def process(path):
 if __name__ == '__main__':
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
     n = 0
-    for f in sorted(glob.glob('*.html') + glob.glob('blog/*.html')):
+    for f in sorted(glob.glob('*.html') + glob.glob('blog/*.html') + glob.glob('licensing/*.html')):
         if process(f):
             n += 1
             print('updated', f)
