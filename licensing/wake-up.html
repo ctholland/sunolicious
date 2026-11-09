@@ -362,6 +362,7 @@
                 <h1 class="pitch-title">WAKE UP</h1>
                 <div class="pitch-cta">
                     <a class="version-btn pitch-btn-primary" href="#listen">Play track</a>
+                    <a class="version-btn" href="#lyrics" id="viewLyrics">View lyrics</a>
                 </div>
             </div>
         </section>
@@ -374,7 +375,7 @@
         </section>
 
         <!-- F. LYRICAL THEME -->
-        <section class="pitch-block">
+        <section class="pitch-block" id="lyrics">
             <h2>Lyrics</h2>
 
             <details class="pitch-lyrics">
@@ -602,6 +603,15 @@
                 });
             });
         });
+    </script>
+    <script>
+    (function () {   /* "View lyrics" opens the existing lyrics block; nothing is duplicated */
+        var d = document.querySelector('.pitch-lyrics'); if (!d) return;
+        function show() { d.open = true; }
+        var a = document.getElementById('viewLyrics'); if (a) a.addEventListener('click', show);
+        if (location.hash === '#lyrics') show();
+        window.addEventListener('hashchange', function () { if (location.hash === '#lyrics') show(); });
+    })();
     </script>
     <script src="../newsletter.js?v=e53d8c0b" data-cfasync="false" defer></script>
 </body>

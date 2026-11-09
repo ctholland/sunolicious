@@ -363,6 +363,7 @@
                 <p class="pitch-lede">Tension, endurance, and the determination to keep moving. A cinematic, driving track for stories with something at stake.</p>
                 <div class="pitch-cta">
                     <a class="version-btn pitch-btn-primary" href="#listen">Play track</a>
+                    <a class="version-btn" href="#lyrics" id="viewLyrics">View lyrics</a>
                     <a class="version-btn" href="#in-context">See it in action</a>
                 </div>
             </div>
@@ -403,7 +404,7 @@
         </section>
 
         <!-- F. LYRICAL THEME -->
-        <section class="pitch-block">
+        <section class="pitch-block" id="lyrics">
             <h2>Lyrical theme</h2>
             <p class="pitch-theme">“Hard Times” is color-blind—indifferent to status, politics, and pride. It doesn’t care who you are, what you believe, or what you thought would save you.</p>
             <p class="pitch-theme">An acoustic anthem about struggle, hypocrisy, and compassion when the world forgets its balance. A reminder that hard times don’t take sides.</p>
@@ -631,6 +632,15 @@
                 });
             });
         });
+    </script>
+    <script>
+    (function () {   /* "View lyrics" opens the existing lyrics block; nothing is duplicated */
+        var d = document.querySelector('.pitch-lyrics'); if (!d) return;
+        function show() { d.open = true; }
+        var a = document.getElementById('viewLyrics'); if (a) a.addEventListener('click', show);
+        if (location.hash === '#lyrics') show();
+        window.addEventListener('hashchange', function () { if (location.hash === '#lyrics') show(); });
+    })();
     </script>
     <script src="../newsletter.js?v=e53d8c0b" data-cfasync="false" defer></script>
 </body>

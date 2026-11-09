@@ -100,6 +100,7 @@
                 <h1 class="pitch-title">{{SONG_TITLE_UPPER}}</h1>
 {{LEDE}}                <div class="pitch-cta">
                     <a class="version-btn pitch-btn-primary" href="#listen">Play track</a>
+                    <a class="version-btn" href="#lyrics" id="viewLyrics">View lyrics</a>
 {{HERO_SECONDARY}}                </div>
             </div>
         </section>
@@ -140,7 +141,7 @@
 
 <!--TILES:END-->
         <!-- F. LYRICAL THEME -->
-        <section class="pitch-block">
+        <section class="pitch-block" id="lyrics">
             <h2>{{LYRICS_HEADING}}</h2>
 {{THEME_P}}
             <details class="pitch-lyrics">
@@ -175,6 +176,15 @@
 {{POPUPS}}
 
 {{SCRIPT}}
+    <script>
+    (function () {   /* "View lyrics" opens the existing lyrics block; nothing is duplicated */
+        var d = document.querySelector('.pitch-lyrics'); if (!d) return;
+        function show() { d.open = true; }
+        var a = document.getElementById('viewLyrics'); if (a) a.addEventListener('click', show);
+        if (location.hash === '#lyrics') show();
+        window.addEventListener('hashchange', function () { if (location.hash === '#lyrics') show(); });
+    })();
+    </script>
 {{VIDEO_JS}}    {{NEWSLETTER}}
 </body>
 </html>
