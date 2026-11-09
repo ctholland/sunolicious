@@ -40,6 +40,13 @@
         .poster-title { font-size: clamp(1.1rem, 3.2vw, 1.9rem); font-weight: 200; letter-spacing: 5px; text-transform: uppercase; color: #ffffff; }
         .poster-status { font-size: 0.72rem; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.75); }
         .poster-badge { font-size: 0.64rem; letter-spacing: 2.2px; text-transform: uppercase; color: #ffffff; border: 1px solid rgba(197,183,160,0.55); background: rgba(9,3,41,0.6); padding: 0.4rem 0.9rem; }
+        .concept-poster.has-poster img { filter: none; transform: none; }
+        .concept-poster.has-poster::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(9,3,41,0.15) 0%, rgba(9,3,41,0.7) 100%); pointer-events: none; }
+        .concept-poster .poster-inner { z-index: 1; }
+        .poster-play { margin-top: 0.4rem; background: rgba(9,3,41,0.6); color: #ffffff; border: 1px solid rgba(255,255,255,0.7); padding: 0.7rem 1.6rem; font: inherit; font-size: 0.72rem; letter-spacing: 2.5px; text-transform: uppercase; cursor: pointer; transition: all 0.3s ease; }
+        .poster-play:hover { background: #ffffff; color: #090329; }
+        .concept-poster.playing > img, .concept-poster.playing > .poster-inner, .concept-poster.playing::after { display: none; }
+        .concept-poster.playing iframe, .concept-poster.playing video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #000; }
         .concept-cap { text-align: center; font-size: 0.9rem; color: rgba(255,255,255,0.85); max-width: 680px; margin: 1.3rem auto 0; }
         .tile-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
         .tile { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); padding: 1.6rem; }
@@ -93,6 +100,7 @@
                 <h1 class="pitch-title">{{SONG_TITLE_UPPER}}</h1>
 {{LEDE}}                <div class="pitch-cta">
                     <a class="version-btn pitch-btn-primary" href="#listen">Play track</a>
+                    <a class="version-btn" href="#lyrics" id="viewLyrics">View lyrics</a>
 {{HERO_SECONDARY}}                </div>
             </div>
         </section>
@@ -103,24 +111,26 @@
 {{PLAYER}}
         </section>
 
-<!--PITCH-ONLY:START-->
+<!--CONTEXT:START-->
         <!-- D. SEE IT IN ACTION -->
         <section class="pitch-block" id="in-context">
             <h2>See {{SONG_TITLE_UPPER}} in context</h2>
             <p class="pitch-sub">A speculative visual pairing created to demonstrate the track's potential.</p>
             <figure>
-                <div class="concept-poster">
-                    <img src="../{{COVER}}" alt="" aria-hidden="true">
+                <div class="{{POSTER_CLASS}}">
+                    <img src="../{{POSTER_SRC}}" alt="" aria-hidden="true">
                     <div class="poster-inner">
                         <div class="poster-title">{{CONCEPT_TITLE}}</div>
                         <div class="poster-status">{{CONCEPT_STATUS}}</div>
                         <div class="poster-badge">{{CONCEPT_DISCLAIMER}}</div>
-                    </div>
+{{VIDEO_BTN}}                    </div>
                 </div>
                 <figcaption class="concept-cap">{{CONCEPT_DESC}}</figcaption>
             </figure>
         </section>
 
+<!--CONTEXT:END-->
+<!--TILES:START-->
         <!-- E. OTHER PLACEMENTS -->
         <section class="pitch-block">
             <h2>Other possible placements</h2>
@@ -129,9 +139,9 @@
             </div>
         </section>
 
-<!--PITCH-ONLY:END-->
+<!--TILES:END-->
         <!-- F. LYRICAL THEME -->
-        <section class="pitch-block">
+        <section class="pitch-block" id="lyrics">
             <h2>{{LYRICS_HEADING}}</h2>
 {{THEME_P}}
             <details class="pitch-lyrics">
@@ -166,6 +176,15 @@
 {{POPUPS}}
 
 {{SCRIPT}}
-    {{NEWSLETTER}}
+    <script>
+    (function () {   /* "View lyrics" opens the existing lyrics block; nothing is duplicated */
+        var d = document.querySelector('.pitch-lyrics'); if (!d) return;
+        function show() { d.open = true; }
+        var a = document.getElementById('viewLyrics'); if (a) a.addEventListener('click', show);
+        if (location.hash === '#lyrics') show();
+        window.addEventListener('hashchange', function () { if (location.hash === '#lyrics') show(); });
+    })();
+    </script>
+{{VIDEO_JS}}    {{NEWSLETTER}}
 </body>
 </html>

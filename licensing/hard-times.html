@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hard Times | Sync Licensing | SUNOLICIOUS™</title>
-    <meta name="description" content="HARD TIMES by SUNOLICIOUS™. Hear the track, see a speculative sync concept, and inquire about licensing for sports, film, television and documentary projects.">
+    <meta name="description" content="HARD TIMES by SUNOLICIOUS™. Hear the track, read the lyrics, and inquire about licensing for film, television, documentary and drama projects.">
     <meta property="og:title" content="Hard Times | Sync Licensing | SUNOLICIOUS™">
-    <meta property="og:description" content="HARD TIMES by SUNOLICIOUS™. Hear the track, see a speculative sync concept, and inquire about licensing for sports, film, television and documentary projects.">
+    <meta property="og:description" content="HARD TIMES by SUNOLICIOUS™. Hear the track, read the lyrics, and inquire about licensing for film, television, documentary and drama projects.">
     <meta property="og:image" content="https://sunolicious.com/images/Sunolicious_Share.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -235,159 +235,6 @@
         color: #E8E8E8;
         line-height: 1.9;
     }
-    .signup-trigger {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        padding: 9px 18px;
-        font-size: 0.65rem;
-        font-weight: 300;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        background: rgba(9,3,41,0.78);
-        color: #ffffff;
-        border: 1px solid rgba(255,255,255,0.7);
-        cursor: pointer;
-        z-index: 1000;
-        transition: all 0.4s ease;
-        font-family: inherit;
-    }
-    .signup-trigger:hover {
-        background: #ffffff;
-        color: #090329;
-    }
-    .popup-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.95);
-        backdrop-filter: blur(10px);
-        display: none;
-        align-items: center;
-        justify-content: center;
-        z-index: 9999;
-    }
-    .popup-overlay.active {
-        display: flex;
-    }
-    .popup-content {
-        background: linear-gradient(161deg, #090329 10%, #3d1a94 35%, #c742c2 65%, #3d1a94 85%, #090329 100%);
-        border: 1px solid rgba(197, 183, 160, 0.3);
-        max-width: 500px;
-        width: 90%;
-        padding: 40px 30px;
-        position: relative;
-        animation: slideUp 0.4s ease;
-    }
-    @keyframes slideUp {
-        from { transform: translateY(30px); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
-    }
-    .close-btn {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        background: none;
-        border: none;
-        color: #999999;
-        font-size: 28px;
-        cursor: pointer;
-        line-height: 1;
-        transition: all 0.3s ease;
-        padding: 5px 10px;
-        font-family: inherit;
-    }
-    .close-btn:hover {
-        color: #C5B7A0;
-        transform: rotate(90deg);
-    }
-    .popup-header {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-    .popup-header h1 {
-        font-size: 36px;
-        font-weight: 200;
-        letter-spacing: 4px;
-        margin-bottom: 5px;
-    }
-    .popup-header h2 {
-        font-size: 24px;
-        font-weight: 300;
-        color: #C5B7A0;
-        letter-spacing: 2px;
-        margin-bottom: 10px;
-    }
-    .popup-header p {
-        font-size: 12px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        color: #999999;
-    }
-    .popup-description {
-        font-size: 14px;
-        line-height: 1.8;
-        color: #999999;
-        margin-bottom: 25px;
-        text-align: center;
-    }
-    .popup-form {
-        margin-bottom: 15px;
-    }
-    .form-group {
-        margin-bottom: 15px;
-    }
-    label {
-        display: block;
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        margin-bottom: 8px;
-        color: #ffffff;
-    }
-    input[type="email"] {
-        width: 100%;
-        padding: 12px 15px;
-        font-size: 15px;
-        background: rgba(255, 255, 255, 0.15);
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        color: #ffffff;
-        transition: all 0.3s ease;
-        font-family: inherit;
-    }
-    input[type="email"]:focus {
-        outline: none;
-        background: rgba(255, 255, 255, 0.2);
-        border-color: #ffffff;
-    }
-    input[type="email"]::placeholder {
-        color: rgba(255, 255, 255, 0.6);
-    }
-    .submit-btn {
-        width: 100%;
-        padding: 14px;
-        font-size: 0.75rem;
-        font-weight: 300;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        background: transparent;
-        color: #ffffff;
-        border: 2px solid #ffffff;
-        cursor: pointer;
-        transition: all 0.4s ease;
-        font-family: inherit;
-    }
-    .submit-btn:hover {
-        background: #ffffff;
-        color: #090329;
-    }
-    .hidden-field {
-        position: absolute;
-        left: -5000px;
-    }
         /* Release cards (same look as Music page) */
         .volumes-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 2.5rem; max-width: 900px; margin: 0 auto 3rem; }
         /* Balanced release grid: 1-3 in one row, 4 = 2+2, 5 = 3+2, 6 = 3+3; short rows center */
@@ -434,6 +281,13 @@
         .poster-title { font-size: clamp(1.1rem, 3.2vw, 1.9rem); font-weight: 200; letter-spacing: 5px; text-transform: uppercase; color: #ffffff; }
         .poster-status { font-size: 0.72rem; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.75); }
         .poster-badge { font-size: 0.64rem; letter-spacing: 2.2px; text-transform: uppercase; color: #ffffff; border: 1px solid rgba(197,183,160,0.55); background: rgba(9,3,41,0.6); padding: 0.4rem 0.9rem; }
+        .concept-poster.has-poster img { filter: none; transform: none; }
+        .concept-poster.has-poster::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(9,3,41,0.15) 0%, rgba(9,3,41,0.7) 100%); pointer-events: none; }
+        .concept-poster .poster-inner { z-index: 1; }
+        .poster-play { margin-top: 0.4rem; background: rgba(9,3,41,0.6); color: #ffffff; border: 1px solid rgba(255,255,255,0.7); padding: 0.7rem 1.6rem; font: inherit; font-size: 0.72rem; letter-spacing: 2.5px; text-transform: uppercase; cursor: pointer; transition: all 0.3s ease; }
+        .poster-play:hover { background: #ffffff; color: #090329; }
+        .concept-poster.playing > img, .concept-poster.playing > .poster-inner, .concept-poster.playing::after { display: none; }
+        .concept-poster.playing iframe, .concept-poster.playing video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #000; }
         .concept-cap { text-align: center; font-size: 0.9rem; color: rgba(255,255,255,0.85); max-width: 680px; margin: 1.3rem auto 0; }
         .tile-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
         .tile { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); padding: 1.6rem; }
@@ -466,7 +320,7 @@
             * { transition: none !important; animation: none !important; }
         }
     </style>
-    <link rel="stylesheet" href="../popups.css">
+    <link rel="stylesheet" href="../popups.css?v=1cea75b2">
 </head>
 <body>
 <!-- Hamburger Menu -->
@@ -506,10 +360,10 @@
             <div>
                 <p class="pitch-kicker">SUNOLICIOUS&trade; &middot; Sync licensing</p>
                 <h1 class="pitch-title">HARD TIMES</h1>
-                <p class="pitch-lede">Tension, endurance, and the determination to keep moving. A cinematic, driving track for stories with something at stake.</p>
+                <p class="pitch-lede">An acoustic anthem for stories where hardship humbles the certain and levels the proud: struggle, hypocrisy, and compassion, without taking sides.</p>
                 <div class="pitch-cta">
                     <a class="version-btn pitch-btn-primary" href="#listen">Play track</a>
-                    <a class="version-btn" href="#in-context">See it in action</a>
+                    <a class="version-btn" href="#lyrics" id="viewLyrics">View lyrics</a>
                 </div>
             </div>
         </section>
@@ -521,37 +375,21 @@
             <div class="pitch-credit"><a href="https://soundcloud.com/sunolicious" target="_blank" rel="noopener">SUNOLICIOUS™</a> · <a href="https://soundcloud.com/sunolicious/hardtimes" target="_blank" rel="noopener">Hard Times</a></div>
         </section>
 
-        <!-- D. SEE IT IN ACTION -->
-        <section class="pitch-block" id="in-context">
-            <h2>See HARD TIMES in context</h2>
-            <p class="pitch-sub">A speculative visual pairing created to demonstrate the track's potential.</p>
-            <figure>
-                <div class="concept-poster">
-                    <img src="../images/hardtimes.webp" alt="" aria-hidden="true">
-                    <div class="poster-inner">
-                        <div class="poster-title">Against the Odds</div>
-                        <div class="poster-status">Concept reel in development</div>
-                        <div class="poster-badge">Concept demonstration · Not a commissioned placement</div>
-                    </div>
-                </div>
-                <figcaption class="concept-cap">Proposed concept, about 30 seconds: a progression from strain and pressure to perseverance and breakthrough. Visual references might include empty streets before dawn, athletic preparation, intense effort, and a final turning point. This is a creative direction, not existing footage.</figcaption>
-            </figure>
-        </section>
-
         <!-- E. OTHER PLACEMENTS -->
         <section class="pitch-block">
             <h2>Other possible placements</h2>
             <div class="tile-grid">
-                <div class="tile"><h3>Sports / resilience</h3><p>Training, adversity, momentum, comeback. A track that carries the long preparation and earns the turn.</p></div>
-                <div class="tile"><h3>Film / television</h3><p>A protagonist under pressure and a decisive turning point, for scenes where the story has something at stake.</p></div>
-                <div class="tile"><h3>Fashion / documentary</h3><p>A gritty, forward-moving montage with emotional weight, where real work and real people carry the picture.</p></div>
+                <div class="tile"><h3>Film / Television</h3><p>A character&#x27;s beliefs or sense of superiority unraveling when circumstances change.</p></div>
+                <div class="tile"><h3>Social / Political Documentary</h3><p>Stories about division, inequality, hypocrisy, and the human consequences of power.</p></div>
+                <div class="tile"><h3>Human Drama</h3><p>Contrasting people from different backgrounds confronting the same hardship.</p></div>
             </div>
         </section>
 
         <!-- F. LYRICAL THEME -->
-        <section class="pitch-block">
+        <section class="pitch-block" id="lyrics">
             <h2>Lyrical theme</h2>
-            <p class="pitch-theme">Written for the ones who kept showing up. HARD TIMES is about the cost of caring: giving more than you get back, carrying what others dropped, and coming out still standing. The song moves from loss to resolve. Hard times take plenty, but they don&#x27;t get to take the light.</p>
+            <p class="pitch-theme">“Hard Times” is color-blind—indifferent to status, politics, and pride. It doesn’t care who you are, what you believe, or what you thought would save you.</p>
+            <p class="pitch-theme">An acoustic anthem about struggle, hypocrisy, and compassion when the world forgets its balance. A reminder that hard times don’t take sides.</p>
             <details class="pitch-lyrics">
                 <summary class="version-btn">Read the lyrics</summary>
                 <p>You preach the gospel of the self-made man,<br>Till your castle’s sinking in the sand.<br>You say “stand tall, don’t need no grace,”<br>But now you’re praying with a pale face.</p>
@@ -607,13 +445,11 @@
         </div>
     </footer>
 
-<!-- EMAIL POPUP BUTTON -->
+<!-- SIGNUP:START (generated by build_popups.py) -->
     <button class="signup-trigger" id="openPopup">Join the List</button>
-    
-    <!-- EMAIL POPUP -->
     <div class="popup-overlay" id="popupOverlay">
         <div class="popup-content">
-            <button class="close-btn" id="closePopup">&times;</button>
+            <button class="close-btn" id="closePopup" aria-label="Close">&times;</button>
             <div class="popup-header">
                 <h1>SUNOLICIOUS<sup style="font-size: 0.3em">™</sup></h1>
                 <p>Human. Machine. Manifest.</p>
@@ -621,11 +457,12 @@
             <p class="popup-description">
                 Join the journey. Get exclusive updates, new releases, and insights into the evolution of human-machine musical collaboration.
             </p>
-            <form class="popup-form" action="https://noahmusic.us6.list-manage.com/subscribe/post?u=634485f7f15097e5aecc9af5f&id=c2b49f4fa3&f_id=004911e2f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+            <form class="popup-form" action="https://noahmusic.us6.list-manage.com/subscribe/post?u=634485f7f15097e5aecc9af5f&amp;id=c2b49f4fa3&amp;f_id=004911e2f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
                 <div class="form-group">
                     <label for="mce-EMAIL">Email Address *</label>
                     <input type="email" name="EMAIL" id="mce-EMAIL" required placeholder="your@email.com">
                 </div>
+                <input type="hidden" name="tags" value="4059298">
                 <div class="hidden-field" aria-hidden="true">
                     <input type="text" name="b_634485f7f15097e5aecc9af5f_c2b49f4fa3" tabindex="-1" value="">
                 </div>
@@ -633,6 +470,7 @@
             </form>
         </div>
     </div>
+    <!-- SIGNUP:END -->
 <!-- POPUPS:START (generated by build_popups.py) -->
     <div class="pp-overlay" id="bioOverlay">
         <div class="pp-panel">
@@ -684,30 +522,6 @@
             menuOverlay.classList.toggle('active');
         }
 
-        // Email popup
-        const openPopupBtn = document.getElementById('openPopup');
-        const closePopupBtn = document.getElementById('closePopup');
-        const popupOverlay = document.getElementById('popupOverlay');
-        
-        openPopupBtn.addEventListener('click', () => {
-            popupOverlay.classList.add('active');
-        });
-        
-        closePopupBtn.addEventListener('click', () => {
-            popupOverlay.classList.remove('active');
-        });
-        
-        popupOverlay.addEventListener('click', (e) => {
-            if (e.target === popupOverlay) {
-                popupOverlay.classList.remove('active');
-            }
-        });
-        
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && popupOverlay.classList.contains('active')) {
-                popupOverlay.classList.remove('active');
-            }
-        });
 
         // Bio Modal handlers
         const bioOverlay = document.getElementById('bioOverlay');
@@ -801,6 +615,15 @@
             });
         });
     </script>
-    <script src="../newsletter.js?v=2" data-cfasync="false" defer></script>
+    <script>
+    (function () {   /* "View lyrics" opens the existing lyrics block; nothing is duplicated */
+        var d = document.querySelector('.pitch-lyrics'); if (!d) return;
+        function show() { d.open = true; }
+        var a = document.getElementById('viewLyrics'); if (a) a.addEventListener('click', show);
+        if (location.hash === '#lyrics') show();
+        window.addEventListener('hashchange', function () { if (location.hash === '#lyrics') show(); });
+    })();
+    </script>
+    <script src="../newsletter.js?v=e53d8c0b" data-cfasync="false" defer></script>
 </body>
 </html>
